@@ -3,5 +3,8 @@
   <head>
     <title>Title page</title>
   </head>
-  <body>Hello Josh</body>
+  <body>
+  	<h1>Hello Josh</h1>
+  </body>
+
 </html>
