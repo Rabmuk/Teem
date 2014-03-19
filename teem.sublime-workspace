@@ -1,0 +1,743 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"print",
+				"print_r"
+			],
+			[
+				"pass",
+				"passconfirm"
+			],
+			[
+				"long",
+				"long_bfs"
+			],
+			[
+				"add",
+				"addWord"
+			],
+			[
+				"ad",
+				"addEdge"
+			],
+			[
+				"node",
+				"nodeName"
+			],
+			[
+				"push",
+				"push_back"
+			],
+			[
+				"the",
+				"thePath"
+			],
+			[
+				"fin",
+				"find_shortest_path"
+			],
+			[
+				"pre",
+				"prev"
+			],
+			[
+				"I",
+				"INFINITY"
+			],
+			[
+				"in",
+				"infinity"
+			],
+			[
+				"for",
+				"for	For Loop"
+			],
+			[
+				"be",
+				"begin"
+			],
+			[
+				"dec",
+				"decendingPost"
+			],
+			[
+				"itr",
+				"itr"
+			],
+			[
+				"de",
+				"decendingPost"
+			],
+			[
+				"rev",
+				"revGraph"
+			],
+			[
+				"rever",
+				"reversedGraph"
+			],
+			[
+				"clear",
+				"clearVisited"
+			],
+			[
+				"dest",
+				"destName"
+			],
+			[
+				"start",
+				"startName"
+			],
+			[
+				"is",
+				"isConnected"
+			],
+			[
+				"pos",
+				"post"
+			],
+			[
+				"post",
+				"postvisit"
+			],
+			[
+				"vis",
+				"visitNumber"
+			],
+			[
+				"fi",
+				"first"
+			],
+			[
+				"it",
+				"itr"
+			],
+			[
+				"to",
+				"toReturn"
+			],
+			[
+				"v",
+				"v"
+			],
+			[
+				"vertex",
+				"vertex"
+			],
+			[
+				"ve",
+				"vector	std::vector"
+			],
+			[
+				"verte",
+				"vertexMap"
+			],
+			[
+				"ver",
+				"vertexMap"
+			],
+			[
+				"str",
+				"string"
+			],
+			[
+				"ps",
+				"pos1"
+			],
+			[
+				"ar",
+				"arrSize"
+			],
+			[
+				"arr",
+				"arrSize"
+			],
+			[
+				"prim",
+				"primesFound"
+			],
+			[
+				"pri",
+				"primesFound"
+			],
+			[
+				"pr",
+				"primesFound"
+			],
+			[
+				"b",
+				"bestp1"
+			],
+			[
+				"dis",
+				"distance"
+			],
+			[
+				"best",
+				"bestdist"
+			],
+			[
+				"diff",
+				"diffysq"
+			],
+			[
+				"p",
+				"Point"
+			],
+			[
+				"n",
+				"nMax"
+			],
+			[
+				"c",
+				"cout"
+			],
+			[
+				"echo",
+				"echo	echo \"…\""
+			],
+			[
+				"cou",
+				"course_list"
+			],
+			[
+				"gues",
+				"guessSwatch"
+			],
+			[
+				"guess",
+				"guessRGB"
+			],
+			[
+				"rou",
+				"roundSelector"
+			],
+			[
+				"rounds",
+				"roundSelector"
+			],
+			[
+				"on",
+				"onclick"
+			],
+			[
+				"roun",
+				"roundScore"
+			],
+			[
+				"hi",
+				"height"
+			],
+			[
+				"h",
+				"height"
+			],
+			[
+				"dif",
+				"difR"
+			],
+			[
+				"curr",
+				"currentRound"
+			],
+			[
+				"ran",
+				"randomizeColor"
+			],
+			[
+				"ra",
+				"randomizeColor"
+			],
+			[
+				"num",
+				"numOfRounds"
+			],
+			[
+				"tim",
+				"timeTaken"
+			],
+			[
+				"di",
+				"difficulty"
+			],
+			[
+				"ro",
+				"roundEnd"
+			],
+			[
+				"round",
+				"roundTime"
+			],
+			[
+				"tar",
+				"targetR"
+			],
+			[
+				"t",
+				"targetG"
+			],
+			[
+				"slide",
+				"slideRed"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"html",
+				"htmlCode"
+			],
+			[
+				"TIT",
+				"title	Tag"
+			],
+			[
+				"hea",
+				"head	Tag"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 311.0,
+		"selected_items":
+		[
+			[
+				"save",
+				"File: Save All"
+			]
+		],
+		"width": 396.0
+	},
+	"console":
+	{
+		"height": 251.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/D/Dropbox/College/fall13/Web Systems/week 12/Lecture18-Examples-Fall2013-inclass/login_secure.php",
+		"/D/Dropbox/Justin Price/Virtual Gallery/artists.php",
+		"/D/Git/Teem/public/login.php",
+		"/D/Dropbox/College/fall13/Web Systems/week 12/Lecture18-Examples-Fall2013-inclass/login_secure_auth.php",
+		"/D/Dropbox/College/fall13/Web Systems/week 12/Lecture18-Examples-Fall2013-inclass/register.php",
+		"/D/Dropbox/College/fall13/Web Systems/week 12/Lecture18-Examples-Fall2013-inclass/register_auth.php",
+		"/D/Dropbox/College/fall13/Web Systems/week 12/Lecture18-Examples-Fall2013-inclass/login_insecure.php",
+		"/D/Git/Teem/public/createaccount.php",
+		"/D/Git/Teem/database/config.php",
+		"/D/Git/Teem/database/init.php",
+		"/D/Git/Teem/public/index.php",
+		"/D/Git/Teem/ftpsync.settings",
+		"/D/Git/Teem/how in install ftpsync to your sublime text 2!",
+		"/D/Dropbox/rabserver/username.txt",
+		"/D/Dropbox/College/spring14/Web Science/Teem Meet/databaseSql.sql",
+		"/D/Git/Teem/teem.sublime-project",
+		"/D/Dropbox/College/spring14/Algo/workspace/lab6/sgb-words.txt",
+		"/D/Dropbox/College/spring14/Algo/workspace/lab6/lab6-Graph.cpp",
+		"/D/Dropbox/College/spring14/Algo/professor notes/spring2014-csci2300-notes-03-06.txt",
+		"/D/Dropbox/College/spring14/Algo/labs/algo lab6.html",
+		"/D/Dropbox/College/spring14/Algo/workspace/lab6/sample-exam1-questions.txt",
+		"/D/Dropbox/College/spring14/Algo/workspace/lab5/directed2.txt",
+		"/D/Dropbox/College/spring14/Algo/professor notes/spring2014-csci2300-notes-03-03.txt",
+		"/D/Dropbox/College/spring14/Algo/workspace/lab5/lab5-Graph.cpp",
+		"/D/Dropbox/College/spring14/Algo/professor notes/spring2014-csci2300-notes-02-27.txt",
+		"/D/Dropbox/College/spring14/Algo/workspace/lab3/lab3-Graph.cpp",
+		"/D/Dropbox/College/spring14/Algo/professor notes/spring2014-csci2300-notes-02-18.txt",
+		"/D/Dropbox/College/spring14/Algo/workspace/lab4/directed2.txt",
+		"/D/Dropbox/College/spring14/Algo/workspace/lab4/directed.txt",
+		"/D/Dropbox/College/spring14/Algo/workspace/lab4/lab4-Graph.cpp",
+		"/D/Dropbox/College/spring14/Algo/professor notes/spring2014-csci2300-notes-02-13.txt",
+		"/D/Dropbox/College/spring14/Algo/workspace/lab2/lab2q1.cpp",
+		"/D/Dropbox/College/spring14/Algo/workspace/lab2/lab2q2.cpp",
+		"/D/Dropbox/College/spring14/Algo/workspace/lab2/lab2q3.cpp",
+		"/D/Dropbox/College/spring14/Algo/professor notes/spring2014-csci2300-notes-02-06.txt",
+		"/D/Dropbox/College/spring14/Algo/professor notes/spring2014-csci2300-notes-02-10.txt",
+		"/D/Dropbox/iD tech/Summer 2014/programming exercises/algo lab3.html",
+		"/D/Dropbox/iD tech/Summer 2014/programming exercises/New Text Document.txt",
+		"/D/Dropbox/College/spring14/Algo/workspace/lab3/undirected.txt",
+		"/D/Dropbox/College/spring14/Algo/workspace/lab3/directed.txt",
+		"/D/Dropbox/College/spring14/Algo/workspace/lab1/lab1q2.cpp",
+		"/D/Dropbox/College/spring14/Algo/professor notes/spring2014-csci2300-notes-02-03.txt",
+		"/D/Dropbox/College/spring14/Algo/workspace/lab1/lab1q3.cpp",
+		"/D/Dropbox/College/spring14/Algo/workspace/lab1/lab1q1.cpp",
+		"/D/Dropbox/iD tech/Summer 2014/programming exercises/java hw 1.txt",
+		"/C/Windows/system32/http",
+		"/D/Dropbox/College/spring14/Algo/workspace/lab1/lab1q1alt.cpp",
+		"/D/Dropbox/College/spring14/Algo/workspace/testing/factorial.cpp",
+		"/D/Dropbox/College/spring14/Web Science/public/index.html",
+		"/D/Dropbox/College/spring14/Web Science/public/info/index.php",
+		"/D/Dropbox/College/spring14/Web Science/public/lab1/index.php",
+		"/D/Dropbox/College/spring14/Web Science/public/lab1/index.html",
+		"/D/Dropbox/College/spring14/Web Science/public/index.php",
+		"/D/Program Files/xampp/apache/conf/httpd.conf",
+		"/D/Program Files/xampp/apache/conf/extra/httpd-vhosts.conf",
+		"/C/WINDOWS/System32/drivers/etc/hosts",
+		"/d/program",
+		"/d/program files/xampp/files/xampp/apache/conf/extra/httpd-ssl.conf",
+		"/d/program files/xampp/files/xampp/apache/conf/httpd.conf",
+		"/d/program files/xampp/files/xampp/mysql/bin/my.ini",
+		"/d/program files/xampp/files/xampp/php/php.ini",
+		"/d/program files/xampp/files/xampp/apache/conf/extra/httpd-xampp.conf",
+		"/D/Dropbox/College/spring14/Algo/workspace/testing/factorialrecursive.cpp",
+		"/D/Dropbox/College/spring14/Algo/workspace/testing/sum.cpp",
+		"/D/Dropbox/baggage damage/value.txt",
+		"/D/Dropbox/Psi Upsilon/archon/bank when is good.txt",
+		"/D/Dropbox/rabserver/Test Project/blah.php",
+		"/D/Dropbox/rabserver/Test Project/ip.php",
+		"/D/Dropbox/rabserver/Test Project/index.html",
+		"/D/Dropbox/rabserver/Test Project/test.php",
+		"/D/Dropbox/rabserver/Test Project/testProj.sublime-project",
+		"/D/Dropbox/rabserver/Test Project/ftpsync.settings",
+		"/D/Dropbox/College/fall13/Web Systems/lab7/lab7.sublime-project",
+		"/D/Dropbox/College/fall13/Web Systems/week 10/lec14inClass/lec14inClass2-forms/lec14_forms.php",
+		"/D/Dropbox/rabserver/temp password.txt",
+		"/D/Dropbox/rabserver/order confirmation.txt",
+		"/D/Dropbox/College/fall13/Web Systems/hw2/websys-assignment-2-team-4/websys-assignment-2-team-4.sublime-project",
+		"/D/Program Files/xampp/htdocs/webForms/resources/PHPIntroWebForms.js",
+		"/D/Dropbox/College/fall13/Web Systems/hw2/websys-assignment-2-team-4/index.html",
+		"/D/Dropbox/College/fall13/Web Systems/hw2/websys-assignment-2-team-4/Team4Scores.html",
+		"/D/Dropbox/College/fall13/Web Systems/hw2/README.txt",
+		"/D/Dropbox/College/fall13/Web Systems/hw2/websys-assignment-2-team-4/resources/assignment2team4.js",
+		"/D/Dropbox/College/fall13/Web Systems/hw2/websys-assignment-2-team-4/resources/score.js",
+		"/D/Dropbox/College/fall13/Web Systems/lab6/Lab 6 start.html",
+		"/D/Dropbox/College/fall13/Web Systems/hw2/websys-assignment-2-team-4/resources/assignment2team4.css",
+		"/D/Dropbox/College/fall13/Web Systems/hw2/websys-assignment-2-team-4/Team#Scores.html",
+		"/D/WinRAR temp/Rar$DIa0.090/alexkumbar-lab4.js",
+		"/D/Dropbox/College/fall13/Undergraduate Research project/temp/Cleaned Data/TreoCaseLevelFLClean.csv",
+		"/D/AppData/Roaming/Sublime Text 2/Packages/User/Default (Windows).sublime-keymap",
+		"/D/AppData/Roaming/Sublime Text 2/Packages/User/Preferences.sublime-settings",
+		"/D/WinRAR temp/Rar$DIa0.104/alexkumbar-lab4.js",
+		"/D/Dropbox/College/fall13/Web Systems/hw2/websys-assignment-2-team-4/assignment2team4.js",
+		"/D/Dropbox/College/fall13/Web Systems/hw2/websys-assignment-2-team-4/test.js",
+		"/D/Dropbox/College/fall13/Web Systems/hw2/websys-assignment-2-team-4/assigment2team4.js",
+		"/C/Users/AKumbar/.ssh/id_rsa.pub",
+		"/D/Program Files/xampp/htdocs/websys/lab 4/resources/alexkumbar-lab4.js",
+		"/D/Program Files/xampp/htdocs/websys/lab 4/alexkumbar-lab4.html",
+		"/D/Program Files/xampp/htdocs/websys/lab 4/resources/lab4.json",
+		"/D/Program Files/xampp/htdocs/websys/lab 4/resources/lab4.js",
+		"/D/Dropbox/College/fall13/Web Systems/week 7/canvas.html",
+		"/D/Dropbox/College/fall13/Web Systems/week 7/ball bounce.html",
+		"/D/Dropbox/College/fall13/Web Systems/week 7/location.html",
+		"/D/Dropbox/College/fall13/Web Systems/week 7/Alice's Adventures in Wonderland  Chapter IV  The Rabbit Sends in a Little Bill.htm",
+		"/D/Dropbox/College/fall13/Web Systems/lab4/lab4.html",
+		"/D/AppData/Roaming/Sublime Text 2/Packages/User/HTML.sublime-settings",
+		"/D/Dropbox/College/fall13/Undergraduate Research project/temp/PPCLevelFilelayoutforNY2.CSV"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+			"dbconn",
+			"login_secure",
+			"users_secure",
+			"username",
+			"uniqueUN",
+			"long_bf",
+			"long_bfs",
+			"find_longest_path",
+			"long_bfs",
+			"bfs",
+			"find_shortest_path",
+			"processRequest",
+			"explore",
+			"dfs",
+			"source",
+			"getVertex",
+			"addEdge",
+			"vertexMap",
+			"Vertex",
+			"reverse",
+			"dfs",
+			"F",
+			"B",
+			"E",
+			"I",
+			"H",
+			"D",
+			"push_ba",
+			"explore",
+			"is",
+			"unweighted",
+			"unweight",
+			"unweighted",
+			"connect",
+			"greatestCommonMultiple",
+			"g",
+			"printPath",
+			"second",
+			"adj",
+			"vmap",
+			"INFINITY",
+			"processRequest",
+			"point",
+			"#",
+			"dropbox.local",
+			"”",
+			"course_list",
+			"totalRounds",
+			"setupUI",
+			"can",
+			"canvas",
+			"alert",
+			"mainDiv",
+			"context.arc",
+			">\n",
+			"\\\">\n",
+			"\"\n",
+			"\"",
+			"\\\"",
+			"\"",
+			"setDifficulty",
+			"arg",
+			"context",
+			"Context",
+			"context",
+			"ctx",
+			"roundTime",
+			"\n    ",
+			"myCanvas",
+			"<canvas>",
+			"<p>",
+			"</STRONG>",
+			"<STRONG>"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"websci",
+			"\"",
+			"\\\"",
+			"'",
+			"\\\"",
+			"</p><p>",
+			"</b>",
+			"<b>"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"replace":
+	{
+		"height": 62.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"conf",
+				"database/config.php"
+			],
+			[
+				"t",
+				"teem.sublime-project"
+			],
+			[
+				"sg",
+				"lab6/sgb-words.txt"
+			],
+			[
+				"lab6",
+				"lab6/lab6-Graph.cpp"
+			],
+			[
+				"lab5",
+				"lab5/lab5-Graph.cpp"
+			],
+			[
+				"lab3",
+				"lab3/lab3-Graph.cpp"
+			],
+			[
+				"gra",
+				"lab3/lab3-Graph.cpp"
+			],
+			[
+				"q2",
+				"lab1/lab1q2.cpp"
+			],
+			[
+				"lab2",
+				"lab2/lab2q1.cpp"
+			],
+			[
+				"q3",
+				"lab2/lab2q3.cpp"
+			],
+			[
+				"cpp",
+				"lab1/lab1q1.cpp"
+			],
+			[
+				"alt",
+				"lab1/lab1q1alt.cpp"
+			],
+			[
+				"q1",
+				"lab1/lab1q1.cpp"
+			],
+			[
+				"lab1",
+				"lab1/lab1q1.cpp"
+			],
+			[
+				"",
+				"testing/factorial.cpp"
+			],
+			[
+				"php",
+				"info/index.php"
+			],
+			[
+				"inde",
+				"lab1/index.php"
+			],
+			[
+				"ind",
+				"index.html"
+			],
+			[
+				"blah",
+				"blah.php"
+			],
+			[
+				"h",
+				"index.html"
+			],
+			[
+				"in",
+				"index.html"
+			],
+			[
+				"js",
+				"resources/assignment2team4.js"
+			],
+			[
+				"css",
+				"resources/assignment2team4.css"
+			],
+			[
+				"tea",
+				"Team4Scores.html"
+			],
+			[
+				"s",
+				"resources/score.js"
+			],
+			[
+				"ht",
+				"Team4Scores.html"
+			],
+			[
+				"sco",
+				"resources/score.js"
+			],
+			[
+				"j",
+				"resources/assignment2team4.js"
+			],
+			[
+				"team",
+				"Team#Scores.html"
+			],
+			[
+				"score",
+				"resources/score.js"
+			],
+			[
+				"ass",
+				"resources/assignment2team4.js"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 278.0,
+	"status_bar_visible": true
+}
