@@ -1,6 +1,6 @@
 <?
 $DB_HOST = "localhost";
-$DB_NAME = "rabmuk_teem";
+$DB_NAME = "rabserve_teem";
 $DB_USERNAME = "rabserve_snap";
 $DB_PASSWORD = "7VcazcGF6pGD";
 

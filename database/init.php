@@ -1,4 +1,4 @@
-<?
+<?php
 // Initializes a global PDO connection $db to the database.
 require_once "config.php";
 

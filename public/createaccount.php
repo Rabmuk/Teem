@@ -1,4 +1,4 @@
-<?php require_once "./db/init.php"; ?>
+<?php require_once "../database/init.php"; ?>
 
 <?php 
     $query = $db->prepare(
