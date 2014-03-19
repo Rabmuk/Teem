@@ -1,4 +1,4 @@
-<?
+<?php
 $DB_HOST = "localhost";
 $DB_NAME = "rabserve_teem";
 $DB_USERNAME = "rabserve_snap";

@@ -12,6 +12,18 @@
 		{
 			"follow_symlinks": true,
 			"path": "database"
+		},
+		{
+			"follow_symlinks": true,
+			"path": "img"
+		},
+		{
+			"follow_symlinks": true,
+			"path": "js"
+		},
+		{
+			"follow_symlinks": true,
+			"path": "css"
 		}
 	],
 	"settings":
