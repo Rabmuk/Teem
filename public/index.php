@@ -8,6 +8,7 @@
     <script src="js/vendor/modernizr.js"></script>
   </head>
   <body>
+<<<<<<< HEAD
     
     <div class="row">
       <div class="large-12 columns">
@@ -40,6 +41,21 @@
       <div class="large-8 medium-8 columns">
         <h5>Here&rsquo;s your basic grid:</h5>
         <!-- Grid Example -->
+=======
+  	<h1>Hello Josh</h1>
+<<<<<<< HEAD
+<<<<<<< HEAD
+	<h2>Goodbye, Josh</h2>
+=======
+  	<p> Don't delete me!</p>
+    <a href="createaccount.php">link</a>
+>>>>>>> 797119de6adaa1fb2f713c00a2a108bf04770b40
+=======
+  	<p> Don't delete me!</p>
+    <a href="createaccount.php">link</a>
+>>>>>>> 797119de6adaa1fb2f713c00a2a108bf04770b40
+  </body>
+>>>>>>> FETCH_HEAD
 
         <div class="row">
           <div class="large-12 columns">
