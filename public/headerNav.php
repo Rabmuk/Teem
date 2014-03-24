@@ -6,7 +6,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bottom Bar</title>
+    <title>Header Bar</title>
     <link rel="stylesheet" href="css/foundation.css" />
     <script src="js/vendor/modernizr.js"></script>
   </head>
@@ -18,10 +18,9 @@
     </div>
     <div class="large-9 columns">
       <ul class="inline-list right">
-        <li><a href="#">Section 1</a></li>
-        <li><a href="#">Section 2</a></li>
-        <li><a href="#">Section 3</a></li>
-        <li><a href="#">Section 4</a></li>
+        <li><a href="index.php">Home</a></li>
+        <li><a href="accountsettings.php">Settings</a></li>
+        <li><a href="#">Log Out</a></li>
       </ul>
     </div>
   </div>
