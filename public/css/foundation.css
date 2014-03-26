@@ -6417,14 +6417,15 @@ th.hide-for-touch {
   min-width:100%;
   border: 2px #3399CC solid;
   background-color: #D6ADFF;
+  margin-bottom: 30px;
 }
 
 .footer{
+  margin-top: 58px;
   left:0;
   right:0;
   min-width:100%;
   border: 2px #3399CC solid;
-  position:absolute;
   bottom:0px;
   background-color: #D6ADFF;
 }
