@@ -6412,3 +6412,8 @@ th.hide-for-touch {
 .myProfile {
   font-size: 30px;
 }
+
+.boxcolumn{
+  height: 600px;
+  overflow-y: scroll;
+}
