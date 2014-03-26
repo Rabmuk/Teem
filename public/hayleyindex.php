@@ -7,36 +7,6 @@
     <link rel="stylesheet" href="css/foundation.css" />
   </head>
   <body>
- 
-    <!-- Navigation -->
-      <nav class="top-bar">
-        <ul class="title-area">
-          <!-- Title Area -->
-          <li class="name">
-            <h1>
-              <a href="#">
-                Top Bar Title
-              </a>
-            </h1>
-          </li>
-          <li class="toggle-topbar menu-icon"><a href="#"><span>menu</span></a></li>
-        </ul>
- 
-        <section class="top-bar-section">
-          <ul class="left">
-            <li><a href="#">Link 1</a></li>
-            <li><a href="#">Link 2</a></li>
-          </ul>
-
-        </section>
-      </nav>
- 
-    <!-- End Navigation -->
-  
-
- 
- 
-
 
  
     <!-- Desktop Slider -->
