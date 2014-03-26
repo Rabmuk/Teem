@@ -2,29 +2,8 @@
 	"folders":
 	[
 		{
-			"follow_symlinks": true,
-			"path": "."
-		},
-		{
-			"follow_symlinks": true,
-			"path": "public"
-		},
-		{
-			"follow_symlinks": true,
-			"path": "database"
-		},
-		{
-			"follow_symlinks": true,
-			"path": "img"
-		},
-		{
-			"follow_symlinks": true,
-			"path": "js"
-		},
-		{
-			"follow_symlinks": true,
-			"path": "css"
-		}
+      "path": "."
+    }
 	],
 	"settings":
 	{
