@@ -6409,6 +6409,8 @@ th.hide-for-touch {
   left: 50%;
   margin-left: -400px;
 }
+/*--------------------------------------------*/
+/*My Profile CSS*/
 
 #myProfile {
   border: 2px #000 solid;
@@ -6419,6 +6421,7 @@ th.hide-for-touch {
 .boxcolumn{
   height: 450px;
   overflow-y: scroll;
+<<<<<<< HEAD
   border: 2px purple solid;
 }
 
@@ -6426,4 +6429,32 @@ th.hide-for-touch {
   left:0;
   right:0;
   min-width:100%;
+=======
+  border: 2px #3399CC solid;
+  padding: 5px;
+}
+
+.profileHeader {
+  background-color: #3399CC;
+  color: white;
+}
+
+.teamTitle {
+  font-size: 24px;
+  text-decoration: underline;
+}
+
+#groupNames {
+  list-style-type: none;
+}
+
+hr {
+  color: #3399CC;
+  height: 5px;
+}
+
+img[src="img/clock.png"] {
+  width: 40px;
+  height: 40px;
+>>>>>>> 65964204eea2fd8d59f854fdcaaadbf3f7c73894
 }
