@@ -6369,3 +6369,16 @@ th.hide-for-touch {
 
 .touch th.show-for-touch {
   display: table-cell !important; }
+
+
+/*-----------------------------------------------------------*/
+/*Hayley Classes*/
+
+.fullwidth {
+  position: 
+  left: 0;
+  right: 0;
+  height:400px;
+  border:2px solid red;
+  background-color: purple;
+}

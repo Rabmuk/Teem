@@ -7,8 +7,6 @@
     <link rel="stylesheet" href="css/foundation.css" />
   </head>
   <body>
-<div class="row">
-  <div class="large-12 columns">
  
     <!-- Navigation -->
       <nav class="top-bar">
@@ -35,16 +33,15 @@
  
     <!-- End Navigation -->
   
-    </div>
-  </div>
+
  
  
-  <div class="row">
-    <div class="large-12 columns">
+
+
  
     <!-- Desktop Slider -->
  
-      <div class="hide-for-small" style="height:400px;width:100%;border:2px solid red;">
+      <div class="fullwidth">
         <div id="featured">
               <p>yoyoyoyo</p>
           </div>
@@ -64,9 +61,7 @@
  
  
   <!-- End Mobile Header -->
- 
-    </div>
-  </div><br>
+  <br>
  
   <div class="row">
     <div class="large-12 columns">
