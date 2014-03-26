@@ -59,6 +59,7 @@ if (isset($_SESSION['email']) && isset($_POST['logout']) && $_POST['logout'] == 
   <form method="post" action="login.php">
     <input name="logout" type="submit" value="Logout" />
   </form>
+  <a href="checklogin.php">check page</a>
   <?php else: ?>
   <h1>Login</h1>
   <?php if (isset($err)) echo "<p>$err</p>" ?>
