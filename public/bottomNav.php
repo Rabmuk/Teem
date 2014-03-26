@@ -1,3 +1,5 @@
+<!-- This is the header navigation for pages when a user is logged in. --> 
+
 <?php
 ?>
 
