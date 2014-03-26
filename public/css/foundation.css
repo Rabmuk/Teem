@@ -6442,3 +6442,8 @@ hr {
   color: #3399CC;
   height: 5px;
 }
+
+img[src="img/clock.png"] {
+  width: 40px;
+  height: 40px;
+}
