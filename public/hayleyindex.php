@@ -41,11 +41,11 @@
  
     <!-- Desktop Slider -->
  
-      <div class="fullwidth">
-        <div id="featured">
-              <p>yoyoyoyo</p>
-          </div>
-        </div>
+      <div class="fullwidth text-center">
+        <h1 class = "indexhead">Teem</h1>
+        <h4 class = "indexsub">Schedule a meeting, divvy up tasks, and get together.</h3>
+
+      </div>
  
     <!-- End Desktop  -->
  
