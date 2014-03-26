@@ -6376,13 +6376,20 @@ th.hide-for-touch {
 
 .fullwidth {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> c4f6d922c9f49d4020007c19a63eed076fbc8515
   left: 0;
   right: 0;
 }
 
+<<<<<<< HEAD
 .fullwidthindexdiv{
 >>>>>>> 2f3c1fd7a3091d0ca2c7c1cc33d2531dd3de74fd
+=======
+#fullwidthindexdiv{
+>>>>>>> c4f6d922c9f49d4020007c19a63eed076fbc8515
   left: 0;
   right: 0;
   height:450px;
