@@ -3,12 +3,12 @@
 <?php
 ?>
 
-  <footer class="row">
+  <footer class="row footer">
     <div class="large-12 columns">
       <hr />
-      <div class="row">
+      <div class="row footer">
         
-        <div class="large-3 columns">
+        <div class="large-4 columns">
           <ul class="inline-list">
              <li><a href="index.php">Home</a></li>
              <li><a href="faq.php">FAQ</a></li>
@@ -18,11 +18,9 @@
           </ul> 
         </div>
 
-        <div class="large-9 columns">
+        <div class="large-8 columns">
           <p>&copy; Team SnapChatRoulette</p>
         </div>
-
-
 
       </div>
     </div> 

@@ -6375,8 +6375,9 @@ th.hide-for-touch {
 /*Hayley Classes*/
 
 .fullwidth {
-  left: 0;
-  right: 0;
+  left:0;
+  right:0;
+  min-width:100%;
 }
 
 #fullwidthindexdiv{
@@ -6408,6 +6409,25 @@ th.hide-for-touch {
   left: 50%;
   margin-left: -400px;
 }
+
+
+.header{
+  left:0;
+  right:0;
+  min-width:100%;
+  border: 2px #3399CC solid;
+  padding: 5px;
+}
+
+.footer{
+  left:0;
+  right:0;
+  min-width:100%;
+  border: 2px #3399CC solid;
+  padding: 5px;
+}
+
+
 /*--------------------------------------------*/
 /*My Profile CSS*/
 
@@ -6420,8 +6440,7 @@ th.hide-for-touch {
 .boxcolumn{
   height: 450px;
   overflow-y: scroll;
-  border: 2px #3399CC solid;
-  padding: 5px;
+  border: 2px purple solid;
 }
 
 .profileHeader {
@@ -6444,6 +6463,13 @@ hr {
 }
 
 img[src="img/clock.png"] {
+<<<<<<< HEAD
   width: 35px;
   height: 35px;
 }
+=======
+  width: 40px;
+  height: 40px;
+>>>>>>> 65964204eea2fd8d59f854fdcaaadbf3f7c73894
+}
+>>>>>>> ad4f68e36fa7608f5bb5982cb4a55085fd2dbc3f
