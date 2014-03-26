@@ -6375,7 +6375,6 @@ th.hide-for-touch {
 /*Hayley Classes*/
 
 .fullwidth {
-  position: 
   left: 0;
   right: 0;
   height:450px;
@@ -6402,4 +6401,8 @@ th.hide-for-touch {
   max-width: 800px;
   left: 50%;
   margin-left: -400px;
+}
+
+.myProfile {
+  font-size: 30px;
 }
