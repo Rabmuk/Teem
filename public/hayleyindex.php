@@ -29,18 +29,7 @@
             <li><a href="#">Link 1</a></li>
             <li><a href="#">Link 2</a></li>
           </ul>
- 
-          <ul class="right">
-            <li class="search">
-              <form>
-                <input type="search">
-              </form>
-            </li>
- 
-            <li class="has-button">
-              <a class="small button" href="#">Search</a>
-            </li>
-          </ul>
+
         </section>
       </nav>
  
@@ -57,13 +46,13 @@
  
       <div class="hide-for-small">
         <div id="featured">
-              <img src="http://placehold.it/1000x400&text=Slide Image" alt="slide image">
+              <img src="http://placehold.it/1000x400&text=Video background" alt="slide image">
               <!-- <img src="http://placehold.it/1000x400&text=Slide Image" alt="slide image">
               <img src="http://placehold.it/1000x400&text=Slide Image" alt="slide image"> -->
           </div>
         </div>
  
-    <!-- End Desktop Slider -->
+    <!-- End Desktop  -->
  
  
     <!-- Mobile Header -->
@@ -88,23 +77,19 @@
     <!-- Thumbnails -->
  
         <div class="large-3 small-6 columns">
-          <img src="http://placehold.it/250x250&text=Thumbnail" />
-          <h6 class="panel">Description</h6>
+          <!--empty-->
         </div>
  
         <div class="large-3 small-6 columns">
-          <img src="http://placehold.it/250x250&text=Thumbnail" />
-          <h6 class="panel">Description</h6>
+          <a href="#" class="button">Sign Up</a>
         </div>
  
         <div class="large-3 small-6 columns">
-          <img src="http://placehold.it/250x250&text=Thumbnail" />
-          <h6 class="panel">Description</h6>
+          <a href="#" class="button">Log In</a>
         </div>
  
         <div class="large-3 small-6 columns">
-          <img src="http://placehold.it/250x250&text=Thumbnail" />
-          <h6 class="panel">Description</h6>
+          <!--empty-->
         </div>
  
     <!-- End Thumbnails -->
