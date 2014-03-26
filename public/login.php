@@ -27,24 +27,24 @@ if (isset($_POST['login']) && $_POST['login'] == 'Login') {
   }
 }
 
-// Logout
-if (isset($_SESSION['email']) && isset($_POST['logout']) && $_POST['logout'] == 'Logout') {
+// // Logout
+// if (isset($_SESSION['email']) && isset($_POST['logout']) && $_POST['logout'] == 'Logout') {
   
-  $_SESSION = array();
+//   $_SESSION = array();
 
-  // If it's desired to kill the session, also delete the session cookie.
-  // Note: This will destroy the session, and not just the session data!
-  if (ini_get("session.use_cookies")) {
-      $params = session_get_cookie_params();
-      setcookie(session_name(), '', time() - 42000,
-          $params["path"], $params["domain"],
-          $params["secure"], $params["httponly"]
-      );
-  }
-  session_destroy();
+//   // If it's desired to kill the session, also delete the session cookie.
+//   // Note: This will destroy the session, and not just the session data!
+//   if (ini_get("session.use_cookies")) {
+//       $params = session_get_cookie_params();
+//       setcookie(session_name(), '', time() - 42000,
+//           $params["path"], $params["domain"],
+//           $params["secure"], $params["httponly"]
+//       );
+//   }
+//   session_destroy();
 
-  $err = 'You have been logged out.';
-}
+//   $err = 'You have been logged out.';
+// }
 
 ?>
 
