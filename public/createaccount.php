@@ -1,4 +1,7 @@
-<?php require_once "../database/init.php"; ?>
+<?php 
+require_once "../database/init.php"; 
+require_once "classes/user.php";
+?>
 
 <?php 
 
@@ -20,8 +23,9 @@
         $salted = hash('sha256', $salt . $_POST['pass']);
         
         // Store the salt with the password, so we can apply it again and check the result
-        $stmt = $db->prepare("INSERT INTO users (email, password, salt) VALUES (:email, :pass, :salt)");
-        $stmt->execute(array(':email' => $_POST['email'], ':pass' => $salted, ':salt' => $salt));
+        // $stmt = $db->prepare("INSERT INTO users (email, password, salt) VALUES (:email, :pass, :salt)");
+        // $stmt->execute(array(':email' => $_POST['email'], ':pass' => $salted, ':salt' => $salt));
+        addUserToDatabase($_POST['email'], $salted, $salt, "", "");
         $msg = "Account created.";
       }
     }else{
