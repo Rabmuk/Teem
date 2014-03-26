@@ -6377,10 +6377,16 @@ th.hide-for-touch {
 .fullwidth {
   left: 0;
   right: 0;
+}
+
+.fullwidthindexdiv{
+  left: 0;
+  right: 0;
   height:450px;
   border:2px solid red;
   background-color: purple;
 }
+
 
 .indexhead{
   position:relative;

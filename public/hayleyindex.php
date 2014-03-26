@@ -41,10 +41,9 @@
  
     <!-- Desktop Slider -->
  
-      <div class="fullwidth text-center">
+      <div class="fullwidthindexdiv text-center">
         <h1 class = "indexhead">Teem</h1>
         <h4 class = "indexsub">Schedule a meeting, divvy up tasks, and get together.</h3>
-
       </div>
  
     <!-- End Desktop  -->
