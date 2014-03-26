@@ -1,8 +1,15 @@
 
-<?php
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>YO</title>
+    <link rel="stylesheet" href="css/foundation.css" />
+    <script src="js/vendor/modernizr.js"></script>
+  </head>
+  <body>
 
-require_once "./headerNav.php"; ?>
-  
 <div class="row">
   <div class="columns twelve">
     <h2>Twelve Columns</h2>
@@ -62,9 +69,7 @@ require_once "./headerNav.php"; ?>
   </div>
 </div>
 
- <?php
-
-require_once "./bottomNav.php"; ?>
+ </body>
     
   
 
