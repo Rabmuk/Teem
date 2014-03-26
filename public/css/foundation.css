@@ -6409,6 +6409,25 @@ th.hide-for-touch {
   left: 50%;
   margin-left: -400px;
 }
+
+
+.header{
+  left:0;
+  right:0;
+  min-width:100%;
+  border: 2px #3399CC solid;
+  padding: 5px;
+}
+
+.footer{
+  left:0;
+  right:0;
+  min-width:100%;
+  border: 2px #3399CC solid;
+  padding: 5px;
+}
+
+
 /*--------------------------------------------*/
 /*My Profile CSS*/
 
@@ -6421,17 +6440,7 @@ th.hide-for-touch {
 .boxcolumn{
   height: 450px;
   overflow-y: scroll;
-<<<<<<< HEAD
   border: 2px purple solid;
-}
-
-.header{
-  left:0;
-  right:0;
-  min-width:100%;
-=======
-  border: 2px #3399CC solid;
-  padding: 5px;
 }
 
 .profileHeader {

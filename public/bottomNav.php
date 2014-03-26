@@ -3,10 +3,10 @@
 <?php
 ?>
 
-  <footer class="row fullwidth">
+  <footer class="row footer">
     <div class="large-12 columns">
       <hr />
-      <div class="row fullwidth">
+      <div class="row footer">
         
         <div class="large-4 columns">
           <ul class="inline-list">
