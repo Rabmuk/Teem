@@ -26,6 +26,7 @@
 		<div class="row">
 			<div class="large-6 columns">
 				<div id="myProfile">
+					<p>test</p>
 				</div>
 			</div>
 			<div class="large-6 columns">

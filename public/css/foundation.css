@@ -6419,6 +6419,8 @@ th.hide-for-touch {
   margin-left: -400px;
 }
 
-.myProfile {
-  font-size: 30px;
+#myProfile {
+  border: 2px #000 solid;
+  width: 100%;
+  height: 400px;
 }
