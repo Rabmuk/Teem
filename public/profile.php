@@ -38,6 +38,14 @@
 			<div class="large-6 columns">
 				<div class="boxcolumn">
 					<h2 class="profileHeader">Upcoming Meetings</h2>
+					<h3 class="teamTitle">Wednesay, March 26th</h3>
+					<div class="row">
+						<div class="large-2 columns">
+							<img src="img/clock.png"></img>
+						</div>
+						<div class="large-10 columns">
+							<h3>3:00 PM - SnapChatRoulette</h3>
+						</div>
 			</div>
 	</div>
 </body>
