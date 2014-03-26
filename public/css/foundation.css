@@ -6375,12 +6375,21 @@ th.hide-for-touch {
 /*Hayley Classes*/
 
 .fullwidth {
+<<<<<<< HEAD
+=======
+  left: 0;
+  right: 0;
+}
+
+.fullwidthindexdiv{
+>>>>>>> 2f3c1fd7a3091d0ca2c7c1cc33d2531dd3de74fd
   left: 0;
   right: 0;
   height:450px;
   border:2px solid red;
   background-color: purple;
 }
+
 
 .indexhead{
   position:relative;

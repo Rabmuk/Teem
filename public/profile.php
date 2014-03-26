@@ -13,13 +13,24 @@
 <body>
 	<div class="fullwidth">
 		<div class="row">
-			<div class="medium-9 columns">
-				<h1 class="myProfile">Welcome</h1>
+			<div class="large-6 columns">
+				<h1 class="myProfile">Welcome, User!</h1>
 			</div>
-			<div class="medium-3 columns">
-				Welcome
+			<div class="large-3 columns">
+				<a href="#" class="button expand">(+) Create a Group</a>
+			</div>
+			<div class="large-3 columns">
+				<a href="#" class="button expand">(+) Create a Meeting</a>
 			</div>
 		</div>
+		<div class="row">
+			<div class="large-6 columns">
+				<div id="myProfile">
+				</div>
+			</div>
+			<div class="large-6 columns">
+				<div id="myMeetings">
+			</div>
 	</div>
 </body>
 </html>
