@@ -1,8 +1,4 @@
-
-<?php
-
-require_once "./headerNav.php"; ?>
-  
+<!doctype = html>
 <div class="row">
   <div class="three columns">
     <h3>Three Columns</h3>
@@ -25,9 +21,6 @@ require_once "./headerNav.php"; ?>
   </div>
 </div>
 
- <?php
-
-require_once "./bottomNav.php"; ?>
     
   
 
