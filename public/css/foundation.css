@@ -6416,7 +6416,7 @@ th.hide-for-touch {
   right:0;
   min-width:100%;
   border: 2px #3399CC solid;
-  padding: 5px;
+  background-color: #D6ADFF;
 }
 
 .footer{
@@ -6424,7 +6424,9 @@ th.hide-for-touch {
   right:0;
   min-width:100%;
   border: 2px #3399CC solid;
-  padding: 5px;
+  position:absolute;
+  bottom:0px;
+  background-color: #D6ADFF;
 }
 
 

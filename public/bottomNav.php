@@ -4,10 +4,6 @@
 ?>
 
   <footer class="row footer">
-    <div class="large-12 columns">
-      <hr />
-      <div class="row footer">
-        
         <div class="large-4 columns">
           <ul class="inline-list">
              <li><a href="index.php">Home</a></li>
@@ -18,12 +14,10 @@
           </ul> 
         </div>
 
-        <div class="large-8 columns">
+        <div class="inline right">
           <p>&copy; Team SnapChatRoulette</p>
         </div>
 
-      </div>
-    </div> 
   </footer>
 
   </body>
