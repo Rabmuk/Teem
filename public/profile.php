@@ -44,10 +44,13 @@
 							<img src="img/clock.png"></img>
 						</div>
 						<div class="large-10 columns">
-							<h3>3:00 PM - SnapChatRoulette</h3>
+							<h4>3:00 PM - SnapchatRoulette</h4>
 						</div>
+						<hr>
+					</div>
+				</div>
 			</div>
-	</div>
+		</div>
 </body>
 </html>
 <?php
