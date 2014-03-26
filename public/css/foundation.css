@@ -6416,4 +6416,5 @@ th.hide-for-touch {
 .boxcolumn{
   height: 600px;
   overflow-y: scroll;
+  border: 2px purple solid;
 }
