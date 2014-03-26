@@ -6375,8 +6375,9 @@ th.hide-for-touch {
 /*Hayley Classes*/
 
 .fullwidth {
-  left: 0;
-  right: 0;
+  left:0;
+  right:0;
+  min-width:100%;
 }
 
 #fullwidthindexdiv{
@@ -6419,4 +6420,10 @@ th.hide-for-touch {
   height: 450px;
   overflow-y: scroll;
   border: 2px purple solid;
+}
+
+.header{
+  left:0;
+  right:0;
+  min-width:100%;
 }
