@@ -78,6 +78,7 @@
  
         <div class="large-3 small-6 columns">
           <!--empty-->
+          <p>yo</p>
         </div>
  
         <div class="large-3 small-6 columns">
@@ -90,6 +91,7 @@
  
         <div class="large-3 small-6 columns">
           <!--empty-->
+          <p>yo</p>
         </div>
  
     <!-- End Thumbnails -->
