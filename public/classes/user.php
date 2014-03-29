@@ -24,7 +24,7 @@ class User{
   }
 
   public function exists(){
-    return !empty($this->user_id);
+    return $this->user_id >= 0;
   }
 
   public function getID(){
