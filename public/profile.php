@@ -9,6 +9,7 @@
 	<meta charset="utf-8" />
     <title>My Profile - Home</title>
     <link rel="stylesheet" href="css/foundation.css" />
+    <link rel="stylesheet" href="css/profile.css" />
 </head>
 <body>
 	<div>
@@ -17,10 +18,10 @@
 				<h1 class="myProfile">Welcome, User!</h1>
 			</div>
 			<div class="large-3 columns">
-				<a href="#" class="button small expand">(+) Create a Group</a>
+				<a href="creategroup.php" class="button small expand">(+) Create a Group</a>
 			</div>
 			<div class="large-3 columns">
-				<a href="#" class="button small expand">(+) Create a Meeting</a>
+				<a href="createmeeting.php" class="button small expand">(+) Create a Meeting</a>
 			</div>
 		</div>
 		<div class="row">
