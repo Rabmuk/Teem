@@ -41,7 +41,7 @@
 	          <label for="email" class="right inline">E-mail</label>
 	        </div>
 	        <div class="small-9 columns">
-	          <input type="text" id="email" placeholder="Enter E-mail">
+	          <input type="email" id="email" placeholder="Enter E-mail">
 	        </div>
 	     </div>
 	     <div class="row">
