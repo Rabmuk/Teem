@@ -1,0 +1,12 @@
+h1 {
+	color: #009999;
+}
+
+label {
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	font-size: 18px;
+}
+
+input[type="submit"] {
+	background-color: #009999;
+}
