@@ -45,7 +45,7 @@ require_once "./headerNav.php"; ?>
         <li><a href="profile.php">Profile</a></li>
         <li><a href="createaccount.php">Create Account</a></li>
         <li><a href="hayleyindex.php">Hayley Index</a></li>
-        <li><a href="#">Section 4</a></li>
+        <li><a href="about.php">About</a></li>
         <li><a href="#">Section 5</a></li>
         <li><a href="#">Section 6</a></li>
       </ul>
