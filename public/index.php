@@ -1,8 +1,4 @@
-
-
-
-   
- <?php
+<?php
 
 require_once "./headerNav.php"; ?>
   
