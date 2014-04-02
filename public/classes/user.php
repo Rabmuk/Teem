@@ -8,7 +8,7 @@ class User{
   private $lastName = "";
   private $groups = array();
 
-  public function __constructor($param){
+  public function __construct($param){
     global $db;
     if (gettype($param) == "integer") {
       $query = $db->prepare(
@@ -35,7 +35,6 @@ class User{
       $this->firstName = $user->firstName;
       $this->lastName = $user->lastName;
     }
-    
   }
 
   public function exists(){
@@ -63,7 +62,7 @@ class User{
 //assume that the email is unique
 function addUserToDatabase($email, $password, $salt, $firstName, $lastName){
   global $db;
-
+  
   $query = $db->prepare(
     "INSERT INTO `users` (`email`, `password`, `salt`, `firstName`, `lastName`)
     VALUES (:email, :password, :salt, :firstName, :lastName)"
@@ -76,13 +75,12 @@ function addUserToDatabase($email, $password, $salt, $firstName, $lastName){
     ":lastName" => $lastName
     ));
 
-  $query = $db->prepare(
-      "SELECT `user_id` FROM `users` WHERE `email` = :email"
-      );
-    $query->execute(array(":email" => $email));
-    $user = $query->fetch();
-
-  return new User($user->user_id);
+  // $query = $db->prepare(
+  //  "SELECT `user_id` FROM `users` WHERE `email` = :email"
+  // );
+  // $query->execute(array(":email" => $email));
+  // $user = $query->fetch();
+  return new User($email);
 }
 
 ?>
