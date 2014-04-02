@@ -6386,7 +6386,6 @@ th.hide-for-touch {
   top:0;
   height:450px;
   border:none;
-  background-color: purple;
   padding-top:110px;
 }
 
@@ -6408,7 +6407,6 @@ th.hide-for-touch {
   padding:5px;
 }
 
-
 .header{
   left:0;
   right:0;
@@ -6428,4 +6426,8 @@ th.hide-for-touch {
   border: 2px #3399CC solid;
   bottom:0px;
   background-color: #D6ADFF;
+}
+
+#wrapper{
+  height:100%;
 }

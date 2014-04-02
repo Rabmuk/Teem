@@ -5,9 +5,24 @@
     <meta charset="utf-8" />
     <title>YO</title>
     <link rel="stylesheet" href="css/foundation.css" />
+    <script src="http://code.jquery.com/jquery-latest.min.js"
+        type="text/javascript"></script>
+<script type="text/javascript" charset="utf-8" src="js/jquery.tubular.1.0.js"></script>
+  
+<script>
+$('document').ready(function() {
+  var options = { videoId: 'f-UGhWj1xww', start: 3 };
+  $('#wrapper').tubular(options);
+  // f-UGhWj1xww cool sepia hd
+  // 49SKbS7Xwf4 beautiful barn sepia
+});
+</script>
+
+
+
   </head>
   <body>
-<wrapper>
+<div id='wrapper'>
  
     <!-- Desktop Slider -->
 
@@ -75,9 +90,6 @@
   require_once "./bottomNav.php";
 
 ?>
-</wrapper>
+</div>
  </body>
     
-  
-
-
