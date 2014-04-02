@@ -48,17 +48,18 @@ require_once "classes/user.php";
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Create an account</title>
         <link rel="stylesheet" href="css/foundation.css">
+        <link rel="stylesheet" href="css/createaccount.css">
 
     </head>
     <body>
 
         <row class="large-9 push-3 columns">
           <!-- Left panel with cute intro sentence -->
-          <div class="large-6 columns">
+          <div class="large-6 columns" id="leftSide">
             <div id="introSentence">
-              <h1>We want your agendas to be as DYNAMIC as your meetings</h1>
+              <h1>We want your agendas to be as DYNAMIC as your meetings.</h1>
             </div>
-
+            <br>
             <h2>Create an account today!</h2>
           </div>
 
@@ -106,10 +107,10 @@ require_once "classes/user.php";
                   </label>
                 </div>
               </div>
-
-
-
+              <a href="#" class="button">Submit</a>
             </form>
+
+            
           </div> 
         </row>
     </body>
