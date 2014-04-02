@@ -53,12 +53,19 @@ require_once "classes/user.php";
     </head>
     <body>
 
+        <!-- Entire page fits same sizing as rest of website -->
         <row class="large-9 push-3 columns">
+          
+
           <!-- Left panel with cute intro sentence -->
           <div class="large-6 columns" id="leftSide">
             <div id="introSentence">
-              <h1>We want your agendas to be as DYNAMIC as your meetings.</h1>
+              <br>
+              <!-- Sorry for the inline styling, but I wanted it to be a diferent color. -->
+              <h1>We want your agendas to be as <span style="color:purple;">DYNAMIC</span> as your meetings.</h1>
             </div>
+            <!-- Line spacing between the two sentences -->
+            <br>
             <br>
             <h2>Create an account today!</h2>
           </div>
@@ -66,8 +73,7 @@ require_once "classes/user.php";
          <!--  Right side form -->
           <div class ="large-6 columns"> 
             <form>
-              
-
+              <!-- First name input -->
               <div class="row">
                 <div class ="large-6 columns">
                   <label>First name
@@ -75,7 +81,7 @@ require_once "classes/user.php";
                   </label>
                 </div>
               </div>
-
+              <!-- Last name input -->
               <div class="row">
                 <div class ="large-6 columns">
                   <label>Last name
@@ -83,7 +89,7 @@ require_once "classes/user.php";
                   </label>
                 </div>
               </div>
-
+              <!-- Email address -->
               <div class="row">
                 <div class ="large-6 columns">
                   <label>Email
@@ -91,7 +97,7 @@ require_once "classes/user.php";
                   </label>
                 </div>
               </div>
-
+              <!-- Password -->
               <div class="row">
                 <div class ="large-6 columns">
                   <label>Password
@@ -99,7 +105,7 @@ require_once "classes/user.php";
                   </label>
                 </div>
               </div>
-
+              <!-- Confirm password -->
               <div class="row">
                 <div class ="large-6 columns">
                   <label>Confirm password
@@ -109,10 +115,10 @@ require_once "classes/user.php";
               </div>
               <a href="#" class="button">Submit</a>
             </form>
-
-            
           </div> 
         </row>
+    
+
     </body>
 </html>
 

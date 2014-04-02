@@ -6,7 +6,18 @@
 
 require_once "./headerNav.php"; ?>
   
-  
+  <html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Index</title>
+        <link rel="stylesheet" href="css/foundation.css">
+
+
+    </head>
+
+
   <div class="row">    
     
     <!-- Main Content Section -->
@@ -33,7 +44,7 @@ require_once "./headerNav.php"; ?>
       <ul class="side-nav">
         <li><a href="profile.php">Profile</a></li>
         <li><a href="createaccount.php">Create Account</a></li>
-        <li><a href="#">Section 3</a></li>
+        <li><a href="hayleyindex.php">Hayley Index</a></li>
         <li><a href="#">Section 4</a></li>
         <li><a href="#">Section 5</a></li>
         <li><a href="#">Section 6</a></li>
