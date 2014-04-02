@@ -1,3 +1,8 @@
+<?php 
+require_once "../database/init.php"; 
+require_once "classes/user.php";
+?>
+
 <!doctype HTML>
 <html class="no-js" lang="en">
 <head>
@@ -15,7 +20,7 @@
   
 	<form>
 	  <div class="row">
-	    <div class="small-8">
+	    <div class="small-12 large-12 columns">
 	      <div class="row">
 	        <div class="small-3 columns">
 	          <label for="title" class="right inline">Title</label>
@@ -56,23 +61,34 @@
 	          <input type="text" id="time" placeholder="Enter Time">
 	        </div>
 	      </div>
+        
 	      <div class="row">
-	        <div class="small-3 columns">
+	        <div class="small-3 large-3 columns">
 	          <label for="attendees" class="right inline">Attendees</label>
 	        </div>
-	        <div class="small-9 columns">
+	        <div class="small-9 large-9 columns">
             <textarea type="text" id="attendees" rows="5" placeholder="Enter Individuals and Groups"></textarea>
-            <a href="#" type="search" class="button nice small radius"><img src="img/search.png"></img>Search</a>
 	        </div>
 	      </div>
+
+        <div>
+	     		<div class="small-10 large-6 small-centered large-centered columns">
+            <a href="#" type="search" class="button nice small radius"><img src="img/search.png"></img>Search</a>
+          </div>
+        </div>
+        
 	      <div class="row">
-	     		<div class="small-9 columns"></div>
-	     		<div class="small-3 columns">
-	     			<input type="submit" class="nice small radius button expand"></input>
+	     		<div class="small-10 large-6 small-centered large-centered columns">
+	     			<input type="submit" class="nice small radius button" value="Create!"></input>
 	     		</div>
 	      </div>
+        
 	    </div>
 	  </div>
 	</form>
 </body>
 </html>
+
+<?php
+  require_once "./bottomNav.php";
+?>
