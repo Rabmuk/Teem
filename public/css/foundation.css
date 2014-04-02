@@ -3040,7 +3040,7 @@ h1, h2, h3, h4, h5, h6 {
   font-style: normal;
   color: #222222;
   text-rendering: optimizeLegibility;
-  margin-top: 0.2rem;
+  /*margin-top: 0.2rem;*/
   margin-bottom: 0.5rem;
   line-height: 1.4; }
   h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
@@ -6383,31 +6383,29 @@ th.hide-for-touch {
 #fullwidthindexdiv{
   left: 0;
   right: 0;
+  top:0;
   height:450px;
-  border:2px solid red;
+  border:none;
   background-color: purple;
+  padding-top:100px;
 }
 
-
 .indexhead{
-  position:relative;
-  background-color: green;
+  background-color:rgba(255,255,255,.3);
   text-align: center;
-  width: 200px;
-  margin-top:150px;
-  margin-bottom: 20px;
-  left: 50%;
-  margin-left: -100px;
-
+  color:white;
+  width: 270px;
+  margin-bottom: 40px;
+  font-size:80px;
 }
 
 .indexsub{
-  position:relative;
-  background-color: green;
+  background-color:rgba(255,255,255,.3);
   text-align: center;
-  max-width: 800px;
+  max-width: 770px;
   left: 50%;
-  margin-left: -400px;
+  color:white;
+  padding:5px;
 }
 
 
@@ -6421,7 +6419,8 @@ th.hide-for-touch {
 }
 
 .footer{
-  margin-top: 58px;
+  position:fixed;
+  bottom:0;
   left:0;
   right:0;
   min-width:100%;

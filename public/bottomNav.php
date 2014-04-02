@@ -1,5 +1,6 @@
 <!-- This is the header navigation for pages when a user is logged in. --> 
-
+<!--ends wrapperYo-->
+</div>
 <?php
 ?>
 
