@@ -5,59 +5,59 @@
     <meta charset="utf-8" />
     <title>YO</title>
     <link rel="stylesheet" href="css/foundation.css" />
+<<<<<<< HEAD
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.js"></script>
     <script src="js/index.js" type="text/javascript"></script>
+=======
+    <script src="http://code.jquery.com/jquery-latest.min.js"
+        type="text/javascript"></script>
+<script type="text/javascript" charset="utf-8" src="js/jquery.tubular.1.0.js"></script>
+  
+<script>
+$('document').ready(function() {
+  var options = { videoId: 'deuhXlqHB9I', start: 3 };
+  $('#wrapper').tubular(options);
+  // f-UGhWj1xww cool sepia hd
+  // 49SKbS7Xwf4 beautiful barn sepia
+});
+</script>
+
+
+
+>>>>>>> b65f2828be2a13c8e7993f461943ca0e203a42a0
   </head>
   <body>
-
+<div id='wrapper'>
  
     <!-- Desktop Slider -->
 
       <div id = "fullwidthindexdiv" class="text-center">
-        <h1 class = "indexhead">Teem</h1>
-        <h4 class = "indexsub">Schedule a meeting, divvy up tasks, and get together.</h3>
+        <center><h1 class = "indexhead">Teem</h1>
+        <h4 class = "indexsub">Schedule a meeting, divvy up tasks, and get together.</h4><center>
       </div>
  
     <!-- End Desktop  -->
  
- 
-    <!-- Mobile Header -->
- 
-    <br>
-    <div class="row">
-      <div class="small-12 show-for-small"><br>
-        <img src="http://placehold.it/1000x600&text=For Small Screens" />
-      </div>
-    </div>
- 
- 
-  <!-- End Mobile Header -->
-  <br>
+  <br><br>
  
   <div class="row">
     <div class="large-12 columns">
       <div class="row">
  
     <!-- Thumbnails -->
- 
-        <div class="large-3 small-6 columns">
-          <!--empty-->
-          <p></p>
+         <div class="large-4 columns">
+          <p> </p>
         </div>
- 
-        <div class="large-3 small-6 columns">
+        <div class="large-2 columns">
           <a href="#" class="button expand">Sign Up</a>
         </div>
  
-        <div class="large-3 small-6 columns">
+        <div class="large-2 columns">
           <a href="#" class="button expand">Log In</a>
         </div>
- 
-        <div class="large-3 small-6 columns">
-          <!--empty-->
-          <p></p>
+         <div class="large-4 columns">
+          <p> </p>
         </div>
- 
     <!-- End Thumbnails -->
  
       </div>
@@ -80,31 +80,17 @@
  
       </div>
     </div>
+    <?php
+
+  require_once "./bottomNav.php";
+
+?>
+  <!--end wrapper-->
   </div>
  
     <!-- Footer -->
  
-  <footer class="row">
-    <div class="large-12 columns">
-      <hr>
-      <div class="row">
-        <div class="large-6 columns">
-          <p>&copy; Copyright no one at all. Go to town.</p>
-        </div>
-        <div class="large-6 columns">
-          <ul class="inline-list right">
-            <li><a href="#">Link 1</a></li>
-            <li><a href="#">Link 2</a></li>
-            <li><a href="#">Link 3</a></li>
-            <li><a href="#">Link 4</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </footer> 
 
+</div>
  </body>
     
-  
-
-

@@ -8,19 +8,34 @@ class User{
   private $lastName = "";
   private $groups = array();
 
-  public function __constructor($user_id){
+  public function __constructor($param){
     global $db;
-    $query = $db->prepare(
-      "SELECT `email`, `firstName`, `lastName` FROM `users` WHERE `user_id` = :user_id"
+    if (gettype($param) == "integer") {
+      $query = $db->prepare(
+        "SELECT `email`, `firstName`, `lastName` FROM `users` WHERE `user_id` = :user_id"
       );
-    $query->execute(array(":user_id" => $user_id));
-    $user = $query->fetch();
-    if (!$user) return;
+      $query->execute(array(":user_id" => $param));
+      $user = $query->fetch();
+      if (!$user) return;
 
-    $this->user_id = $user_id;
-    $this->email = $user->email;
-    $this->firstName = $user->firstName;
-    $this->lastName = $user->lastName;
+      $this->user_id = $user_id;
+      $this->email = $user->email;
+      $this->firstName = $user->firstName;
+      $this->lastName = $user->lastName;
+    }else if(gettype($param) == "string"){
+      $query = $db->prepare(
+        "SELECT `user_id`, `firstName`, `lastName` FROM `users` WHERE `email` = :email"
+      );
+      $query->execute(array(":email" => $param));
+      $user = $query->fetch();
+      if (!$user) return;
+
+      $this->user_id = $user->user_id;
+      $this->email = $param;
+      $this->firstName = $user->firstName;
+      $this->lastName = $user->lastName;
+    }
+    
   }
 
   public function exists(){

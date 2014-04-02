@@ -35,17 +35,95 @@ require_once "classes/user.php";
 
 ?>
 
+<!doctype html>
+
+<?php
+    require_once "./headerNav.php";
+?>
+
 <html>
-<head>
-  <title>make your acc</title>
-</head>
-<body>
-  <?php if (isset($msg)) echo "<p>$msg</p>" ?>
-  <form method="post" action="createaccount.php">
-    <label for="email">Email: </label><input type="text" name="email" />
-    <label for="pass">Password: </label><input type="password" name="pass" />
-    <label for="passconfirm">Confirm: </label><input type="password" name="passconfirm" />
-    <input type="submit" name="register" value="Register" />
-  </form>
-</body>
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Create an account</title>
+        <link rel="stylesheet" href="css/foundation.css">
+        <link rel="stylesheet" href="css/createaccount.css">
+
+    </head>
+    <body>
+
+        <!-- Entire page fits same sizing as rest of website -->
+        <row class="large-9 push-3 columns">
+          
+
+          <!-- Left panel with cute intro sentence -->
+          <div class="large-6 columns" id="leftSide">
+            <div id="introSentence">
+              <br>
+              <!-- Sorry for the inline styling, but I wanted it to be a diferent color. -->
+              <h1>We want your agendas to be as <span style="color:purple;">DYNAMIC</span> as your meetings.</h1>
+            </div>
+            <!-- Line spacing between the two sentences -->
+            <br>
+            <br>
+            <h2>Create an account today!</h2>
+          </div>
+
+         <!--  Right side form -->
+          <div class ="large-6 columns"> 
+            <form>
+              <!-- First name input -->
+              <div class="row">
+                <div class ="large-6 columns">
+                  <label>First name
+                    <input type="text" placeholder="First name" />
+                  </label>
+                </div>
+              </div>
+              <!-- Last name input -->
+              <div class="row">
+                <div class ="large-6 columns">
+                  <label>Last name
+                    <input type="text" placeholder="Last name" />
+                  </label>
+                </div>
+              </div>
+              <!-- Email address -->
+              <div class="row">
+                <div class ="large-6 columns">
+                  <label>Email
+                    <input type="text" placeholder="Email" />
+                  </label>
+                </div>
+              </div>
+              <!-- Password -->
+              <div class="row">
+                <div class ="large-6 columns">
+                  <label>Password
+                    <input type="password" placeholder="Password" />
+                  </label>
+                </div>
+              </div>
+              <!-- Confirm password -->
+              <div class="row">
+                <div class ="large-6 columns">
+                  <label>Confirm password
+                    <input type="password" placeholder="Confirm password" />
+                  </label>
+                </div>
+              </div>
+              <a href="#" class="button">Submit</a>
+            </form>
+          </div> 
+        </row>
+    
+
+    </body>
 </html>
+
+<?php
+
+  require_once "./bottomNav.php";
+
+?>
