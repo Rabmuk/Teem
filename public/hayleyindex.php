@@ -5,6 +5,8 @@
     <meta charset="utf-8" />
     <title>YO</title>
     <link rel="stylesheet" href="css/foundation.css" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.js"></script>
+    <script src="js/index.js" type="text/javascript"></script>
   </head>
   <body>
 
