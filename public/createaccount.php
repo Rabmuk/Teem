@@ -3,8 +3,7 @@ require_once "../database/init.php";
 require_once "classes/user.php";
 ?>
 
-<?php 
-
+<?php
   if (isset($_POST['register']) && $_POST['register'] == "Register") {
     $uniqueEmail = $db->prepare('SELECT email FROM users WHERE email=:email');
     $uniqueEmail->execute(array(':email' => $_POST['email']));
@@ -17,16 +16,18 @@ require_once "classes/user.php";
         $msg = "Passwords must match";
       }else{
         // Generate random salt
-        $salt = hash('sha256', uniqid(mt_rand(), true));      
+        $salt = hash('sha256', uniqid(mt_rand(), true));
 
         // Apply salt before hashing
         $salted = hash('sha256', $salt . $_POST['pass']);
-        
-        // Store the salt with the password, so we can apply it again and check the result
-        // $stmt = $db->prepare("INSERT INTO users (email, password, salt) VALUES (:email, :pass, :salt)");
-        // $stmt->execute(array(':email' => $_POST['email'], ':pass' => $salted, ':salt' => $salt));
-        addUserToDatabase($_POST['email'], $salted, $salt, "", "");
-        $msg = "Account created.";
+  
+        $user = addUserToDatabase($_POST['email'], $salted, $salt, $_POST['fName'], $_POST['lName']);
+        if ($user->exists()) {
+          $msg = 'Account created! <a href="login.php">Login Here</a>';  
+        }
+        else{
+          $msg = 'An error has occured, please try again.';   
+        }
       }
     }else{
       $msg = "That email is already in use";
@@ -62,7 +63,15 @@ require_once "classes/user.php";
             <div id="introSentence">
               <br>
               <!-- Sorry for the inline styling, but I wanted it to be a diferent color. -->
-              <h1>We want your agendas to be as <span style="color:purple;">DYNAMIC</span> as your meetings.</h1>
+              <h1>
+              <?php if (isset($msg)) {
+                echo $msg;  
+              }else{
+               echo 'We want your agendas to be as <span style="color:purple;">DYNAMIC</span> as your meetings.';
+              }
+
+              ?>
+              </h1>
             </div>
             <!-- Line spacing between the two sentences -->
             <br>
@@ -72,12 +81,12 @@ require_once "classes/user.php";
 
          <!--  Right side form -->
           <div class ="large-6 columns"> 
-            <form>
+            <form method="post" action="createaccount.php">
               <!-- First name input -->
               <div class="row">
                 <div class ="large-6 columns">
                   <label>First name
-                    <input type="text" placeholder="First name" />
+                    <input type="text" placeholder="First name" name="fName" />
                   </label>
                 </div>
               </div>
@@ -85,7 +94,7 @@ require_once "classes/user.php";
               <div class="row">
                 <div class ="large-6 columns">
                   <label>Last name
-                    <input type="text" placeholder="Last name" />
+                    <input type="text" placeholder="Last name" name="lName" />
                   </label>
                 </div>
               </div>
@@ -93,7 +102,7 @@ require_once "classes/user.php";
               <div class="row">
                 <div class ="large-6 columns">
                   <label>Email
-                    <input type="text" placeholder="Email" />
+                    <input type="text" placeholder="Email" name="email" />
                   </label>
                 </div>
               </div>
@@ -101,7 +110,7 @@ require_once "classes/user.php";
               <div class="row">
                 <div class ="large-6 columns">
                   <label>Password
-                    <input type="password" placeholder="Password" />
+                    <input type="password" placeholder="Password" name="pass" />
                   </label>
                 </div>
               </div>
@@ -109,11 +118,11 @@ require_once "classes/user.php";
               <div class="row">
                 <div class ="large-6 columns">
                   <label>Confirm password
-                    <input type="password" placeholder="Confirm password" />
+                    <input type="password" placeholder="Confirm password" name="passconfirm" />
                   </label>
                 </div>
               </div>
-              <a href="#" class="button">Submit</a>
+              <input type="submit" name="register" value="Register" />
             </form>
           </div> 
         </row>
