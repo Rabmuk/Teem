@@ -6390,7 +6390,7 @@ th.hide-for-touch {
 }
 
 .indexhead{
-  background-color:rgba(0,0,0,.3);
+  background-color:rgba(0,0,0,.2);
   text-align: center;
   color:white;
   width: 270px;
@@ -6399,7 +6399,7 @@ th.hide-for-touch {
 }
 
 .indexsub{
-  background-color:rgba(0,0,0,.3);
+  background-color:rgba(0,0,0,.2);
   text-align: center;
   max-width: 770px;
   left: 50%;

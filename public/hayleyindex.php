@@ -11,7 +11,7 @@
   
 <script>
 $('document').ready(function() {
-  var options = { videoId: 'f-UGhWj1xww', start: 3 };
+  var options = { videoId: 'deuhXlqHB9I', start: 3 };
   $('#wrapper').tubular(options);
   // f-UGhWj1xww cool sepia hd
   // 49SKbS7Xwf4 beautiful barn sepia
@@ -40,25 +40,19 @@ $('document').ready(function() {
       <div class="row">
  
     <!-- Thumbnails -->
- 
-        <div class="large-3 small-6 columns">
-          <!--empty-->
-          <p></p>
+         <div class="large-4 columns">
+          <p> </p>
         </div>
- 
-        <div class="large-3 small-6 columns">
+        <div class="large-2 columns">
           <a href="#" class="button expand">Sign Up</a>
         </div>
  
-        <div class="large-3 small-6 columns">
+        <div class="large-2 columns">
           <a href="#" class="button expand">Log In</a>
         </div>
- 
-        <div class="large-3 small-6 columns">
-          <!--empty-->
-          <p></p>
+         <div class="large-4 columns">
+          <p> </p>
         </div>
- 
     <!-- End Thumbnails -->
  
       </div>
@@ -81,15 +75,17 @@ $('document').ready(function() {
  
       </div>
     </div>
-  </div>
- 
-    <!-- Footer -->
- 
-<?php
+    <?php
 
   require_once "./bottomNav.php";
 
 ?>
+  <!--end wrapper-->
+  </div>
+ 
+    <!-- Footer -->
+ 
+
 </div>
  </body>
     
