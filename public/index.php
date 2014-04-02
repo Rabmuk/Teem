@@ -32,7 +32,7 @@ require_once "./headerNav.php"; ?>
         
       <ul class="side-nav">
         <li><a href="profile.php">Profile</a></li>
-        <li><a href="#">Section 2</a></li>
+        <li><a href="createaccount.php">Create Account</a></li>
         <li><a href="#">Section 3</a></li>
         <li><a href="#">Section 4</a></li>
         <li><a href="#">Section 5</a></li>

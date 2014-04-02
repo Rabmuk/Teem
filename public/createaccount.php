@@ -35,17 +35,88 @@ require_once "classes/user.php";
 
 ?>
 
+<!doctype html>
+
+<?php
+    require_once "./headerNav.php";
+?>
+
 <html>
-<head>
-  <title>make your acc</title>
-</head>
-<body>
-  <?php if (isset($msg)) echo "<p>$msg</p>" ?>
-  <form method="post" action="createaccount.php">
-    <label for="email">Email: </label><input type="text" name="email" />
-    <label for="pass">Password: </label><input type="password" name="pass" />
-    <label for="passconfirm">Confirm: </label><input type="password" name="passconfirm" />
-    <input type="submit" name="register" value="Register" />
-  </form>
-</body>
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Create an account</title>
+        <link rel="stylesheet" href="css/foundation.css">
+
+    </head>
+    <body>
+
+        <row class="large-9 push-3 columns">
+          <!-- Left panel with cute intro sentence -->
+          <div class="large-6 columns">
+            <div id="introSentence">
+              <h1>We want your agendas to be as DYNAMIC as your meetings</h1>
+            </div>
+
+            <h2>Create an account today!</h2>
+          </div>
+
+         <!--  Right side form -->
+          <div class ="large-6 columns"> 
+            <form>
+              
+
+              <div class="row">
+                <div class ="large-6 columns">
+                  <label>First name
+                    <input type="text" placeholder="First name" />
+                  </label>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class ="large-6 columns">
+                  <label>Last name
+                    <input type="text" placeholder="Last name" />
+                  </label>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class ="large-6 columns">
+                  <label>Email
+                    <input type="text" placeholder="Email" />
+                  </label>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class ="large-6 columns">
+                  <label>Password
+                    <input type="password" placeholder="Password" />
+                  </label>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class ="large-6 columns">
+                  <label>Confirm password
+                    <input type="password" placeholder="Confirm password" />
+                  </label>
+                </div>
+              </div>
+
+
+
+            </form>
+          </div> 
+        </row>
+    </body>
 </html>
+
+<?php
+
+  require_once "./bottomNav.php";
+
+?>

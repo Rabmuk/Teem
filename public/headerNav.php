@@ -8,6 +8,8 @@
     <div class="large-3 columns">
       <h1><img src="http://placehold.it/400x75&text=Logo" /></h1>
     </div>
+    
+
     <div class="large-9 columns">
       <ul class="inline-list right">
         <li><a href="index.php">Home</a></li>
