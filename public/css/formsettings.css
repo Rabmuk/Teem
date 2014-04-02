@@ -1,0 +1,16 @@
+h2 {
+	color: #009999;
+}
+
+label {
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	font-size: 18px;
+}
+
+button nice small radius {
+	background-color: #009999;
+}
+
+input[type="submit"] {
+	background-color: #009999;
+}
