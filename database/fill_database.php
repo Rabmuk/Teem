@@ -1,19 +1,25 @@
 <?php
-require_once "config.php";
-require_once "init.php";
+require_once 'config.php';
 
-try{
-	$sql = "INSERT INTO users ( user_id, password, email ) VALUES ( :userid, :password, :email )";
-	$query = $db->prepare( $sql );
-	$query->execute( array( ':username'=>'1', ':password'=>'password', ':email'=>'example@rpi.edu' ) );
-	$query->execute( array( ':username'=>'2', ':password'=>'password2', ':email'=>'bobr4@rpi.edu' ) );
-	$query->execute( array( ':username'=>'3', ':password'=>'password3', ':email'=>'like23@rpi.edu' ) );
-	$query->execute( array( ':username'=>'4', ':password'=>'password4', ':email'=>'miney4@rpi.edu' ) );
-	$query->execute( array( ':username'=>'5', ':password'=>'password5', ':email'=>'jerry5@rpi.edu' ) );
-	$query->execute( array( ':username'=>'6', ':password'=>'password6', ':email'=>'cashmoney@rpi.edu' ) );
-	$query->execute( array( ':username'=>'7', ':password'=>'password7', ':email'=>'executiveleader1@rpi.edu' ) );
-}catch(PDOException $e) {
-  die("DB ERROR: ". $e->getMessage());
+$my_connect = mysql_connect($DB_HOST,$DB_USERNAME,$DB_PASSWORD);
+
+if (!$my_connect) {
+	die('Error connecting to the database: ' . mysql_error());
 }
 
+mysql_select_db($DB_NAME, $my_connect);
+
+mysql_query("INSERT INTO `users`(`user_id`, `email`, `password`, `salt`) VALUES (1,'example@rpi.edu','password','saltedpassword')");
+mysql_query("INSERT INTO `users`(`user_id`, `email`, `password`, `salt`) VALUES (2,'rick@rpi.edu','lkdsfj','saltedpassword')");
+mysql_query("INSERT INTO `users`(`user_id`, `email`, `password`, `salt`) VALUES (3,'evelyn@rpi.edu','passwor345','saltedpassword')");
+mysql_query("INSERT INTO `users`(`user_id`, `email`, `password`, `salt`) VALUES (4,'lisa3@rpi.edu','pa34word','saltedpassword')");
+mysql_query("INSERT INTO `users`(`user_id`, `email`, `password`, `salt`) VALUES (5,'moneybanks@rpi.edu','23ssword','saltedpassword')");
+mysql_query("INSERT INTO `users`(`user_id`, `email`, `password`, `salt`) VALUES (6,'executiveleader@rpi.edu','passw78d','saltedpassword')");
+mysql_query("INSERT INTO `users`(`user_id`, `email`, `password`, `salt`) VALUES (7,'alex3@rpi.edu','pass099d','saltedpassword')");
+mysql_query("INSERT INTO `users`(`user_id`, `email`, `password`, `salt`) VALUES (8,'mop@rpi.edu','passw878d','saltedpassword')");
+
+
+mysql_close($my_connect);
+
 ?>
+
