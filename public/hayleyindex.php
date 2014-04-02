@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/foundation.css" />
   </head>
   <body>
-
+<wrapper>
  
     <!-- Desktop Slider -->
 
@@ -18,19 +18,7 @@
  
     <!-- End Desktop  -->
  
- 
-    <!-- Mobile Header -->
- 
-    <br>
-    <div class="row">
-      <div class="small-12 show-for-small"><br>
-        <img src="http://placehold.it/1000x600&text=For Small Screens" />
-      </div>
-    </div>
- 
- 
-  <!-- End Mobile Header -->
-  <br>
+  <br><br>
  
   <div class="row">
     <div class="large-12 columns">
@@ -87,7 +75,7 @@
   require_once "./bottomNav.php";
 
 ?>
-
+</wrapper>
  </body>
     
   
