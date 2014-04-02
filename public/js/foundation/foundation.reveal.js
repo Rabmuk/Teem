@@ -1,4 +1,5 @@
-;(function ($, window, document, undefined) {
+(function ($, window, document, undefined) {
+
   'use strict';
 
   Foundation.libs.reveal = {
