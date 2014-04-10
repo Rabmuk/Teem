@@ -10,6 +10,7 @@
     <link rel="stylesheet" type="text/css" href="css/index.css">
     <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
     <script src="js/index.js" type="text/javascript"></script>
+    <script src="js/contactscripts.js" type="text/javascript"></script>
   </head>
 
     <div class="row">
