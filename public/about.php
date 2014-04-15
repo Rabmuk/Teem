@@ -22,7 +22,7 @@
           
 
           
-          <div>
+          <div class="small-5 columns">
              <h4>Teem was created to help groups of people facilitate better and more efficient meetings. It was built with love by Team SnapChatRoulette 
              at Rensselaer Polytechnic Institutes's Web Science course taught by Richard Plotka. </h4> 
           </div>
