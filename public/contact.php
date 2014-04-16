@@ -18,7 +18,7 @@
 <h1>Get in touch.</h1>
 	            <!-- Start #contact -->
 				<?php include "php_helpers/contactphpbit.php" ?>
-				<div id = "contactbox" style="background-color:#1c1c1c;">
+				<div id = "contactbox" style="background-color:lightgrey;">
 		
 			        <?php if(isset($emailSent) && $emailSent == true) { ?>
 		                <p class="info">Your email was sent. Huzzah!</p>
