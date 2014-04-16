@@ -37,8 +37,7 @@ if (isset($_POST['login']) && $_POST['login'] == 'Login') {
     <link rel="stylesheet" type="text/css" href="css/index.css">
     <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
     <script src="js/index.js" type="text/javascript"></script>
-        <link href='http://fonts.googleapis.com/css?family=Alegreya+Sans:300,400,500,700' rel='stylesheet' type='text/css'>
-
+<link href='http://fonts.googleapis.com/css?family=Raleway:400,300,500' rel='stylesheet' type='text/css'>
   </head>
   <body>
   <div id='wrapper'>
