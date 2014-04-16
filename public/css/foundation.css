@@ -6378,24 +6378,29 @@ th.hide-for-touch {
   left:0;
   right:0;
   min-width:100%;
-  border: 2px #3399CC solid;
-  background-color: #D6ADFF;
+  background-color: #197b5e;
   margin-bottom: 30px;
 }
 
 .footer{
   position: fixed;
   margin-top:45px;
-  bottom:0px;
+  bottom:0;
+  left:0px;
+  right:0px;
+  min-width:100%;
   height: 50px;
   padding: 10px;
   background-color: #197b5e;
 }
-.footer a{
+
+.inline-list:{overflow:block;}
+
+.footer a, .header a{
   font-size:18px;
   color: #3de8b6;
 }
-.footer a:hover{
+.footer a:hover, .header a:hover{
   color: white;
 }
 .footer p{
@@ -6404,5 +6409,5 @@ th.hide-for-touch {
 }
 
 #wrapper{
-  height:100%;
-}
+  position: relative;
+  min-height: 100%;}

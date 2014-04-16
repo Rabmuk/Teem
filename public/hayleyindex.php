@@ -117,7 +117,7 @@ if (isset($_POST['login']) && $_POST['login'] == 'Login') {
     <script>
     $(document).foundation();
     </script>
-  </div>
+
 </body>
 </html>
 <?php

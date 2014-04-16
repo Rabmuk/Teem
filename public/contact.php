@@ -1,6 +1,7 @@
 <?php
-
+    require_once "./headerNav.php";
 ?>
+
 <!doctype html>
 <html class="no-js" lang="en">
   <head>
@@ -59,3 +60,8 @@
 			    <!-- End #contact -->
 			    </div>
 			    </div>
+<?php
+
+  require_once "./bottomNav.php";
+
+?>
