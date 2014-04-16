@@ -1,4 +1,4 @@
-<link href='http://fonts.googleapis.com/css?family=Alegreya+Sans:300,400,500,700' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Alegreya+Sans:300' rel='stylesheet' type='text/css'>
 
 
 <!-- This is the header navigation for pages when a user is logged in. --> 
