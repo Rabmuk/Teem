@@ -58,7 +58,7 @@ if (isset($_POST['login']) && $_POST['login'] == 'Login') {
           <p> </p>
         </div>
         <div class="large-2 columns">
-          <a href="#" class="button expand">Sign Up</a>
+          <a href="createaccount.php" class="button expand">Sign Up</a>
         </div>
  
         <div class="large-2 columns">
