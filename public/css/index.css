@@ -1,3 +1,13 @@
+a{
+  color: #197b5e;
+}
+
+.button{
+  background-color: #197b5e;
+  border-color: #3de8b6;
+}
+
+
 .fullwidth {
   left:0;
   right:0;
@@ -12,10 +22,11 @@
   border:none;
   padding-top:110px;
   background-image: url('../img/clockworksbw.png');
+  border-bottom: 10px #3de8b6 solid;
 }
 
 .indexhead{
-  background-color:rgba(0,0,0,.4);
+  background-color:rgba(61,232,182,.3);
   text-align: center;
   color:white;
   width: 270px;
@@ -24,7 +35,7 @@
 }
 
 .indexsub{
-  background-color:rgba(0,0,0,.4);
+  background-color:rgba(61,232,182,.3);
   text-align: center;
   max-width: 770px;
   left: 50%;

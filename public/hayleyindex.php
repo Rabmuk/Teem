@@ -106,8 +106,10 @@ if (isset($_POST['login']) && $_POST['login'] == 'Login') {
  
       </div>
     </div>
-  <!--end wrapper-->
+ 
   </div>
+   <!--end wrapper-->
+</div>
  
     <!-- Footer -->
     <script type="text/javascript" src="js/foundation/foundation.js"></script>

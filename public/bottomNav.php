@@ -4,7 +4,7 @@
 <?php
 ?>
 
-  <footer class="footer">
+  <footer class="footer fullwidth">
           <ul class="inline-list">
              <li><a href="index.php">Home</a></li>
              <li><a href="faq.php">FAQ</a></li>
