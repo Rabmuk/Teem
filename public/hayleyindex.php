@@ -39,7 +39,7 @@ if (isset($_POST['login']) && $_POST['login'] == 'Login') {
     <script src="js/index.js" type="text/javascript"></script>
   </head>
   <body>
-    <div id='wrapper'>
+  <div id='wrapper'>
  
     <!-- Desktop Slider -->
     <div id = "fullwidthindexdiv" class="text-center">
@@ -109,7 +109,7 @@ if (isset($_POST['login']) && $_POST['login'] == 'Login') {
  
   </div>
    <!--end wrapper-->
-</div>
+
  
     <!-- Footer -->
     <script type="text/javascript" src="js/foundation/foundation.js"></script>
@@ -117,6 +117,7 @@ if (isset($_POST['login']) && $_POST['login'] == 'Login') {
     <script>
     $(document).foundation();
     </script>
+  </div>
 </body>
 </html>
 <?php
