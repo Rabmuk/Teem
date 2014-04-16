@@ -1,9 +1,22 @@
 <?php 	
 	session_start();
-	require_once "./headerNav.php";
-
 	require_once "classes/user.php";
 	require_once "classes/group.php";
+
+	if (isset($_SESSION['email'])){
+		$user = new User($_SESSION['email']);
+	}else{
+		header("Location: ./index.php");
+	}
+
+	// $groups = $user.getGroups();
+	// print_r($groups);
+// 	SELECT *
+// FROM groups
+// INNER JOIN groupMembers ON groups.group_id = groupMembers.id_group
+// INNER JOIN users ON groupMembers.id_user = users.user_id;
+
+	require_once "./headerNav.php";	
 ?>
 <!doctype HTML>
 <html class="no-js" lang="en">

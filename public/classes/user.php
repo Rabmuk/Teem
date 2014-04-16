@@ -13,7 +13,7 @@ class User{
     if (gettype($param) == "integer") {
       $query = $db->prepare(
         "SELECT `email`, `firstName`, `lastName` FROM `users` WHERE `user_id` = :user_id"
-      );
+        );
       $query->execute(array(":user_id" => $param));
       $user = $query->fetch();
       if (!$user) return;
@@ -25,7 +25,7 @@ class User{
     }else if(gettype($param) == "string"){
       $query = $db->prepare(
         "SELECT `user_id`, `firstName`, `lastName` FROM `users` WHERE `email` = :email"
-      );
+        );
       $query->execute(array(":email" => $param));
       $user = $query->fetch();
       if (!$user) return;
@@ -55,6 +55,15 @@ class User{
 
   public function getLastName(){
     return $this->lastName;
+  }
+
+  public function getGroups(){
+    $query = $db->prepare(
+     "SELECT `id_group` FROM `groupMembers` WHERE `id_user` = :id_user"
+     );
+    $query->execute(array(":id_user" => $user_id));
+    $user = $query->fetch(); 
+    
   }
 
 }
