@@ -1,62 +1,124 @@
 <?php
+session_start();
+require_once "../database/init.php";
 
-require_once "./headerNav.php"; ?>
+// Check login
+if (isset($_POST['login']) && $_POST['login'] == 'Login') {
+
+  // check user with the salt
+
+  $salt_stmt = $db->prepare('SELECT salt FROM users WHERE email=:email');
+  $salt_stmt->execute(array(':email' => $_POST['email']));
+  $res = $salt_stmt->fetch();
+  $salt = ($res) ? $res->salt : '';
+  $salted = hash('sha256', $salt . $_POST['pass']);
+
+
+  $login_stmt = $db->prepare('SELECT email, user_id FROM users WHERE email=:email AND password=:pass');
+  $login_stmt->execute(array(':email' => $_POST['email'], ':pass' => $salted));
   
-  <html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Index</title>
-        <link rel="stylesheet" href="css/foundation.css">
+  
+  if ($user = $login_stmt->fetch()) {
+    $_SESSION['email'] = $user->email;
+    $_SESSION['user_id'] = $user->user_id;
+  }
+  else {
+    $err = 'Incorrect email or password.';
+  }
+}
 
-
-    </head>
-
-
-  <div class="row">    
-    
-    <!-- Main Content Section -->
-    <!-- This has been source ordered to come first in the markup (and on small devices) but to be to the right of the nav on larger screens -->
-    <div class="large-9 push-3 columns">
-      
-      <h3>Page Title <small>Page subtitle</small></h3>
-      
-      <p>Bacon ipsum dolor sit amet salami ham hock biltong ball tip drumstick sirloin pancetta meatball short loin. Venison tail chuck pork chop, andouille ball tip beef ribs flank boudin bacon. Salami andouille pork belly short ribs flank cow. Salami sirloin turkey kielbasa. Sausage venison pork loin leberkas chuck short loin, cow ham prosciutto pastrami jowl. Ham hock jerky tri-tip, fatback hamburger shoulder swine pancetta ground round. Tri-tip prosciutto meatball turkey, brisket spare ribs shankle chuck cow chicken ham hock boudin meatloaf jowl.</p>
+?>
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>YO</title>
+    <link rel="stylesheet" href="css/foundation.css" />
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+    <script src="js/index.js" type="text/javascript"></script>
+<link href='http://fonts.googleapis.com/css?family=Raleway:400,300,500' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+  <div id='wrapper'>
  
-      <p>Ground round pastrami pork loin tenderloin jerky. Jerky spare ribs biltong, ham hock ham capicola pork. Jerky turducken pork, meatloaf sausage capicola swine corned beef turkey short loin. Tongue prosciutto pork loin, ground round spare ribs venison kielbasa strip steak.</p>
+    <!-- Desktop Slider -->
+    <div id = "fullwidthindexdiv" class="text-center">
+      <center><h1 class = "indexhead">Teem</h1>
+        <h4 class = "indexsub">Schedule a meeting, divvy up tasks, and get together.</h4><center>
+      </div>
  
-      <p>Hamburger bresaola turkey t-bone, leberkas salami pork chop ham hock beef ribs. Rump biltong meatball venison, short ribs pork loin shank shankle corned beef beef. Cow salami jowl short loin hamburger fatback. Short ribs pork belly shoulder pastrami drumstick salami corned beef ham hock bresaola. Swine filet mignon cow sausage ball tip. Cow ribeye ground round, sausage pork loin pig beef ball tip turkey boudin.</p>
+    <!-- End Desktop  -->
+    <br><br>
+    <div class="row">
+      <div class="large-12 columns">
+        <div class="row">
  
-      <p>Prosciutto ball tip filet mignon andouille frankfurter chicken rump sausage meatball. Filet mignon meatloaf ground round andouille ham hock pork. Bresaola short loin meatball chuck hamburger pig. Turkey venison chuck, tongue fatback tail swine jerky corned beef shank kielbasa prosciutto ribeye ham tri-tip. Rump bacon pork belly meatloaf shoulder short loin meatball kielbasa pork loin tongue bresaola brisket corned beef jowl prosciutto. Beef ribs shankle short ribs pork belly corned beef fatback pork chop tongue biltong boudin strip steak sirloin meatloaf pancetta.</p>
-            
+    <!-- Thumbnails -->
+         <div class="large-4 columns">
+          <p> </p>
+        </div>
+        <div class="large-2 columns">
+          <a href="#" class="button expand">Sign Up</a>
+        </div>
+ 
+        <div class="large-2 columns">
+          <a href="#" data-reveal-id="myModal" class="button expand" data-reveal>Log In</a>
+          <div id="myModal" class="reveal-modal small" data-reveal>
+            <div id="login">
+              <?php if (isset($_SESSION['email'])): ?>
+              <h1>Welcome, <?php echo htmlentities($_SESSION['email']) ?></h1>
+              <form method="post" action="login.php">
+                <input name="logout" type="submit" value="Logout" />
+              </form>
+              <a href="checklogin.php">check page</a>
+              <?php else: ?>
+              <h1>Login</h1>
+              <?php if (isset($err)) echo "<p>$err</p>" ?>
+              <form method="post" action="login.php">
+                <label for="email">Email: </label><input type="text" name="email" />
+                <label for="pass">Password: </label><input type="password" name="pass" />
+                <input name="login" type="submit" value="Login" />
+              </form>
+              <?php endif; ?>
+            </div>
+            <a class="close-reveal-modal">&#215;</a>
+          </div>
+        </div>
+         <div class="large-4 columns">
+          <p> </p>
+        </div>
+    <!-- End Thumbnails -->
+      </div>
     </div>
-    
-    
-    <!-- Nav Sidebar -->
-    <!-- This is source ordered to be pulled to the left on larger screens -->
-    <div class="large-3 pull-9 columns">
-        
-      <ul class="side-nav">
-        <li><a href="profile.php">Profile</a></li>
-        <li><a href="createaccount.php">Create Account</a></li>
-        <li><a href="hayleyindex.php">Hayley Index</a></li>
-        <li><a href="about.php">About</a></li>
-        <li><a href="#">Section 5</a></li>
-        <li><a href="#">Section 6</a></li>
-      </ul>
-      
-      <p><img src="http://placehold.it/320x240&text=Ad" /></p>
-        
-    </div>
-    
   </div>
+ 
+  <div class="row"> 
+    <!-- Content -->
+    <div class="large-12 columns">
+      <center><p><br>New to Teem? Learn more <a href="about.php" taget="_blank" >about us</a>.</p></center>
+    </div>
+ 
+    <!-- End Content -->
+ 
+      </div>
+ 
 
+   <!--end wrapper-->
+   </div>
+ 
+    <!-- Footer -->
+    <script type="text/javascript" src="js/foundation/foundation.js"></script>
+    <script type="text/javascript" src="js/foundation/foundation.reveal.js"></script>
+    <script>
+    $(document).foundation();
+    </script>
 
- <?php
+</body>
+</html>
+<?php
 
-require_once "./bottomNav.php"; ?>
+  require_once "./bottomNav.php";
+
+?>
     
-  
-
-

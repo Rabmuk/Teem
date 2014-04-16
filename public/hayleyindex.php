@@ -37,6 +37,7 @@ if (isset($_POST['login']) && $_POST['login'] == 'Login') {
     <link rel="stylesheet" type="text/css" href="css/index.css">
     <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
     <script src="js/index.js" type="text/javascript"></script>
+    <link href='http://fonts.googleapis.com/css?family=Alegreya+Sans:300' rel='stylesheet' type='text/css'>
   </head>
   <body>
   <div id='wrapper'>
@@ -58,7 +59,7 @@ if (isset($_POST['login']) && $_POST['login'] == 'Login') {
           <p> </p>
         </div>
         <div class="large-2 columns">
-          <a href="#" class="button expand">Sign Up</a>
+          <a href="createaccount.php" class="button expand">Sign Up</a>
         </div>
  
         <div class="large-2 columns">
