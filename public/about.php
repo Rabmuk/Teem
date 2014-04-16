@@ -55,7 +55,7 @@
 
                 <li>
                   <h4 href="#q5">Where is the logout button?</h4>
-                  <p>The logout out button is located on the top left corner of the website. </p>
+                  <p>The logout out button is located on the top right corner of the website. </p>
                 </li>
 
                 <li>
@@ -74,7 +74,7 @@
       <!--end wrapper-->
       </div>
   </body>
-</html>
+</html>s
 
 <?php
 
