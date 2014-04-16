@@ -43,12 +43,10 @@ a{
 }
 
 h1 {
-  font-family: "Trebuchet MS", Helvetica, sans-serif;
   color: #009999;
 }
 
 label {
-  font-family: "Trebuchet MS", Helvetica, sans-serif;
   font-size: 14px;
   color: #009999;
 }
@@ -58,7 +56,6 @@ label {
 }
 
 input[type="submit"] {
-  font-family: "Trebuchet MS", Helvetica, sans-serif;
   background-color: #009999;
   border: 2px #009999 solid;
   color: white; 
