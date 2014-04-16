@@ -58,6 +58,10 @@ class User{
   }
 
   public function getGroups(){
+    //  SELECT *
+// FROM groups
+// INNER JOIN groupMembers ON groups.group_id = groupMembers.id_group
+// INNER JOIN users ON groupMembers.id_user = users.user_id;
     $query = $db->prepare(
      "SELECT `id_group` FROM `groupMembers` WHERE `id_user` = :id_user"
      );

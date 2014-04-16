@@ -11,10 +11,6 @@
 
 	// $groups = $user.getGroups();
 	// print_r($groups);
-// 	SELECT *
-// FROM groups
-// INNER JOIN groupMembers ON groups.group_id = groupMembers.id_group
-// INNER JOIN users ON groupMembers.id_user = users.user_id;
 
 	require_once "./headerNav.php";	
 ?>
