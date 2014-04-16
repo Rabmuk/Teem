@@ -27,6 +27,10 @@ if (isset($_POST['login']) && $_POST['login'] == 'Login') {
   }
 }
 
+if (isset($_SESSION['email'])) {
+  header("Location: profile.php");
+}
+
 ?>
 <!doctype html>
 <html class="no-js" lang="en">
@@ -62,16 +66,9 @@ if (isset($_POST['login']) && $_POST['login'] == 'Login') {
         </div>
  
         <div class="large-2 columns">
-          <a href="#" data-reveal-id="myModal" class="button expand" data-reveal>Log In</a>
+          <a id="showLogin" href="#" data-reveal-id="myModal" class="button expand" data-reveal>Log In</a>
           <div id="myModal" class="reveal-modal small" data-reveal>
             <div id="login">
-              <?php if (isset($_SESSION['email'])): ?>
-              <h1>Welcome, <?php echo htmlentities($_SESSION['email']) ?></h1>
-              <form method="post" action="index.php">
-                <input name="logout" type="submit" value="Logout" />
-              </form>
-              <a href="checklogin.php">check page</a>
-              <?php else: ?>
               <h1>Login</h1>
               <?php if (isset($err)) echo "<p>$err</p>" ?>
               <form method="post" action="index.php">
@@ -79,7 +76,6 @@ if (isset($_POST['login']) && $_POST['login'] == 'Login') {
                 <label for="pass">Password: </label><input type="password" name="pass" />
                 <input name="login" type="submit" value="Login" />
               </form>
-              <?php endif; ?>
             </div>
             <a class="close-reveal-modal">&#215;</a>
           </div>
