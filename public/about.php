@@ -74,7 +74,7 @@
       <!--end wrapper-->
       </div>
   </body>
-</html>s
+</html>
 
 <?php
 
