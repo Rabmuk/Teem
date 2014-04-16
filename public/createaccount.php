@@ -23,7 +23,7 @@ require_once "classes/user.php";
   
         $user = addUserToDatabase($_POST['email'], $salted, $salt, $_POST['fName'], $_POST['lName']);
         if ($user->exists()) {
-          $msg = 'Account created! <a href="login.php">Login Here</a>';  
+          $msg = 'Account created! Login <a href="index.php">here</a>';  
         }
         else{
           $msg = 'An error has occured, please try again.';   

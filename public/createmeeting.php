@@ -3,6 +3,10 @@ require_once "../database/init.php";
 require_once "classes/user.php";
 ?>
 
+<?php
+    require_once "./headerNav.php";
+?>
+
 <!doctype HTML>
 <html class="no-js" lang="en">
 <head>

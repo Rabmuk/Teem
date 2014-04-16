@@ -6394,6 +6394,12 @@ th.hide-for-touch {
   background-color: #197b5e;
 }
 
+.fullwidth {
+  left:0;
+  right:0;
+  min-width:100%;
+}
+
 .inline-list:{overflow:block;}
 
 .footer a, .header a{
