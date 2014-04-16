@@ -3,7 +3,7 @@
 <?php
 ?>
 
-  <footer class="footer">
+  <footer class="footer" id = "footer">
           <ul class="inline-list">
              <li><a href="index.php">Home</a></li>
              <li><a href="about.php">About</a></li>

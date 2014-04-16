@@ -16,6 +16,7 @@ a[href="creategroup.php"], [href="createmeeting.php"] {
 .profileHeader {
   background-color: #009999;
   color: white;
+  padding:10px;
 }
 
 .teamTitle {
