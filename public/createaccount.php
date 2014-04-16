@@ -55,7 +55,7 @@ require_once "classes/user.php";
     <body>
 
         <!-- Entire page fits same sizing as rest of website -->
-        <row class="large-9 push-3 columns">
+        <row class="large-9 push-2 columns create_page">
           
 
           <!-- Left panel with cute intro sentence -->
@@ -67,15 +67,14 @@ require_once "classes/user.php";
               <?php if (isset($msg)) {
                 echo $msg;  
               }else{
-               echo 'We want your agendas to be as <span style="color:purple;">DYNAMIC</span> as your meetings.';
+               echo 'We want your agendas to be as <span style="color:#197b5e;">DYNAMIC</span> as your meetings.';
               }
 
               ?>
               </h1>
             </div>
             <!-- Line spacing between the two sentences -->
-            <br>
-            <br>
+           
             <h2>Create an account today!</h2>
           </div>
 
