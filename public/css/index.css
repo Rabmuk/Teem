@@ -7,7 +7,6 @@ a{
   border-color: #3de8b6;
 }
 
-
 .fullwidth {
   left:0;
   right:0;
@@ -142,3 +141,4 @@ input[type="text"], input[type="password"] {
   border-radius: 2px;
   width: 300px;
 }
+

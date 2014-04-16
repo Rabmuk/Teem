@@ -92,24 +92,19 @@ if (isset($_POST['login']) && $_POST['login'] == 'Login') {
     </div>
   </div>
  
-  <div class="row">
-    <div class="large-12 columns">
-      <div class="row">
- 
+  <div class="row"> 
     <!-- Content -->
- 
-        <div class="large-12 columns">
-          <center><p><br>New to Teem? Learn more <a href=""taget="_blank" >about us</a>.</p></center>
-        </div>
+    <div class="large-12 columns">
+      <center><p><br>New to Teem? Learn more <a href="about.php" taget="_blank" >about us</a>.</p></center>
+    </div>
  
     <!-- End Content -->
  
       </div>
-    </div>
  
-  </div>
-   <!--end wrapper-->
 
+   <!--end wrapper-->
+   </div>
  
     <!-- Footer -->
     <script type="text/javascript" src="js/foundation/foundation.js"></script>

@@ -6384,7 +6384,6 @@ th.hide-for-touch {
 
 .footer{
   position: fixed;
-  margin-top:45px;
   bottom:0;
   left:0px;
   right:0px;
@@ -6410,4 +6409,5 @@ th.hide-for-touch {
 
 #wrapper{
   position: relative;
-  min-height: 100%;}
+  min-height: 100%;
+  margin-bottom:50px;}

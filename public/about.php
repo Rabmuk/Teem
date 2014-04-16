@@ -17,7 +17,8 @@
         
     </head>
     <body>
-        
+      <!--start wrapper-->
+      <div id = "wrapper">
         <div class="row">
           
 
@@ -68,7 +69,8 @@
 
 
         </div>
-
+      <!--end wrapper-->
+      </div>
   </body>
 </html>
 
