@@ -1,7 +1,9 @@
-<?php 
-	
+<?php 	
+	session_start();
 	require_once "./headerNav.php";
 
+	require_once "classes/user.php";
+	require_once "classes/group.php";
 ?>
 <!doctype HTML>
 <html class="no-js" lang="en">
@@ -28,12 +30,14 @@
 			<div class="large-6 columns">
 				<div class="boxcolumn">
 					<h2 class="profileHeader">My Groups</h2>
-					<h3 class="teamTitle">SnapchatRoullette</h3>
+					<!-- Insert groups here! -->
+
+					<!-- <h3 class="teamTitle">SnapchatRoullette</h3>
 					<ul id="groupNames">
 						<li>Team Leader: Not Chris</li>
 						<li>Members: Lauren, Hayley, Alex, Candice, Josh
 					</ul>
-					<hr class="profileDivide"></hr>
+					<hr class="profileDivide"></hr> -->
 				</div>
 			</div>
 			<div class="large-6 columns">

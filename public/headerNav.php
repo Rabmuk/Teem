@@ -1,8 +1,5 @@
-<link href='http://fonts.googleapis.com/css?family=Alegreya+Sans:300' rel='stylesheet' type='text/css'>
-
-
 <!-- This is the header navigation for pages when a user is logged in. --> 
-<?php // session_start(); ?>
+  <link href='http://fonts.googleapis.com/css?family=Alegreya+Sans:300' rel='stylesheet' type='text/css'>
    <div class="row header">
     <div class="large-3 columns">
       <h1><img src="http://placehold.it/400x75&text=Logo" /></h1>

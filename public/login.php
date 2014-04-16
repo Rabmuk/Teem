@@ -27,6 +27,10 @@ if (isset($_POST['login']) && $_POST['login'] == 'Login') {
   }
 }
 
+if (isset($_SESSION['email'])){
+    header("Location: ./profile.php");
+}
+
 ?>
 
 <!doctype html>
@@ -35,13 +39,6 @@ if (isset($_POST['login']) && $_POST['login'] == 'Login') {
   <title>Login</title>
 </head>
 <body>
-  <?php if (isset($_SESSION['email'])): ?>
-  <h1>Welcome, <?php echo htmlentities($_SESSION['email']) ?></h1>
-  <form method="post" action="login.php">
-    <input name="logout" type="submit" value="Logout" />
-  </form>
-  <a href="checklogin.php">check page</a>
-  <?php else: ?>
   <h1>Login</h1>
   <?php if (isset($err)) echo "<p>$err</p>" ?>
   <form method="post" action="login.php">
@@ -49,6 +46,5 @@ if (isset($_POST['login']) && $_POST['login'] == 'Login') {
     <label for="pass">Password: </label><input type="password" name="pass" />
     <input name="login" type="submit" value="Login" />
   </form>
-  <?php endif; ?>
 </body>
 </html>

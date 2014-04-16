@@ -69,14 +69,14 @@ if (isset($_POST['login']) && $_POST['login'] == 'Login') {
             <div id="login">
               <?php if (isset($_SESSION['email'])): ?>
               <h1>Welcome, <?php echo htmlentities($_SESSION['email']) ?></h1>
-              <form method="post" action="login.php">
+              <form method="post" action="index.php">
                 <input name="logout" type="submit" value="Logout" />
               </form>
               <a href="checklogin.php">check page</a>
               <?php else: ?>
               <h1>Login</h1>
               <?php if (isset($err)) echo "<p>$err</p>" ?>
-              <form method="post" action="login.php">
+              <form method="post" action="index.php">
                 <label for="email">Email: </label><input type="text" name="email" />
                 <label for="pass">Password: </label><input type="password" name="pass" />
                 <input name="login" type="submit" value="Login" />
