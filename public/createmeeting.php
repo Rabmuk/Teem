@@ -79,7 +79,7 @@ require_once "classes/user.php";
         
 	      <div class="row">
 	     		<div class="small-10 large-6 small-centered large-centered columns">
-	     			<input type="submit" class="nice small radius button" value="Create!"></input>
+            <a href="#" type="submit" class="button nice small radius">Create</a>
 	     		</div>
 	      </div>
         

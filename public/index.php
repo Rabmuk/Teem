@@ -32,14 +32,12 @@ if (isset($_POST['login']) && $_POST['login'] == 'Login') {
 <html class="no-js" lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>YO</title>
+    <title>Teem</title>
     <link rel="stylesheet" href="css/foundation.css" />
     <link rel="stylesheet" type="text/css" href="css/index.css">
     <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
     <script src="js/index.js" type="text/javascript"></script>
-        <link href='http://fonts.googleapis.com/css?family=Alegreya+Sans:300,400,500,700' rel='stylesheet' type='text/css'>
-
-  </head>
+<link href='http://fonts.googleapis.com/css?family=Roboto+Slab:300' rel='stylesheet' type='text/css'>  </head>
   <body>
   <div id='wrapper'>
  
@@ -60,7 +58,7 @@ if (isset($_POST['login']) && $_POST['login'] == 'Login') {
           <p> </p>
         </div>
         <div class="large-2 columns">
-          <a href="#" class="button expand">Sign Up</a>
+          <a href="createaccount.php" class="button expand">Sign Up</a>
         </div>
  
         <div class="large-2 columns">

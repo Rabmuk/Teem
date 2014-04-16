@@ -101,13 +101,13 @@ input[type="submit"]:hover {
   height: 120px;
 }
 
-#submitbutton{
+/*#submitbutton{
   width: 100px;
   height: 40px;
   border: 2px solid #740000!important;
   background-color: white;
   color: #1c1c1c;
-}
+}*/
 
 #sentmessage{
   margin-bottom: -20px;
@@ -115,7 +115,7 @@ input[type="submit"]:hover {
 }
 
 .formblock{
-  color: #e74343;
+  
 }
 
 #alert{
