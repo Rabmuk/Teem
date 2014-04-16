@@ -11,10 +11,11 @@
   height:450px;
   border:none;
   padding-top:110px;
+  background-image: url('../img/clockworksbw.png');
 }
 
 .indexhead{
-  background-color:rgba(0,0,0,.2);
+  background-color:rgba(0,0,0,.4);
   text-align: center;
   color:white;
   width: 270px;
@@ -23,7 +24,7 @@
 }
 
 .indexsub{
-  background-color:rgba(0,0,0,.2);
+  background-color:rgba(0,0,0,.4);
   text-align: center;
   max-width: 770px;
   left: 50%;

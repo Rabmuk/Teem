@@ -36,7 +36,6 @@ if (isset($_POST['login']) && $_POST['login'] == 'Login') {
     <link rel="stylesheet" href="css/foundation.css" />
     <link rel="stylesheet" type="text/css" href="css/index.css">
     <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
-    <script type="text/javascript" charset="utf-8" src="js/jquery.tubular.1.0.js"></script>
     <script src="js/index.js" type="text/javascript"></script>
   </head>
   <body>
