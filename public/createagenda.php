@@ -17,7 +17,7 @@
 	<div class="row">
 		<div class="large-12 columns">
 			<form>
-				Meeting name:<input type="text" name="firstname"><br>
+				Meeting name:<input type="text" value="Make this take the meeting name and display it here" name="firstname"><br>
 				Desired outcomes:<input type="text" name="lastname">
 			</form>
 			<p>Topics of Discussion:</p>
@@ -56,7 +56,6 @@
 			<div class="large-2 columns">
 				<select>
 				  <option>Minutes</option>
-				  <option>Seconds</option>
 				  <option>Hours</option>
 				</select>
 			</div>
@@ -80,7 +79,6 @@
 			<div class="large-2 columns">
 				<select>
 				  <option>Minutes</option>
-				  <option>Seconds</option>
 				  <option>Hours</option>
 				</select>
 			</div>
@@ -104,7 +102,6 @@
 			<div class="large-2 columns">
 				<select>
 				  <option>Minutes</option>
-				  <option>Seconds</option>
 				  <option>Hours</option>
 				</select>
 			</div>
