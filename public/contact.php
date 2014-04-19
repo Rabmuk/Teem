@@ -22,7 +22,10 @@
 
 				
 		        <?php if(isset($emailSent) && $emailSent == true) { ?>
+	                
+		       	<div class="large-6 columns">
 	                <p class="info">Your email was sent. Huzzah!</p>
+	            </div>
 	            <?php } else { ?>
 				<p class="desc">You can use this contact form to report any bugs, ask a question, or send a message to the team. All fields are required.</p>
 			
@@ -32,7 +35,7 @@
 				
 				
 
-				<form id="contact-us" class="large-offset-1 columns" action="#" method="post">
+				<form id="contact-us" class="" action="#" method="post">
 					<div class="row">
 						<div class="large-6 columns">
 							<input type="text" name="contactName" id="contactName" value="<?php if(isset($_POST['contactName'])) echo $_POST['contactName'];?>" class="txt requiredField messageinput name" placeholder="Name" onclick="clearTextArea(this);"/>
@@ -68,7 +71,11 @@
 		    <!-- End #contact -->
 		</div>
 	</div>
+<<<<<<< HEAD
+
+=======
 </div>
+>>>>>>> FETCH_HEAD
 <?php
 
   require_once "./bottomNav.php";
