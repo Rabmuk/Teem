@@ -13,7 +13,7 @@
     <script src="js/index.js" type="text/javascript"></script>
     <script src="js/contactscripts.js" type="text/javascript"></script>
   </head>
-
+<div id="wrapper">
     <div class="row" id="contact">
      	 <div class="large-12 columns">
 
@@ -71,7 +71,11 @@
 		    <!-- End #contact -->
 		</div>
 	</div>
+<<<<<<< HEAD
 
+=======
+</div>
+>>>>>>> FETCH_HEAD
 <?php
 
   require_once "./bottomNav.php";

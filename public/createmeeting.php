@@ -1,10 +1,8 @@
 <?php 
-require_once "../database/init.php"; 
-require_once "classes/user.php";
-?>
+	require_once "../database/init.php"; 
+	require_once "classes/user.php";
+	require_once "./headerNav.php";
 
-<?php
-    require_once "./headerNav.php";
 ?>
 
 <!doctype HTML>
@@ -14,14 +12,16 @@ require_once "classes/user.php";
     <title>Create a Meeting</title>
     <link rel="stylesheet" href="css/foundation.css" />
     <link rel="stylesheet" href="css/formsettings.css"/>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script src="js/createmeeting.js" type="text/javascript" ></script>
 </head>
 <body>
+<div id = "wrapper">
   <div class="row">
 		<div class="large-12">
 			<h2>Create a Meeting</h2>
 		</div>
   </div>
-  
 	<form>
 	  <div class="row">
 	    <div class="small-12 large-12 columns">
@@ -54,7 +54,7 @@ require_once "classes/user.php";
 	          <label for="date" class="right inline">Date</label>
 	        </div>
 	        <div class="small-9 columns">
-	          <input type="text" id="date" placeholder="Enter Date">
+	          <input type="date" id="datepicker" placeholder="Enter Date">
 	        </div>
 	      </div>
 	      <div class="row">
@@ -62,7 +62,7 @@ require_once "classes/user.php";
 	          <label for="time" class="right inline">Time</label>
 	        </div>
 	        <div class="small-9 columns">
-	          <input type="text" id="time" placeholder="Enter Time">
+	          <input type="time" id="time" placeholder="Enter Time">
 	        </div>
 	      </div>
         
@@ -90,6 +90,7 @@ require_once "classes/user.php";
 	    </div>
 	  </div>
 	</form>
+</div>
 </body>
 </html>
 
