@@ -29,25 +29,12 @@
 	<!--topics, attachments-->
 	<div class="row">
 		<div class="large-6 columns">
-			<h5>Topics to Cover</h5>
-			<textarea rows="4" onFocus="if(this.value=='topic')this.value='';">At w3schoolser free tutorials in all web development technologies. 
-			</textarea>
+			<h5 class= "heading">Topics to Cover</h5>
+			<textarea rows="4" onFocus="if(this.value=='Enter topics here.')this.value='';">Enter topics here.</textarea>
 			<input type="submit" name="savetopics" value="Save" />
 		</div>
 	</div>
 </div>
-
-
-
-<textarea rows="4" >At w3schoolser free tutorials in all web development technologies. 
-			</textarea>
-
-			<ul>
-				<li>hey</li>
-				<li>yo</li>
-				<li>heyooooo</li>
-			</ul>
-
 
 <!--don't worry about this-->
 <br><br><br><br><br>
