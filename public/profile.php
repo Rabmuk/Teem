@@ -18,6 +18,7 @@ require_once "./headerNav.php";
 	<title>My Profile - Home</title>
 	<link rel="stylesheet" href="css/foundation.css" />
 	<link rel="stylesheet" href="css/profile.css" />
+	<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
 </head>
 <body>
 	<div id="wrapper">
@@ -26,7 +27,23 @@ require_once "./headerNav.php";
 					<h1 class="myProfile">Welcome, <?php echo $user->getFirstName(); ?>!</h1>
 				</div>
 				<div class="large-3 columns">
-					<a href="creategroup.php">(+) Create a Group</a>
+					<a href="#" data-reveal-id="myModal" data-reveal>(+) Create a Group</a>
+					<div id="myModal" class="reveal-modal small" data-reveal>
+            <div id="createGroup">
+            	<h1>Create a Group</h1>
+              <form method="post" action="profile.php" id="addGroup">
+                <label for="groupName">Group Name: </label><input type="text" name="groupName" />
+                <label for="addMembers">Add Members*:</label><textarea rows="4" cols="50" name="addMembers" form="addGroup"></textarea>
+                <p>*Seperate group member e-mails by ','</p>
+                <div class="row">
+                	<div class="large-12 columns">
+                		<input name="addMembers" type="submit" value="Submit" />
+                	</div>
+                </div>
+              </form>
+            </div>
+            <a class="close-reveal-modal">&#215;</a>
+          </div>
 				</div>
 				<div class="large-3 columns">
 					<a href="createmeeting.php">(+) Create a Meeting</a>
@@ -81,6 +98,11 @@ require_once "./headerNav.php";
 			</div>
 		</div>
 	</body>
+	<script type="text/javascript" src="js/foundation/foundation.js"></script>
+  <script type="text/javascript" src="js/foundation/foundation.reveal.js"></script>
+  <script>
+  $(document).foundation();
+  </script>
 	</html>
 	<?php
 
