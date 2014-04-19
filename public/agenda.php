@@ -10,38 +10,29 @@
 </head>
 <body>
 	<div class="row">
-		<div class="large-12 columns greenyo">
+		<div class="large-12 columns colorback">
 			<h1 class= "meetingName">Web Science Meeting Agenda</h1>
 			<p class= "desiredOutcome">Desired outcome: TO BEAT THE OTHER SCHEDULING TEAM >:D</p>
 		</div>
 	</div>
 	<div class="row">
 		<!--topic name and person responsible-->
-		<div class="large-5 columns">
+		<div class="large-6 columns blockleft">
 			<br>
-			<h4 class = "topicName">Introduction</h4>
+			<h4 class = "heading">Introduction</h4>
+			<p class = "duration inline right">25 minutes</p>
 			<p class = "person">Alex Kumbar</p>
-		</div>
-		<!--duration-->
-		<div class="large-1 columns">
-			<br>
-			<p class = "duration">25 minutes</p>
-		</div>
-		<!--action items-->
-		<div class="large-6 columns">
-			<br>
-			<h4 class = "actionItems">Action Items</h4>
-		</div>
-	</div>
-	<div class="row">
-		<div class="large-6 columns">
 			<ul>
 				<li>hey</li>
 				<li>yo</li>
 				<li>heyooooo</li>
 			</ul>
 		</div>
-		<div class="large-6 columns"><p></p></div>
+		<!--action items-->
+		<div class="large-6 columns blockright">
+			<br>
+			<h4 class = "heading">Action Items</h4>
+		</div>
 	</div>
 
 <!--don't worry about this-->
