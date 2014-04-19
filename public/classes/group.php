@@ -38,6 +38,24 @@ class Group{
     return $this->group_id;
   }
 
+  public function getMemberNames(){
+    global $db;
+
+    $toReturn = '';
+
+    $query = $db->prepare(
+      "SELECT `id_user` FROM `groupMembers` WHERE `id_group` = :id_group"
+      );
+    $query->execute(array(":id_group" => $this->group_id));
+
+    while ($row = $query->fetch()) {
+      $tempUser = new User((int)$row->id_user);
+      $toReturn .= ', ' . $tempUser->getName();
+    }
+
+    return $toReturn;
+  }
+
 }
 
 //assume that the email is unique

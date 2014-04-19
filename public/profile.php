@@ -45,7 +45,7 @@ require_once "./headerNav.php";
 							<li>Team Leader: <?php echo $group->getOwner()->getName(); ?></li>
 							<li>Members: 
 								<?php 
-									
+									echo $group->getMemberNames();
 								?>
 							</li>
 							</ul>
