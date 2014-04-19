@@ -15,5 +15,6 @@ echo pageHeader("PHP Library Examples"); ?>
   <li><a href="fileupload.php">An example of a large file upload.</a></li>
   <li><a href="idtoken.php">An example of verifying and retrieving the id token.</a></li>
   <li><a href="multi-api.php">An example of using multiple APIs.</a></li>
+  <li><a href="userexample3.php">Chris' Thing</a></li>
 </ul>
 <?php echo pageFooter();
