@@ -28,7 +28,7 @@ require_once 'Google/Service/Urlshortener.php';
  ************************************************/
  $client_id = '725388779886-qj9g8a3flqtlib212svpt0siskhmqirg.apps.googleusercontent.com';
  $client_secret = 'CP66xoPSvItVo_sak3SrPz0N';
- $redirect_uri = 'http://www.rabserver.com/oauth2callback';
+ $redirect_uri = 'http://www.rabserver.com/teem/public/API/examples/user-example.php';
 
 /************************************************
   Make an API request on behalf of a user. In
@@ -103,7 +103,7 @@ echo pageHeader("User Query - URL Shortener");
 if (
     $client_id == '725388779886-qj9g8a3flqtlib212svpt0siskhmqirg.apps.googleusercontent.com'
     || $client_secret == 'CP66xoPSvItVo_sak3SrPz0N'
-    || $redirect_uri == 'http://www.rabserver.com/oauth2callback') {
+    || $redirect_uri == 'http://www.rabserver.com/teem/public/API/examples/user-example.php') {
   echo missingClientSecretsWarning();
 }
 ?>
