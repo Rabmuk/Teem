@@ -1,33 +1,30 @@
 <?php 	
-	session_start();
-	require_once "classes/user.php";
-	require_once "classes/group.php";
+session_start();
+require_once "classes/user.php";
+require_once "classes/group.php";
 
-	if (isset($_SESSION['email'])){
-		$user = new User($_SESSION['email']);
-	}else{
-		header("Location: ./index.php");
-	}
+if (isset($_SESSION['email'])){
+	$user = new User($_SESSION['email']);
+}else{
+	header("Location: ./index.php");
+}
 
-	// $groups = $user.getGroups();
-	// print_r($groups);
-
-	require_once "./headerNav.php";	
+require_once "./headerNav.php";	
 ?>
 <!doctype HTML>
 <html class="no-js" lang="en">
 <head>
 	<meta charset="utf-8" />
-    <title>My Profile - Home</title>
-    <link rel="stylesheet" href="css/foundation.css" />
-    <link rel="stylesheet" href="css/profile.css" />
+	<title>My Profile - Home</title>
+	<link rel="stylesheet" href="css/foundation.css" />
+	<link rel="stylesheet" href="css/profile.css" />
 </head>
 <body>
 <div id = "wrapper">
 	<div>
 		<div class="row">
 			<div class="large-6 columns">
-				<h1 class="myProfile">Welcome, User!</h1>
+				<h1 class="myProfile">Welcome, <?php echo $user->getFirstName(); ?>!</h1>
 			</div>
 			<div class="large-3 columns">
 				<a href="creategroup.php">(+) Create a Group</a>
@@ -40,7 +37,24 @@
 			<div class="large-6 columns">
 				<div class="boxcolumn">
 					<h2 class="profileHeader">My Groups</h2>
-					<!-- Insert groups here! -->
+					<?php 
+					$results = $user->getGroups();
+					foreach ($results as $group) {
+						?>
+						<h3 class="teamTitle"> <?php echo $group->getName(); ?> </h3>
+						<ul id="groupNames">
+							<li>Team Leader: <?php echo $group->getOwner()->getName(); ?></li>
+							<li>Members: 
+								<?php 
+									echo $group->getMemberNames();
+								?>
+							</li>
+							</ul>
+							<hr class="profileDivide"></hr>
+							<?php
+						}
+						?>
+						<!-- Insert groups here! -->
 
 					<!-- <h3 class="teamTitle">SnapchatRoullette</h3>
 					<ul id="groupNames">
@@ -66,13 +80,19 @@
 				</div>
 			</div>
 		</div>
+<<<<<<< HEAD
 	</div>
 </div>
 </body>
 </html>
 <?php
+=======
+	</body>
+	</html>
+	<?php
+>>>>>>> 1a1da9670dfb0e701f332299d93a1d80f8eeeb11
 
 	require_once "./bottomNav.php";
 
-?>
+	?>
 

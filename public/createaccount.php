@@ -55,9 +55,9 @@ require_once "classes/user.php";
     <body>
       <div id="wrapper">
 
+        <div id="wrapper">
         <!-- Entire page fits same sizing as rest of website -->
-        <row class="large-9 push-2 columns create_page">
-          
+        <div class="row">
 
           <!-- Left panel with cute intro sentence -->
           <div class="large-6 columns" id="leftSide">
@@ -125,9 +125,14 @@ require_once "classes/user.php";
               <input type="submit" name="register" value="Register" />
             </form>
           </div> 
+<<<<<<< HEAD
         </row>
       </div>
     
+=======
+        </div>
+      </div>
+>>>>>>> 1a1da9670dfb0e701f332299d93a1d80f8eeeb11
 
     </body>
 </html>

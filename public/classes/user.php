@@ -18,7 +18,7 @@ class User{
       $user = $query->fetch();
       if (!$user) return;
 
-      $this->user_id = $user_id;
+      $this->user_id = $param;
       $this->email = $user->email;
       $this->firstName = $user->firstName;
       $this->lastName = $user->lastName;
@@ -57,17 +57,27 @@ class User{
     return $this->lastName;
   }
 
+  public function getName(){
+    return $this->getFirstName() . ' ' . $this->getLastName();
+  }
+
   public function getGroups(){
-    //  SELECT *
-// FROM groups
-// INNER JOIN groupMembers ON groups.group_id = groupMembers.id_group
-// INNER JOIN users ON groupMembers.id_user = users.user_id;
+    global $db;
+
+    $toReturn = array();
+
     $query = $db->prepare(
-     "SELECT `id_group` FROM `groupMembers` WHERE `id_user` = :id_user"
+     "SELECT `group_id`
+     FROM groups
+     INNER JOIN groupMembers ON groups.group_id = groupMembers.id_group
+     INNER JOIN users ON groupMembers.id_user = users.user_id WHERE id_user = :user_id"
      );
-    $query->execute(array(":id_user" => $user_id));
-    $user = $query->fetch(); 
+    $query->execute(array(":user_id" => $this->user_id));
+    while ($row = $query->fetch()) {
+      array_push($toReturn, new Group($row->group_id));
+    }
     
+    return $toReturn;
   }
 
 }

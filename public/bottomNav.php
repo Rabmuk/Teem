@@ -9,6 +9,7 @@
         <div class="large-6 columns">
           <ul class="inline-list right">
 
+<<<<<<< HEAD
   <footer id="footer">
           <ul class="inline-list">
              <li><a href="index.php">Home</a></li>
@@ -32,5 +33,20 @@
       }
     });
     </script>
+=======
+ <footer class="row footer">
+    
+    <div class="large-9 columns">
+      <ul class="inline-list left">
+        <li><a href="about.php">About</a></li>
+        <li><a href="contact.php">Contact Us</a></li>
+      </ul>
+    </div>
+
+    <div class="large-3 columns">
+        <p>&copy; Team SnapChatRoulette</p>
+    </div>
+  </footer>
+>>>>>>> 1a1da9670dfb0e701f332299d93a1d80f8eeeb11
 
 </html>

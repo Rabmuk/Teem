@@ -8,6 +8,26 @@ a:hover{
 	color:#3de8b6;
 }
 
-.greenyo{
+.colorback{
 	background-color: #3de8b6;
+	border: 2px solid #3de8b6;
+}
+
+.blockleft{
+	border-bottom: 2px solid #3de8b6;
+	border-right: 2px solid #3de8b6;
+	border-left: 2px solid #3de8b6;
+	min-height: 500px;
+}
+
+.blockright{
+	border-right: 2px solid #3de8b6;
+	border-bottom: 2px solid #3de8b6;
+	border-right: 2px solid #3de8b6;
+	min-height: 500px;
+}
+
+.heading{
+	color: #197b5e;
+	text-decoration: underline;
 }
