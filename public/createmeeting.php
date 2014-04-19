@@ -1,6 +1,8 @@
 <?php 
-require_once "../database/init.php"; 
-require_once "classes/user.php";
+	require_once "../database/init.php"; 
+	require_once "classes/user.php";
+	require_once "./headerNav.php";
+
 ?>
 
 <!doctype HTML>
@@ -14,6 +16,7 @@ require_once "classes/user.php";
     <script src="js/createmeeting.js" type="text/javascript" ></script>
 </head>
 <body>
+<div id = "wrapper">
   <div class="row">
 		<div class="large-12">
 			<h2>Create a Meeting</h2>
@@ -87,6 +90,7 @@ require_once "classes/user.php";
 	    </div>
 	  </div>
 	</form>
+</div>
 </body>
 </html>
 

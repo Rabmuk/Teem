@@ -1,9 +1,18 @@
 <?php 	
 	session_start();
-	require_once "./headerNav.php";
-
 	require_once "classes/user.php";
 	require_once "classes/group.php";
+
+	if (isset($_SESSION['email'])){
+		$user = new User($_SESSION['email']);
+	}else{
+		header("Location: ./index.php");
+	}
+
+	// $groups = $user.getGroups();
+	// print_r($groups);
+
+	require_once "./headerNav.php";	
 ?>
 <!doctype HTML>
 <html class="no-js" lang="en">
@@ -14,6 +23,7 @@
     <link rel="stylesheet" href="css/profile.css" />
 </head>
 <body>
+<div id = "wrapper">
 	<div>
 		<div class="row">
 			<div class="large-6 columns">
@@ -56,6 +66,8 @@
 				</div>
 			</div>
 		</div>
+	</div>
+</div>
 </body>
 </html>
 <?php

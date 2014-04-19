@@ -65,16 +65,13 @@ if (isset($_POST['login']) && $_POST['login'] == 'Login') {
           <a href="#" data-reveal-id="myModal" class="button expand" data-reveal>Log In</a>
           <div id="myModal" class="reveal-modal small" data-reveal>
             <div id="login">
-              <?php if (isset($_SESSION['email'])): ?>
-              <h1>Welcome, <?php echo htmlentities($_SESSION['email']) ?></h1>
-              <form method="post" action="index.php">
-                <input name="logout" type="submit" value="Logout" />
-              </form>
-              <a href="checklogin.php">check page</a>
+              <?php if (isset($_SESSION['email'])): 
+                header("Location: ./profile.php");
+              ?>
               <?php else: ?>
               <h1>Login</h1>
               <?php if (isset($err)) echo "<p>$err</p>" ?>
-              <form method="post" action="index.php">
+              <form method="post" action="login.php">
                 <label for="email">Email: </label><input type="text" name="email" />
                 <label for="pass">Password: </label><input type="password" name="pass" />
                 <input name="login" type="submit" value="Login" />

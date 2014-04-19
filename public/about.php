@@ -1,6 +1,7 @@
 
 <?php
     require_once "./headerNav.php";
+    
 ?>
 
 <!doctype html>
@@ -14,7 +15,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>About Us</title>
         <link rel="stylesheet" href="css/foundation.css">
-        
+        <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+        <script src="js/index.js" type="text/javascript"></script>    
     </head>
     <body>
       <!--start wrapper-->
