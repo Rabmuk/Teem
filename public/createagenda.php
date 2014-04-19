@@ -4,7 +4,11 @@
 <html class="no-js" lang="en">
 <head>
 	<meta charset="utf-8" />
+<<<<<<< HEAD
     <title>Create Agenda</title>
+=======
+    <title>Teem - Create Agenda</title>
+>>>>>>> 2df864ae51578ef29725c1e7241e4605e7f3bec0
     <link rel="stylesheet" href="css/foundation.css" />
     <link rel="stylesheet" href="css/createagenda.css" />
     <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
@@ -19,8 +23,8 @@
 	<div class="row">
 		<div class="large-12 columns">
 			<form>
-				Meeting name:<input type="text" value="Make this take the meeting name and display it here" name="firstname"><br>
-				Desired outcomes:<input type="text" name="lastname">
+				Meeting name:<input type="text" value="Make this take the meeting name and display it here" name="meetingname"><br>
+				Desired outcomes:<input type="text" name="outcomes">
 			</form>
 			<p>Topics of Discussion:</p>
 		</div>

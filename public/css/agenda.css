@@ -31,5 +31,13 @@ a:hover{
 .heading{
 	color: #197b5e;
 	text-decoration: underline;
-	margin-bottom: 0px;
+}
+
+input[type="submit"] {
+  background-color: #009999;
+  border: 2px #009999 solid;
+  color: white; 
+  text-align: center;
+  min-width: 50px;
+  height: 35px;
 }

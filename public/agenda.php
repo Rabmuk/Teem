@@ -20,38 +20,26 @@
 	</div>
 	<!--headings-->
 	<div class="row">
-		<div class="large-5 columns">
-			<br><h4 class = "heading">Introduction</h4>
-		</div>
-		<div class="large-2 columns"><p></p></div>
-		<div class="large-5 columns">
-			<br>
-			<h4 class = "heading">Action Items</h4>
-		</div>
-	</div>
-	<!--person, duration-->
-	<div class="row">
-		<div class="large-5 columns">
+		<div class="large-12 columns">
+			<br><h3 class = "heading">Introduction</h3>
 			<p class = "inline right">25 minutes</p>
 			<p>Alex Kumbar</p>
-			
 		</div>
-		<div class="large-2 columns"><p></p></div>
-		<div class="large-5 columns">
-			<br>
-			<h4 class = "heading">Action Items</h4>
+	</div>
+	<!--topics, attachments-->
+	<div class="row">
+		<div class="large-6 columns">
+			<h5 class= "heading">Topics to Cover</h5>
+			<textarea rows="4" onFocus="if(this.value=='Enter topics here.')this.value='';">Enter topics here.</textarea>
+			<input type="submit" name="savetopics" value="Save" />
+		</div>
+		<div class="large-6 columns">
+			<h5 class= "heading">Attachments</h5>
+			<input type="submit" name="uploadfile" value="Upload File" />
+			<input type="submit" name="savetopics" value="Save" />
 		</div>
 	</div>
 </div>
-
-
-
-			<ul>
-				<li>hey</li>
-				<li>yo</li>
-				<li>heyooooo</li>
-			</ul>
-
 
 <!--don't worry about this-->
 <br><br><br><br><br>
