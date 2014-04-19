@@ -11,6 +11,7 @@ class Meeting{
   public function __construct($param){
     global $db;
     
+    $query = $db->prepare(
     "SELECT * FROM `groupMeeting` WHERE `meeting_id` = :meeting_id"
       );
     $query->execute(array(":meeting_id" => $param ));
@@ -38,7 +39,7 @@ class Meeting{
 
 }
 
-function addMeetingToDatabase($id_group, $startTime, $endTime){
+function addMeetingToDatabase($id_group, $startTime, $endTime, $members){
   $query = $db->prepare(
     "INSERT INTO `groupMeeting` (`id_group`, `startTime`, `endTime`)
     VALUES (:id_group, :startTime, :endTime)"
@@ -57,6 +58,8 @@ function addMeetingToDatabase($id_group, $startTime, $endTime){
       ":startTime" => $startTime
       ));
     $meeting = $query->fetch();
+
+    // TODO add meeting members to database
 
     return new Meeting($meeting->meeting_id);
 }
