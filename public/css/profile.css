@@ -2,8 +2,12 @@
   color: #009999;
 }
 
-a[href="creategroup.php"], [href="createmeeting.php"] {
+a[href="#"], [href="createmeeting.php"] {
   font-size: 20px;
+  color: #009999;
+}
+
+h1 {
   color: #009999;
 }
 
@@ -36,4 +40,37 @@ hr {
 img[src="img/clock.png"] {
   width: 35px;
   height: 35px;
+}
+
+#createGroup {
+  background-color: white;
+  height: 100%;
+  padding-bottom: 5px;
+}
+
+input[type="text"], textarea {
+  border: 2px #606060 solid;
+  border-radius: 5px;
+}
+
+#myModal {
+  border: 5px #009999 solid;
+}
+
+input[type="submit"] {
+  background-color: #009999;
+  border: 2px #009999 solid;
+  color: white; 
+  text-align: center;
+  width: 75px;
+  height: 35px;
+}
+
+label {
+  font-size: 20px;
+}
+
+input[type="submit"]:hover {
+  background-color: #00CC99;
+  border: 2px #00CC99 solid;
 }
