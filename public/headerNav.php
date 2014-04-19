@@ -2,7 +2,7 @@
 <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:300' rel='stylesheet' type='text/css'>  </head>
    <div class="row header">
     <div class="large-3 columns">
-      <h1><img src="http://placehold.it/400x75&text=Logo" /></h1>
+      <h1><img src="img/logo-mini.png" /></h1>
     </div>
     
     <div class="large-9 columns">
