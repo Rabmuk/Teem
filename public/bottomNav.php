@@ -3,7 +3,7 @@
 <?php
 ?>
 
- <footer class="row header">
+ <footer class="row footer">
     
     <div class="large-9 columns">
       <ul class="inline-list left">

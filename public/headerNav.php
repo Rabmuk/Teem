@@ -1,11 +1,11 @@
 <!-- This is the header navigation for pages when a user is logged in. --> 
 <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:300' rel='stylesheet' type='text/css'>  </head>
    <div class="row header">
-    <div class="large-3 columns">
+    <div class="large-4 columns">
       <h1><img src="http://placehold.it/400x75&text=Logo" /></h1>
     </div>
     
-    <div class="large-9 columns">
+    <div class="large-8 columns">
       <ul class="inline-list right">
         <li><a href="index.php">Home</a></li>
         <li><a href="accountsettings.php">Settings</a></li>
