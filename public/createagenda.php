@@ -4,7 +4,7 @@
 <html class="no-js" lang="en">
 <head>
 	<meta charset="utf-8" />
-    <title>My Profile - Home</title>
+    <title>Teem - Create Agenda</title>
     <link rel="stylesheet" href="css/foundation.css" />
     <link rel="stylesheet" href="css/createagenda.css" />
 </head>
@@ -17,8 +17,8 @@
 	<div class="row">
 		<div class="large-12 columns">
 			<form>
-				Meeting name:<input type="text" value="Make this take the meeting name and display it here" name="firstname"><br>
-				Desired outcomes:<input type="text" name="lastname">
+				Meeting name:<input type="text" value="Make this take the meeting name and display it here" name="meetingname"><br>
+				Desired outcomes:<input type="text" name="outcomes">
 			</form>
 			<p>Topics of Discussion:</p>
 		</div>
