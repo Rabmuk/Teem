@@ -1,6 +1,5 @@
 <?php
 require_once "../database/init.php";
-require_once "user.php";
 
 class Group{
   private $group_id = -1;
@@ -42,6 +41,7 @@ class Group{
     global $db;
 
     $toReturn = '';
+    $isFirst = true;
 
     $query = $db->prepare(
       "SELECT `id_user` FROM `groupMembers` WHERE `id_group` = :id_group"
@@ -50,7 +50,11 @@ class Group{
 
     while ($row = $query->fetch()) {
       $tempUser = new User((int)$row->id_user);
-      $toReturn .= ', ' . $tempUser->getName();
+      if (!$isFirst) {
+        $toReturn .= ', ';
+      }
+      $toReturn .= $tempUser->getName();
+      $isFirst = false;
     }
 
     return $toReturn;
