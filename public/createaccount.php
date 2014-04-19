@@ -53,6 +53,7 @@ require_once "classes/user.php";
 
     </head>
     <body>
+      <div id="wrapper">
 
         <!-- Entire page fits same sizing as rest of website -->
         <row class="large-9 push-2 columns create_page">
@@ -101,7 +102,7 @@ require_once "classes/user.php";
               <div class="row">
                 <div class ="large-6 columns">
                   <label>Email
-                    <input type="text" placeholder="Email" name="email" />
+                    <input type="email" placeholder="Email" name="email" />
                   </label>
                 </div>
               </div>
@@ -125,6 +126,7 @@ require_once "classes/user.php";
             </form>
           </div> 
         </row>
+      </div>
     
 
     </body>
