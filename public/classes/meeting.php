@@ -59,7 +59,10 @@ function addMeetingToDatabase($id_group, $startTime, $endTime, $members){
       ));
     $meeting = $query->fetch();
 
-    // TODO add meeting members to database
+    $memberArray = explode(" ", $members);
+    foreach ($memberArray as $member) {
+      // TODO add meeting members to database  
+    }
 
     return new Meeting($meeting->meeting_id);
 }
