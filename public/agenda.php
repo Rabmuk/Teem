@@ -7,6 +7,8 @@
     <title>Teem - Agenda</title>
     <link rel="stylesheet" href="css/foundation.css" />
     <link rel="stylesheet" href="css/agenda.css" />
+    <script src="http://code.jquery.com/jquery-latest.min.js"
+        type="text/javascript"></script>
 </head>
 <body>
 <div id = "wrapper">
@@ -16,29 +18,44 @@
 			<p class= "desiredOutcome">Desired outcome: TO BEAT THE OTHER SCHEDULING TEAM >:D</p>
 		</div>
 	</div>
+	<!--headings-->
 	<div class="row">
-		<!--topic name and person responsible-->
-		<div class="large-6 columns blockleft">
-			<br>
-			<h4 class = "heading">Introduction</h4>
-			<p class = "duration inline right">25 minutes</p>
-			<p class = "person">Alex Kumbar</p>
-			<ul>
-				<li>hey</li>
-				<li>yo</li>
-				<li>heyooooo</li>
-			</ul>
+		<div class="large-5 columns">
+			<br><h4 class = "heading">Introduction</h4>
 		</div>
-		<!--action items-->
-		<div class="large-6 columns blockright">
+		<div class="large-2 columns"><p></p></div>
+		<div class="large-5 columns">
+			<br>
+			<h4 class = "heading">Action Items</h4>
+		</div>
+	</div>
+	<!--person, duration-->
+	<div class="row">
+		<div class="large-5 columns">
+			<p class = "inline right">25 minutes</p>
+			<p>Alex Kumbar</p>
+			
+		</div>
+		<div class="large-2 columns"><p></p></div>
+		<div class="large-5 columns">
 			<br>
 			<h4 class = "heading">Action Items</h4>
 		</div>
 	</div>
 </div>
 
+
+
+			<ul>
+				<li>hey</li>
+				<li>yo</li>
+				<li>heyooooo</li>
+			</ul>
+
+
 <!--don't worry about this-->
 <br><br><br><br><br>
+
 </body>
 </html>
 <?php
