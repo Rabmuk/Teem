@@ -1,13 +1,15 @@
 <?php
 require_once "../database/init.php";
+require_once "user.php";
 
 class Group{
   private $group_id = -1;
   private $id_owner = -1;
   private $name = "";
 
-  public function __constructor($group_id){
+  public function __construct($group_id){
     global $db;
+
     $query = $db->prepare(
       "SELECT `id_owner`, `name` FROM `groups` WHERE `group_id` = :group_id"
       );
@@ -22,6 +24,18 @@ class Group{
 
   public function exists(){
     return $this->group_id >= 0;
+  }
+
+  public function getName(){
+    return $this->name;
+  }
+
+  public function getOwner(){
+    return new User((int)$this->id_owner);
+  }
+
+  public function getID(){
+    return $this->group_id;
   }
 
 }
