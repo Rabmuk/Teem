@@ -20,31 +20,27 @@
 	</div>
 	<!--headings-->
 	<div class="row">
-		<div class="large-5 columns">
-			<br><h4 class = "heading">Introduction</h4>
-		</div>
-		<div class="large-2 columns"><p></p></div>
-		<div class="large-5 columns">
-			<br>
-			<h4 class = "heading">Action Items</h4>
-		</div>
-	</div>
-	<!--person, duration-->
-	<div class="row">
-		<div class="large-5 columns">
+		<div class="large-12 columns">
+			<br><h3 class = "heading">Introduction</h3>
 			<p class = "inline right">25 minutes</p>
 			<p>Alex Kumbar</p>
-			
 		</div>
-		<div class="large-2 columns"><p></p></div>
-		<div class="large-5 columns">
-			<br>
-			<h4 class = "heading">Action Items</h4>
+	</div>
+	<!--topics, attachments-->
+	<div class="row">
+		<div class="large-6 columns">
+			<h5>Topics to Cover</h5>
+			<textarea rows="4" onFocus="if(this.value=='topic')this.value='';">At w3schoolser free tutorials in all web development technologies. 
+			</textarea>
+			<input type="submit" name="savetopics" value="Save" />
 		</div>
 	</div>
 </div>
 
 
+
+<textarea rows="4" >At w3schoolser free tutorials in all web development technologies. 
+			</textarea>
 
 			<ul>
 				<li>hey</li>
