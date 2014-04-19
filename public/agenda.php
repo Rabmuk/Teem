@@ -33,6 +33,11 @@
 			<textarea rows="4" onFocus="if(this.value=='Enter topics here.')this.value='';">Enter topics here.</textarea>
 			<input type="submit" name="savetopics" value="Save" />
 		</div>
+		<div class="large-6 columns">
+			<h5 class= "heading">Attachments</h5>
+			<input type="submit" name="uploadfile" value="Upload File" />
+			<input type="submit" name="savetopics" value="Save" />
+		</div>
 	</div>
 </div>
 

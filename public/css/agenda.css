@@ -38,6 +38,6 @@ input[type="submit"] {
   border: 2px #009999 solid;
   color: white; 
   text-align: center;
-  width: 50px;
+  min-width: 50px;
   height: 35px;
 }
