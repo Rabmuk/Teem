@@ -19,7 +19,7 @@ session_start();
 
 set_include_path("../src/" . PATH_SEPARATOR . get_include_path());
 require_once 'Google/Client.php';
-require_once 'Google/Service/Urlshortener.php';
+require_once 'Google/Service/Calendar.php';
 
 /************************************************
   ATTENTION: Fill in these values! Make sure
@@ -37,11 +37,16 @@ require_once 'Google/Service/Urlshortener.php';
   through a login flow. To do this we need some
   information from our API console project.
  ************************************************/
+
 $client = new Google_Client();
-$client->setClientId($client_id);
-$client->setClientSecret($client_secret);
-$client->setRedirectUri($redirect_uri);
-$client->addScope("https://www.googleapis.com/auth/urlshortener");
+$client->setApplicationName("Web Science Application");
+$client->setClientId('725388779886-qj9g8a3flqtlib212svpt0siskhmqirg.apps.googleusercontent.com');
+$client->setClientSecret('CP66xoPSvItVo_sak3SrPz0N');
+$client->setRedirectUri('http://www.rabserver.com/teem/public/API/examples/user-example.php');
+$service = new Google_Service_Calendar($client);
+
+#$service = new Google_Service_Books($client);
+
 
 /************************************************
   When we create the service here, we pass the
@@ -49,7 +54,10 @@ $client->addScope("https://www.googleapis.com/auth/urlshortener");
   for the required scopes, and uses that when
   generating the authentication URL later.
  ************************************************/
-$service = new Google_Service_Urlshortener($client);
+/*$service = new Google_Service_Urlshortener($client);*/
+/*$service = new Google_CalendarService($client);*/
+
+/* later on we will need to read these dates in from user input in some manner */
 
 /************************************************
   If we're logging out we just need to clear our
@@ -92,39 +100,35 @@ if (isset($_SESSION['access_token']) && $_SESSION['access_token']) {
   might happen here is the access token itself is
   refreshed if the application has offline access.
  ************************************************/
-if ($client->getAccessToken() && isset($_GET['url'])) {
-  $url = new Google_Service_Urlshortener_Url();
-  $url->longUrl = $_GET['url'];
-  $short = $service->url->insert($url);
-  $_SESSION['access_token'] = $client->getAccessToken();
+if ($client->getAccessToken()){
+
+  $date_from = '2014-02-21T02:30:00Z';
+  $date_to = '2014-02-21T17:00:00Z';
+
+
+  $freebusy_req = new Google_Service_Calendar_FreeBusyRequest();
+  $freebusy_req->setTimeMin(date(DateTime::ATOM, strtotime($date_from)));
+  $freebusy_req->setTimeMax(date(DateTime::ATOM, strtotime($date_to)));
+  $freebusy_req->setTimeZone('America/Albany');
+  $item = new Google_Service_Calendar_FreeBusyRequestItem();
+  $item->setId('{calendarId}');
+  $freebusy_req->setItems(array($item));
+  $query = $service->freebusy->query($freebusy_req);
+
+  echo $createdReq->getKind(); // works
+  echo $createdReq->getTimeMin(); // works
+  echo $createdReq->getTimeMax(); // works
+  $s = $createdReq->getCalendars($diekalender);  
+  Print_r($s, true); // doesn't show anything
+
+  echo "<hr><br><font size=+1>Already connected</font> (No need to login)";
+
+} else {
+
+  $authUrl = $client->createAuthUrl();
+  print "<hr><br><font size=+2><a href='$authUrl'>Connect Me!</a></font>";
+
 }
 
-echo pageHeader("User Query - URL Shortener");
-if (
-    $client_id == '<YOUR_CLIENT_ID>'
-    || $client_secret == '<YOUR_CLIENT_SECRET>'
-    || $redirect_uri == '<YOUR_REDIRECT_URI>') {
-  echo missingClientSecretsWarning();
-}
-?>
-<div class="box">
-  <div class="request">
-    <?php if (isset($authUrl)): ?>
-      <a class='login' href='<?php echo $authUrl; ?>'>Connect Me!</a>
-    <?php else: ?>
-      <form id="url" method="GET" action="<?php echo $_SERVER['PHP_SELF']; ?>">
-        <input name="url" class="url" type="text">
-        <input type="submit" value="Shorten">
-      </form>
-      <a class='logout' href='?logout'>Logout</a>
-    <?php endif ?>
-  </div>
-
-  <?php if (isset($short)): ?>
-    <div class="shortened">
-      <?php var_dump($short); ?>
-    </div>
-  <?php endif ?>
-</div>
-<?php
-echo pageFooter(__FILE__);
+$url = 'http://' . $_SERVER['HTTP_HOST'] . $_SERVER['PHP_SELF'];
+echo "<br><br><font size=+2><a href=$url?logout>Logout</a></font>";
