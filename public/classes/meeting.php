@@ -12,7 +12,7 @@ class Meeting{
     global $db;
     
     $query = $db->prepare(
-    "SELECT * FROM `groupMeeting` WHERE `meeting_id` = :meeting_id"
+      "SELECT * FROM `meetings` WHERE `meeting_id` = :meeting_id"
       );
     $query->execute(array(":meeting_id" => $param ));
     $meeting = $query->fetch();
@@ -33,38 +33,59 @@ class Meeting{
     return $this->id_group;
   }
 
-  public function exists(){
-    return $this->meeting_id >= 0;
-  }
-
 }
 
-function addMeetingToDatabase($id_group, $startTime, $endTime, $members){
+function addMeetingToDatabase($title, $location, $startTime, $members){
+  global $db;
+
   $query = $db->prepare(
-    "INSERT INTO `groupMeeting` (`id_group`, `startTime`, `endTime`)
-    VALUES (:id_group, :startTime, :endTime)"
+    "INSERT INTO `meetings` (, `title`, `startTime`)
+    VALUES (:title, :startTime)"
     );
   $query->execute(array(
-    ":id_group" => $id_group,
-    ":startTime" => $startTime,
-    ":endTime" => $endTime
+    ":title" => $title,
+    ":startTime" => $startTime
     ));
 
   $query = $db->prepare(
-      "SELECT `meeting_id` FROM `groupMeeting` WHERE `id_group` = :id_group AND `startTime` = :startTime"
+    "SELECT `meeting_id` FROM `meetings` WHERE `title` = :title 
+    AND `startTime` = :startTime"
+    );
+  $query->execute(array(
+    ":title" => $title, 
+    ":startTime" => $startTime
+    ));
+  $meeting = $query->fetch();
+
+  $toReturn = new Meeting($meeting->meeting_id);
+
+  $memberArray = explode(", ", $members);
+
+  foreach ($memberArray as $member) {
+    $query = $db->prepare(
+      "SELECT `user_id` FROM `users` WHERE `email` = :email"
       );
     $query->execute(array(
-      ":id_group" => $id_group, 
-      ":startTime" => $startTime
+      ":email" => $member
       ));
-    $meeting = $query->fetch();
+    $user = $query->fetch();
 
-    $memberArray = explode(" ", $members);
-    foreach ($memberArray as $member) {
-      // TODO add meeting members to database  
+    if($user){
+      $query = $db->prepare(
+        "INSERT INTO `meetingMembers` (`id_meeting`, `id_user`)
+        VALUES (:id_meeting, :id_user)"
+        );
+      $query->execute(array(
+        ":id_meeting" => $meeting->meeting_id,
+        ":id_user" => $user->user_id
+        ));
+    }else{
+      echo $member . ' cound not be found\n';
     }
 
-    return new Meeting($meeting->meeting_id);
+  }
+
+  return $toReturn;
 }
 
 ?>

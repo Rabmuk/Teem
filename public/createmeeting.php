@@ -1,6 +1,7 @@
 <?php 
 require_once "../database/init.php"; 
 require_once "classes/user.php";
+require_once "classes/meeting.php";
 require_once "./headerNav.php";
 
 ?>
@@ -18,9 +19,9 @@ require_once "./headerNav.php";
 <body>
 	<div id = "wrapper">
 		<?php if(isset($_POST['submit']) && $_POST['submit'] == 'Create'){
-
+			addMeetingToDatabase($_POST['title'], $_POST['location'], $_POST['date'], $_POST['time'], $_POST['attendees']);
 			
-			echo "Youre meeting has been created.";
+			echo "Your meeting has been created.";
 		}else{ ?>
 		<div class="row">
 			<div class="large-12">
@@ -35,7 +36,7 @@ require_once "./headerNav.php";
 							<label for="title" class="right inline">Title</label>
 						</div>
 						<div class="small-9 columns">
-							<input type="text" id="title" placeholder="Enter Title">
+							<input type="text" id="title" name="title" placeholder="Enter Title">
 						</div>
 					</div>
 					<div class="row">
@@ -51,7 +52,7 @@ require_once "./headerNav.php";
 							<label for="location" class="right inline">Location</label>
 						</div>
 						<div class="small-9 columns">
-							<input type="text" id="location" placeholder="Enter Location">
+							<input type="text" id="location" name="location" placeholder="Enter Location">
 						</div>
 					</div>
 					<div class="row">
@@ -59,7 +60,7 @@ require_once "./headerNav.php";
 							<label for="date" class="right inline">Date</label>
 						</div>
 						<div class="small-9 columns">
-							<input type="date" id="datepicker" placeholder="Enter Date">
+							<input type="date" id="datepicker" name="date" placeholder="Enter Date">
 						</div>
 					</div>
 					<div class="row">
@@ -67,7 +68,7 @@ require_once "./headerNav.php";
 							<label for="time" class="right inline">Time</label>
 						</div>
 						<div class="small-9 columns">
-							<input type="time" id="time" placeholder="Enter Time">
+							<input type="time" id="time" name="time" placeholder="Enter Time">
 						</div>
 					</div>
 
@@ -76,7 +77,7 @@ require_once "./headerNav.php";
 							<label for="attendees" class="right inline">Attendees</label>
 						</div>
 						<div class="small-9 large-9 columns">
-							<textarea type="text" id="attendees" rows="5" placeholder="Enter Individuals and Groups"></textarea>
+							<textarea type="text" id="attendees" name="attendees" rows="5" placeholder="Enter Individuals and Groups"></textarea>
 						</div>
 					</div>
 
