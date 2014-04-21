@@ -20,8 +20,9 @@ require_once "./headerNav.php";
 	<div id = "wrapper">
 		<?php if(isset($_POST['submit']) && $_POST['submit'] == 'Create'){
 			addMeetingToDatabase($_POST['title'], $_POST['location'], $_POST['date'], $_POST['time'], $_POST['attendees']);
-			
-			echo "Your meeting has been created.";
+			?>
+			<h1>Your meeting has been created.</h1>
+			<?php
 		}else{ ?>
 		<div class="row">
 			<div class="large-12">

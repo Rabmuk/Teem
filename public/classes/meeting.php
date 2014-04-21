@@ -4,7 +4,9 @@ require_once "../database/init.php";
 class Meeting{
 
   private $meeting_id = -1;
-  private $id_group = -1;
+  private $title = '';
+  private $location = '';
+  private $date = '';
   private $startTime = '';
   private $endTime = '';
   
@@ -17,10 +19,12 @@ class Meeting{
     $query->execute(array(":meeting_id" => $param ));
     $meeting = $query->fetch();
 
-    if (!$meeting) {return ; }
+    if (!$meeting) { return ; }
 
     $this->meeting_id = $param;
-    $this->id_group = $meeting->id_group;
+    $this->title = $meeting->title;
+    $this->location = $meeting->location;
+    $this->date = $meeting->date;
     $this->startTime = $meeting->startTime;
     $this->endTime = $meeting->endTime;
   }
@@ -29,8 +33,16 @@ class Meeting{
     return $this->meeting_id >= 0;
   }
 
-  public function getGroupID(){
-    return $this->id_group;
+  public function getTitle(){
+    return $this->title;
+  }
+
+  public function getDate(){
+    return $this->date;
+  }
+
+  public function getTime(){
+    return $this->startTime; 
   }
 
 }
@@ -99,11 +111,11 @@ function addMeetingToDatabase($title, $location, $date, $startTime, $members){
           ":id_group" => $group->group_id
           ));
         while ($row = $query->fetch()) {
-          $query = $db->prepare(
+          $insertQuery = $db->prepare(
             "INSERT INTO `meetingMembers` (`id_meeting`, `id_user`)
             VALUES (:id_meeting, :id_user)"
             );
-          $query->execute(array(
+          $insertQuery->execute(array(
             ":id_meeting" => $meeting->meeting_id,
             ":id_user" => $row->id_user
             ));

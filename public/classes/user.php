@@ -80,6 +80,24 @@ class User{
     return $toReturn;
   }
 
+  public function getMeetings(){
+    global $db;
+
+    $toReturn = array();
+
+    $query = $db->prepare(
+      "SELECT `id_meeting` FROM meetingMembers 
+      INNER JOIN meetings ON meetingMembers.id_meeting = meetings.meeting_id
+      WHERE id_user = :user_id ORDER BY `date`, `startTime`"
+     );
+    $query->execute(array(":user_id" => $this->user_id));
+    while ($row = $query->fetch()) {
+      array_push($toReturn, new Meeting($row->id_meeting));
+    }
+    
+    return $toReturn;    
+  }
+
 }
 
 //assume that the email is unique
