@@ -70,7 +70,7 @@ if (isset($_POST['login']) && $_POST['login'] == 'Login') {
               ?>
               <?php else: ?>
               <h1>Login</h1>
-              <?php if (isset($err)) echo "<p>$err</p>" ?>
+              <?php if (isset($err)) echo "<p id='err'>$err</p>" ?>
               <form method="post" action="login.php">
                 <label for="email">Email: </label><input type="text" name="email" />
                 <label for="pass">Password: </label><input type="password" name="pass" />

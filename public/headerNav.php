@@ -7,7 +7,7 @@
    <div class="row header">
     <div class="large-3 columns">
       
-      <a href="index.php"><img src="img/logo-mini.png" /></a>
+      <a id="logo" href="index.php"><img src="img/logo-mini.png" />Teem</a>
     </div>
     
     <div class="large-9 columns">

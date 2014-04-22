@@ -6417,3 +6417,12 @@ footer p{
   position: relative;
   min-height: 100%;
 }
+
+#logo {
+  color: white;
+  font-size: 48px;
+}
+
+img[src="img/logo-mini.png"] {
+  padding-right: 10px;
+}

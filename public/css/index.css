@@ -67,6 +67,7 @@ input[type="submit"] {
 input[type="submit"]:hover {
   background-color: #00CC99;
   border: 2px #00CC99 solid;
+  cursor: pointer;
 }
 
 /*Begin contact stuff, yo*/
@@ -136,5 +137,9 @@ input[type="text"], input[type="password"] {
   /*border: 3px #000 solid;*/
   padding-bottom: 5px;
   /*border-radius: 2px;*/
+}
+
+#err {
+  font-color: red;
 }
 
