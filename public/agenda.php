@@ -7,8 +7,7 @@
     <title>Teem - Agenda</title>
     <link rel="stylesheet" href="css/foundation.css" />
     <link rel="stylesheet" href="css/agenda.css" />
-    <script src="http://code.jquery.com/jquery-latest.min.js"
-        type="text/javascript"></script>
+    <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
 </head>
 <body>
 <div id = "wrapper">
