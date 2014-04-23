@@ -1,16 +1,10 @@
 <?php
 error_reporting(E_ALL);
+session_start();
 set_include_path("../src/" . PATH_SEPARATOR . get_include_path());
 require_once 'Google/Client.php';
 require_once 'Google/Service/Calendar.php';
-session_start();
 
-if ((isset($_SESSION)) && (!empty($_SESSION))) {
-   echo "There are cookies<br>";
-   echo "<pre>";
-   print_r($_SESSION);
-   echo "</pre>";
-}
 
  $client_id = '725388779886-qj9g8a3flqtlib212svpt0siskhmqirg.apps.googleusercontent.com';
  $client_secret = 'CP66xoPSvItVo_sak3SrPz0N';
@@ -37,17 +31,18 @@ if (isset($_GET['logout'])) {
 }
 
 if (isset($_GET['code'])) {
-  echo "<br>I got a code from Google = ".$_GET['code']; // You won't see this if redirected later
   $client->authenticate($_GET['code']);
-  $_SESSION['token'] = $client->getAccessToken();
-  header('Location: http://' . $_SERVER['HTTP_HOST'] . $_SERVER['PHP_SELF']);
-  echo "<br>I got the token = ".$_SESSION['token']; // <-- not needed to get here unless location uncommented
+  $_SESSION['access_token'] = $client->getAccessToken();
+  $redirect = 'http://' . $_SERVER['HTTP_HOST'] . $_SERVER['PHP_SELF'];
+  header('Location: ' . filter_var($redirect, FILTER_SANITIZE_URL));
 }
 
 if (isset($_SESSION['token'])) {
   echo "<br>Getting access";
   $client->setAccessToken($_SESSION['token']);
 }
+
+
 
 if ($client->getAccessToken()){
 
@@ -64,10 +59,10 @@ if ($client->getAccessToken()){
   $freebusy_req->setItems(array($item));
   $query = $service->freebusy->query($freebusy_req);
 
-  echo $createdReq->getKind(); // works
-  echo $createdReq->getTimeMin(); // works
-  echo $createdReq->getTimeMax(); // works
-  $s = $createdReq->getCalendars($diekalender);  
+  echo $createdReq->getKind(); 
+  echo $createdReq->getTimeMin();
+  echo $createdReq->getTimeMax(); 
+  $s = $createdReq->getCalendars($chriscalender);  
   Print_r($s, true); // doesn't show anything
 
 
