@@ -19,5 +19,5 @@ The details:
 The rest:
 	- link to profile.php in header
 	- if logged in, clicking on header logo will bring you to profile.php
-	- make contact page look nice
+	- DONE - make contact page look nice
 	- Google API??

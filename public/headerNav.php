@@ -12,7 +12,7 @@
     
     <div class="large-9 columns">
       <ul class="inline-list right">
-        <li><a href="index.php">Home</a></li>
+        <li><a href="profile.php">Home</a></li>
         <li><a href="accountsettings.php">Settings</a></li>
         <?php if(isset($_SESSION['email'])){ ?>
           <li><a href="logout.php">Log Out</a></li>
