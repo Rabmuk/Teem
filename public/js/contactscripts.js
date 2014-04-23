@@ -40,7 +40,7 @@
 				var formInput = $(this).serialize();
 				$.post($(this).attr('action'),formInput, function(data){
 					$('form#contact-us').slideUp("fast", function() {				   
-						$(this).before('<p class="tick">Thank you! Your message has been sent. </p>');
+						$(this).before('<p class="tick" style="color:#197b5e;">Thank you! Your message has been sent. </p>');
 					});
 				});
 			}

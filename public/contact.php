@@ -27,6 +27,7 @@
 	                <p class="info">Your email was sent. Huzzah!</p>
 	            </div>
 	            <?php } else { ?>
+	            <h1 style="color:black;">Contact Us</h1>
 				<p class="desc">You can use this contact form to report any bugs, ask a question, or send a message to the team. All fields are required.</p>
 			
 				<?php if(isset($hasError) || isset($captchaError) ) { ?>

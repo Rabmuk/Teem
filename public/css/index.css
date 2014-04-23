@@ -78,20 +78,8 @@ input[type="submit"]:hover {
 .messageinput{
   font-size: 20px;
   line-height: 24px;
-  font-family: 'Dosis';
   /*border: 2px solid #740000!important;*/
   width:95%;
-  height:40px;
-  padding-left: 10px;
-  margin-bottom: 10px;
-}
-
-.messageinputhalf{
-  font-size: 20px;
-  line-height: 24px;
-  font-family: 'Dosis';
-  /*border: 2px solid #740000!important;*/
-  width:46.7%;
   height:40px;
   padding-left: 10px;
   margin-bottom: 10px;
@@ -100,6 +88,11 @@ input[type="submit"]:hover {
 .messageinputtextarea{
   padding-top: 10px;
   height: 120px;
+  border-radius: 5px;
+  border: #606060 solid 2px;
+  width:100%;
+  font-family: 'Roboto Slab';
+  font-size:0.875rem;
 }
 
 /*#submitbutton{

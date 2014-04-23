@@ -40,7 +40,7 @@ if(isset($_POST['submitted'])) {
 	if(!isset($hasError)) {
 		
 		$emailTo = 'schluh@rpi.edu';
-		$subject = '[REMEMBRALLS site message] from: '.$name;
+		$subject = '[Teem site message] from: '.$name;
 		$sendCopy = trim($_POST['sendCopy']);
 		$body = "Name: $name \n\nEmail: $email \n\nComments: $comments";
 		$headers = 'From: ' .' <'.$emailTo.'>' . "\r\n" . 'Reply-To: ' . $email;
