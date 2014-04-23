@@ -33,6 +33,10 @@ class AgendaItem{
     return $this->item_id >= 0;
   }
 
+  public function getTime(){
+    return $this->allottedMinutes;
+  }
+
 }
 
 function addAgendaItemToDatabase($id_meeting, $id_user, $topics, $allottedMinutes, $itemOrder){

@@ -87,7 +87,7 @@ require_once "./headerNav.php";
       <img src="img/clock.png"></img>
     </div>
     <div class="large-10 columns">
-      <h4><?php echo $meeting->getTime(); ?> - <?php echo $meeting->getTitle(); ?></h4>
+      <h4><?php echo $meeting->getTime(); ?> - <a href=<?php echo '"agenda.php?id=' . $meeting->getID() . '"'; ?>><?php echo $meeting->getTitle(); ?></a></h4>
     </div>
     <hr>
   </div>

@@ -5,6 +5,7 @@ class Meeting{
 
   private $meeting_id = -1;
   private $title = '';
+  private $description = '';
   private $location = '';
   private $date = '';
   private $startTime = '';
@@ -23,6 +24,7 @@ class Meeting{
 
     $this->meeting_id = $param;
     $this->title = $meeting->title;
+    $this->description = $meeting->description;
     $this->location = $meeting->location;
     $this->date = $meeting->date;
     $this->startTime = $meeting->startTime;
@@ -37,12 +39,54 @@ class Meeting{
     return $this->title;
   }
 
+  public function getDescription(){
+    return $this->description;
+  }
+
   public function getDate(){
     return $this->date;
   }
 
   public function getTime(){
     return $this->startTime; 
+  }
+
+  public function getID(){
+    return $this->meeting_id;
+  }
+
+  public function checkMember($id_user){
+    global $db;
+    $query = $db->prepare(
+      "SELECT * FROM `meetingMembers` WHERE `id_user` = :id_user AND `id_meeting` = :id_meeting"
+      );
+    $query->execute(array(
+      ":id_user" => $id_user,
+      ":id_meeting" => $this->meeting_id
+      ));
+    $meeting = $query->fetch();
+    if ($meeting) {
+      return true;
+    }
+    return false;
+  }
+
+  public function getAgendaItems(){
+    global $db;
+
+    $toReturn = array();
+
+    $query = $db->prepare(
+     "SELECT `item_id`
+     FROM agendaItems
+     WHERE id_meeting = :id_meeting"
+     );
+    $query->execute(array(":id_meeting" => $this->meeting_id));
+    while ($row = $query->fetch()) {
+      array_push($toReturn, new agendaItem($row->item_id));
+    }
+
+    return $toReturn;
   }
 
 }
