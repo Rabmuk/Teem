@@ -19,7 +19,7 @@ a{
   top:0;
   height:450px;
   border:none;
-  padding-top:110px;
+  padding-top: 20px;
   background-image: url('../img/clockworksbw.png');
   border-bottom: 10px #3de8b6 solid;
 }
@@ -132,7 +132,12 @@ input[type="text"], input[type="password"] {
   /*border-radius: 2px;*/
 }
 
-#err {
-  font-color: red;
+img[src="img/logo-large.png"] {
+  padding-bottom: 10px;
+  width: 175px;
+  height: 175px;
+
 }
+
+
 

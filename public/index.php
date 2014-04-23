@@ -43,8 +43,11 @@ if (isset($_POST['login']) && $_POST['login'] == 'Login') {
  
     <!-- Desktop Slider -->
     <div id = "fullwidthindexdiv" class="text-center">
-      <center><h1 class = "indexhead">Teem</h1>
-        <h4 class = "indexsub">Schedule a meeting, divvy up tasks, and get together.</h4><center>
+      <center>
+        <img src="img/logo-large.png" />
+        <h1 class = "indexhead">Teem</h1>
+        <h4 class = "indexsub">Schedule a meeting, divvy up tasks, and get together.</h4>
+        <center>
       </div>
  
     <!-- End Desktop  -->
@@ -70,7 +73,7 @@ if (isset($_POST['login']) && $_POST['login'] == 'Login') {
               ?>
               <?php else: ?>
               <h1>Login</h1>
-              <?php if (isset($err)) echo "<p id='err'>$err</p>" ?>
+              <?php if (isset($err)) echo "<p>$err</p>" ?>
               <form method="post" action="login.php">
                 <label for="email">Email: </label><input type="text" name="email" />
                 <label for="pass">Password: </label><input type="password" name="pass" />

@@ -69,14 +69,14 @@ require_once "classes/user.php";
                 echo $msg;  
               }else{
                echo 'We want your agendas to be as <span style="color:#197b5e;">DYNAMIC</span> as your meetings.';
+               echo '<h2>Create an account today!</h2>';
               }
 
               ?>
               </h1>
             </div>
             <!-- Line spacing between the two sentences -->
-           
-            <h2>Create an account today!</h2>
+        
           </div>
 
          <!--  Right side form -->
@@ -125,14 +125,10 @@ require_once "classes/user.php";
               <input type="submit" name="register" value="Register" />
             </form>
           </div> 
-<<<<<<< HEAD
         </row>
       </div>
-    
-=======
         </div>
       </div>
->>>>>>> 1a1da9670dfb0e701f332299d93a1d80f8eeeb11
 
     </body>
 </html>
