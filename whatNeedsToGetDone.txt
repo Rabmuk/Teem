@@ -9,6 +9,7 @@ The basics:
 			- if no agenda, "there is no agenda for this meeting."
 
 The details:
+	- login is probably broken
 	- "you created a meeting. want to make an agenda for it?"
 	- anyone who clicks on "see agenda" under meeting will be able to edit their agenda
 
@@ -16,8 +17,12 @@ The details:
 		- everyone can upload their own files
 		- save action items text area
 
+	- incorrect login needs to redirect to index.php
+
 The rest:
 	- DONE - link to profile.php in header
 	- if logged in, clicking on header logo will bring you to profile.php
 	- DONE - make contact page look nice
 	- Google API??
+	- footer
+		- text in footer white
