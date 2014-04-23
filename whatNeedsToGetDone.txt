@@ -17,7 +17,7 @@ The details:
 		- save action items text area
 
 The rest:
-	- link to profile.php in header
+	- DONE - link to profile.php in header
 	- if logged in, clicking on header logo will bring you to profile.php
 	- DONE - make contact page look nice
 	- Google API??
