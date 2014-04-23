@@ -82,16 +82,13 @@ require_once "./headerNav.php";
 						</div>
 					</div>
 
-					<div>
-						<div class="small-10 large-6 small-centered large-centered columns">
-							<a href="#" type="search" class="button nice small radius"><img src="img/search.png"></img>Search</a>
-						</div>
-					</div>
-
 					<div class="row">
-						<div class="small-10 large-6 small-centered large-centered columns">
+						<div class="small-9 large-6 small-centered large-centered columns">
+							<input name="search" type="submit" value="Search" class="button nice radius expand"/>
+						</div>
+						<div class="small-9 large-6 small-centered large-centered columns">
 							<!-- <input name="submit" type="submit" class="button nice small radius">Create</a> -->
-							<input name="submit" type="submit" value="Create" />
+							<input name="submit" type="submit" value="Create" class="button nice radius expand"/>
 						</div>
 					</div>
 
