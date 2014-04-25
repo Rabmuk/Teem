@@ -174,4 +174,21 @@ function addMeetingToDatabase($title, $location, $date, $startTime, $members){
   return $toReturn;
 }
 
+function addItemToMeeting($meeting_id, $heading, $allottedTime, $presenter){
+  global $db;
+
+  $user = new User($presenter);
+
+  $query = $db->prepare(
+    "INSERT INTO `agendaItems` (`id_meeting`, `id_user`, `heading`, `allottedMinutes`)
+    VALUES (:id_meeting, :id_user, :heading, :allottedMinutes)"
+    );
+  $query->execute(array(
+    ":id_meeting" => $meeting_id,
+    ":id_user" => $user->getID(),
+    ":heading" => $heading,
+    ":allottedMinutes" => $allottedTime
+    ));
+}
+
 ?>

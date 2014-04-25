@@ -49,12 +49,51 @@ class User{
     return $this->email;
   }
 
+  public function setEmail($em){
+    global $db;
+
+    $query = $db->prepare(
+      "UPDATE `users` SET `email` = :email WHERE `user_id` = :user_id"
+      );
+    $query->execute(array(
+      ":email" => $em,
+      ":user_id" => $this->user_id
+      ));
+    $this->email = $em;
+  }
+
   public function getFirstName(){
     return $this->firstName;
   }
 
+  public function setFirstName($fn){
+    global $db;
+
+    $query = $db->prepare(
+      "UPDATE `users` SET `firstName` = :firstName WHERE `user_id` = :user_id"
+      );
+    $query->execute(array(
+      ":firstName" => $fn,
+      ":user_id" => $this->user_id
+      ));
+    $this->firstName = $fn;
+  }
+
   public function getLastName(){
     return $this->lastName;
+  }
+
+  public function setLastName($ln){
+    global $db;
+
+    $query = $db->prepare(
+      "UPDATE `users` SET `lastName` = :lastName WHERE `user_id` = :user_id"
+      );
+    $query->execute(array(
+      ":lastName" => $ln,
+      ":user_id" => $this->user_id
+      ));
+    $this->lastName = $ln;
   }
 
   public function getName(){
@@ -89,7 +128,7 @@ class User{
       "SELECT `id_meeting` FROM meetingMembers 
       INNER JOIN meetings ON meetingMembers.id_meeting = meetings.meeting_id
       WHERE id_user = :user_id ORDER BY `date`, `startTime`"
-     );
+      );
     $query->execute(array(":user_id" => $this->user_id));
     while ($row = $query->fetch()) {
       array_push($toReturn, new Meeting($row->id_meeting));

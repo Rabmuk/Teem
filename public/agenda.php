@@ -17,6 +17,14 @@ if(!$user->exists() || !$meeting->exists() || !$meeting->checkMember($user->getI
 	header("Location: ./index.php");
 }
 
+if (isset($_POST['savetopics']) && $_POST['savetopics'] == 'Save') {
+	addTopicsToItem($_POST['item_id'], $_POST['topics']);
+}
+
+if (isset($_POST['addItem']) && $_POST['addItem'] == "Submit") {
+	addItemToMeeting($meeting->getID(), $_POST['heading'], $_POST['time'], $_POST['presenter']);
+}
+
 require_once "./headerNav.php";	
 ?>
 <!doctype HTML>
@@ -44,17 +52,28 @@ require_once "./headerNav.php";
 			?>
 			<div class="row">
 				<div class="large-12 columns">
-					<br><h3 class = "heading">Introduction</h3>
+					<br><h3 class = "heading"><?php echo $agendaItem->getHeading(); ?></h3>
 					<p class = "inline right"><?php echo $agendaItem->getTime(); ?> minutes</p>
-					<p>Alex Kumbar</p>
+					<p><?php echo $agendaItem->getPresenter()->getName(); ?></p>
 				</div>
 			</div>
 			<!--topics, attachments-->
 			<div class="row">
 				<div class="large-6 columns">
 					<h5 class= "heading">Topics to Cover</h5>
-					<textarea rows="4" onFocus="if(this.value=='Enter topics here.')this.value='';">Enter topics here.</textarea>
-					<input type="submit" name="savetopics" value="Save" />
+					<ul>
+						<?php 
+						$topics = $agendaItem->getTopics();
+						foreach ($topics as $topic) {
+							echo "<li>" . $topic . "</li>";
+						}
+						?>
+					</ul>
+					<form method="post" action=<?php echo '"?id=' . $_GET['id'] . '"'; ?>>
+						<input type="hidden" name="item_id" value=<?php echo '"' . $agendaItem->getID() . '"'; ?>>
+						<textarea name="topics" rows="4" onFocus="if(this.value=='Add topics here.')this.value='';">Add topics here.</textarea>
+						<input type="submit" name="savetopics" value="Save" />
+					</form>
 				</div>
 				<div class="large-6 columns">
 					<h5 class= "heading">Attachments</h5>
@@ -66,33 +85,13 @@ require_once "./headerNav.php";
 			<?php 
 		}
 		?>
-		
-		<!--end one person's section-->
-		<!--begin one person's section-->
-		<!--headings-->
-		<!-- <div class="row">
-			<div class="large-12 columns">
-				<br><h3 class = "heading">Colors and stuff</h3>
-				<p class = "inline right">15 minutes</p>
-				<p>Hayley Schluter</p>
-			</div>
-		</div> -->
-		<!--topics, attachments-->
-		<!-- <div class="row">
-			<div class="large-6 columns">
-				<h5 class= "heading">Topics to Cover</h5>
-				<textarea rows="4" onFocus="if(this.value=='Enter topics here.')this.value='';">Enter topics here.</textarea>
-				<input type="submit" name="savetopics" value="Save" />
-			</div>
-			<div class="large-6 columns">
-				<h5 class= "heading">Attachments</h5>
-				<input type="submit" name="uploadfile" value="Upload File" />
-				<input type="submit" name="savetopics" value="Save" />
-			</div>
-		</div>
-		<center><hr style="width:80%;"></center> -->
-		<!--end one person's section-->
-
+		<h1>halp with formatting</h1>
+		<form method="post" action=<?php echo '"?id=' . $_GET['id'] . '"'; ?>>
+			<input type="text" name="heading" placeholder="Enter item heading">
+			<input type="text" name="time" placeholder="Enter allotted minutes">
+			<input type="text" name="presenter" placeholder="Enter presentor's email">
+			<input type="submit" name="addItem" value="Submit" class="button small expand"></input>
+		</form>
 	</div>
 
 	<!--don't worry about this-->
