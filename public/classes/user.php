@@ -66,6 +66,13 @@ class User{
     return $this->firstName;
   }
 
+  public function isUser($user){
+    if ($user instanceof User) {
+      return $this->user_id == $user->getID();
+    }
+    return false;
+  }
+
   public function setFirstName($fn){
     global $db;
 
