@@ -39,7 +39,7 @@ require_once "./headerNav.php";
         <p>*Seperate group member e-mails by ','</p>
         <div class="row">
          <div class="large-12 columns">
-          <input name="addMembers" type="submit" value="Submit" />
+          <input name="submit" type="submit" value="Submit" />
         </div>
       </div>
     </form>
@@ -98,6 +98,7 @@ require_once "./headerNav.php";
 </div>
 </div>
 </div>
+<h> <?php echo $user->getID(); ?> QWERQWEREQEWR </h>
 </body>
 <script type="text/javascript" src="js/foundation/foundation.js"></script>
 <script type="text/javascript" src="js/foundation/foundation.reveal.js"></script>
@@ -111,3 +112,8 @@ require_once "./bottomNav.php";
 
 ?>
 
+<?php if(isset($_POST['submit'])){
+          $id_owner = $user->getID();
+          addGroupToDatabase($id_owner, $_POST['addMembers'], $_POST['groupName']);
+        }
+      ?> 

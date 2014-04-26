@@ -63,7 +63,7 @@ class Group{
 }
 
 //assume that the email is unique
-function addGroupToDatabase($id_owner, $name){
+function addGroupToDatabase($id_owner, $name, $members){
   global $db;
 
   $query = $db->prepare(
@@ -84,7 +84,37 @@ function addGroupToDatabase($id_owner, $name){
       ));
     $group = $query->fetch();
 
-  return new User($group->group_id);
-}
+  $returnValue = new User($group->group_id);
+
+
+  $memberArray = explode(",", $members);
+
+  foreach ($memberArray as $member) {
+    $member = trim($member);
+    $query = $db->prepare(
+      "SELECT `user_id` FROM `users` WHERE `email` = :email"
+      );
+    $query->execute(array(
+      ":email" => $member
+      ));
+    $user = $query->fetch();
+
+    if($user){
+      $query = $db->prepare(
+        "INSERT INTO `groupmembers` (`id_group`, `id_user`)
+        VALUES (:id_group, :id_user)"
+        );
+      $query->execute(array(
+        ":id_group" => $group->group_id,
+        ":id_user" => $user->user_id
+        ));
+    }else{
+        echo $member . ' cound not be found\n';  
+      }
+    }
+    return $returnValue;
+  }
+
+
 
 ?>
