@@ -120,6 +120,15 @@ function addMeetingToDatabase($title, $id_owner, $location, $date, $startTime, $
 
   $toReturn = new Meeting($meeting->meeting_id);
 
+  $insertQuery = $db->prepare(
+    "INSERT INTO `meetingMembers` (`id_meeting`, `id_user`)
+    VALUES (:id_meeting, :id_user)"
+    );
+  $insertQuery->execute(array(
+    ":id_meeting" => $meeting->meeting_id,
+    ":id_user" => $id_owner
+    ));
+
   $memberArray = explode(",", $members);
 
   foreach ($memberArray as $member) {

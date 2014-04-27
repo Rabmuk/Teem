@@ -76,15 +76,24 @@ function addGroupToDatabase($id_owner, $name, $members){
     ));
 
   $query = $db->prepare(
-      "SELECT `group_id` FROM `groups` WHERE `name` = :name AND `id_owner` = :id_owner"
-      );
-    $query->execute(array(
-      ":name" => $name, 
-      ":id_owner" => $id_owner
-      ));
-    $group = $query->fetch();
+    "SELECT `group_id` FROM `groups` WHERE `name` = :name AND `id_owner` = :id_owner"
+    );
+  $query->execute(array(
+    ":name" => $name, 
+    ":id_owner" => $id_owner
+    ));
+  $group = $query->fetch();
 
   $returnValue = new User($group->group_id);
+
+  $query = $db->prepare(
+    "INSERT INTO `groupMembers` (`id_group`, `id_user`)
+    VALUES (:id_group, :id_user)"
+    );
+  $query->execute(array(
+    ":id_group" => $group->group_id,
+    ":id_user" => $id_owner
+    ));
 
 
   $memberArray = explode(",", $members);
@@ -109,11 +118,11 @@ function addGroupToDatabase($id_owner, $name, $members){
         ":id_user" => $user->user_id
         ));
     }else{
-        echo $member . ' cound not be found\n';  
-      }
+      echo $member . ' cound not be found\n';  
     }
-    return $returnValue;
   }
+  return $returnValue;
+}
 
 function deleteGroup($name, $id_owner){
   global $db;
@@ -131,36 +140,36 @@ function deleteMember($id_user){
 }
 
 function addMember($id_user){
-    global $db;
+  global $db;
 
-    $member = trim($id_user);
+  $member = trim($id_user);
+  $query = $db->prepare(
+    "SELECT `user_id` FROM `users` WHERE `email` = :email"
+    );
+  $query->execute(array(
+    ":email" => $member
+    ));
+  $user = $query->fetch();
+
+  if($user){
     $query = $db->prepare(
-      "SELECT `user_id` FROM `users` WHERE `email` = :email"
+      "INSERT INTO `groupmembers` (`id_group`, `id_user`)
+      VALUES (:id_group, :id_user)"
       );
     $query->execute(array(
-      ":email" => $member
+      ":id_group" => $group->group_id,
+      ":id_user" => $user->user_id
       ));
-    $user = $query->fetch();
-
-    if($user){
-      $query = $db->prepare(
-        "INSERT INTO `groupmembers` (`id_group`, `id_user`)
-        VALUES (:id_group, :id_user)"
-        );
-      $query->execute(array(
-        ":id_group" => $group->group_id,
-        ":id_user" => $user->user_id
-        ));
-    }else{
-        echo $member . ' cound not be found\n';  
-      }
+  }else{
+    echo $member . ' cound not be found\n';  
+  }
 }
 
 function changeGroupName($id_group, $name){
   global $db;
   
   $query = $db->exec("UPDATE `groups` SET `name`= $name  WHERE `id_group`= $id_group");
-   
+
 }
 
 
