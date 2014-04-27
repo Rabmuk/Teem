@@ -98,17 +98,30 @@ require_once "./headerNav.php";
 			<?php 
 		}
 		?>
-		<h1>halp with formatting</h1>
-		<form method="post" action=<?php echo '"?id=' . $_GET['id'] . '"'; ?>>
-			<input type="text" name="heading" placeholder="Enter item heading">
-			<input type="text" name="time" placeholder="Enter allotted minutes">
-			<input type="text" name="presenter" placeholder="Enter presentor's email">
-			<input type="submit" name="addItem" value="Submit" class="button small expand"></input>
-		</form>
+
+		<a href="#" data-reveal-id="myModal" class="button exapand" data-reveal>Add meeting item</a>
+		
+		<div id="myModal" class="reveal-modal small" data-reveal>
+			<h1>Add meeting item</h1>
+			<form method="post" action=<?php echo '"?id=' . $_GET['id'] . '"'; ?>>
+				<input type="text" name="heading" placeholder="Enter item heading">
+				<input type="number" name="time" placeholder="Enter allotted minutes">
+				<input type="email" name="presenter" placeholder="Enter presentor's email">
+				<input type="submit" name="addItem" value="Submit" class="button small expand"></input>
+				<a class="close-reveal-modal">&#215;</a>
+				
+			</form>
+		</div>
 	</div>
 
 	<!--don't worry about this-->
 	<br><br><br><br><br>
+
+	<script type="text/javascript" src="js/foundation/foundation.js"></script>
+    <script type="text/javascript" src="js/foundation/foundation.reveal.js"></script>
+    <script>
+    $(document).foundation();
+    </script>
 
 </body>
 </html>
