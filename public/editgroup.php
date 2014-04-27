@@ -35,6 +35,12 @@ require_once "./headerNav.php";
      <?php 
       }
        ?>
+    <div id="wrapper">
+      <form action="" method="post">
+        <select name="member" id="member" class="update">
+          <option value=""> Members</option>
+        </select>
+    </div>
   </div> 
  </body>
 </html>
