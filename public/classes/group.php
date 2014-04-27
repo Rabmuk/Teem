@@ -144,9 +144,7 @@ function addGroupToDatabase($id_owner, $name, $members){
 
 function deleteGroup($name, $id_owner){
   global $db;
-  //Delete from groupmembers first to avoid foreign key restraints 
-  $query = $db->exec("DELETE FROM `groupmembers` WHERE `id_group` = $id_group"); 
-  //Now delete the group itself
+
   $query = $db->exec("DELETE FROM `groups` WHERE `name` = $name");
 
 }
