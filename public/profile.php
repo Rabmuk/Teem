@@ -1,5 +1,6 @@
 <?php 	
 session_start();
+$counter = 0;
 foreach (glob("classes/*.php") as $filename)
 {
   include $filename;
@@ -59,7 +60,7 @@ require_once "./headerNav.php";
     $results = $user->getGroups();
     foreach ($results as $group) {
      ?>
-     <h3 class="teamTitle"> <?php echo $group->getName(); ?> </h3>
+     <h3> <a href="editgroup.php" class="teamTitle"> <?php echo $group->getName(); ?> </a></h3>
      <ul id="groupNames">
       <li>Team Leader: <?php echo $group->getOwner()->getName(); ?></li>
       <li>Members: 
