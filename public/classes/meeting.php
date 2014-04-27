@@ -167,7 +167,7 @@ function addMeetingToDatabase($title, $id_owner, $location, $date, $startTime, $
             ));
         }
       }else{
-        echo $member . ' cound not be found\n';  
+        echo '<p>' . $member . ' cound not be found</p>';
       }
     }
 
