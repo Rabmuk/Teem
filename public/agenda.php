@@ -25,6 +25,17 @@ if (isset($_POST['addItem']) && $_POST['addItem'] == "Submit") {
 	addItemToMeeting($meeting->getID(), $_POST['heading'], $_POST['time'], $_POST['presenter']);
 }
 
+if (isset($_POST['savefile']) && $_POST['savefile'] == 'Submit') {
+	if ($_FILES["file"]["error"] > 0) {
+		echo "Return Code: " . $_FILES["file"]["error"] . "<br>";
+	} else {
+		$temp = explode(".", $_FILES["file"]["name"]);
+		$extension = end($temp);
+		$randomName = hash('sha256', uniqid(mt_rand(), true));
+		move_uploaded_file($_FILES["file"]["tmp_name"], "./uploads/" . $randomName . '.' . $extension);
+	}
+}
+
 require_once "./headerNav.php";	
 ?>
 <!doctype HTML>
@@ -90,8 +101,11 @@ require_once "./headerNav.php";
 					<?php
 					if ($isPresenter) {
 						?>
-						<input type="submit" name="uploadfile" value="Upload File" />
-						<input type="submit" name="savetopics" value="Save" />
+						<form action="" method="post" enctype="multipart/form-data">
+							<label for="file">Filename:</label>
+							<input type="file" name="file" id="file"><br>
+							<input type="submit" name="savefile" value="Submit">
+						</form>
 						<?php
 					}
 					?>
@@ -144,10 +158,10 @@ require_once "./headerNav.php";
 	<br><br><br><br><br>
 
 	<script type="text/javascript" src="js/foundation/foundation.js"></script>
-    <script type="text/javascript" src="js/foundation/foundation.reveal.js"></script>
-    <script>
-    $(document).foundation();
-    </script>
+	<script type="text/javascript" src="js/foundation/foundation.reveal.js"></script>
+	<script>
+	$(document).foundation();
+	</script>
 
 </body>
 </html>
