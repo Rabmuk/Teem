@@ -91,15 +91,17 @@ class Meeting{
 
 }
 
-function addMeetingToDatabase($title, $location, $date, $startTime, $members){
+function addMeetingToDatabase($title, $id_owner, $location, $date, $startTime, $members){
   global $db;
 
   $query = $db->prepare(
-    "INSERT INTO `meetings` (`title`, `location`, `date`, `startTime`)
-    VALUES (:title, :location, :date, :startTime)"
+    "INSERT INTO `meetings` (`id_owner`, `title`, `description`, `location`, `date`, `startTime`)
+    VALUES (:id_owner, :title, :description, :location, :date, :startTime)"
     );
   $query->execute(array(
+    ":id_owner" => $id_owner,
     ":title" => $title,
+    ":description" => "",
     ":location" => $location,
     ":date" => $date,
     ":startTime" => $startTime

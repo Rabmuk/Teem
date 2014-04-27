@@ -101,7 +101,7 @@ function addGroupToDatabase($id_owner, $name, $members){
 
     if($user){
       $query = $db->prepare(
-        "INSERT INTO `groupmembers` (`id_group`, `id_user`)
+        "INSERT INTO `groupMembers` (`id_group`, `id_user`)
         VALUES (:id_group, :id_user)"
         );
       $query->execute(array(

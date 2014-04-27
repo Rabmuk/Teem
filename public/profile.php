@@ -12,6 +12,11 @@ if (isset($_SESSION['email'])){
 	header("Location: ./index.php");
 }
 
+if(isset($_POST['submit'])){
+  $id_owner = $user->getID();
+  addGroupToDatabase($id_owner, $_POST['groupName'], $_POST['addMembers']);
+}
+
 require_once "./headerNav.php";	
 ?>
 <!doctype HTML>
@@ -112,9 +117,3 @@ $(document).foundation();
 require_once "./bottomNav.php";
 
 ?>
-
-<?php if(isset($_POST['submit'])){
-          $id_owner = $user->getID();
-          addGroupToDatabase($id_owner, $_POST['addMembers'], $_POST['groupName']);
-        }
-      ?> 

@@ -1,8 +1,16 @@
 <?php 
+session_start();
+
 require_once "../database/init.php"; 
 require_once "classes/user.php";
 require_once "classes/meeting.php";
 require_once "./headerNav.php";
+
+if (isset($_SESSION['email'])){
+	$user = new User($_SESSION['email']);
+}else{
+	header("Location: ./index.php");
+}
 
 ?>
 
@@ -19,7 +27,7 @@ require_once "./headerNav.php";
 <body>
 	<div id = "wrapper">
 		<?php if(isset($_POST['submit']) && $_POST['submit'] == 'Create'){
-			addMeetingToDatabase($_POST['title'], $_POST['location'], $_POST['date'], $_POST['time'], $_POST['attendees']);
+			addMeetingToDatabase($_POST['title'], (Integer)$user->getID(), $_POST['location'], $_POST['date'], $_POST['time'], $_POST['attendees']);
 			?>
 			<h1>Your meeting has been created.</h1>
 			<?php

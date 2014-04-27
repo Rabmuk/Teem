@@ -53,7 +53,7 @@ require_once "./headerNav.php";
 							<label for="firstName" class="right inline">First Name</label>
 						</div>
 						<div class="small-9 columns">
-							<input type="text" id="firstName" name="firstName" placeholder="Enter First Name">
+							<input type="text" id="firstName" name="firstName" value="<?php echo $user->getFirstName(); ?>">
 						</div>
 					</div>
 					<div class="row">
@@ -61,7 +61,7 @@ require_once "./headerNav.php";
 							<label for="lastName" class="right inline">Last Name</label>
 						</div>
 						<div class="small-9 columns">
-							<input type="text" id="lastName" name="lastName" placeholder="Enter Last Name">
+							<input type="text" id="lastName" name="lastName" value="<?php echo $user->getLastName(); ?>">
 						</div>
 					</div>
 					<div class="row">
@@ -69,7 +69,7 @@ require_once "./headerNav.php";
 							<label for="email" class="right inline">E-mail</label>
 						</div>
 						<div class="small-9 columns">
-							<input type="email" id="email" name="email" placeholder="Enter E-mail">
+							<input type="email" id="email" name="email" value="<?php echo $user->getEmail(); ?>">
 						</div>
 					</div>
 					<div class="row">
