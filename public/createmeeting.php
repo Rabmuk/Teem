@@ -31,6 +31,7 @@ if (isset($_SESSION['email'])){
 			?>
 			<h1>Your meeting has been created.</h1>
 			<a href="index.php">Return to your profile</a>
+			
 			<?php
 		}else{ ?>
 		<div class="row">
