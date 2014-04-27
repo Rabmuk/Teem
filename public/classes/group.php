@@ -115,6 +115,53 @@ function addGroupToDatabase($id_owner, $name, $members){
     return $returnValue;
   }
 
+function deleteGroup($name, $id_owner){
+  global $db;
+  //Delete from groupmembers first to avoid foreign key restraints 
+  $query = $db->exec("DELETE FROM `groupmembers` WHERE `id_group` = $id_group"); 
+  //Now delete the group itself
+  $query = $db->exec("DELETE FROM `groups` WHERE `name` = $name");
+
+}
+
+function deleteMember($id_user){
+  global $db;
+  //Delete member from group
+  $query = $db->exec("DELETE FROM `groupmembers` WHERE `id_user` = $id_user"); 
+}
+
+function addMember($id_user){
+    global $db;
+
+    $member = trim($id_user);
+    $query = $db->prepare(
+      "SELECT `user_id` FROM `users` WHERE `email` = :email"
+      );
+    $query->execute(array(
+      ":email" => $member
+      ));
+    $user = $query->fetch();
+
+    if($user){
+      $query = $db->prepare(
+        "INSERT INTO `groupmembers` (`id_group`, `id_user`)
+        VALUES (:id_group, :id_user)"
+        );
+      $query->execute(array(
+        ":id_group" => $group->group_id,
+        ":id_user" => $user->user_id
+        ));
+    }else{
+        echo $member . ' cound not be found\n';  
+      }
+}
+
+function changeGroupName($id_group, $name){
+  global $db;
+  
+  $query = $db->exec("UPDATE `groups` SET `name`= $name  WHERE `id_group`= $id_group");
+   
+}
 
 
 ?>
