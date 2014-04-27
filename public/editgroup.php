@@ -28,11 +28,11 @@ require_once "./headerNav.php";
       </div>
     </div>
     <?php 
-      $results = $user->getGroups();
-      $arraycounter  = 0;
-      foreach ($results as $group) {
+      if (isset($_GET['id'])) {
+        $group = new Group($_GET['id']);
+      }
     ?>
-    <form action="" method="post">
+    <form action=<?php echo '"?id=' . $_GET['id'] . '"';?> method="post">
       <div class="row">
         <div class="small-3 columns">
           <label for="changeName" class="right inline">Change Group Name: </label>
@@ -41,7 +41,6 @@ require_once "./headerNav.php";
           <input type="text" id="changeName" name="changeName" value="<?php echo $group->getName(); ?>">
         </div>
       </div>
-      <?php } ?>
       <div class="row">
         <div class="small-3 columns">
           <label for="addMember" class="right inline">Add Members</label>
