@@ -22,6 +22,7 @@ require_once "./headerNav.php";
 			addMeetingToDatabase($_POST['title'], $_POST['location'], $_POST['date'], $_POST['time'], $_POST['attendees']);
 			?>
 			<h1>Your meeting has been created.</h1>
+			<a href="index.php">Return to your profile</a>
 			<?php
 		}else{ ?>
 		<div class="row">
