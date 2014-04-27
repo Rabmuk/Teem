@@ -72,13 +72,7 @@
 		    <!-- End #contact -->
 		</div>
 	</div>
-<<<<<<< HEAD
-
-=======
 </div>
->>>>>>> FETCH_HEAD
 <?php
-
   require_once "./bottomNav.php";
-
 ?>
