@@ -104,7 +104,6 @@ require_once "./headerNav.php";
 </div>
 </div>
 </div>
-<h> <?php echo $user->getID(); ?> QWERQWEREQEWR </h>
 </body>
 <script type="text/javascript" src="js/foundation/foundation.js"></script>
 <script type="text/javascript" src="js/foundation/foundation.reveal.js"></script>
