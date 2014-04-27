@@ -69,16 +69,29 @@ require_once "./headerNav.php";
 						}
 						?>
 					</ul>
-					<form method="post" action=<?php echo '"?id=' . $_GET['id'] . '"'; ?>>
-						<input type="hidden" name="item_id" value=<?php echo '"' . $agendaItem->getID() . '"'; ?>>
-						<textarea name="topics" rows="4" onFocus="if(this.value=='Add topics here.')this.value='';">Add topics here.</textarea>
-						<input type="submit" name="savetopics" value="Save" />
-					</form>
+					<?php 
+					$isPresenter = $user->isUser($agendaItem->getPresenter());
+					if ($isPresenter) {
+						?>
+						<form method="post" action=<?php echo '"?id=' . $_GET['id'] . '"'; ?>>
+							<input type="hidden" name="item_id" value=<?php echo '"' . $agendaItem->getID() . '"'; ?>>
+							<textarea name="topics" rows="4" onFocus="if(this.value=='Add topics here.')this.value='';">Add topics here.</textarea>
+							<input type="submit" name="savetopics" value="Save" />
+						</form>
+						<?php
+					}
+					?>
 				</div>
 				<div class="large-6 columns">
 					<h5 class= "heading">Attachments</h5>
-					<input type="submit" name="uploadfile" value="Upload File" />
-					<input type="submit" name="savetopics" value="Save" />
+					<?php
+					if ($isPresenter) {
+						?>
+						<input type="submit" name="uploadfile" value="Upload File" />
+						<input type="submit" name="savetopics" value="Save" />
+						<?php
+					}
+					?>
 				</div>
 			</div>
 			<center><hr style="width:80%;"></center>
