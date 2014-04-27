@@ -54,10 +54,10 @@ if (isset($_SESSION['email'])){
 					</div>
 					<div class="row">
 						<div class="small-3 columns">
-							<label for="description" class="right inline">Description</label>
+							<label for="description" class="right inline">Desired Outcome</label>
 						</div>
 						<div class="small-9 columns">
-							<textarea type="text" id="description" rows="2" placeholder="Enter Description"></textarea>
+							<textarea type="text" id="description" rows="2" placeholder="Enter Desired Outcome"></textarea>
 						</div>
 					</div>
 					<div class="row">

@@ -93,13 +93,19 @@ require_once "./headerNav.php";
 					}
 					?>
 				</div>
+
 			</div>
+
+			
 			<center><hr style="width:80%;"></center>
 			<?php 
 		}
 		?>
+		<div class="row">
+				<a href="#" data-reveal-id="myModal" class="button exapand" data-reveal>Add meeting item</a>
+			</div>
 
-		<a href="#" data-reveal-id="myModal" class="button exapand" data-reveal>Add meeting item</a>
+		
 		
 		<div id="myModal" class="reveal-modal small" data-reveal>
 			<h1>Add meeting item</h1>
