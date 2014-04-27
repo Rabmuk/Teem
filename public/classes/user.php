@@ -67,8 +67,6 @@ class User{
   }
 
   public function isUser($user){
-    echo $this->user_id . " : " . $user->getID();
-
     if ($user instanceof User) {
       return $this->user_id == $user->getID();
     }

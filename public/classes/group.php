@@ -60,6 +60,24 @@ class Group{
     return $toReturn;
   }
 
+  public function getMemberArray(){
+    global $db;
+
+    $toReturn = array();
+
+    $query = $db->prepare(
+      "SELECT `id_user` FROM `groupMembers` WHERE `id_group` = :id_group"
+      );
+    $query->execute(array(":id_group" => $this->group_id));
+
+    while ($row = $query->fetch()) {
+      $tempUser = new User((int)$row->id_user);
+      array_push($toReturn, $tempUser->getName());
+    }
+
+    return $toReturn;
+  }
+
 }
 
 //assume that the email is unique

@@ -65,7 +65,7 @@ require_once "./headerNav.php";
     $results = $user->getGroups();
     foreach ($results as $group) {
      ?>
-     <h3> <a href="editgroup.php" class="teamTitle"> <?php echo $group->getName(); ?> </a></h3>
+     <h3> <a href=<?php echo '"editgroup.php?id=' . $group->getID() . '"'; ?>><?php echo $group->getName(); ?></a></h3>
      <ul id="groupNames">
       <li>Team Leader: <?php echo $group->getOwner()->getName(); ?></li>
       <li>Members: 
