@@ -102,7 +102,7 @@ function addGroupToDatabase($id_owner, $name, $members){
     ));
   $group = $query->fetch();
 
-  $returnValue = new User($group->group_id);
+  $returnValue = new Group($group->group_id);
 
   $query = $db->prepare(
     "INSERT INTO `groupMembers` (`id_group`, `id_user`)
