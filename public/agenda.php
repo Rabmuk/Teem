@@ -51,11 +51,14 @@ require_once "./headerNav.php";
 		foreach($agendaItems as $agendaItem){
 			?>
 			<div class="row">
-				<div class="large-12 columns">
+				<div class="large-10 columns">
 					<br><h3 class = "heading"><?php echo $agendaItem->getHeading(); ?></h3>
 					<p class = "inline right"><?php echo $agendaItem->getTime(); ?> minutes</p>
 					<p><?php echo $agendaItem->getPresenter()->getName(); ?></p>
 				</div>
+
+
+				
 			</div>
 			<!--topics, attachments-->
 			<div class="row">
@@ -120,6 +123,23 @@ require_once "./headerNav.php";
 		</div>
 	</div>
 
+
+	<!-- Action items *TODO* FOR ALEX-->
+	<!-- It's a list of each member's name, with a list of their action items. Underneath it is the ability to add tasks -->
+	<div class="large-2 columns">
+		<!-- meeting attendee's name -->
+
+		<!-- Add a new task -->
+		<form method="post">
+			<input type="text" name="task" placeholder="Enter new task">
+			<input type="submit" name="addTask" value="Submit" class="button small"></input>
+
+
+		</form>
+
+	</div>
+
+	
 	<!--don't worry about this-->
 	<br><br><br><br><br>
 
