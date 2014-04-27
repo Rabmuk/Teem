@@ -27,7 +27,7 @@
           
           <div class="small-9 columns ">
              <h3>Teem was created to help groups of people facilitate better and more efficient meetings. It was built with love by Team SnapChatRoulette 
-             at <a href="http://rpi.edu">Rensselaer Polytechnic Institutes'</a> Web Science course taught by Richard Plotka. </h3> 
+             at <a href="http://rpi.edu">Rensselaer Polytechnic Institute's</a> Web Science course taught by Richard Plotka. </h3> 
           </div>
 
           <div class="faq small-9 columns end" id="questions">
