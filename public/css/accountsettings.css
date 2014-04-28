@@ -1,5 +1,5 @@
 h1 {
-	color: #009999;
+	color: #197b5e;
 }
 
 label {
@@ -9,4 +9,20 @@ label {
 
 input[type="submit"] {
 	background-color: #009999;
+}
+
+input[type="submit"] {
+  background-color: #197b5e;
+  border: 2px #197b5e solid;
+  color: white; 
+  border-radius: 5px;
+  text-align: center;
+  width: 100px;
+  height: 50px;
+}
+
+input[type="submit"]:hover {
+  background-color: #838383;
+  border: 2px #838383 solid;
+  cursor: pointer;
 }
