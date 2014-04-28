@@ -25,17 +25,6 @@ if (isset($_POST['addItem']) && $_POST['addItem'] == "Submit") {
 	addItemToMeeting($meeting->getID(), $_POST['heading'], $_POST['time'], $_POST['presenter']);
 }
 
-if (isset($_POST['savefile']) && $_POST['savefile'] == 'Submit') {
-	if ($_FILES["file"]["error"] > 0) {
-		echo "Return Code: " . $_FILES["file"]["error"] . "<br>";
-	} else {
-		$temp = explode(".", $_FILES["file"]["name"]);
-		$extension = end($temp);
-		$randomName = hash('sha256', uniqid(mt_rand(), true));
-		move_uploaded_file($_FILES["file"]["tmp_name"], "./uploads/" . $randomName . '.' . $extension);
-	}
-}
-
 require_once "./headerNav.php";	
 ?>
 <!doctype HTML>
@@ -46,6 +35,7 @@ require_once "./headerNav.php";
 	<link rel="stylesheet" href="css/foundation.css" />
 	<link rel="stylesheet" href="css/agenda.css" />
 	<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+	<script src="agenda.js"></script>
 </head>
 <body>
 	<div id = "wrapper">
@@ -101,11 +91,8 @@ require_once "./headerNav.php";
 					<?php
 					if ($isPresenter) {
 						?>
-						<form action="" method="post" enctype="multipart/form-data">
-							<label for="file">Filename:</label>
-							<input type="file" name="file" id="file"><br>
-							<input type="submit" name="savefile" value="Submit">
-						</form>
+						<input type="submit" name="uploadfile" value="Upload File" />
+						<input type="submit" name="savetopics" value="Save" />
 						<?php
 					}
 					?>
@@ -140,28 +127,55 @@ require_once "./headerNav.php";
 
 	<!-- Action items *TODO* FOR ALEX-->
 	<!-- It's a list of each member's name, with a list of their action items. Underneath it is the ability to add tasks -->
-	<div class="large-2 columns">
-		<!-- meeting attendee's name -->
+	
+		<!-- Each individual action item list -->
+		<div class="row actionItems">
+			<div class="large-2 columns">
+				<!-- meeting attendee's name -->
+				<h3 class="memberName">Chris</h3>
+				<!-- List of existing tasks -->
+				<ul class="tasks">
+				    <li>Write the next great novel.</li>
+				    <li>Shovel snow</li>
+				    <li>Juggle saws</li>
+				    <li>Dance</li>
+				</ul>
+				<!-- Add a new task -->
+				<!-- Hitting enter will input the form. Javascript located in agenda.js -->
+				<form method="post">
+					<input type="text" name="Newtask" placeholder="New Task">
 
-		<!-- Add a new task -->
-		<form method="post">
-			<input type="text" name="task" placeholder="Enter new task">
-			<input type="submit" name="addTask" value="Submit" class="button small"></input>
+				</form>
+			</div>
+		</div>
+
+		<div class="row actionItems">
+			<div class="large-2 columns">
+				<h3 class="memberName">Candice</h3>
+				<ul class="tasks">
+				    <li>Peel an orange</li>
+				    <li>Drink coffe</li>
+				</ul>
+				<!-- Add a new task -->
+				<form method="post">
+					<input type="text" name="Newtask" placeholder="New Task">
+
+				</form>
+			</div>
+		</div>
 
 
-		</form>
 
-	</div>
 
 	
 	<!--don't worry about this-->
 	<br><br><br><br><br>
 
 	<script type="text/javascript" src="js/foundation/foundation.js"></script>
-	<script type="text/javascript" src="js/foundation/foundation.reveal.js"></script>
-	<script>
-	$(document).foundation();
-	</script>
+    <script type="text/javascript" src="js/foundation/foundation.reveal.js"></script>
+    <script>
+    $(document).foundation();
+    </script>
 
 </body>
 </html>
