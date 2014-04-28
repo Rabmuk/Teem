@@ -4,11 +4,20 @@
 
 a[href="#"], [href="createmeeting.php"] {
   font-size: 20px;
-  color: #009999;
+  color: #197b5e;
+
+}
+
+.links {
+  padding-top: 25px;
+}
+
+a:hover {
+  color: #3de8b6;
 }
 
 h1 {
-  color: #009999;
+  color: #197b5e;
 }
 
 .boxcolumn{
@@ -58,19 +67,21 @@ input[type="text"], textarea {
 }
 
 input[type="submit"] {
-  background-color: #009999;
-  border: 2px #009999 solid;
+  background-color: #197b5e;
+  border: 2px #197b5e solid;
   color: white; 
+  border-radius: 5px;
   text-align: center;
   width: 75px;
   height: 35px;
 }
 
+input[type="submit"]:hover {
+  background-color: #838383;
+  border: 2px #838383 solid;
+  cursor: pointer;
+}
 label {
   font-size: 20px;
 }
 
-input[type="submit"]:hover {
-  background-color: #00CC99;
-  border: 2px #00CC99 solid;
-}

@@ -34,7 +34,7 @@ require_once "./headerNav.php";
     <div class="large-6 columns">
      <h1 class="myProfile">Welcome, <?php echo $user->getFirstName(); ?>!</h1>
    </div>
-   <div class="large-3 columns">
+   <div class="links large-3 columns">
      <a href="#" data-reveal-id="myModal" data-reveal>(+) Create a Group</a>
      <div id="myModal" class="reveal-modal small" data-reveal>
       <div id="createGroup">
@@ -53,7 +53,7 @@ require_once "./headerNav.php";
   <a class="close-reveal-modal">&#215;</a>
 </div>
 </div>
-<div class="large-3 columns">
+<div class="links large-3 columns">
  <a href="createmeeting.php">(+) Create a Meeting</a>
 </div>
 </div>

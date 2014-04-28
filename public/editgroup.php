@@ -72,8 +72,9 @@ require_once "./headerNav.php";
         </div>
       </div>
       <div class="row">
-        <div class="small-3 columns">
-          <input type="submit" name="submit" value="Save" class="button small expand"></input>
+        <div class="small-10 columns"></div>
+        <div class="small-2 columns">
+          <input type="submit" name="submit" value="Save" class="button small"></input>
         </div>
       </div>
     </form>
