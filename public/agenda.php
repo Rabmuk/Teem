@@ -33,6 +33,7 @@ if (isset($_POST['savefile']) && $_POST['savefile'] == 'Submit') {
 		$extension = end($temp);
 		$randomName = hash('sha256', uniqid(mt_rand(), true));
 		move_uploaded_file($_FILES["file"]["tmp_name"], "./uploads/" . $randomName . '.' . $extension);
+		addFileToItem($_POST['item_id'], $temp[0], $randomName . '.' . $extension);
 	}
 }
 
@@ -98,10 +99,22 @@ require_once "./headerNav.php";
 				</div>
 				<div class="large-6 columns">
 					<h5 class= "heading">Attachments</h5>
+					<ul>
+						<?php
+						$files = $agendaItem->getFiles();
+						foreach ($files as $file) {
+							?>
+							<a href="uploads/<?php echo $file->getLocation(); ?>" target="_blank"><?php echo $file->getName(); ?></a>
+
+							<?php
+						}
+						?>
+					</ul>
 					<?php
 					if ($isPresenter) {
 						?>
 						<form action="" method="post" enctype="multipart/form-data">
+							<input type="hidden" name="item_id" value=<?php echo '"' . $agendaItem->getID() . '"'; ?>>
 							<label for="file">Filename:</label>
 							<input type="file" name="file" id="file"><br>
 							<input type="submit" name="savefile" value="Submit">
@@ -119,8 +132,8 @@ require_once "./headerNav.php";
 		}
 		?>
 		<div class="row">
-				<a href="#" data-reveal-id="myModal" class="button exapand" data-reveal>Add meeting item</a>
-			</div>
+			<a href="#" data-reveal-id="myModal" class="button exapand" data-reveal>Add meeting item</a>
+		</div>
 
 		
 		
