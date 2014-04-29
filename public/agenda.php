@@ -40,130 +40,147 @@ require_once "./headerNav.php";
 <body>
 	<div id = "wrapper">
 		<div class="row">
-			<div class="large-12 columns">
+			<div class="large-10 columns">
 				<h1 class= "meetingName"><?php echo $meeting->getTitle(); ?></h1>
 				<p class= "desiredOutcome">Desired outcome: <?php echo $meeting->getDescription(); ?></p>
-			</div>
-		</div>
-		<!--begin one person's section-->
-		<!--headings-->
-		<?php 
-		$agendaItems = $meeting->getAgendaItems();
-		foreach($agendaItems as $agendaItem){
-			?>
-			<div class="row">
-				<div class="large-10 columns">
-					<br><h3 class = "heading"><?php echo $agendaItem->getHeading(); ?></h3>
-					<p class = "inline right"><?php echo $agendaItem->getTime(); ?> minutes</p>
-					<p><?php echo $agendaItem->getPresenter()->getName(); ?></p>
-				</div>
 
+				<!--begin one person's section-->
+				<!--headings-->
+				<?php 
+				$agendaItems = $meeting->getAgendaItems();
+				foreach($agendaItems as $agendaItem){
+					?>
+					<div class="row">
+						<div class="large-12 columns">
+							<br><h3 class = "heading"><?php echo $agendaItem->getHeading(); ?></h3>
+							<p class = "inline right"><?php echo $agendaItem->getTime(); ?> minutes</p>
+							<p><?php echo $agendaItem->getPresenter()->getName(); ?></p>
+						</div>
+					</div>
+					<!--topics, attachments-->
+					<div class="row">
+						<div class="large-6 columns">
+							<h5 class= "heading">Topics to Cover</h5>
+							<ul>
+								<?php 
+								$topics = $agendaItem->getTopics();
+								foreach ($topics as $topic) {
+									echo "<li>" . $topic . "</li>";
+								}
+								?>
+							</ul>
+							<?php 
+							$isPresenter = $user->isUser($agendaItem->getPresenter());
+							if ($isPresenter) {
+								?>
+								<form method="post" action=<?php echo '"?id=' . $_GET['id'] . '"'; ?>>
+									<input type="hidden" name="item_id" value=<?php echo '"' . $agendaItem->getID() . '"'; ?>>
+									<textarea name="topics" rows="4" onFocus="if(this.value=='Add topics here.')this.value='';">Add topics here.</textarea>
+									<input type="submit" name="savetopics" value="Save" />
+								</form>
+								<?php
+							}
+							?>
+						</div>
+						
+						<div class="large-6 columns">
+							<h5 class= "heading">Attachments</h5>
+							<?php
+							if ($isPresenter) {
+								?>
+								<input type="submit" name="uploadfile" value="Upload File" />
+								<input type="submit" name="savetopics" value="Save" />
+								<?php
+							}
+							?>
+						</div>
 
-				
-			</div>
-			<!--topics, attachments-->
-			<div class="row">
-				<div class="large-6 columns">
-					<h5 class= "heading">Topics to Cover</h5>
-					<ul>
-						<?php 
-						$topics = $agendaItem->getTopics();
-						foreach ($topics as $topic) {
-							echo "<li>" . $topic . "</li>";
-						}
-						?>
-					</ul>
+					</div>
+
+					
+					<center><hr style="width:80%;"></center>
 					<?php 
-					$isPresenter = $user->isUser($agendaItem->getPresenter());
-					if ($isPresenter) {
-						?>
-						<form method="post" action=<?php echo '"?id=' . $_GET['id'] . '"'; ?>>
-							<input type="hidden" name="item_id" value=<?php echo '"' . $agendaItem->getID() . '"'; ?>>
-							<textarea name="topics" rows="4" onFocus="if(this.value=='Add topics here.')this.value='';">Add topics here.</textarea>
-							<input type="submit" name="savetopics" value="Save" />
-						</form>
-						<?php
-					}
-					?>
-				</div>
-				<div class="large-6 columns">
-					<h5 class= "heading">Attachments</h5>
-					<?php
-					if ($isPresenter) {
-						?>
-						<input type="submit" name="uploadfile" value="Upload File" />
-						<input type="submit" name="savetopics" value="Save" />
-						<?php
-					}
-					?>
-				</div>
+				}
+				?>
 
-			</div>
-
-			
-			<center><hr style="width:80%;"></center>
-			<?php 
-		}
-		?>
-		<div class="row">
-				<a href="#" data-reveal-id="myModal" class="button exapand" data-reveal>Add meeting item</a>
-			</div>
+						<!-- Button to add meeting item -->
+				<div class="row">
+					<a href="#" data-reveal-id="myModal" class="button exapand" data-reveal>Add meeting item</a>
+				</div>
 
 		
 		
-		<div id="myModal" class="reveal-modal small" data-reveal>
-			<h1>Add meeting item</h1>
-			<form method="post" action=<?php echo '"?id=' . $_GET['id'] . '"'; ?>>
-				<input type="text" name="heading" placeholder="Enter item heading">
-				<input type="number" name="time" placeholder="Enter allotted minutes">
-				<input type="email" name="presenter" placeholder="Enter presentor's email">
-				<input type="submit" name="addItem" value="Submit" class="button small expand"></input>
-				<a class="close-reveal-modal">&#215;</a>
+				<div id="myModal" class="reveal-modal small" data-reveal>
+					<h1>Add meeting item</h1>
+					<form method="post" action=<?php echo '"?id=' . $_GET['id'] . '"'; ?>>
+						<input type="text" name="heading" placeholder="Enter item heading">
+						<input type="number" name="time" placeholder="Enter allotted minutes">
+						<input type="email" name="presenter" placeholder="Enter presentor's email">
+						<input type="submit" name="addItem" value="Submit" class="button small expand"></input>
+						<a class="close-reveal-modal">&#215;</a>
+						
+					</form>
+				</div>
+			</div>
+
+			<div class="large-2 columns">
+				<!-- Action items *TODO* FOR ALEX-->
+				<!-- It's a list of each member's name, with a list of their action items. Underneath it is the ability to add tasks -->
+
 				
-			</form>
+				<div class="actionItems">
+					<!-- Each individual action item list -->
+					<h3>Action Items</h3>
+					<div class="row">
+						<!-- meeting attendee's name -->
+						<h4 class="memberName">Chris</h4>
+						<!-- List of existing tasks -->
+						<ul class="tasks">
+						    <li>Write the next great novel.</li>
+						    <li>Shovel snow</li>
+						    <li>Juggle saws</li>
+						    <li>Dance</li>
+						</ul>
+						<!-- Add a new task -->
+						<!-- Hitting enter will input the form. Javascript located in agenda.js -->
+						<form method="post">
+							<input type="text" name="Newtask" placeholder="New Task">
+
+						</form>
+					
+					</div>
+
+					<div class="row">
+						<h4 class="memberName">Candice</h4>
+						<ul class="tasks">
+						    <li>Peel an orange</li>
+						    <li>Drink coffe</li>
+						</ul>
+						<!-- Add a new task -->
+						<!-- Hitting enter will input the form. Javascript located in agenda.js -->
+						<form method="post">
+							<input type="text" name="Newtask" placeholder="New Task">
+
+						</form>
+						
+					</div>
+				</div>
+
+			</div>
+				
+
+		
+
+
 		</div>
+
+
+
+		
 	</div>
 
 
-	<!-- Action items *TODO* FOR ALEX-->
-	<!-- It's a list of each member's name, with a list of their action items. Underneath it is the ability to add tasks -->
 	
-		<!-- Each individual action item list -->
-		<div class="row actionItems">
-			<div class="large-2 columns">
-				<!-- meeting attendee's name -->
-				<h3 class="memberName">Chris</h3>
-				<!-- List of existing tasks -->
-				<ul class="tasks">
-				    <li>Write the next great novel.</li>
-				    <li>Shovel snow</li>
-				    <li>Juggle saws</li>
-				    <li>Dance</li>
-				</ul>
-				<!-- Add a new task -->
-				<!-- Hitting enter will input the form. Javascript located in agenda.js -->
-				<form method="post">
-					<input type="text" name="Newtask" placeholder="New Task">
-
-				</form>
-			</div>
-		</div>
-
-		<div class="row actionItems">
-			<div class="large-2 columns">
-				<h3 class="memberName">Candice</h3>
-				<ul class="tasks">
-				    <li>Peel an orange</li>
-				    <li>Drink coffe</li>
-				</ul>
-				<!-- Add a new task -->
-				<form method="post">
-					<input type="text" name="Newtask" placeholder="New Task">
-
-				</form>
-			</div>
-		</div>
-
 
 
 
