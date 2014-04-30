@@ -144,6 +144,24 @@ class User{
     return $toReturn;    
   }
 
+  public function atMeeting($meeting_id){
+    global $db;
+
+    $query = $db->prepare(
+      "SELECT * FROM meetingMembers 
+      WHERE id_user = :user_id AND `id_meeting` = :id_meeting"
+      );
+    $query->execute(array(
+      ":user_id" => $this->user_id,
+      ":id_meeting" => $meeting_id
+      ));
+    if ($row = $query->fetch()) {
+      return true;
+    }
+
+    return false;
+  }
+
   public function getActionItems($meeting_id){
     global $db;
 
