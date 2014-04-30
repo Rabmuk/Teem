@@ -6383,6 +6383,14 @@ th.hide-for-touch {
   margin-bottom: 30px;
 }
 
+#headerlist{
+  padding-top: 25px;
+}
+
+.footerlist{
+  padding-top: 10px;
+}
+
 footer {
   /*position: fixed;
   bottom:0;
@@ -6418,7 +6426,7 @@ footer p{
 
 #wrapper{
   position: relative;
-  min-height: 95%;
+  min-height: 94%;
 }
 
 #logo {

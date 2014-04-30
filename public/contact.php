@@ -62,7 +62,7 @@
 							<?php } ?>
 						</div>
 					</div>
-	                	<button name="submit" type="submit" id="submitbutton">Send</button>
+	                	<button class = "button" name="submit" type="submit" id="submitbutton">Send</button>
 						<input type="hidden" name="submitted" id="submitted" value="true" />
 				</form>			
 				<?php } ?>

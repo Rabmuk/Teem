@@ -11,7 +11,7 @@
     </div>
     
     <div class="large-9 columns">
-      <ul class="inline-list right">
+      <ul class="inline-list right" id = "headerlist">
         <li><a href="profile.php">Home</a></li>
         <li><a href="accountsettings.php">Settings</a></li>
         <?php if(isset($_SESSION['email'])){ ?>
