@@ -5,7 +5,6 @@
 
     <title>Teem - About Us</title>
 
-    <body>
       <!--start wrapper-->
       <div id = "wrapper">
         <div class="row">

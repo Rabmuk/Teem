@@ -50,8 +50,8 @@ if(isset($_POST['submit'])){
 
 require_once "./headerNav.php";	
 ?>
-
-  <title>Teem - Edit Group</title>
+<!doctype HTML>
+<html>
 
  <body>
   <div id="wrapper">

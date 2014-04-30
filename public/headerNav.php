@@ -33,6 +33,7 @@
       <script src="js/jquery.tubular.1.0.js" type="text/javascript"></script>  
 
     </head>
+<body>
    <div class="row header">
     <div class="large-3 columns">
       
