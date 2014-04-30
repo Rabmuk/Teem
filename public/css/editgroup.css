@@ -2,12 +2,19 @@ ul {
   list-style-type: none;
 }
 
+
+a {
+  color: white;
+}
+
 .button{
+  color: white;
   background-color: #197b5e;
   border-color: #3de8b6;
 }
 
 .button:hover{
+  color: white;
   background-color: #838383;
   border-color: #838383;
 }
