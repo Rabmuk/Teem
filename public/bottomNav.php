@@ -19,7 +19,7 @@
     </footer> !-->
     <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
   
- <footer class="row footer">
+ <div class="fopter">
     
     <div class="large-12 columns">
       <ul class="inline-list left footerlist">

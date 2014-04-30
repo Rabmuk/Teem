@@ -6413,6 +6413,27 @@ footer {
   background-color: #197b5e;
 }
 
+* {
+margin: 0;
+}
+
+html, body {
+height: 100%;
+}
+
+
+.wrapper {
+min-height: 100%;
+height: auto !important;
+height: 100%;
+margin: 0 auto -4em;
+}
+
+
+.footer, .push {
+height: 4em;
+}
+
 .fullwidth {
   left:0;
   right:0;
@@ -6436,11 +6457,14 @@ footer p{
   color: white;
 }
 
+<<<<<<< HEAD
+=======
 #wrapper{
   position: relative;
-  min-height: 79.3%;
+  min-height: 93.7%;
 }
 
+>>>>>>> ca646c228e1ad4b32a8e7da5c5aed5a8f15ba3b3
 #logo {
   color: white;
   font-size: 48px;

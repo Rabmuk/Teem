@@ -131,6 +131,7 @@ require_once "./headerNav.php";
 										<?php
 									}
 									?>
+<<<<<<< HEAD
 								</div>
 								
 								<div class="large-6 columns">
@@ -146,6 +147,9 @@ require_once "./headerNav.php";
 										}
 										?>
 									</ul>
+=======
+									<li><a href="uploads/<?php echo $file->getLocation(); ?>" target="_blank"><?php echo $file->getName(); ?></a></li>
+>>>>>>> FETCH_HEAD
 									<?php
 									if ($isPresenter) {
 										?>
@@ -187,6 +191,11 @@ require_once "./headerNav.php";
 						</div>
 
 
+<<<<<<< HEAD
+=======
+			<div class="large-2 columns">
+				<!-- It's a list of each member's name, with a list of their action items. Underneath it is the ability to add tasks -->
+>>>>>>> FETCH_HEAD
 
 				</div>
 
