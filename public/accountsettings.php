@@ -37,8 +37,8 @@ require_once "./headerNav.php";
 <head>
 	<meta charset="utf-8" />
 	<title>Account Settings</title>
-	<link rel="stylesheet" type="text/css" href="/css/foundation.css" />
-	<link rel="stylesheet" type="text/css" href="/css/accountsettings.css"/>
+	<link rel="stylesheet" type="text/css" href="css/foundation.css" />
+	<link rel="stylesheet" type="text/css" href="css/accountsettings.css"/>
 </head>
 <body>
 	<div class="wrapper">
