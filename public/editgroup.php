@@ -11,6 +11,43 @@ if (isset($_SESSION['email'])){
 	header("Location: ./index.php");
 }
 
+if(isset($_POST['submit'])){
+  $group = new Group($_GET['id']);
+  $memberarray = $group->getMemberArrayID();
+  $groupid = $group->getID();
+  $groupname = $group->getName();
+  $email_user = $user->getEmail();
+
+  if(isset($_POST['deleteAcc'])){
+    $id_owner = $user->getID();
+    deleteGroup($id_owner);
+    header("Location: ./profile.php");
+  }
+
+  $counter = 0;
+  foreach ($memberarray as $value) {
+    echo $memberarray[$counter];
+    echo "\n";
+    if(isset($_POST["deleteMember[2]"])){
+      echo "YOLO!";
+      $id_member = $value;
+      deleteMember($id_member);
+    }
+    $counter++;
+  }
+
+  $newgroupname = $_POST['changeName'];
+  if($newgroupname != $groupname){
+    changeGroupName($groupid, $newgroupname);
+  }
+
+  $newmember = $_POST['addMember'];
+  if($newmember != ''){
+    addMember($newmember, $groupid);
+    echo $id_owner;
+  }
+}
+
 require_once "./headerNav.php";	
 ?>
 <!doctype HTML>
@@ -59,7 +96,7 @@ require_once "./headerNav.php";
           $members = $group->getMemberArray();
           $counter = 0;
           foreach ($members as $value) {
-            echo "<li><input id='deleteMember[$counter]' type='checkbox'><label for='deleteMember[$counter]'>$value</label></input></li>";
+            echo "<li><input id='deleteMember[$counter]' name='deleteMember[$counter]' type='checkbox'><label for='deleteMember[$counter]'>$value</label></input></li>";
             $counter++;
           }
           ?>
@@ -68,7 +105,7 @@ require_once "./headerNav.php";
       <div class="row">
         <div class="small-3 columns"></div>
         <div class="small-9 columns">
-          <input id="deleteAcc" type="checkbox"><label for="deleteAcc">Delete Group?</label></input>
+          <input id="deleteAcc" name="deleteAcc" type="checkbox"><label for="deleteAcc">Delete Group?</label></input>
         </div>
       </div>
       <div class="row">

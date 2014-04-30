@@ -1,12 +1,7 @@
 
-<?php
-    require_once "./headerNav.php";
-    
-?>
-
 <!doctype html>
 
-
+<?php require_once "headerNav.php"; ?>   
 
 <html>
     <head>
@@ -22,7 +17,6 @@
       <!--start wrapper-->
       <div id = "wrapper">
         <div class="row">
-          
 
           
           <div class="small-9 columns ">

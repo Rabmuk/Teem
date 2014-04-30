@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="css/foundation.css" />
     <link rel="stylesheet" type="text/css" href="css/index.css">
     <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
-    <script src="js/index.js" type="text/javascript"></script>
     <script src="js/contactscripts.js" type="text/javascript"></script>
   </head>
 <div class="wrapper">
@@ -63,7 +62,7 @@
 							<?php } ?>
 						</div>
 					</div>
-	                	<button name="submit" type="submit" id="submitbutton">Send</button>
+	                	<button class = "button" name="submit" type="submit" id="submitbutton">Send</button>
 						<input type="hidden" name="submitted" id="submitted" value="true" />
 				</form>			
 				<?php } ?>

@@ -51,6 +51,10 @@ body {
   position: relative;
   cursor: default; }
 
+a{
+  color: #3de8b6;
+}
+
 a:hover {
   cursor: pointer; }
 
@@ -6375,12 +6379,28 @@ th.hide-for-touch {
 /*-----------------------------------------------------------*/
 /*Hayley Classes*/
 
+a{
+  color:#197b5e;
+}
+a:hover{
+  color: #3de8b6;
+}
+
 .header{
   left:0;
   right:0;
   min-width:100%;
   background-color: #197b5e;
   margin-bottom: 30px;
+}
+
+#headerlist{
+  padding-top: 25px;
+}
+
+.footerlist{
+  padding-top: 12px;
+  margin-bottom:-12px;
 }
 
 footer {
@@ -6428,7 +6448,7 @@ footer a, .header a{
   color: white;
 }
 footer a:hover, .header a:hover{
-  color: white;
+  color: #3de8b6;
 }
 footer p{
   position: absolute;
@@ -6437,6 +6457,14 @@ footer p{
   color: white;
 }
 
+<<<<<<< HEAD
+=======
+#wrapper{
+  position: relative;
+  min-height: 93.7%;
+}
+
+>>>>>>> ca646c228e1ad4b32a8e7da5c5aed5a8f15ba3b3
 #logo {
   color: white;
   font-size: 48px;

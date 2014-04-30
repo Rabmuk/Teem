@@ -77,8 +77,7 @@ class Meeting{
     $toReturn = array();
 
     $query = $db->prepare(
-     "SELECT `item_id`
-     FROM agendaItems
+     "SELECT `item_id` FROM agendaItems
      WHERE id_meeting = :id_meeting"
      );
     $query->execute(array(":id_meeting" => $this->meeting_id));
@@ -87,6 +86,51 @@ class Meeting{
     }
 
     return $toReturn;
+  }
+
+  public function getMemberArray(){
+    global $db;
+
+    $toReturn = array();
+
+    $query = $db->prepare(
+      "SELECT `id_user` FROM `meetingMembers` WHERE `id_meeting` = :id_meeting"
+      );
+    $query->execute(array(":id_meeting" => $this->meeting_id));
+
+    while ($row = $query->fetch()) {
+      $tempUser = new User((int)$row->id_user);
+      array_push($toReturn, $tempUser);
+    }
+
+    return $toReturn;
+  }
+
+  public function addActionItem($id_user, $action){
+    global $db;
+
+    $query = $db->prepare(
+      "INSERT INTO `actionItems` (`id_meeting`, `id_user`, `action`)
+      VALUES (:id_meeting, :id_user, :action)"
+      );
+    $query->execute(array(
+      ":id_meeting" => $this->meeting_id,
+      ":id_user" => $id_user,
+      ":action" => $action
+      ));
+  }
+
+  public function clearActionItem($id_user){
+    global $db;
+
+    $query = $db->prepare(
+      "DELETE FROM `actionItems` WHERE `id_meeting` = :id_meeting
+      AND `id_user` = :id_user"
+      );
+    $query->execute(array(
+      ":id_meeting" => $this->meeting_id,
+      ":id_user" => $id_user
+      ));
   }
 
 }
@@ -189,6 +233,10 @@ function addItemToMeeting($meeting_id, $heading, $allottedTime, $presenter){
   global $db;
 
   $user = new User($presenter);
+
+  if (!$user->atMeeting($meeting_id)) {
+    return $user->getName() . ' is not a member of this meeting.';
+  }
 
   $query = $db->prepare(
     "INSERT INTO `agendaItems` (`id_meeting`, `id_user`, `heading`, `allottedMinutes`)

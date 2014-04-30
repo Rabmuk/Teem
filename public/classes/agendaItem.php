@@ -69,7 +69,33 @@ class AgendaItem{
     return $toReturn;
   }
 
+  public function getFiles(){
+    global $db;
 
+    $toReturn = array();
+
+    $query = $db->prepare(
+     "SELECT `file_id` FROM files
+     WHERE id_item = :id_item"
+     );
+    $query->execute(array(":id_item" => $this->item_id));
+    while ($row = $query->fetch()) {
+      array_push($toReturn, new File($row->file_id));
+    }
+
+    return $toReturn;
+  }
+
+  public function clearTopics(){
+    global $db;
+
+    $query = $db->prepare(
+      "DELETE FROM `topics` WHERE `id_item` = :id_item"
+      );
+    $query->execute(array(
+      ":id_item" => $this->item_id
+      ));
+  }
 
 }
 

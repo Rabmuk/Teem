@@ -144,6 +144,44 @@ class User{
     return $toReturn;    
   }
 
+  public function atMeeting($meeting_id){
+    global $db;
+
+    $query = $db->prepare(
+      "SELECT * FROM meetingMembers 
+      WHERE id_user = :user_id AND `id_meeting` = :id_meeting"
+      );
+    $query->execute(array(
+      ":user_id" => $this->user_id,
+      ":id_meeting" => $meeting_id
+      ));
+    if ($row = $query->fetch()) {
+      return true;
+    }
+
+    return false;
+  }
+
+  public function getActionItems($meeting_id){
+    global $db;
+
+    $toReturn = array();
+
+    $query = $db->prepare(
+     "SELECT `action_id` FROM actionItems
+     WHERE id_meeting = :id_meeting AND id_user = :id_user"
+     );
+    $query->execute(array(
+      ":id_meeting" => $meeting_id,
+      ":id_user" => $this->user_id
+      ));
+    while ($row = $query->fetch()) {
+      array_push($toReturn, new actionItem($row->action_id));
+    }
+
+    return $toReturn;
+  }
+
 }
 
 //assume that the email is unique
@@ -162,11 +200,6 @@ function addUserToDatabase($email, $password, $salt, $firstName, $lastName){
     ":lastName" => $lastName
     ));
 
-  // $query = $db->prepare(
-  //  "SELECT `user_id` FROM `users` WHERE `email` = :email"
-  // );
-  // $query->execute(array(":email" => $email));
-  // $user = $query->fetch();
   return new User($email);
 }
 

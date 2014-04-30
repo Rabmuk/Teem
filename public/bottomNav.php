@@ -22,11 +22,11 @@
  <div class="fopter">
     
     <div class="large-12 columns">
-      <ul class="inline-list left">
+      <ul class="inline-list left footerlist">
         <li><a href="about.php">About</a></li>
         <li><a href="contact.php">Contact Us</a></li>
       </ul>
-      <p>&copy; Team SnapChatRoulette</p>
+      <p class = "footerlist">&copy; Team SnapChatRoulette</p>
 
     </div>
   </footer>

@@ -78,6 +78,24 @@ class Group{
     return $toReturn;
   }
 
+  public function getMemberArrayID(){
+    global $db;
+
+    $toReturn = array();
+
+    $query = $db->prepare(
+      "SELECT `id_user` FROM `groupMembers` WHERE `id_group` = :id_group"
+      );
+    $query->execute(array(":id_group" => $this->group_id));
+
+    while ($row = $query->fetch()) {
+      $tempUser = new User((int)$row->id_user);
+      array_push($toReturn, $tempUser->getID());
+    }
+
+    return $toReturn;
+  }
+
 }
 
 //assume that the email is unique
@@ -142,10 +160,10 @@ function addGroupToDatabase($id_owner, $name, $members){
   return $returnValue;
 }
 
-function deleteGroup($name, $id_owner){
+function deleteGroup($id_owner){
   global $db;
 
-  $query = $db->exec("DELETE FROM `groups` WHERE `name` = $name");
+  $query = $db->exec("DELETE FROM `groups` WHERE `id_owner` = $id_owner");
 
 }
 
@@ -155,7 +173,7 @@ function deleteMember($id_user){
   $query = $db->exec("DELETE FROM `groupmembers` WHERE `id_user` = $id_user"); 
 }
 
-function addMember($id_user){
+function addMember($id_user, $group_id){
   global $db;
 
   $member = trim($id_user);
@@ -169,22 +187,22 @@ function addMember($id_user){
 
   if($user){
     $query = $db->prepare(
-      "INSERT INTO `groupmembers` (`id_group`, `id_user`)
+      "INSERT INTO `groupMembers` (`id_group`, `id_user`)
       VALUES (:id_group, :id_user)"
       );
     $query->execute(array(
-      ":id_group" => $group->group_id,
+      ":id_group" => $group_id,
       ":id_user" => $user->user_id
       ));
   }else{
-    echo $member . ' cound not be found\n';  
+    echo ('<script type="text/javascript">alert ("The email you entered is not registered with our service.");</script>');
   }
 }
 
-function changeGroupName($id_group, $name){
+function changeGroupName($group_id, $name){
   global $db;
   
-  $query = $db->exec("UPDATE `groups` SET `name`= $name  WHERE `id_group`= $id_group");
+  $query = $db->exec("UPDATE `groups` SET `name`= '$name' WHERE `group_id`= $group_id");
 
 }
 
