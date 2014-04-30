@@ -94,6 +94,8 @@ require_once "./headerNav.php";
 
 
 
+
+
 		<!-- Actual agenda, and next actions -->
 		<div class="row">
 			<div class="large-9 columns" id="meetingTasks">
@@ -173,7 +175,6 @@ require_once "./headerNav.php";
 							</div>
 
 							
-							<!-- <center><hr style="width:80%;"></center> -->
 							<?php 
 						}
 						?>
@@ -181,6 +182,11 @@ require_once "./headerNav.php";
 			
 
 			</div>
+
+			
+
+			
+
 
 			<!-- Next Actions -->
 			<div class="large-3 columns" id="nextActions">
@@ -226,14 +232,11 @@ require_once "./headerNav.php";
 
 			</div>
 
-
-
-
 			
 
 		</div>
 
-
+		
 	</div>
 
 
