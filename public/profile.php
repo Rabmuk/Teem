@@ -29,7 +29,7 @@ require_once "./headerNav.php";
 	<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
 </head>
 <body>
-	<div id="wrapper">
+	<div class="wrapper">
    <div class="row">
     <div class="large-6 columns">
      <h1 class="myProfile">Welcome, <?php echo $user->getFirstName(); ?>!</h1>
@@ -100,9 +100,10 @@ require_once "./headerNav.php";
   <?php
 }
 ?>
-</div>
-</div>
-</div>
+      </div>
+    </div>
+  </div>
+<div class="push"></div>
 </div>
 </body>
 <script type="text/javascript" src="js/foundation/foundation.js"></script>
