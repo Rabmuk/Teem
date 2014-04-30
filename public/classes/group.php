@@ -206,10 +206,10 @@ function addMember($id_user, $group_id){
 function changeGroupName($group_id, $name){
   global $db;
   
-  $query = $db->prepare("UPDATE `groups` SET `name`= :name WHERE `group_id`= :group_id");
+  $query = $db->prepare("UPDATE `groups` SET `name`= :email WHERE `group_id`= :group_id");
   $query->execute(array(
     ":email" => $name,
-    "group_id" => $group_id
+    ":group_id" => $group_id
     ));
 
 }

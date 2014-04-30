@@ -11,7 +11,7 @@ if (isset($_SESSION['email'])){
 	header("Location: ./index.php");
 }
 
-if(isset($_POST['submit'])){
+if(isset($_POST['submit2'])){
   $group = new Group($_GET['id']);
   $memberarray = $group->getMemberArrayID();
   $groupid = $group->getID();
@@ -52,6 +52,7 @@ if(isset($_POST['submit'])){
 }
 
 if(isset($_POST['deleteAcc'])){
+    echo "This and stuff"; 
     $id_owner = $user->getID();
     deleteGroup($id_owner);
 
@@ -123,7 +124,7 @@ require_once "./headerNav.php";
           <a href="#" data-reveal-id="myModal" class="button expand" data-reveal>Delete Group</a>
         </div>
         <div class="small-2 columns">
-          <input type="submit" name="submit" value="Save" class="button small"></input>
+          <input type="submit" name="submit2" value="Save" class="button small"></input>
         </div>
       </div>
       <div id='myModal' class='reveal-modal small' data-reveal>
