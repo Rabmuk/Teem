@@ -78,6 +78,24 @@ class Group{
     return $toReturn;
   }
 
+  public function getMemberArrayID(){
+    global $db;
+
+    $toReturn = array();
+
+    $query = $db->prepare(
+      "SELECT `id_user` FROM `groupMembers` WHERE `id_group` = :id_group"
+      );
+    $query->execute(array(":id_group" => $this->group_id));
+
+    while ($row = $query->fetch()) {
+      $tempUser = new User((int)$row->id_user);
+      array_push($toReturn, $tempUser->getID());
+    }
+
+    return $toReturn;
+  }
+
 }
 
 //assume that the email is unique
@@ -142,10 +160,10 @@ function addGroupToDatabase($id_owner, $name, $members){
   return $returnValue;
 }
 
-function deleteGroup($name, $id_owner){
+function deleteGroup($id_owner){
   global $db;
 
-  $query = $db->exec("DELETE FROM `groups` WHERE `name` = $name");
+  $query = $db->exec("DELETE FROM `groups` WHERE `id_owner` = $id_owner");
 
 }
 
