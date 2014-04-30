@@ -102,6 +102,10 @@ class Group{
 function addGroupToDatabase($id_owner, $name, $members){
   global $db;
 
+  echo $name;
+  $name = stripslashes($name);
+  echo "\n";
+  echo $name;
   $query = $db->prepare(
     "INSERT INTO `groups` (`id_owner`, `name`)
     VALUES (:id_owner, :name)"
@@ -202,9 +206,12 @@ function addMember($id_user, $group_id){
 function changeGroupName($group_id, $name){
   global $db;
   
-  $query = $db->exec("UPDATE `groups` SET `name`= '$name' WHERE `group_id`= $group_id");
+  $query = $db->prepare("UPDATE `groups` SET `name`= :name WHERE `group_id`= :group_id");
+  $query->execute(array(
+    ":email" => $name,
+    "group_id" => $group_id
+    ));
 
 }
-
 
 ?>

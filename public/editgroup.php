@@ -28,7 +28,7 @@ if(isset($_POST['submit'])){
   foreach ($memberarray as $value) {
     echo $memberarray[$counter];
     echo "\n";
-    if(isset($_POST["deleteMember[2]"])){
+    if(isset($_POST["deleteMember[{$counter}]"])){
       echo "YOLO!";
       $id_member = $value;
       deleteMember($id_member);
@@ -96,7 +96,7 @@ require_once "./headerNav.php";
           $members = $group->getMemberArray();
           $counter = 0;
           foreach ($members as $value) {
-            echo "<li><input id='deleteMember[$counter]' name='deleteMember[$counter]' type='checkbox'><label for='deleteMember[$counter]'>$value</label></input></li>";
+            echo "<li><input id='deleteMember[{$counter}]' name='deleteMember[{$counter}]' type='checkbox'><label for='deleteMember[{$counter}]'>$value</label></input></li>";
             $counter++;
           }
           ?>
