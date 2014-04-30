@@ -14,6 +14,8 @@ if (isset($_SESSION['email'])){
 if(isset($_POST['submit'])){
   $group = new Group($_GET['id']);
   $memberarray = $group->getMemberArrayID();
+  $groupid = $group->getID();
+  $groupname = $group->getName();
 
   if(isset($_POST['deleteAcc'])){
     $id_owner = $user->getID();
@@ -28,6 +30,11 @@ if(isset($_POST['submit'])){
       deleteMember($id_member);
     }
     $counter++;
+  }
+
+  $newgroupname = $_POST['changeName'];
+  if($newgroupname != $groupname){
+    changeGroupName($groupid, $newgroupname);
   }
 }
 

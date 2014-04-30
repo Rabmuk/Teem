@@ -199,10 +199,10 @@ function addMember($id_user){
   }
 }
 
-function changeGroupName($id_group, $name){
+function changeGroupName($group_id, $name){
   global $db;
   
-  $query = $db->exec("UPDATE `groups` SET `name`= $name  WHERE `id_group`= $id_group");
+  $query = $db->exec("UPDATE `groups` SET `name`= '$name' WHERE `group_id`= $group_id");
 
 }
 
