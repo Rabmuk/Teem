@@ -71,6 +71,21 @@ class Meeting{
     return false;
   }
 
+  public function addMember($id_user){
+    global $db;
+
+    if (!$this->checkMember($id_user)) {
+      $query = $db->prepare(
+        "INSERT INTO `meetingMembers` (`id_meeting`, `id_user`)
+        VALUES (:id_meeting, :id_user)"
+        );
+      $query->execute(array(
+        ":id_meeting" => $this->meeting_id,
+        ":id_user" => $id_user
+        ));
+    }
+  }
+
   public function getAgendaItems(){
     global $db;
 
@@ -186,14 +201,7 @@ function addMeetingToDatabase($title, $id_owner, $location, $date, $startTime, $
     $user = $query->fetch();
 
     if($user){
-      $query = $db->prepare(
-        "INSERT INTO `meetingMembers` (`id_meeting`, `id_user`)
-        VALUES (:id_meeting, :id_user)"
-        );
-      $query->execute(array(
-        ":id_meeting" => $meeting->meeting_id,
-        ":id_user" => $user->user_id
-        ));
+      $toReturn->addMember($user->user_id);
     }else{
       $query = $db->prepare(
         "SELECT `group_id` FROM `groups` WHERE `name` = :name"
@@ -210,14 +218,7 @@ function addMeetingToDatabase($title, $id_owner, $location, $date, $startTime, $
           ":id_group" => $group->group_id
           ));
         while ($row = $query->fetch()) {
-          $insertQuery = $db->prepare(
-            "INSERT INTO `meetingMembers` (`id_meeting`, `id_user`)
-            VALUES (:id_meeting, :id_user)"
-            );
-          $insertQuery->execute(array(
-            ":id_meeting" => $meeting->meeting_id,
-            ":id_user" => $row->id_user
-            ));
+          $toReturn->addMember($row->id_user);
         }
       }else{
         echo '<p>' . $member . ' cound not be found</p>';
