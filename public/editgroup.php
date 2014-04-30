@@ -51,14 +51,14 @@ if(isset($_POST['submit'])){
   }
 }
 
-if(isset($_POST['deleteAcc'])){
+if(isset($_POST['deleteAcc']) && $_POST['deleteAcc'] == "Yes"){
     $id_owner = $user->getID();
     deleteGroup($id_owner);
 
     header("Location: ./profile.php");
   }
 
-if(isset($_POST['nodeleteAcc'])){
+if(isset($_POST['deleteAcc']) && $_POST['deleteAcc'] == "No"){
     header("Location: ./editgroup.php");
   }
 
@@ -134,7 +134,7 @@ require_once "./headerNav.php";
             <input type="submit" name="deleteAcc" value="Yes" class="button small"></input>
           </div>
           <div class="large-3 columns">
-            <input type="submit" name="nodeleteAcc" value="No" class="button small"></input>
+            <input type="submit" name="deleteAcc" value="No" class="button small"></input>
           </div>
         <a class='close-reveal-modal'>&#215;</a>
       </div>
