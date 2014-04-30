@@ -7,7 +7,7 @@
     <title>Create Agenda</title>
     <title>Teem - Create Agenda</title>
     <link rel="stylesheet" href="css/foundation.css" />
-    <link rel="stylesheet" href="css/createagenda.css" />
+    <link rel="stylesheet" type = "text/css" href="css/createagenda.css" />
     <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
     <script src="js/createagenda.js" type="text/javascript"></script>
 </head>
