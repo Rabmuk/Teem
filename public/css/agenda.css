@@ -41,3 +41,8 @@ input[type="submit"] {
   min-width: 50px;
   height: 35px;
 }
+
+.agendaRow{
+	width: 100%;
+
+}
