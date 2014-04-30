@@ -51,6 +51,10 @@ body {
   position: relative;
   cursor: default; }
 
+a{
+  color: #3de8b6;
+}
+
 a:hover {
   cursor: pointer; }
 
@@ -6427,7 +6431,7 @@ footer p{
 
 #wrapper{
   position: relative;
-  min-height: 94%;
+  min-height: 79.3%;
 }
 
 #logo {
