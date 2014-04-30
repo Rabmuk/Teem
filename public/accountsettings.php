@@ -37,13 +37,9 @@ if (isset($_POST['submit']) && $_POST['submit'] == "Submit") {
 	<link rel="stylesheet" href="css/accountsettings.css"/>
 </head>
 <body>
-<<<<<<< HEAD
 	<div class="wrapper">
-=======
 	<div id="wrapper">
 		<?php require_once "./headerNav.php"; ?>
-
->>>>>>> ca646c228e1ad4b32a8e7da5c5aed5a8f15ba3b3
 		<div class="row">
 			<div class="large-12">
 				<h1>General Settings</h1>
