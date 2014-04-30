@@ -20,6 +20,10 @@ h1 {
   color: #197b5e;
 }
 
+h3{
+  padding-left: 10px;
+}
+
 .boxcolumn{
   height: 450px;
   overflow-y: scroll;
