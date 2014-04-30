@@ -1,5 +1,5 @@
 <!-- This is the header navigation for pages when a user is logged in. --> 
-<head>
+
   <link href='http://fonts.googleapis.com/css?family=Alegreya+Sans:300' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="css/foundation.css" />
 
