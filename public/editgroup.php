@@ -127,9 +127,6 @@ require_once "./headerNav.php";
         </div>
       </div>
       <div id='myModal' class='reveal-modal small' data-reveal>
-<<<<<<< HEAD
-
-=======
         <p class="text-center">Are you sure you want to delete your group?</p>
         <div class="row">
           <div class="large-3 columns"><p></p></div>
@@ -139,7 +136,6 @@ require_once "./headerNav.php";
           <div class="large-3 columns">
             <input type="submit" name="nodeleteAcc" value="No" class="button small"></input>
           </div>
->>>>>>> d89657c99ff8d41e616a21e7b7512ab281b72ff7
         <a class='close-reveal-modal'>&#215;</a>
       </div>
     </form>
