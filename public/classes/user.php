@@ -144,6 +144,26 @@ class User{
     return $toReturn;    
   }
 
+  public function getActionItems($meeting_id){
+    global $db;
+
+    $toReturn = array();
+
+    $query = $db->prepare(
+     "SELECT `action_id` FROM actionItems
+     WHERE id_meeting = :id_meeting AND id_user = :id_user"
+     );
+    $query->execute(array(
+      ":id_meeting" => $meeting_id,
+      ":id_user" => $this->user_id
+      ));
+    while ($row = $query->fetch()) {
+      array_push($toReturn, new actionItem($row->action_id));
+    }
+
+    return $toReturn;
+  }
+
 }
 
 //assume that the email is unique

@@ -77,13 +77,30 @@ class Meeting{
     $toReturn = array();
 
     $query = $db->prepare(
-     "SELECT `item_id`
-     FROM agendaItems
+     "SELECT `item_id` FROM agendaItems
      WHERE id_meeting = :id_meeting"
      );
     $query->execute(array(":id_meeting" => $this->meeting_id));
     while ($row = $query->fetch()) {
       array_push($toReturn, new agendaItem($row->item_id));
+    }
+
+    return $toReturn;
+  }
+
+  public function getMemberArray(){
+    global $db;
+
+    $toReturn = array();
+
+    $query = $db->prepare(
+      "SELECT `id_user` FROM `meetingMembers` WHERE `id_meeting` = :id_meeting"
+      );
+    $query->execute(array(":id_meeting" => $this->meeting_id));
+
+    while ($row = $query->fetch()) {
+      $tempUser = new User((int)$row->id_user);
+      array_push($toReturn, $tempUser);
     }
 
     return $toReturn;

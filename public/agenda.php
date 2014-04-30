@@ -133,8 +133,8 @@ require_once "./headerNav.php";
 				?>
 
 				
-		
-		
+
+
 				<div id="myModal" class="reveal-modal small" data-reveal>
 					<h1>Add meeting item</h1>
 					<form method="post" action=<?php echo '"?id=' . $_GET['id'] . '"'; ?>>
@@ -156,83 +156,76 @@ require_once "./headerNav.php";
 				<div class="actionItems">
 					<!-- Each individual action item list -->
 					<h3>Action Items</h3>
-					<div class="row">
-						<!-- meeting attendee's name -->
-						<h4 class="memberName">Chris</h4>
-						<!-- List of existing tasks -->
-						<ul class="tasks">
-						    <li>Write the next great novel.</li>
-						    <li>Shovel snow</li>
-						    <li>Juggle saws</li>
-						    <li>Dance</li>
-						</ul>
-						<!-- Add a new task -->
-						<!-- Hitting enter will input the form. Javascript located in agenda.js -->
-						<form method="post">
-							<input type="text" name="Newtask" placeholder="New Task">
+					<?php 
+					$members = $meeting->getMemberArray();
+					foreach ($members as $member) {
+						?>
+						<div class="row">
+							<!-- meeting attendee's name -->
+							<h4 class="memberName"><?php echo $member->getName(); ?></h4>
+							<!-- List of existing tasks -->
+							<ul class="tasks">
+								<?php
+								foreach ($member->getActionItems($meeting->getID()) as $action) {
+									echo '<li>' . $action->getAction() . '</li>';
+								}
+								?>
+							</ul>
+							<!-- Add a new task -->
+							<!-- Hitting enter will input the form. Javascript located in agenda.js -->
+							<form method="post">
+								<input type="text" name="Newtask" placeholder="New Task">
 
-						</form>
-
-					
-					</div>
-
-					<div class="row">
-						<h4 class="memberName">Candice</h4>
-						<ul class="tasks">
-						    <li>Peel an orange</li>
-						    <li>Drink coffe</li>
-						</ul>
-						<!-- Add a new task -->
-						<!-- Hitting enter will input the form. Javascript located in agenda.js -->
-						<form method="post">
-							<input type="text" name="Newtask" placeholder="New Task">
-
-						
-				</div>
-				
+							</form>
 
 
-						</form>
-						
-					</div>
-				</div>
+						</div>
+
+						<?php
+					}
+					?>
+
+				</form>
 
 			</div>
-				
-
-			
-			<center><hr style="width:80%;"></center>
-			
-		
-		<div class="row">
-			<a href="#" data-reveal-id="myModal" class="button exapand" data-reveal>Add meeting item</a>
 		</div>
 
-
-		
-
-
-		</div>
-
-
-
-		
 	</div>
 
 
-	
+
+	<center><hr style="width:80%;"></center>
+
+
+	<div class="row">
+		<a href="#" data-reveal-id="myModal" class="button exapand" data-reveal>Add meeting item</a>
+	</div>
 
 
 
-	
-	<!--don't worry about this-->
-	<br><br><br><br><br>
 
-	<script type="text/javascript" src="js/foundation/foundation.js"></script>
-    <script type="text/javascript" src="js/foundation/foundation.reveal.js"></script>
-    <script>
-    $(document).foundation();
-    </script>
+
+</div>
+
+
+
+
+</div>
+
+
+
+
+
+
+
+<!--don't worry about this-->
+<br><br><br><br><br>
+
+<script type="text/javascript" src="js/foundation/foundation.js"></script>
+<script type="text/javascript" src="js/foundation/foundation.reveal.js"></script>
+<script>
+$(document).foundation();
+</script>
 
 </body>
 </html>

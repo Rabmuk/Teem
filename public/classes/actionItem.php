@@ -25,6 +25,10 @@ class ActionItem{
     $this->action = $item->action;
   }
 
+  public function getAction(){
+    return $this->action;
+  }
+
 }
 
 function addActionItem($id_meeting, $id_user, $action){
