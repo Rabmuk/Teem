@@ -63,6 +63,7 @@ if ($reload) {
 }
 
 require_once "./headerNav.php";	
+
 ?>
 <!doctype HTML>
 <html class="no-js" lang="en">
@@ -72,32 +73,32 @@ require_once "./headerNav.php";
 	<link rel="stylesheet" href="css/foundation.css" />
 	<link rel="stylesheet" href="css/agenda.css" />
 	<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
-	<script src="js/agenda.js"></script>
+	<script src="agenda.js"></script>
 </head>
-
-
 <body>
 
 
-	<div class="wrapper">
+
+
+
+<div class="wrapper">
+	<div class="agendaRow">
 		
-		<!-- Meeting name and desire outcome -->
+		<!-- Meeting name and desired outcome -->
 		<div class="row">
-			<div class="large-9 columns" id="desiredOutcomes">
+			<div class="large-6 columns">
 				<h1 class= "meetingName"><?php echo $meeting->getTitle(); ?></h1>
 				<p class= "desiredOutcome">Desired outcome: <?php echo $meeting->getDescription(); ?></p>
 			</div>
-
 		</div>
 
+		
 
 
 
-
-
-		<!-- Actual agenda, and next actions -->
+		<!-- Agenda body -->
 		<div class="row">
-			<div class="large-9 columns" id="meetingTasks">
+			<div class="large-9 columns">
 				<?php 
 					$agendaItems = $meeting->getAgendaItems();
 					foreach($agendaItems as $agendaItem){
@@ -136,7 +137,6 @@ require_once "./headerNav.php";
 									<?php
 								}
 								?>
-
 							</div>
 							
 							<div class="large-6 columns">
@@ -152,9 +152,6 @@ require_once "./headerNav.php";
 									}
 									?>
 								</ul>
-
-								<li><a href="uploads/<?php echo $file->getLocation(); ?>" target="_blank"><?php echo $file->getName(); ?></a></li>
-
 								<?php
 								if ($isPresenter) {
 									?>
@@ -173,13 +170,17 @@ require_once "./headerNav.php";
 
 						</div>
 
-							
-							<!-- <center><hr style="width:80%;"></center> -->
-							<?php 
-						}
-						?>
+						
+						
+						<?php 
+					}
+					?>
 
-				
+
+					<div class="row">
+							<a href="#" data-reveal-id="myModal" class="button exapand" data-reveal>Add meeting item</a>
+						</div>
+
 
 						<div id="myModal" class="reveal-modal small" data-reveal>
 							<h1>Add meeting item</h1>
@@ -193,76 +194,70 @@ require_once "./headerNav.php";
 							</form>
 						</div>
 
-						<div class="row">
-							<a href="#" data-reveal-id="myModal" class="button exapand" data-reveal>Add meeting item</a>
-						</div>
-
-				
-			
-
 			</div>
 
 
-			<!-- Next Actions -->
 			<div class="large-3 columns" id="nextActions">
-				<div class="actionItems">
-						<!-- Each individual action item list -->
-						<h3>Action Items</h3>
-						<?php 
-						$members = $meeting->getMemberArray();
-						foreach ($members as $member) {
-							?>
-							<div class="row">
-								<!-- meeting attendee's name -->
-								<h4 class="memberName"><?php echo $member->getName(); ?></h4>
-								<!-- List of existing tasks -->
-								<ul class="tasks">
-									<?php
-									foreach ($member->getActionItems($meeting->getID()) as $action) {
-										echo '<li>' . $action->getAction() . '</li>';
-									}
-									?>
-								</ul>
-								<!-- Add a new task -->
-								<!-- Hitting enter will input the form. Javascript located in agenda.js -->
-								<form method="post">
-									<input type="text" name="newtask" placeholder="New Task">
-									<input type="hidden" name="id_user" value="<?php echo $member->getID(); ?>">
-								</form>
-								<form method="post">
-									<input type="submit" name="clearActions" value="Clear" />
-									<input type="hidden" name="id_user" value="<?php echo $member->getID(); ?>">
-								</form>
-
-
-
-
-							</div>
-
+				<!-- Each individual action item list -->
+				<h3>Action Items</h3>
+				<?php 
+				$members = $meeting->getMemberArray();
+				foreach ($members as $member) {
+					?>
+					<div class="row">
+						<!-- meeting attendee's name -->
+						<h4 class="memberName"><?php echo $member->getName(); ?></h4>
+						<!-- List of existing tasks -->
+						<ul class="tasks">
 							<?php
-						}
-						?>
+							foreach ($member->getActionItems($meeting->getID()) as $action) {
+								echo '<li>' . $action->getAction() . '</li>';
+							}
+							?>
+						</ul>
+						<!-- Add a new task -->
+						<!-- Hitting enter will input the form. Javascript located in agenda.js -->
+						<form method="post">
+							<input type="text" name="newtask" placeholder="New Task">
+							<input type="hidden" name="id_user" value="<?php echo $member->getID(); ?>">
+						</form>
+						<form method="post">
+							<input type="submit" name="clearActions" value="Clear" />
+							<input type="hidden" name="id_user" value="<?php echo $member->getID(); ?>">
+						</form>
+
 
 					</div>
 
+					<?php
+				}
+				?>
+
 			</div>
 
 
 
-
-
+		</div>
 			
-
-		</div>
-
-
-		</div>
-
-		
+			
 	</div>
+		
+
+
+</div>
+	
 
 
 
+
+
+
+
+
+
+
+
+	
 
 
 
