@@ -134,7 +134,7 @@ require_once "./headerNav.php";
             <input type="submit" name="deleteAcc" value="Yes" class="button small"></input>
           </div>
           <div class="large-3 columns">
-            <input type="submit" name="nodeleteAcc" value="No" class="button small"></input>
+            <input type="submit" name="deleteAcc" value="No" class="button small"></input>
           </div>
         <a class='close-reveal-modal'>&#215;</a>
       </div>

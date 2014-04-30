@@ -1,6 +1,17 @@
 
-<?php include "headerNav.php"; ?>   
+<?php include "./headerNav.php"; ?>   
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>About Us</title>
+        <link rel="stylesheet" href="css/foundation.css">
+        <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+        <script src="js/index.js" type="text/javascript"></script>    
+    </head>
 
+<<<<<<< HEAD
 <!doctype HTML>
 <html class="no-js" lang="en">
 <head>
@@ -10,6 +21,9 @@
   <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
 </head>
 <body>
+=======
+
+>>>>>>> 85620a08c94d656dba541a0cfec6e03c0c247d75
       <!--start wrapper-->
   <div id = "wrapper">
   <div class="row">
