@@ -18,22 +18,19 @@
         </div>
     </footer> !-->
 
-  <link href='http://fonts.googleapis.com/css?family=Alegreya+Sans:300' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="css/foundation.css" />
-  <link rel="stylesheet" href="css/index.css" />
-
-<link href='http://fonts.googleapis.com/css?family=Roboto+Slab:300' rel='stylesheet' type='text/css'>  
 
 <html>  
+  <link rel="stylesheet" href="css/foundation.css" />
+  <link rel="stylesheet" href="css/index.css" />
+  <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:300' rel='stylesheet' type='text/css'>  
+
  <div class="footer">
-    
     <div class="large-12 columns">
       <ul class="inline-list left footerlist">
         <li><a href="about.php">About</a></li>
         <li><a href="contact.php">Contact Us</a></li>
       </ul>
       <p class = "footerlist">&copy; Team SnapChatRoulette</p>
-
     </div>
-  </footer>
+  </div>
 </html>
