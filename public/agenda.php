@@ -246,28 +246,6 @@ require_once "./headerNav.php";
 
 </div>
 	
-
-
-
-
-
-
-
-
-
-
-
-	
-
-
-
-
-
-
-
-
-
-
 <!--don't worry about this-->
 <br><br><br><br><br>
 
