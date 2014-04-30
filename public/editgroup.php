@@ -52,7 +52,11 @@ require_once "./headerNav.php";
 ?>
 <!doctype HTML>
 <html>
-
+<head>
+  <title>Edit Group</title>
+  <link rel="stylesheet" href="css/foundation.css" />
+  <link rel="stylesheet" href="css/editgroup.css"/>
+</head>
  <body>
   <div id="wrapper">
     <div class="row">

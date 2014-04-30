@@ -1,7 +1,5 @@
 
-<!doctype html>
-
-<?php require_once "./headerNav.php"; ?>   
+<?php include "headerNav.php"; ?>   
 
     <title>Teem - About Us</title>
 

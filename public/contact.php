@@ -1,10 +1,12 @@
 <?php
-    require_once "./headerNav.php";
+    require_once "headerNav.php";
 ?>
 
     <title>Teem - Contact</title>
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+    <script src="js/contactscripts.js" type="text/javascript"></script>
 <body>
-
 <div class="wrapper">
     <div class="row" id="contact">
      	 <div class="large-12 columns">
@@ -66,7 +68,6 @@
 	</div>
 </div>
 </body>
-</html>
 <?php
-  require_once "./bottomNav.php";
+  require_once "bottomNav.php";
 ?>

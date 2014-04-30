@@ -14,8 +14,17 @@ if (isset($_SESSION['email'])){
 
 ?>
 
-	<title>Teem - Create a Meeting</title>
-	
+<!doctype HTML>
+<html class="no-js" lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Create a Meeting</title>
+	<link rel="stylesheet" href="css/foundation.css" />
+	<link rel="stylesheet" href="css/formsettings.css"/>
+	<link rel="stylesheet" type="text/css" href="css/createmeeting.css">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script src="js/createmeeting.js" type="text/javascript" ></script>
+</head>
 <body>
 	<div id = "wrapper">
 		<?php 

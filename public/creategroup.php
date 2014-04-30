@@ -6,8 +6,16 @@ require_once "./headerNav.php";
 
 ?>
 
-	<title>Teem - Create a Group</title>
-	
+<!doctype HTML>
+<html class="no-js" lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Create a Group</title>
+	<link rel="stylesheet" href="css/foundation.css" />
+	<link rel="stylesheet" href="css/formsettings.css"/>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script src="js/createmeeting.js" type="text/javascript" ></script>
+</head>
 <body>
 	<div id = "wrapper">
 		<div class="row">

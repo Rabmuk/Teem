@@ -42,10 +42,20 @@ require_once "classes/user.php";
     require_once "./headerNav.php";
 ?>
 
-        <title>Teem - Create an account</title>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Create an account</title>
+        <link rel="stylesheet" href="css/foundation.css">
+        <link rel="stylesheet" href="css/createaccount.css">
 
+    </head>
     <body>
       <div id="wrapper">
+
+        <div id="wrapper">
         <!-- Entire page fits same sizing as rest of website -->
         <div class="row">
 
@@ -64,7 +74,7 @@ require_once "classes/user.php";
 
               ?>
               </h1>
-          </div>
+            </div>
             <!-- Line spacing between the two sentences -->
         
           </div>
@@ -116,6 +126,7 @@ require_once "classes/user.php";
             </form>
           </div> 
         </row>
+      </div>
         </div>
       </div>
 
