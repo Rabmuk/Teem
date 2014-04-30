@@ -72,28 +72,32 @@ require_once "./headerNav.php";
 	<link rel="stylesheet" href="css/foundation.css" />
 	<link rel="stylesheet" href="css/agenda.css" />
 	<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
-	<script src="agenda.js"></script>
+	<script src="js/agenda.js"></script>
 </head>
+
+
 <body>
 
 
 	<div class="wrapper">
 		
-		<!-- Name of meeting and desire outcome -->	
+		<!-- Meeting name and desire outcome -->
 		<div class="row">
-			<div class="large-9 columns" id="DesiredOutcomes">
+			<div class="large-9 columns" id="desiredOutcomes">
 				<h1 class= "meetingName"><?php echo $meeting->getTitle(); ?></h1>
 				<p class= "desiredOutcome">Desired outcome: <?php echo $meeting->getDescription(); ?></p>
 			</div>
 
-
 		</div>
 
-		<!-- The actual agenda material, including topics and action items -->
-		<div class="row agendaRow">
-			
-				<div class="large-9 columns" id="meetingTasks">
-					<?php 
+
+
+
+
+		<!-- Actual agenda, and next actions -->
+		<div class="row">
+			<div class="large-9 columns" id="meetingTasks">
+				<?php 
 						$agendaItems = $meeting->getAgendaItems();
 						foreach($agendaItems as $agendaItem){
 							?>
@@ -131,7 +135,7 @@ require_once "./headerNav.php";
 										<?php
 									}
 									?>
-<<<<<<< HEAD
+
 								</div>
 								
 								<div class="large-6 columns">
@@ -147,9 +151,9 @@ require_once "./headerNav.php";
 										}
 										?>
 									</ul>
-=======
+
 									<li><a href="uploads/<?php echo $file->getLocation(); ?>" target="_blank"><?php echo $file->getName(); ?></a></li>
->>>>>>> FETCH_HEAD
+
 									<?php
 									if ($isPresenter) {
 										?>
@@ -173,37 +177,14 @@ require_once "./headerNav.php";
 							<?php 
 						}
 						?>
+				
+			
 
-						<div id="myModal" class="reveal-modal small" data-reveal>
-							<h1>Add meeting item</h1>
-							<form method="post" action=<?php echo '"?id=' . $_GET['id'] . '"'; ?>>
-								<input type="text" name="heading" placeholder="Enter item heading">
-								<input type="number" name="time" placeholder="Enter allotted minutes">
-								<input type="email" name="presenter" placeholder="Enter presentor's email">
-								<input type="submit" name="addItem" value="Submit" class="button small expand"></input>
-								<a class="close-reveal-modal">&#215;</a>
-								
-							</form>
-						</div>
+			</div>
 
-						<div class="row">
-							<a href="#" data-reveal-id="myModal" class="button exapand" data-reveal>Add meeting item</a>
-						</div>
-
-
-<<<<<<< HEAD
-=======
-			<div class="large-2 columns">
-				<!-- It's a list of each member's name, with a list of their action items. Underneath it is the ability to add tasks -->
->>>>>>> FETCH_HEAD
-
-				</div>
-
-
-
-				<div class="large-3 columns" id="agendaItems">
-					
-					<div class="actionItems">
+			<!-- Next Actions -->
+			<div class="large-3 columns" id="nextActions">
+				<div class="actionItems">
 						<!-- Each individual action item list -->
 						<h3>Action Items</h3>
 						<?php 
@@ -243,12 +224,14 @@ require_once "./headerNav.php";
 
 					</div>
 
-				</div>
+			</div>
+
+
+
 
 			
+
 		</div>
-
-
 
 
 	</div>
