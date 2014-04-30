@@ -94,6 +94,11 @@ require_once "./headerNav.php";
 
 
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> d89657c99ff8d41e616a21e7b7512ab281b72ff7
 		<!-- Actual agenda, and next actions -->
 		<div class="row">
 			<div class="large-9 columns" id="meetingTasks">
@@ -173,7 +178,6 @@ require_once "./headerNav.php";
 							</div>
 
 							
-							<!-- <center><hr style="width:80%;"></center> -->
 							<?php 
 						}
 						?>
@@ -181,6 +185,14 @@ require_once "./headerNav.php";
 			
 
 			</div>
+<<<<<<< HEAD
+=======
+
+			
+
+			
+
+>>>>>>> d89657c99ff8d41e616a21e7b7512ab281b72ff7
 
 			<!-- Next Actions -->
 			<div class="large-3 columns" id="nextActions">
@@ -225,6 +237,7 @@ require_once "./headerNav.php";
 					</div>
 
 			</div>
+<<<<<<< HEAD
 
 
 
@@ -232,8 +245,14 @@ require_once "./headerNav.php";
 			
 
 		</div>
+=======
 
+			
+>>>>>>> d89657c99ff8d41e616a21e7b7512ab281b72ff7
 
+		</div>
+
+		
 	</div>
 
 
