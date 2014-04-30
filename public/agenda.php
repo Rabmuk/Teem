@@ -82,10 +82,10 @@ require_once "./headerNav.php";
 
 
 <div class="wrapper">
-	<div class="agendaRow">
+	
 		
 		<!-- Meeting name and desired outcome -->
-		<div class="row">
+		<div class="row" >
 			<div class="large-6 columns">
 				<h1 class= "meetingName"><?php echo $meeting->getTitle(); ?></h1>
 				<p class= "desiredOutcome">Desired outcome: <?php echo $meeting->getDescription(); ?></p>
@@ -97,8 +97,8 @@ require_once "./headerNav.php";
 
 
 		<!-- Agenda body -->
-		<div class="row">
-			<div class="large-9 columns">
+		<div class="row" id="totalWidth">
+			<div class="large-9 columns" id="agendaBody">
 				<?php 
 					$agendaItems = $meeting->getAgendaItems();
 					foreach($agendaItems as $agendaItem){
@@ -234,13 +234,10 @@ require_once "./headerNav.php";
 				?>
 
 			</div>
-
-
-
 		</div>
 			
 			
-	</div>
+	
 		
 
 
