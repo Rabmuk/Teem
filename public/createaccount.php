@@ -54,10 +54,8 @@ require_once "classes/user.php";
     </head>
     <body>
       <div id="wrapper">
-
-        <div id="wrapper">
         <!-- Entire page fits same sizing as rest of website -->
-        <div class="row lower">
+        <div class="row">
 
           <!-- Left panel with cute intro sentence -->
           <div class="large-6 columns" id="leftSide">
@@ -74,7 +72,7 @@ require_once "classes/user.php";
 
               ?>
               </h1>
-            </div>
+          </div>
             <!-- Line spacing between the two sentences -->
         
           </div>
@@ -126,7 +124,6 @@ require_once "classes/user.php";
             </form>
           </div> 
         </row>
-      </div>
         </div>
       </div>
 
