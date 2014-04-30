@@ -51,14 +51,14 @@ if(isset($_POST['submit'])){
   }
 }
 
-if(isset($_POST['deleteAcc'])){
+if(isset($_POST['deleteAcc']) && $_POST['deleteAcc'] == "Yes"){
     $id_owner = $user->getID();
     deleteGroup($id_owner);
 
     header("Location: ./profile.php");
   }
 
-if(isset($_POST['nodeleteAcc'])){
+if(isset($_POST['deleteAcc']) && $_POST['deleteAcc'] == "No"){
     header("Location: ./editgroup.php");
   }
 
@@ -68,8 +68,8 @@ require_once "./headerNav.php";
 <html>
 <head>
   <title>Edit Group</title>
-  <link rel="stylesheet" href="css/foundation.css" />
-  <link rel="stylesheet" href="css/editgroup.css"/>
+  <link rel="stylesheet" type="text/css" href="css/foundation.css" />
+  <link rel="stylesheet" type="text/css" href="css/editgroup.css"/>
   <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
 </head>
  <body>

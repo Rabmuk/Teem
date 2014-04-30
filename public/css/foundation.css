@@ -6403,7 +6403,7 @@ a:hover{
   margin-bottom:-12px;
 }
 
-footer {
+.footer {
   /*position: fixed;
   bottom:0;
   left:0px;
@@ -6442,15 +6442,15 @@ height: 4em;
 
 .inline-list:{overflow:block;}
 
-footer a, .header a{
+.footer a, .header a{
   font-size:18px;
   vertical-align: middle;
   color: white;
 }
-footer a:hover, .header a:hover{
+.footer a:hover, .header a:hover{
   color: #3de8b6;
 }
-footer p{
+.footer p{
   position: absolute;
   right: 5px;
   font-size:18px;

@@ -1,4 +1,5 @@
 <?php 
+
 session_start();
 foreach (glob("classes/*.php") as $filename)
 {
@@ -24,22 +25,24 @@ if (isset($_POST['submit']) && $_POST['submit'] == "Submit") {
 		$user->setEmail($_POST['email']);
 		$_SESSION['email'] = $_POST['email'];
 	}
-
 }
 
+require_once "./headerNav.php"; 
+
 ?>
+
+
 <!doctype HTML>
 <html class="no-js" lang="en">
 <head>
 	<meta charset="utf-8" />
 	<title>Account Settings</title>
-	<link rel="stylesheet" href="css/foundation.css" />
-	<link rel="stylesheet" href="css/accountsettings.css"/>
+	<link rel="stylesheet" type="text/css" href="/css/foundation.css" />
+	<link rel="stylesheet" type="text/css" href="/css/accountsettings.css"/>
 </head>
 <body>
 	<div class="wrapper">
 	<div id="wrapper">
-		<?php require_once "./headerNav.php"; ?>
 		<div class="row">
 			<div class="large-12">
 				<h1>General Settings</h1>
@@ -106,6 +109,8 @@ if (isset($_POST['submit']) && $_POST['submit'] == "Submit") {
 	</div>
 </body>
 </html>
+
+
 <?php
 
 require_once "./bottomNav.php";
