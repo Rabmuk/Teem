@@ -86,7 +86,16 @@ class AgendaItem{
     return $toReturn;
   }
 
+  public function clearTopics(){
+    global $db;
 
+    $query = $db->prepare(
+      "DELETE FROM `topics` WHERE `id_item` = :id_item"
+      );
+    $query->execute(array(
+      ":id_item" => $this->item_id
+      ));
+  }
 
 }
 

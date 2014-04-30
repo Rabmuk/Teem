@@ -17,12 +17,22 @@ if(!$user->exists() || !$meeting->exists() || !$meeting->checkMember($user->getI
 	header("Location: ./index.php");
 }
 
-if (isset($_POST['savetopics']) && $_POST['savetopics'] == 'Save') {
+$reload = false;
+
+if (isset($_POST['topics'])) {
 	addTopicsToItem($_POST['item_id'], $_POST['topics']);
+	$reload = true;
+}
+
+if (isset($_POST['clearTopics'])) {
+	$item = new agendaItem($_POST['item_id']);
+	$item->clearTopics();
+	$reload = true;
 }
 
 if (isset($_POST['addItem']) && $_POST['addItem'] == "Submit") {
 	addItemToMeeting($meeting->getID(), $_POST['heading'], $_POST['time'], $_POST['presenter']);
+	$reload = true;
 }
 
 if (isset($_POST['savefile']) && $_POST['savefile'] == 'Submit') {
@@ -35,14 +45,21 @@ if (isset($_POST['savefile']) && $_POST['savefile'] == 'Submit') {
 		move_uploaded_file($_FILES["file"]["tmp_name"], "./uploads/" . $randomName . '.' . $extension);
 		addFileToItem($_POST['item_id'], $temp[0], $randomName . '.' . $extension);
 	}
+	$reload = true;
 }
 
 if (isset($_POST['newtask'])) {
 	$meeting->addActionItem($_POST['id_user'], $_POST['newtask']);
+	$reload = true;
 }
 
 if (isset($_POST['clearActions'])) {
 	$meeting->clearActionItem($_POST['id_user']);
+	$reload = true;
+}
+
+if ($reload) {
+	echo '<script>window.location.reload()</script>';
 }
 
 require_once "./headerNav.php";	
@@ -93,10 +110,13 @@ require_once "./headerNav.php";
 							$isPresenter = $user->isUser($agendaItem->getPresenter());
 							if ($isPresenter) {
 								?>
-								<form method="post" action=<?php echo '"?id=' . $_GET['id'] . '"'; ?>>
-									<input type="hidden" name="item_id" value=<?php echo '"' . $agendaItem->getID() . '"'; ?>>
-									<textarea name="topics" rows="4" onFocus="if(this.value=='Add topics here.')this.value='';">Add topics here.</textarea>
-									<input type="submit" name="savetopics" value="Save" />
+								<form method="post">
+									<input type="text" name="topics" placeholder="New Topic">
+									<input type="hidden" name="item_id" value="<?php echo $agendaItem->getID(); ?>">
+								</form>
+								<form method="post">
+									<input type="submit" name="clearTopics" value="Clear" />
+									<input type="hidden" name="item_id" value="<?php echo $agendaItem->getID(); ?>">
 								</form>
 								<?php
 							}
