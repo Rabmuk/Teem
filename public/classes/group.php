@@ -173,7 +173,7 @@ function deleteMember($id_user){
   $query = $db->exec("DELETE FROM `groupmembers` WHERE `id_user` = $id_user"); 
 }
 
-function addMember($id_user){
+function addMember($id_user, $group_id){
   global $db;
 
   $member = trim($id_user);
@@ -187,15 +187,15 @@ function addMember($id_user){
 
   if($user){
     $query = $db->prepare(
-      "INSERT INTO `groupmembers` (`id_group`, `id_user`)
+      "INSERT INTO `groupMembers` (`id_group`, `id_user`)
       VALUES (:id_group, :id_user)"
       );
     $query->execute(array(
-      ":id_group" => $group->group_id,
+      ":id_group" => $group_id,
       ":id_user" => $user->user_id
       ));
   }else{
-    echo $member . ' cound not be found\n';  
+    echo ('<script type="text/javascript">alert ("The email you entered is not registered with our service.");</script>');
   }
 }
 

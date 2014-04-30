@@ -16,6 +16,7 @@ if(isset($_POST['submit'])){
   $memberarray = $group->getMemberArrayID();
   $groupid = $group->getID();
   $groupname = $group->getName();
+  $email_user = $user->getEmail();
 
   if(isset($_POST['deleteAcc'])){
     $id_owner = $user->getID();
@@ -25,7 +26,10 @@ if(isset($_POST['submit'])){
 
   $counter = 0;
   foreach ($memberarray as $value) {
-    if(isset($_POST["deleteMember[{$counter}]"])){
+    echo $memberarray[$counter];
+    echo "\n";
+    if(isset($_POST["deleteMember[2]"])){
+      echo "YOLO!";
       $id_member = $value;
       deleteMember($id_member);
     }
@@ -35,6 +39,12 @@ if(isset($_POST['submit'])){
   $newgroupname = $_POST['changeName'];
   if($newgroupname != $groupname){
     changeGroupName($groupid, $newgroupname);
+  }
+
+  $newmember = $_POST['addMember'];
+  if($newmember != ''){
+    addMember($newmember, $groupid);
+    echo $id_owner;
   }
 }
 
