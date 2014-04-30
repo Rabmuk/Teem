@@ -130,8 +130,7 @@ require_once "./headerNav.php";
 								$files = $agendaItem->getFiles();
 								foreach ($files as $file) {
 									?>
-									<a href="uploads/<?php echo $file->getLocation(); ?>" target="_blank"><?php echo $file->getName(); ?></a>
-
+									<li><a href="uploads/<?php echo $file->getLocation(); ?>" target="_blank"><?php echo $file->getName(); ?></a></li>
 									<?php
 								}
 								?>
