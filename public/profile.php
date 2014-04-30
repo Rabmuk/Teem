@@ -19,15 +19,9 @@ if(isset($_POST['submit'])){
 
 require_once "./headerNav.php";	
 ?>
-<!doctype HTML>
-<html class="no-js" lang="en">
-<head>
-	<meta charset="utf-8" />
-	<title>My Profile - Home</title>
-	<link rel="stylesheet" href="css/foundation.css" />
-	<link rel="stylesheet" href="css/profile.css" />
-	<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
-</head>
+
+<title>Teem - Home</title>
+
 <body>
 	<div class="wrapper">
    <div class="row">

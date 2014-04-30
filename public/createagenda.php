@@ -1,16 +1,8 @@
 <?php 	require_once "./headerNav.php";	
 ?>
-<!doctype HTML>
-<html class="no-js" lang="en">
-<head>
-	<meta charset="utf-8" />
-    <title>Create Agenda</title>
+
     <title>Teem - Create Agenda</title>
-    <link rel="stylesheet" href="css/foundation.css" />
-    <link rel="stylesheet" href="css/createagenda.css" />
-    <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
-    <script src="js/createagenda.js" type="text/javascript"></script>
-</head>
+
 <body>
 	<div class="row">
 		<div class="large-12 columns">

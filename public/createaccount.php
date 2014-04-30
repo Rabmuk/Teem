@@ -42,16 +42,8 @@ require_once "classes/user.php";
     require_once "./headerNav.php";
 ?>
 
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Create an account</title>
-        <link rel="stylesheet" href="css/foundation.css">
-        <link rel="stylesheet" href="css/createaccount.css">
+        <title>Teem - Create an account</title>
 
-    </head>
     <body>
       <div id="wrapper">
         <!-- Entire page fits same sizing as rest of website -->

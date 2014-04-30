@@ -1,18 +1,10 @@
 
 <!doctype html>
 
-<?php require_once "headerNav.php"; ?>   
+<?php require_once "./headerNav.php"; ?>   
 
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>About Us</title>
-        <link rel="stylesheet" href="css/foundation.css">
-        <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
-        <script src="js/index.js" type="text/javascript"></script>    
-    </head>
+    <title>Teem - About Us</title>
+
     <body>
       <!--start wrapper-->
       <div id = "wrapper">
