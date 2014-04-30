@@ -24,3 +24,7 @@ input[type="submit"]:hover {
   border: 2px #838383 solid;
   cursor: pointer;
 }
+
+.lower{
+  margin-top: 40px;
+}

@@ -6379,6 +6379,13 @@ th.hide-for-touch {
 /*-----------------------------------------------------------*/
 /*Hayley Classes*/
 
+a{
+  color:#197b5e;
+}
+a:hover{
+  color: #3de8b6;
+}
+
 .header{
   left:0;
   right:0;

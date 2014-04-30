@@ -57,7 +57,7 @@ require_once "classes/user.php";
 
         <div id="wrapper">
         <!-- Entire page fits same sizing as rest of website -->
-        <div class="row">
+        <div class="row lower">
 
           <!-- Left panel with cute intro sentence -->
           <div class="large-6 columns" id="leftSide">
