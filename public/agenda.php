@@ -73,7 +73,7 @@ require_once "./headerNav.php";
 	<link rel="stylesheet" href="css/foundation.css" />
 	<link rel="stylesheet" href="css/agenda.css" />
 	<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
-	<script src="agenda.js"></script>
+	<script src="js/agenda.js"></script>
 </head>
 <body>
 
