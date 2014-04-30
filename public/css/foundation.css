@@ -6420,7 +6420,7 @@ footer a, .header a{
   color: white;
 }
 footer a:hover, .header a:hover{
-  color: white;
+  color: #3de8b6;
 }
 footer p{
   position: absolute;
