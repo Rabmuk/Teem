@@ -51,6 +51,17 @@ if(isset($_POST['submit'])){
   }
 }
 
+if(isset($_POST['deleteAcc'])){
+    $id_owner = $user->getID();
+    deleteGroup($id_owner);
+
+    header("Location: ./profile.php");
+  }
+
+if(isset($_POST['nodeleteAcc'])){
+    header("Location: ./editgroup.php");
+  }
+
 require_once "./headerNav.php";	
 ?>
 <!doctype HTML>
@@ -126,10 +137,10 @@ require_once "./headerNav.php";
         <div class="row">
           <div class="large-3 columns"><p></p></div>
           <div class="large-3 columns">
-            <input type="submit" name="submit" value="Yes" class="button small"></input>
+            <input type="submit" name="deleteAcc" value="Yes" class="button small"></input>
           </div>
           <div class="large-3 columns">
-            <input type="submit" name="submit" value="No" class="button small"></input>
+            <input type="submit" name="nodeleteAcc" value="No" class="button small"></input>
           </div>
 >>>>>>> d89657c99ff8d41e616a21e7b7512ab281b72ff7
         <a class='close-reveal-modal'>&#215;</a>
