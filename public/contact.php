@@ -7,8 +7,8 @@
   <head>
     <meta charset="utf-8" />
     <title>Contact</title>
-    <link rel="stylesheet" href="css/foundation.css" />
-    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" href="css/foundation.css">
+    <link rel="stylesheet" href="css/index.css">
     <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
     <script src="js/contactscripts.js" type="text/javascript"></script>
   </head>
