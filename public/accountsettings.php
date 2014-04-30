@@ -27,8 +27,6 @@ if (isset($_POST['submit']) && $_POST['submit'] == "Submit") {
 
 }
 
-require_once "./headerNav.php";
-
 ?>
 <!doctype HTML>
 <html class="no-js" lang="en">
@@ -40,6 +38,8 @@ require_once "./headerNav.php";
 </head>
 <body>
 	<div id="wrapper">
+		<?php require_once "./headerNav.php"; ?>
+
 		<div class="row">
 			<div class="large-12">
 				<h1>General Settings</h1>
