@@ -1,7 +1,7 @@
 
 <!doctype html>
 
-
+<?php require_once "headerNav.php"; ?>   
 
 <html>
     <head>
@@ -18,7 +18,6 @@
       <div id = "wrapper">
         <div class="row">
 
-        <?php require_once "./headerNav.php"; ?>   
           
           <div class="small-9 columns ">
              <h3>Teem was created to help groups of people facilitate better and more efficient meetings. It was built with love by Team SnapChatRoulette 
