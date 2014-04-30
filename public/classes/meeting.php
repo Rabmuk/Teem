@@ -106,6 +106,33 @@ class Meeting{
     return $toReturn;
   }
 
+  public function addActionItem($id_user, $action){
+    global $db;
+
+    $query = $db->prepare(
+      "INSERT INTO `actionItems` (`id_meeting`, `id_user`, `action`)
+      VALUES (:id_meeting, :id_user, :action)"
+      );
+    $query->execute(array(
+      ":id_meeting" => $this->meeting_id,
+      ":id_user" => $id_user,
+      ":action" => $action
+      ));
+  }
+
+  public function clearActionItem($id_user){
+    global $db;
+
+    $query = $db->prepare(
+      "DELETE FROM `actionItems` WHERE `id_meeting` = :id_meeting
+      AND `id_user` = :id_user"
+      );
+    $query->execute(array(
+      ":id_meeting" => $this->meeting_id,
+      ":id_user" => $id_user
+      ));
+  }
+
 }
 
 function addMeetingToDatabase($title, $id_owner, $location, $date, $startTime, $members){

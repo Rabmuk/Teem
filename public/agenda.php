@@ -37,6 +37,14 @@ if (isset($_POST['savefile']) && $_POST['savefile'] == 'Submit') {
 	}
 }
 
+if (isset($_POST['newtask'])) {
+	$meeting->addActionItem($_POST['id_user'], $_POST['newtask']);
+}
+
+if (isset($_POST['clearActions'])) {
+	$meeting->clearActionItem($_POST['id_user']);
+}
+
 require_once "./headerNav.php";	
 ?>
 <!doctype HTML>
@@ -174,8 +182,12 @@ require_once "./headerNav.php";
 							<!-- Add a new task -->
 							<!-- Hitting enter will input the form. Javascript located in agenda.js -->
 							<form method="post">
-								<input type="text" name="Newtask" placeholder="New Task">
-
+								<input type="text" name="newtask" placeholder="New Task">
+								<input type="hidden" name="id_user" value="<?php echo $member->getID(); ?>">
+							</form>
+							<form method="post">
+								<input type="submit" name="clearActions" value="Clear" />
+								<input type="hidden" name="id_user" value="<?php echo $member->getID(); ?>">
 							</form>
 
 

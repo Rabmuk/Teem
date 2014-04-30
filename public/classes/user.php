@@ -182,11 +182,6 @@ function addUserToDatabase($email, $password, $salt, $firstName, $lastName){
     ":lastName" => $lastName
     ));
 
-  // $query = $db->prepare(
-  //  "SELECT `user_id` FROM `users` WHERE `email` = :email"
-  // );
-  // $query->execute(array(":email" => $email));
-  // $user = $query->fetch();
   return new User($email);
 }
 
