@@ -17,8 +17,13 @@
           </ul>
         </div>
     </footer> !-->
-    <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
-  
+<head>
+  <link href='http://fonts.googleapis.com/css?family=Alegreya+Sans:300' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="css/foundation.css" />
+
+<link href='http://fonts.googleapis.com/css?family=Roboto+Slab:300' rel='stylesheet' type='text/css'>  
+</head>
+<html>  
  <div class="footer">
     
     <div class="large-12 columns">
