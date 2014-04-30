@@ -36,7 +36,7 @@ if (isset($_SESSION['email'])){
 <!doctype html>
 <html>
 <head>
-  <title>Login</title>
+  <title>Teem - Login</title>
 </head>
 <body>
   <h1>Login</h1>

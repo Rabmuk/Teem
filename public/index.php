@@ -58,6 +58,12 @@ if (isset($_SESSION['email'])) {
     <br><br>
     <div class="row">
       <div class="large-12 columns">
+          <?php if (isset($err)) {
+            
+            echo "<div class='row'><div class='large-12 columns text-center'><p class='error'> Invalid Username or Password</p></div></div>";
+
+          }
+          ?>
         <div class="row">
  
     <!-- Thumbnails -->
@@ -73,10 +79,11 @@ if (isset($_SESSION['email'])) {
           <div id="myModal" class="reveal-modal small" data-reveal>
             <div id="login">
               <h1>Login</h1>
-              <?php if (isset($err)) echo "<p>$err</p>" ?>
               <form method="post" action="index.php">
-                <label for="email">Email: </label><input type="text" name="email" />
+                <label for="email">Email: </label><input type="text" class="error" name="email" />
+
                 <label for="pass">Password: </label><input type="password" name="pass" />
+
                 <input name="login" type="submit" value="Login" />
               </form>
             </div>

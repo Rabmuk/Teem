@@ -1,7 +1,16 @@
 <?php
-    require_once "./headerNav.php";
+    require_once "headerNav.php";
 ?>
 
+<head>
+    <title>Teem - Contact</title>
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+    <script src="js/contactscripts.js" type="text/javascript"></script>
+      <link rel="stylesheet" href="css/index.css" />
+      <link rel="stylesheet" href="css/foundation.css" />
+      </head>
+<body>
 <!doctype html>
 <html class="no-js" lang="en">
   <head>
@@ -12,6 +21,7 @@
     <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
     <script src="js/contactscripts.js" type="text/javascript"></script>
   </head>
+
 <div class="wrapper">
     <div class="row" id="contact">
      	 <div class="large-12 columns">
@@ -72,6 +82,7 @@
 		</div>
 	</div>
 </div>
+</body>
 <?php
-  require_once "./bottomNav.php";
+  require_once "bottomNav.php";
 ?>

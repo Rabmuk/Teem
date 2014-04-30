@@ -19,16 +19,19 @@ if(isset($_POST['submit'])){
   $email_user = $user->getEmail();
 
   if(isset($_POST['deleteAcc'])){
-    $id_owner = $user->getID();
-    deleteGroup($id_owner);
-    header("Location: ./profile.php");
+
+    //$id_owner = $user->getID();
+    //deleteGroup($id_owner);
+
+
+    //header("Location: ./profile.php");
   }
 
   $counter = 0;
   foreach ($memberarray as $value) {
     echo $memberarray[$counter];
     echo "\n";
-    if(isset($_POST["deleteMember[2]"])){
+    if(isset($_POST["deleteMember[{$counter}]"])){
       echo "YOLO!";
       $id_member = $value;
       deleteMember($id_member);
@@ -56,6 +59,7 @@ require_once "./headerNav.php";
   <title>Edit Group</title>
   <link rel="stylesheet" href="css/foundation.css" />
   <link rel="stylesheet" href="css/editgroup.css"/>
+  <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
 </head>
  <body>
   <div id="wrapper">
@@ -96,7 +100,7 @@ require_once "./headerNav.php";
           $members = $group->getMemberArray();
           $counter = 0;
           foreach ($members as $value) {
-            echo "<li><input id='deleteMember[$counter]' name='deleteMember[$counter]' type='checkbox'><label for='deleteMember[$counter]'>$value</label></input></li>";
+            echo "<li><input id='deleteMember[{$counter}]' name='deleteMember[{$counter}]' type='checkbox'><label for='deleteMember[{$counter}]'>$value</label></input></li>";
             $counter++;
           }
           ?>
@@ -105,7 +109,7 @@ require_once "./headerNav.php";
       <div class="row">
         <div class="small-3 columns"></div>
         <div class="small-9 columns">
-          <input id="deleteAcc" name="deleteAcc" type="checkbox"><label for="deleteAcc">Delete Group?</label></input>
+         <a href="#" data-reveal-id="myModal" class="button expand" data-reveal>Delete Group</a>
         </div>
       </div>
       <div class="row">
@@ -114,8 +118,15 @@ require_once "./headerNav.php";
           <input type="submit" name="submit" value="Save" class="button small"></input>
         </div>
       </div>
+      <div id='myModal' class='reveal-modal small' data-reveal>
+
+        <a class='close-reveal-modal'>&#215;</a>
+      </div>
     </form>
   </div>
+  <script type="text/javascript" src="js/foundation/foundation.js"></script>
+  <script type="text/javascript" src="js/foundation/foundation.reveal.js"></script>
+  <script> $(document).foundation(); </script>
  </body>
 </html>
 
