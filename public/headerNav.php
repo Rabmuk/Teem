@@ -1,23 +1,11 @@
 <!-- This is the header navigation for pages when a user is logged in. --> 
-<!doctype html>
-<html>
-    <head>
-      <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:300' rel='stylesheet' type='text/css'>   
-      <link href='http://fonts.googleapis.com/css?family=Alegreya+Sans:300' rel='stylesheet' type='text/css'>
-      <!--CSS LINKS-->
-      <link rel="stylesheet" href="css/accountsettings.css" />
-      <link rel="stylesheet" href="css/agenda.css" />
-      <link rel="stylesheet" href="css/colorscheme.css" />
-      <link rel="stylesheet" href="css/createaccount.css" />
-      <link rel="stylesheet" href="css/createagenda.css" />
-      <link rel="stylesheet" href="css/createmeeting.css" />
-      <link rel="stylesheet" href="css/editgroup.css" />
-      <link rel="stylesheet" href="css/foundation.css" />
-      <link rel="stylesheet" href="css/foundation.min.css" />
-      <link rel="stylesheet" href="css/foundation-datepicker.css" />
-      <link rel="stylesheet" href="css/index.css" />
-      <link rel="stylesheet" href="css/foundation.css" />
-    </head>
+
+  <link href='http://fonts.googleapis.com/css?family=Alegreya+Sans:300' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="css/foundation.css" />
+
+<link href='http://fonts.googleapis.com/css?family=Roboto+Slab:300' rel='stylesheet' type='text/css'>  
+</head>
+
    <div class="row header">
     <div class="large-3 columns">
       
