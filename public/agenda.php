@@ -94,14 +94,91 @@ require_once "./headerNav.php";
 
 
 
-<<<<<<< HEAD
-=======
 
-
->>>>>>> d89657c99ff8d41e616a21e7b7512ab281b72ff7
 		<!-- Actual agenda, and next actions -->
 		<div class="row">
 			<div class="large-9 columns" id="meetingTasks">
+				<?php 
+					$agendaItems = $meeting->getAgendaItems();
+					foreach($agendaItems as $agendaItem){
+						?>
+						<div class="row">
+							<div class="large-12 columns">
+								<br><h3 class = "heading"><?php echo $agendaItem->getHeading(); ?></h3>
+								<p class = "inline right"><?php echo $agendaItem->getTime(); ?> minutes</p>
+								<p><?php echo $agendaItem->getPresenter()->getName(); ?></p>
+							</div>
+						</div>
+						<!--topics, attachments-->
+						<div class="row">
+							<div class="large-6 columns">
+								<h5 class= "heading">Topics to Cover</h5>
+								<ul>
+									<?php 
+									$topics = $agendaItem->getTopics();
+									foreach ($topics as $topic) {
+										echo "<li>" . $topic . "</li>";
+									}
+									?>
+								</ul>
+								<?php 
+								$isPresenter = $user->isUser($agendaItem->getPresenter());
+								if ($isPresenter) {
+									?>
+									<form method="post">
+										<input type="text" name="topics" placeholder="New Topic">
+										<input type="hidden" name="item_id" value="<?php echo $agendaItem->getID(); ?>">
+									</form>
+									<form method="post">
+										<input type="submit" name="clearTopics" value="Clear" />
+										<input type="hidden" name="item_id" value="<?php echo $agendaItem->getID(); ?>">
+									</form>
+									<?php
+								}
+								?>
+
+							</div>
+							
+							<div class="large-6 columns">
+								<h5 class= "heading">Attachments</h5>
+								<ul>
+									<?php
+									$files = $agendaItem->getFiles();
+									foreach ($files as $file) {
+										?>
+										<a href="uploads/<?php echo $file->getLocation(); ?>" target="_blank"><?php echo $file->getName(); ?></a>
+
+										<?php
+									}
+									?>
+								</ul>
+
+								<li><a href="uploads/<?php echo $file->getLocation(); ?>" target="_blank"><?php echo $file->getName(); ?></a></li>
+
+								<?php
+								if ($isPresenter) {
+									?>
+
+									<form action="" method="post" enctype="multipart/form-data">
+										<input type="hidden" name="item_id" value=<?php echo '"' . $agendaItem->getID() . '"'; ?>>
+										<label for="file">Filename:</label>
+										<input type="file" name="file" id="file"><br>
+										<input type="submit" name="savefile" value="Submit">
+									</form>
+
+									<?php
+								}
+								?>
+							</div>
+
+						</div>
+
+							
+							<!-- <center><hr style="width:80%;"></center> -->
+							<?php 
+						}
+						?>
+
 				
 
 						<div id="myModal" class="reveal-modal small" data-reveal>
@@ -124,14 +201,7 @@ require_once "./headerNav.php";
 			
 
 			</div>
-<<<<<<< HEAD
-=======
 
-			
-
-			
-
->>>>>>> d89657c99ff8d41e616a21e7b7512ab281b72ff7
 
 			<!-- Next Actions -->
 			<div class="large-3 columns" id="nextActions">
@@ -176,7 +246,7 @@ require_once "./headerNav.php";
 					</div>
 
 			</div>
-<<<<<<< HEAD
+
 
 
 
@@ -184,10 +254,7 @@ require_once "./headerNav.php";
 			
 
 		</div>
-=======
 
-			
->>>>>>> d89657c99ff8d41e616a21e7b7512ab281b72ff7
 
 		</div>
 
