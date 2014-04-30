@@ -107,13 +107,10 @@ require_once "./headerNav.php";
         </div>
       </div>
       <div class="row">
-        <div class="small-3 columns"></div>
-        <div class="small-9 columns">
-         <a href="#" data-reveal-id="myModal" class="button expand" data-reveal>Delete Group</a>
+        <div class="small-8 columns"><p></p></div>
+        <div class="small-2 columns">
+          <a href="#" data-reveal-id="myModal" class="button expand" data-reveal>Delete Group</a>
         </div>
-      </div>
-      <div class="row">
-        <div class="small-10 columns"></div>
         <div class="small-2 columns">
           <input type="submit" name="submit" value="Save" class="button small"></input>
         </div>

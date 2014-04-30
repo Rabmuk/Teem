@@ -3,20 +3,27 @@ ul {
 }
 
 
-a {
+a[href="#"] {
   color: white;
+  font-size: 13px;
 }
 
 .button{
   color: white;
-  background-color: #197b5e;
-  border-color: #3de8b6;
+  background-color: #838383;
+  border-color: #838383;
+  border-radius: 5px;
+  text-align: center;
+  width: 100px;
+  height: 50px;
 }
 
 .button:hover{
   color: white;
-  background-color: #838383;
-  border-color: #838383;
+  background-color: #197b5e;
+  border-color: #197b5e;
+  border-radius: 5px;
+  text-align: center;
 }
 
 input[type="submit"] {
