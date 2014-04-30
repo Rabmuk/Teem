@@ -2,16 +2,6 @@
     require_once "headerNav.php";
 ?>
 
-<head>
-    <title>Teem - Contact</title>
-<<<<<<< HEAD
-    <link rel="stylesheet" type="text/css" href="css/index.css">
-    <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
-    <script src="js/contactscripts.js" type="text/javascript"></script>
-      <link rel="stylesheet" href="css/index.css" />
-      <link rel="stylesheet" href="css/foundation.css" />
-      </head>
-<body>
 <!doctype html>
 <html class="no-js" lang="en">
   <head>
@@ -23,19 +13,7 @@
     <script src="js/contactscripts.js" type="text/javascript"></script>
   </head>
 
-=======
-    <link rel="stylesheet" type="text/css" href="css/index.css">
-    <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
-    <script src="js/contactscripts.js" type="text/javascript"></script>
-      <link rel="stylesheet" href="css/index.css" />
-      <link rel="stylesheet" href="css/foundation.css" />
-      </head>
 <body>
-<!doctype html>
-<html class="no-js" lang="en">
-
-<body>
->>>>>>> d89657c99ff8d41e616a21e7b7512ab281b72ff7
 <div class="wrapper">
     <div class="row" id="contact">
      	 <div class="large-12 columns">
@@ -99,8 +77,5 @@
 </body>
 <?php
   require_once "bottomNav.php";
-<<<<<<< HEAD
+
 ?>
-=======
-?>
->>>>>>> d89657c99ff8d41e616a21e7b7512ab281b72ff7
