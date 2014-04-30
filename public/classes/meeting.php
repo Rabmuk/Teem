@@ -234,6 +234,10 @@ function addItemToMeeting($meeting_id, $heading, $allottedTime, $presenter){
 
   $user = new User($presenter);
 
+  if (!$user->atMeeting($meeting_id)) {
+    return $user->getName() . ' is not a member of this meeting.';
+  }
+
   $query = $db->prepare(
     "INSERT INTO `agendaItems` (`id_meeting`, `id_user`, `heading`, `allottedMinutes`)
     VALUES (:id_meeting, :id_user, :heading, :allottedMinutes)"

@@ -176,7 +176,6 @@ require_once "./headerNav.php";
 			</div>
 
 			<div class="large-2 columns">
-				<!-- Action items *TODO* FOR ALEX-->
 				<!-- It's a list of each member's name, with a list of their action items. Underneath it is the ability to add tasks -->
 
 				
