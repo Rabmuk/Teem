@@ -14,7 +14,7 @@
   </head>
 
 <body>
-<div class="wrapper">
+<div id = "specialwrapper">
     <div class="row" id="contact">
      	 <div class="large-12 columns">
 

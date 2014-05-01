@@ -150,5 +150,8 @@ img[src="img/logo-large.png"] {
 
 }
 
-
+#specialwrapper{
+  min-height: 79%;
+  position: relative;
+}
 
