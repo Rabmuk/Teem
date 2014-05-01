@@ -44,8 +44,8 @@ require_once "./headerNav.php";
       <div id="createGroup">
        <h1>Create a Group</h1>
        <form method="post" action="profile.php" id="addGroup">
-        <label for="groupName">Group Name: </label><input type="text" name="groupName" />
-        <label for="addMembers">Add Members*:</label><textarea rows="4" cols="50" name="addMembers" form="addGroup"></textarea>
+        <label for="groupName">Group Name: </label><input id="groupName" type="text" name="groupName" />
+        <label for="addMembers">Add Members*:</label><textarea id="addMembers" rows="4" cols="50" name="addMembers" form="addGroup"></textarea>
         <p>*Seperate group member e-mails by ','</p>
         <div class="row">
          <div class="large-12 columns">
