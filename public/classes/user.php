@@ -182,6 +182,17 @@ class User{
     return $toReturn;
   }
 
+  public function deleteUser(){
+    global $db;
+
+    $query = $db->prepare(
+     "DELETE FROM `users` WHERE `user_id` = :user_id"
+     );
+    $query->execute(array(
+      ":user_id" => $this->user_id
+      ));
+  }
+
 }
 
 //assume that the email is unique

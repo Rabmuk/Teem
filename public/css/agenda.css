@@ -42,4 +42,71 @@ input[type="submit"] {
   height: 35px;
 }
 
+.minutesListing{
+	margin-right: 25px;
+}
 
+.actionItemTitle{
+	float: left;
+}
+
+#nextActions{
+	margin-left:10px;
+	width:25%;
+	padding-left: 50px;
+	border-left: 1px #3de8b6 solid;
+}
+
+#addmeetingitembutton{
+color: white;
+font-size: 20px;
+background-color: #197b5e;
+border-color: #197b5e;
+border-radius: 5px;
+padding:15px;
+margin-left: 18px;
+}
+
+#addmeetingitembutton:hover{
+	background-color: #838383;
+}
+
+#actionitemstitle{
+	color: #197b5e;
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+.needsbottomborder{
+	border-bottom: #3de8b6 1px solid;
+}
+
+.bigyo{
+	font-weight:bold;
+}
+
+#filenamesubmit{
+	margin-top:7px;
+}
+
+#myModal input[type="number"], #myModal input[type="text"] {
+border: 2px #838383 solid;
+border-radius: 5px;
+}
+
+#myModal input[type="submit"]{
+background-color: #197b5e;
+width: 50%;
+min-height: 20px;
+padding: 10px;
+padding-bottom: 30px;
+margin-bottom: 10px;
+}
+
+#myModal input[type="submit"]:hover {
+background-color: #838383;
+border: 2px #838383 solid;
+}
+
+#spacerforme{
+}

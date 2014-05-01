@@ -164,6 +164,16 @@ class Meeting{
       ));
   }
 
+  public function emailActionItems(){
+    global $db;
+
+    $members = $this->getMemberArray();
+    
+    foreach ($members as $member) {
+       
+     } 
+  }
+
 }
 
 function addMeetingToDatabase($title, $description, $id_owner, $location, $date, $startTime, $members){
@@ -193,11 +203,13 @@ function addMeetingToDatabase($title, $description, $id_owner, $location, $date,
     ));
   $meeting = $query->fetch();
 
-  $toReturn = new Meeting($meeting->meeting_id);
+  $newMeeting = new Meeting($meeting->meeting_id);
 
-  $toReturn->addMember($id_owner);
+  $newMeeting->addMember($id_owner);
 
   $memberArray = explode(",", $members);
+
+  $err = "";
 
   foreach ($memberArray as $member) {
     $member = trim($member);
@@ -210,7 +222,7 @@ function addMeetingToDatabase($title, $description, $id_owner, $location, $date,
     $user = $query->fetch();
 
     if($user){
-      $toReturn->addMember($user->user_id);
+      $newMeeting->addMember($user->user_id);
     }else{
       $query = $db->prepare(
         "SELECT `group_id` FROM `groups` WHERE `name` = :name"
@@ -227,16 +239,18 @@ function addMeetingToDatabase($title, $description, $id_owner, $location, $date,
           ":id_group" => $group->group_id
           ));
         while ($row = $query->fetch()) {
-          $toReturn->addMember($row->id_user);
+          $newMeeting->addMember($row->id_user);
         }
       }else{
-        echo '<h5>' . $member . ' cound not be found</h5>';
+        if ($member != "") {
+          $err .= '<h5>' . $member . ' cound not be found</h5>';
+        }
       }
     }
 
   }
 
-  return $toReturn;
+  return $err;
 }
 
 function addItemToMeeting($meeting_id, $heading, $allottedTime, $presenter){

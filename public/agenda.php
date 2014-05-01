@@ -58,6 +58,11 @@ if (isset($_POST['clearActions'])) {
 	$reload = true;
 }
 
+if (isset($_POST['emailActionItems'])) {
+	
+	$reload = true;
+}
+
 if ($reload) {
 	echo '<script>window.location.reload()</script>';
 }
@@ -97,20 +102,20 @@ if ($reload) {
 
 		<!-- Agenda body -->
 		<div class="row">
-			<div class="large-9 columns" id="agendaBody">
+			<div class="large-8 columns" id="agendaBody">
 				<?php 
 				$agendaItems = $meeting->getAgendaItems();
 				foreach($agendaItems as $agendaItem){
 					?>
 					<div class="row">
 						<div class="large-12 columns">
-							<br><h3 class = "heading"><?php echo $agendaItem->getHeading(); ?></h3>
+							<br><h3 class = "heading bigyo"><?php echo $agendaItem->getHeading(); ?></h3>
 							<p class = "inline right"><?php echo $agendaItem->getTime(); ?> minutes</p>
 							<p><?php echo $agendaItem->getPresenter()->getName(); ?></p>
 						</div>
 					</div>
 					<!--topics, attachments-->
-					<div class="row">
+					<div class="row needsbottomborder">
 						<div class="large-6 columns">
 							<h5 class= "heading">Topics to Cover</h5>
 							<ul>
@@ -154,12 +159,12 @@ if ($reload) {
 							<?php
 							if ($isPresenter) {
 								?>
-
+								<br>
 								<form action="" method="post" enctype="multipart/form-data">
 									<input type="hidden" name="item_id" value=<?php echo '"' . $agendaItem->getID() . '"'; ?>>
 									<label for="file">Filename:</label>
 									<input type="file" name="file" id="file"><br>
-									<input type="submit" name="savefile" value="Submit">
+									<input type="submit" name="savefile" value="Submit" id="filenamesubmit">
 								</form>
 
 								<?php
@@ -182,8 +187,11 @@ if ($reload) {
 				if ($meeting->checkOwner($user->getID())) {
 					?>
 					<div class="row">
-						<a href="#" data-reveal-id="myModal" class="button exapand" data-reveal>Add meeting item</a>
+						<a href="#" id = "addmeetingitembutton" data-reveal-id="myModal" class="button exapand" data-reveal>Add meeting item</a>
 					</div>
+					<form method="post">
+						<input type="submit" name="emailActionItems" value="Email Action Items">
+					</form>
 					<?php 
 				}
 				?>
@@ -195,7 +203,16 @@ if ($reload) {
 						<input type="text" name="heading" placeholder="Enter item heading">
 						<input type="number" name="time" placeholder="Enter allotted minutes">
 						<input type="email" name="presenter" placeholder="Enter presentor's email">
-						<input type="submit" name="addItem" value="Submit" class="button small expand"></input>
+
+						<!-- <label>Select meeting attendee
+							<select>
+								<option value="Alex">Alex</option>
+								<option value="Candice">Candice</option>
+
+							</select>
+
+						</label> -->
+						<center><input type="submit" name="addItem" value="Submit" class="button small expand"></input></center>
 						<a class="close-reveal-modal">&#215;</a>
 
 					</form>
@@ -203,18 +220,18 @@ if ($reload) {
 
 			</div>
 
-
-
-			<div class="large-3 columns" id="nextActions">
+			<div class="large-4 columns" id="nextActions">
 				<!-- Each individual action item list -->
-				<h3>Action Items</h3>
+				<div class="row">
+					<h3 id = "actionitemstitle">Action Items</h3>
+				</div>
 				<?php 
 				$members = $meeting->getMemberArray();
 				foreach ($members as $member) {
 					?>
 					<div class="row">
 						<!-- meeting attendee's name -->
-						<h4 class="memberName"><?php echo $member->getName(); ?></h4>
+						<h5 class="memberName"><?php echo $member->getName(); ?></h5>
 						<!-- List of existing tasks -->
 						<ul class="tasks">
 							<?php

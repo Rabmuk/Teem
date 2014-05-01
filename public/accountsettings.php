@@ -13,6 +13,10 @@ if (isset($_SESSION['email'])){
 }
 
 if (isset($_POST['submit']) && $_POST['submit'] == "Submit") {
+	if (isset($_POST['deleteAcc'])) {
+		$user->deleteUser();
+		header("Location: ./logout.php");
+	}
 	if (isset($_POST['firstName']) && $_POST['firstName'] != "Enter First Name") {
 		$user->setFirstName($_POST['firstName']);
 	}
@@ -93,7 +97,7 @@ require_once "./headerNav.php";
 					<div class="row">
 						<div class="small-3 columns"></div>
 						<div class="small-9 columns">
-							<input id="deleteAcc" type="checkbox"><label for="deleteAcc">Delete Account?</label></input>
+							<input id="deleteAcc" name="deleteAcc" type="checkbox"><label for="deleteAcc">Delete Account?</label></input>
 						</div>
 					</div>
 					<div class="row">

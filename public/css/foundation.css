@@ -1696,8 +1696,7 @@ button, .button {
     font-size: 0.6875rem;
     /*     @else                            { font-size: $padding - rem-calc(2); } */ }
   button.expand, .button.expand {
-    padding-right: 0;
-    padding-left: 0;
+    padding:20px;
     width: 100%; }
   button.left-align, .button.left-align {
     text-align: left;
@@ -4661,6 +4660,7 @@ label {
   font-weight: normal;
   line-height: 1.5;
   margin-bottom: 0;
+  font-family: 'Roboto Slab';
   /* Styles for required inputs */ }
   label.right {
     float: none;
