@@ -202,7 +202,14 @@ if ($reload) {
 					<form method="post" action=<?php echo '"?id=' . $_GET['id'] . '"'; ?>>
 						<input type="text" name="heading" placeholder="Enter item heading">
 						<input type="number" name="time" placeholder="Enter allotted minutes">
-						<input type="email" name="presenter" placeholder="Enter presentor's email">
+						<label>Select meeting attendee
+							<select>
+								<option value="Alex">Alex</option>
+								<option value="Candice">Candice</option>
+
+							</select>
+
+						</label>
 						<input type="submit" name="addItem" value="Submit" class="button small expand"></input>
 						<a class="close-reveal-modal">&#215;</a>
 
