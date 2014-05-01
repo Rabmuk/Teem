@@ -43,7 +43,7 @@ switch ($_POST['submit2']) {
     $newmember = $_POST['addMember'];
     if($newmember != ''){
       addMember($newmember, $groupid);
-      echo $id_owner;
+      // echo $id_owner;
     }
   break;
 }

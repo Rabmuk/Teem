@@ -102,10 +102,8 @@ class Group{
 function addGroupToDatabase($id_owner, $name, $members){
   global $db;
 
-  echo $name;
+
   $name = stripslashes($name);
-  echo "\n";
-  echo $name;
   $query = $db->prepare(
     "INSERT INTO `groups` (`id_owner`, `name`)
     VALUES (:id_owner, :name)"
