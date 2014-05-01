@@ -212,7 +212,7 @@ if ($reload) {
 							</select>
 
 						</label> -->
-						<input type="submit" name="addItem" value="Submit" class="button small expand"></input>
+						<center><input type="submit" name="addItem" value="Submit" class="button small expand"></input></center>
 						<a class="close-reveal-modal">&#215;</a>
 
 					</form>
