@@ -33,3 +33,7 @@ input[type="email"] {
   border: 2px #197b5e solid;
   color: blue;
 }
+
+#specialwrapper{
+  min-height: 76%;
+}
