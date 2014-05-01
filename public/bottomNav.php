@@ -20,7 +20,6 @@
 
 
   <link rel="stylesheet" href="css/foundation.css" />
-  <link rel="stylesheet" href="css/index.css" />
   <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:300' rel='stylesheet' type='text/css'> 
 
  <div class="footer">
