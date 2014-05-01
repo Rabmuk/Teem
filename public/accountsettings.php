@@ -323,7 +323,7 @@ if (isset($_POST['submit']) && $_POST['submit'] == "Save") {
 		$_SESSION['email'] = $_POST['email'];
 	}
 
-	echo '<script>window.location.reload()</script>';
+	// echo '<script>window.location.reload()</script>';
 }
 
 require_once "./headerNav.php"; 
