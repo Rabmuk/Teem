@@ -62,11 +62,8 @@ if ($reload) {
 	echo '<script>window.location.reload()</script>';
 }
 
-require_once "./headerNav.php";	
-
 ?>
 <!doctype HTML>
-<html class="no-js" lang="en">
 <head>
 	<meta charset="utf-8" />
 	<title>Teem - Agenda</title>
@@ -78,7 +75,9 @@ require_once "./headerNav.php";
 <body>
 
 
-
+<?php
+require_once "./headerNav.php";	
+?>
 
 
 <div class="wrapper">
@@ -97,7 +96,7 @@ require_once "./headerNav.php";
 
 
 		<!-- Agenda body -->
-		<div class="row" id="totalWidth">
+		<div class="row">
 			<div class="large-9 columns" id="agendaBody">
 				<?php 
 					$agendaItems = $meeting->getAgendaItems();
@@ -176,6 +175,8 @@ require_once "./headerNav.php";
 					}
 					?>
 
+					<br>
+					<br>
 
 					<div class="row">
 							<a href="#" data-reveal-id="myModal" class="button exapand" data-reveal>Add meeting item</a>
@@ -195,7 +196,8 @@ require_once "./headerNav.php";
 						</div>
 
 			</div>
-
+		
+		
 
 			<div class="large-3 columns" id="nextActions">
 				<!-- Each individual action item list -->
@@ -234,6 +236,7 @@ require_once "./headerNav.php";
 				?>
 
 			</div>
+		
 		</div>
 			
 			
@@ -243,6 +246,28 @@ require_once "./headerNav.php";
 
 </div>
 	
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
 <!--don't worry about this-->
 <br><br><br><br><br>
 

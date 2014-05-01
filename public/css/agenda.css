@@ -42,24 +42,4 @@ input[type="submit"] {
   height: 35px;
 }
 
-#totalWidth{
-	width: 100%;
-}
 
-
-/*#agendaBody{
-	margin-right: 20px;
-}*/
-
-.agendaRow .row{
-	margin-right: 100px;
-	margin-left: 100px;
-	width: 100%;
-
-}
-
-.agendaRow .totalWidth{
-	
-	width: 100%;
-
-}
