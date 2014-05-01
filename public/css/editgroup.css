@@ -5,10 +5,11 @@ ul {
 
 a[href="#"] {
   color: white;
-  font-size: 20px;
+  font-size: 18px;
   background-color: #838383;
   border-color: #838383;
   border-radius: 5px;
+  width: 75px;
 }
 
 a[href="#"]:hover {
@@ -22,7 +23,7 @@ a[href="#"]:hover {
 input[type="button"] {
   background-color: #197b5e;
   border: 2px #197b5e solid;
-  font-size: 20px;
+  font-size: 18px;
   border-radius: 5px;
   text-align: center;
   padding:15px;
@@ -39,8 +40,8 @@ input[type="button"]:hover {
 
 input[type="submit"] {
   padding:15px;
-  width:50px;
-  font-size: 20px;
+  width:55px;
+  font-size: 18px;
   height: 65px;
 }
 

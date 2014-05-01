@@ -127,8 +127,8 @@ require_once "./headerNav.php";
         </div>
       </div>
       <div class="row">
-        <div class="large-8 columns"><p></p></div>
-        <div class="large-2 columns">
+        <div class="large-7 columns"><p></p></div>
+        <div class="large-3 columns">
           <a href="#" data-reveal-id="myModal" class="button expand" data-reveal>Delete Group</a>
         </div>
         <div class="large-2 columns">
