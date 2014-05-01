@@ -102,7 +102,7 @@ if ($reload) {
 
 		<!-- Agenda body -->
 		<div class="row">
-			<div class="large-9 columns" id="agendaBody">
+			<div class="large-8 columns" id="agendaBody">
 				<?php 
 				$agendaItems = $meeting->getAgendaItems();
 				foreach($agendaItems as $agendaItem){
@@ -220,9 +220,7 @@ if ($reload) {
 
 			</div>
 
-
-
-			<div class="large-3 columns" id="nextActions">
+			<div class="large-4 columns" id="nextActions">
 				<!-- Each individual action item list -->
 				<div class="row">
 					<h3 id = "actionitemstitle">Action Items</h3>

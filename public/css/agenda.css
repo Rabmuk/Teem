@@ -51,8 +51,10 @@ input[type="submit"] {
 }
 
 #nextActions{
-	padding-left: 30px;
-	border-left: 1px #838383 solid;
+	margin-left:10px;
+	width:25%;
+	padding-left: 50px;
+	border-left: 1px #3de8b6 solid;
 }
 
 #addmeetingitembutton{
@@ -104,4 +106,7 @@ margin-bottom: 10px;
 #myModal input[type="submit"]:hover {
 background-color: #838383;
 border: 2px #838383 solid;
+}
+
+#spacerforme{
 }
