@@ -17,3 +17,11 @@ input[type="submit"]:hover {
 h2 {
  color: #197b5e;
 }
+
+#description,
+#datepicker,
+#time,
+#attendees{
+  border: 2px #606060 solid;
+  border-radius:5px;
+}
