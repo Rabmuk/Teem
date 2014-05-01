@@ -58,6 +58,11 @@ if (isset($_POST['clearActions'])) {
 	$reload = true;
 }
 
+if (isset($_POST['emailActionItems'])) {
+	
+	$reload = true;
+}
+
 if ($reload) {
 	echo '<script>window.location.reload()</script>';
 }
@@ -196,6 +201,9 @@ if ($reload) {
 					<div class="row">
 						<a href="#" data-reveal-id="myModal" class="button exapand" data-reveal>Add meeting item</a>
 					</div>
+					<form method="post">
+						<input type="submit" name="emailActionItems" value="Email Action Items">
+					</form>
 					<?php 
 				}
 				?>

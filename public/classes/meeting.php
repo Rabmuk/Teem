@@ -164,6 +164,16 @@ class Meeting{
       ));
   }
 
+  public function emailActionItems(){
+    global $db;
+
+    $members = $this->getMemberArray();
+    
+    foreach ($members as $member) {
+       
+     } 
+  }
+
 }
 
 function addMeetingToDatabase($title, $description, $id_owner, $location, $date, $startTime, $members){
