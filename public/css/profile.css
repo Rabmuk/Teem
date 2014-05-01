@@ -90,3 +90,7 @@ label {
   font-size: 20px;
 }
 
+#specialwrapper{
+  position:relative;
+  min-height: 89%
+}
