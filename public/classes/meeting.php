@@ -23,6 +23,7 @@ class Meeting{
     if (!$meeting) { return ; }
 
     $this->meeting_id = $param;
+    $this->id_owner = $meeting->id_owner;
     $this->title = $meeting->title;
     $this->description = $meeting->description;
     $this->location = $meeting->location;
@@ -53,6 +54,10 @@ class Meeting{
 
   public function getID(){
     return $this->meeting_id;
+  }
+
+  public function checkOwner($id_user){
+    return $id_user == $this->id_owner;
   }
 
   public function checkMember($id_user){
@@ -86,7 +91,7 @@ class Meeting{
 
       $user = new User($id_user);
       $subject = "Meeting has been scheduled!";
-      $message = "You have been requested at a meeting\n" . 
+      $message = "You have been request for a meeting\n" . 
        "Date: $this->date\n" .
        "Time: $this->startTime\n" .
        "Location: $this->location\n" .

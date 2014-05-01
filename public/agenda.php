@@ -75,13 +75,13 @@ if ($reload) {
 <body>
 
 
-<?php
-require_once "./headerNav.php";	
-?>
+	<?php
+	require_once "./headerNav.php";	
+	?>
 
 
-<div class="wrapper">
-	
+	<div class="wrapper">
+
 		
 		<!-- Meeting name and desired outcome -->
 		<div class="row" >
@@ -99,105 +99,111 @@ require_once "./headerNav.php";
 		<div class="row">
 			<div class="large-9 columns" id="agendaBody">
 				<?php 
-					$agendaItems = $meeting->getAgendaItems();
-					foreach($agendaItems as $agendaItem){
-						?>
-						<div class="row">
-							<div class="large-12 columns">
-								<br><h3 class = "heading"><?php echo $agendaItem->getHeading(); ?></h3>
-								<p class = "inline right"><?php echo $agendaItem->getTime(); ?> minutes</p>
-								<p><?php echo $agendaItem->getPresenter()->getName(); ?></p>
-							</div>
-						</div>
-						<!--topics, attachments-->
-						<div class="row">
-							<div class="large-6 columns">
-								<h5 class= "heading">Topics to Cover</h5>
-								<ul>
-									<?php 
-									$topics = $agendaItem->getTopics();
-									foreach ($topics as $topic) {
-										echo "<li>" . $topic . "</li>";
-									}
-									?>
-								</ul>
-								<?php 
-								$isPresenter = $user->isUser($agendaItem->getPresenter());
-								if ($isPresenter) {
-									?>
-									<form method="post">
-										<input type="text" name="topics" placeholder="New Topic">
-										<input type="hidden" name="item_id" value="<?php echo $agendaItem->getID(); ?>">
-									</form>
-									<form method="post">
-										<input type="submit" name="clearTopics" value="Clear" />
-										<input type="hidden" name="item_id" value="<?php echo $agendaItem->getID(); ?>">
-									</form>
-									<?php
-								}
-								?>
-							</div>
-							
-							<div class="large-6 columns">
-								<h5 class= "heading">Attachments</h5>
-								<ul>
-									<?php
-									$files = $agendaItem->getFiles();
-									foreach ($files as $file) {
-										?>
-										<a href="uploads/<?php echo $file->getLocation(); ?>" target="_blank"><?php echo $file->getName(); ?></a>
-
-										<?php
-									}
-									?>
-								</ul>
-								<?php
-								if ($isPresenter) {
-									?>
-
-									<form action="" method="post" enctype="multipart/form-data">
-										<input type="hidden" name="item_id" value=<?php echo '"' . $agendaItem->getID() . '"'; ?>>
-										<label for="file">Filename:</label>
-										<input type="file" name="file" id="file"><br>
-										<input type="submit" name="savefile" value="Submit">
-									</form>
-
-									<?php
-								}
-								?>
-							</div>
-
-						</div>
-
-						
-						
-						<?php 
-					}
+				$agendaItems = $meeting->getAgendaItems();
+				foreach($agendaItems as $agendaItem){
 					?>
-
-					<br>
-					<br>
-
 					<div class="row">
-							<a href="#" data-reveal-id="myModal" class="button exapand" data-reveal>Add meeting item</a>
+						<div class="large-12 columns">
+							<br><h3 class = "heading"><?php echo $agendaItem->getHeading(); ?></h3>
+							<p class = "inline right"><?php echo $agendaItem->getTime(); ?> minutes</p>
+							<p><?php echo $agendaItem->getPresenter()->getName(); ?></p>
+						</div>
+					</div>
+					<!--topics, attachments-->
+					<div class="row">
+						<div class="large-6 columns">
+							<h5 class= "heading">Topics to Cover</h5>
+							<ul>
+								<?php 
+								$topics = $agendaItem->getTopics();
+								foreach ($topics as $topic) {
+									echo "<li>" . $topic . "</li>";
+								}
+								?>
+							</ul>
+							<?php 
+							$isPresenter = $user->isUser($agendaItem->getPresenter());
+							if ($isPresenter) {
+								?>
+								<form method="post">
+									<input type="text" name="topics" placeholder="New Topic">
+									<input type="hidden" name="item_id" value="<?php echo $agendaItem->getID(); ?>">
+								</form>
+								<form method="post">
+									<input type="submit" name="clearTopics" value="Clear" />
+									<input type="hidden" name="item_id" value="<?php echo $agendaItem->getID(); ?>">
+								</form>
+								<?php
+							}
+							?>
 						</div>
 
+						<div class="large-6 columns">
+							<h5 class= "heading">Attachments</h5>
+							<ul>
+								<?php
+								$files = $agendaItem->getFiles();
+								foreach ($files as $file) {
+									?>
+									<a href="uploads/<?php echo $file->getLocation(); ?>" target="_blank"><?php echo $file->getName(); ?></a>
 
-						<div id="myModal" class="reveal-modal small" data-reveal>
-							<h1>Add meeting item</h1>
-							<form method="post" action=<?php echo '"?id=' . $_GET['id'] . '"'; ?>>
-								<input type="text" name="heading" placeholder="Enter item heading">
-								<input type="number" name="time" placeholder="Enter allotted minutes">
-								<input type="email" name="presenter" placeholder="Enter presentor's email">
-								<input type="submit" name="addItem" value="Submit" class="button small expand"></input>
-								<a class="close-reveal-modal">&#215;</a>
-								
-							</form>
+									<?php
+								}
+								?>
+							</ul>
+							<?php
+							if ($isPresenter) {
+								?>
+
+								<form action="" method="post" enctype="multipart/form-data">
+									<input type="hidden" name="item_id" value=<?php echo '"' . $agendaItem->getID() . '"'; ?>>
+									<label for="file">Filename:</label>
+									<input type="file" name="file" id="file"><br>
+									<input type="submit" name="savefile" value="Submit">
+								</form>
+
+								<?php
+							}
+							?>
 						</div>
+
+					</div>
+
+
+
+					<?php 
+				}
+				?>
+
+				<br>
+				<br>
+
+				<?php
+				if ($meeting->checkOwner($user->getID())) {
+					?>
+					<div class="row">
+						<a href="#" data-reveal-id="myModal" class="button exapand" data-reveal>Add meeting item</a>
+					</div>
+					<?php 
+				}
+				?>
+
+
+				<div id="myModal" class="reveal-modal small" data-reveal>
+					<h1>Add meeting item</h1>
+					<form method="post" action=<?php echo '"?id=' . $_GET['id'] . '"'; ?>>
+						<input type="text" name="heading" placeholder="Enter item heading">
+						<input type="number" name="time" placeholder="Enter allotted minutes">
+						<input type="email" name="presenter" placeholder="Enter presentor's email">
+						<input type="submit" name="addItem" value="Submit" class="button small expand"></input>
+						<a class="close-reveal-modal">&#215;</a>
+
+					</form>
+				</div>
 
 			</div>
-		
-		
+
+
 
 			<div class="large-3 columns" id="nextActions">
 				<!-- Each individual action item list -->
@@ -236,15 +242,15 @@ require_once "./headerNav.php";
 				?>
 
 			</div>
-		
+
 		</div>
-			
-			
-	
+
+
+
 		
 
 
-</div>
+	</div>
 	
 
 
@@ -268,14 +274,14 @@ require_once "./headerNav.php";
 
 
 
-<!--don't worry about this-->
-<br><br><br><br><br>
+	<!--don't worry about this-->
+	<br><br><br><br><br>
 
-<script type="text/javascript" src="js/foundation/foundation.js"></script>
-<script type="text/javascript" src="js/foundation/foundation.reveal.js"></script>
-<script>
-$(document).foundation();
-</script>
+	<script type="text/javascript" src="js/foundation/foundation.js"></script>
+	<script type="text/javascript" src="js/foundation/foundation.reveal.js"></script>
+	<script>
+	$(document).foundation();
+	</script>
 
 </body>
 </html>
