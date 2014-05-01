@@ -98,7 +98,7 @@ if (isset($_SESSION['email'])){
 					<div class="row">
 						<div class="small-9 large-6 small-centered large-centered columns">
 							<!-- <input name="submit" type="submit" class="button nice small radius">Create</a> -->
-							<input name="submit" type="submit" value="Create" class="button nice radius expand"/>
+							<input name="submit" type="submit" value="Create" class="button nice radius"/>
 						</div>
 					</div>
 

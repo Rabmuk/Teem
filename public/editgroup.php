@@ -147,6 +147,7 @@ require_once "./headerNav.php";
           <div class="large-3 columns">
             <input type="button" name="nodeleteAcc" value="No" class="button expand"></input>
           </div>
+          <div class="large-3 columns"><p></p></div>
         </div>
         </form>
         <a class="close-reveal-modal">&#215;</a>
