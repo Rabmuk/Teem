@@ -30,7 +30,7 @@ if (isset($_POST['submit']) && $_POST['submit'] == "Save") {
 		$_SESSION['email'] = $_POST['email'];
 	}
 
-	// echo '<script>window.location.reload()</script>';
+	echo '<script>window.location.reload()</script>';
 }
 
 require_once "./headerNav.php"; 
@@ -103,9 +103,9 @@ require_once "./headerNav.php";
 						</div>
 					</div> -->
 					<div class="row">
-					        <div class="large-8 columns"><p></p></div>
-					        <div class="large-2 columns">
-					          <a href="#" data-reveal-id="myModal" class="button expand" data-reveal>Delete Group</a>
+					        <div class="large-7 columns"><p></p></div>
+					        <div class="large-3 columns">
+					          <a href="#" data-reveal-id="myModal" class="button expand" data-reveal>Delete Account</a>
 					        </div>
 					        <div class="large-2 columns">
 					          <input type="submit" name="submit" value="Save" class="button small expand"></input>
@@ -117,21 +117,23 @@ require_once "./headerNav.php";
 				        <div class="row">
 				          <div class="large-3 columns"><p></p></div>
 				          <form method="post">
-				          <div class="large-3 columns">
-				            <input type="submit" name="submit" value="Yes" class="button expand"></input>
-				          </div>
-				          <div class="large-3 columns">
-				            <input type="submit" name="submit" value="No" class="button expand"></input>
-				          </div>
-				          <div class="large-3 columns"><p></p></div>
-				        </div>
-				        </form>
+					          <div class="large-3 columns">
+					            <input type="submit" name="submit" value="Yes" class="button expand"></input>
+					          </div>
+					          <div class="large-3 columns">
+					            <input type="submit" name="submit" value="No" class="button expand"></input>
+					          </div>
+					          <div class="large-3 columns"><p></p></div>
+				          </form>
 				        <a class="close-reveal-modal">&#215;</a>
 				      </div>
 				  </div>
 			</div>
-		
+		<script type="text/javascript" src="js/foundation/foundation.js"></script>
+		<script type="text/javascript" src="js/foundation/foundation.reveal.js"></script>
+		<script> $(document).foundation(); </script>
 	</div>
+</div>
 </body>
 </html>
 
