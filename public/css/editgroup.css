@@ -5,7 +5,7 @@ ul {
 
 a[href="#"] {
   color: white;
-  font-size: 13px;
+  font-size: 20px;
   background-color: #838383;
   border-color: #838383;
   border-radius: 5px;
@@ -22,23 +22,26 @@ a[href="#"]:hover {
 input[type="button"] {
   background-color: #197b5e;
   border: 2px #197b5e solid;
-  font-size: 13px;
+  font-size: 20px;
   border-radius: 5px;
   text-align: center;
-  height: 50px;
-  width: 75px;
+  padding:15px;
+  width:50px;
+  height: 65px;
 }
 
 input[type="button"]:hover {
   background-color: #838383;
   border: 2px #838383 solid;
   cursor: pointer;
+
 }
 
 input[type="submit"] {
-  width: 75px;
-  height: 50px;
-  font-size: 13px;
+  padding:15px;
+  width:50px;
+  font-size: 20px;
+  height: 65px;
 }
 
 h1 {
