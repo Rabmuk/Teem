@@ -132,7 +132,7 @@ require_once "./headerNav.php";
           <a href="#" data-reveal-id="myModal" class="button expand" data-reveal>Delete Group</a>
         </div>
         <div class="large-2 columns">
-          <input type="submit" name="submit" value="Save" class="button expand"></input>
+          <input type="submit" name="submit2" value="Save" class="button expand"></input>
         </div>
       </div>
     </form>
@@ -142,10 +142,10 @@ require_once "./headerNav.php";
           <div class="large-3 columns"><p></p></div>
           <form method="post">
           <div class="large-3 columns">
-            <input type="button" name="deleteAcc" value="Yes" class="button expand"></input>
+            <input type="submit" name="submit" value="Yes" class="button expand"></input>
           </div>
           <div class="large-3 columns">
-            <input type="button" name="nodeleteAcc" value="No" class="button expand"></input>
+            <input type="submit" name="submit" value="No" class="button expand"></input>
           </div>
           <div class="large-3 columns"><p></p></div>
         </div>
