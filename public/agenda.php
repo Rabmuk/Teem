@@ -187,7 +187,7 @@ if ($reload) {
 				if ($meeting->checkOwner($user->getID())) {
 					?>
 					<div class="row">
-						<a href="#" data-reveal-id="myModal" class="button exapand" data-reveal>Add meeting item</a>
+						<a href="#" id = "addmeetingitembutton" data-reveal-id="myModal" class="button exapand" data-reveal>Add meeting item</a>
 					</div>
 					<form method="post">
 						<input type="submit" name="emailActionItems" value="Email Action Items">
