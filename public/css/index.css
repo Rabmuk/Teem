@@ -65,6 +65,10 @@ label {
   border: 5px #197b5e solid;
 }
 
+#myModal [type="password"]{
+  border-radius: 5px;
+  border: #606060 solid 2px;
+}
 
 
 /*Begin contact stuff, yo*/

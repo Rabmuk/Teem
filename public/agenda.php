@@ -205,7 +205,7 @@ if ($reload) {
 						<!-- <input type="email" name="presenter" placeholder="Enter presentor's email"> -->
 
 						<label>Select meeting attendee
-							<select name="presenter">
+							<select name="presenter" id = "makegoodborder">
 								<?php
 								$members = $meeting->getMemberArray();
 								foreach ($members as $member) {
