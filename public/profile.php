@@ -33,7 +33,7 @@ require_once "./headerNav.php";
 
 
 <body>
-	<div class="wrapper" id="specialwrapper">
+	<div class="wrapper" id="specialwrapperprofile">
    <div class="row">
     <div class="large-6 columns">
      <h1 class="myProfile">Welcome, <?php echo $user->getFirstName(); ?>!</h1>

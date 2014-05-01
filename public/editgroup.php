@@ -77,7 +77,7 @@ require_once "./headerNav.php";
   <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
 </head>
  <body>
-  <div class="wrapper" id = "specialwrapper">
+  <div class="wrapper" id = "specialwrappereditgroup">
     <div class="row">
       <div class="large-12 columns">
         <h1> Edit Group </h1>
