@@ -36,4 +36,5 @@ input[type="email"] {
 
 #specialwrapper{
   min-height: 76%;
+  position: relative;
 }
