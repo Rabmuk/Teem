@@ -41,7 +41,6 @@ require_once "./headerNav.php";
 	<link rel="stylesheet" type="text/css" href="css/accountsettings.css"/>
 </head>
 <body>
-	<div class="wrapper">
 	<div id="wrapper">
 		<div class="row">
 			<div class="large-12">
