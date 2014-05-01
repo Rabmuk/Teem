@@ -115,7 +115,10 @@ require_once "./headerNav.php";
           $memberarray = $group->getMemberArrayID();
           $members = $group->getMemberArray();
           foreach ($memberarray as $value) {
-            if($counter != 0){
+            if($counter == 0){
+              echo "<li>" . $members[$counter] . "</li>";
+            }
+            else{
             echo "<li><input type='checkbox' name='check_list[]' alt='Checkbox' value=$value>" . $members[$counter] . "</label></input></li>";
           }
             $counter++;
