@@ -166,3 +166,9 @@ input[type="text"] {
   border-radius: 5px;
   border: #606060 solid 2px;
 }
+
+#contactName,#email {
+  border-radius: 5px;
+  border: #606060 solid 2px;
+}
+
