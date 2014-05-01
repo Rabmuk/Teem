@@ -25,3 +25,8 @@ h2 {
   border: 2px #606060 solid;
   border-radius:5px;
 }
+
+label{
+  font-family: 'Roboto Slab', 'Arial';
+  font-size: 20px;
+}
