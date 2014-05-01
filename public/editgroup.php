@@ -17,6 +17,10 @@ if (isset($_GET['id'])){
   header("Location: ./index.php");
 }
 
+if (!$group->checkOwner()) {
+  header("Location: ./index.php"); 
+}
+
 
 
 

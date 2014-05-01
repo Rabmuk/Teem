@@ -37,6 +37,10 @@ class Group{
     return $this->group_id;
   }
 
+  public function checkOwner($id_user){
+    return $id_user == $this->id_owner;
+  }
+
   public function getMemberNames(){
     global $db;
 
