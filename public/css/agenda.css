@@ -62,7 +62,7 @@ background-color: #197b5e;
 border-color: #197b5e;
 border-radius: 5px;
 padding:15px;
-margin-left: 20px;
+margin-left: 18px;
 }
 
 #addmeetingitembutton:hover{
@@ -77,7 +77,6 @@ margin-left: 20px;
 
 .needsbottomborder{
 	border-bottom: #838383 1px solid;
-	margin-left: 
 }
 
 .bigyo{
@@ -86,4 +85,9 @@ margin-left: 20px;
 
 #filenamesubmit{
 	margin-top:7px;
+}
+
+#myModal input[type="number"], #myModal input[type="text"] {
+border: 2px #838383 solid;
+border-radius: 5px;
 }
