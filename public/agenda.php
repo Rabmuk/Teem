@@ -159,12 +159,12 @@ if ($reload) {
 							<?php
 							if ($isPresenter) {
 								?>
-
+								<br>
 								<form action="" method="post" enctype="multipart/form-data">
 									<input type="hidden" name="item_id" value=<?php echo '"' . $agendaItem->getID() . '"'; ?>>
 									<label for="file">Filename:</label>
 									<input type="file" name="file" id="file"><br>
-									<input type="submit" name="savefile" value="Submit">
+									<input type="submit" name="savefile" value="Submit" id="filenamesubmit">
 								</form>
 
 								<?php
