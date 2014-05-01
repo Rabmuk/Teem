@@ -40,3 +40,7 @@ input[type="submit"]:hover {
 h1 {
   color: #197b5e;
 }
+
+#specialwrapper{
+  min-height:86.8%;
+}

@@ -74,7 +74,7 @@ require_once "./headerNav.php";
   <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
 </head>
  <body>
-  <div id="wrapper">
+  <div class="wrapper" id = "specialwrapper">
     <div class="row">
       <div class="large-12 columns">
         <h1> Edit Group </h1>
@@ -144,6 +144,7 @@ require_once "./headerNav.php";
   <script type="text/javascript" src="js/foundation/foundation.js"></script>
   <script type="text/javascript" src="js/foundation/foundation.reveal.js"></script>
   <script> $(document).foundation(); </script>
+  </div>
  </body>
 </html>
 
