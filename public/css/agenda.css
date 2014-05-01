@@ -49,3 +49,8 @@ input[type="submit"] {
 .actionItemTitle{
 	float: left;
 }
+
+#nextActions{
+	padding-left: 10px;
+	border-left: 1px #838383 solid;
+}
