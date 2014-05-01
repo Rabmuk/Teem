@@ -12,7 +12,7 @@ if (isset($_SESSION['email'])){
 	header("Location: ./index.php");
 }
 
-if (isset($_POST['submit']) && $_POST['submit'] == "Yes") {
+if (isset($_POST['submit']) && $_POST['submit'] == "Save") {
 	if (isset($_POST['deleteAcc'])) {
 		$user->deleteUser();
 		header("Location: ./logout.php");
@@ -108,7 +108,7 @@ require_once "./headerNav.php";
 					          <a href="#" data-reveal-id="myModal" class="button expand" data-reveal>Delete Group</a>
 					        </div>
 					        <div class="large-2 columns">
-					          <input type="submit" name="submit" value="Submit" class="button small expand"></input>
+					          <input type="submit" name="submit" value="Save" class="button small expand"></input>
 					        </div>
 					</div>
 					</form>
