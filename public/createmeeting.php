@@ -32,8 +32,16 @@ if (isset($_SESSION['email'])){
 			addMeetingToDatabase($_POST['title'], $_POST['description'], (Integer)$user->getID(), $_POST['location'], $_POST['date'], $_POST['time'], $_POST['attendees']);
 			?>
 			<div id = "wrapper">
-			<h1>Your meeting has been created.</h1>
-			<a href="index.php">Return to your profile</a>
+				<div class="row">
+					<div class="large-12 columns">
+						<h1>Your meeting has been created.</h1>
+					</div>
+				</div>
+				<div class="row">
+					<div class="large-12 columns">
+						<a href="index.php">Return to your profile</a>
+					</div>
+				</div>
 			</div>
 			<?php
 		}else{ ?>
