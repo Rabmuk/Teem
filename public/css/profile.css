@@ -40,6 +40,7 @@ h3 a{
 .teamTitle {
   font-size: 24px;
   text-decoration: underline;
+  padding-left:10px;
 }
 
 #groupNames {
@@ -52,8 +53,11 @@ hr {
 }
 
 img[src="img/clock.png"] {
-  width: 35px;
+  width: 45px;
   height: 35px;
+  padding-left:10px;
+  margin-top:3px;
+  margin-left: 45px;
 }
 
 #createGroup {
