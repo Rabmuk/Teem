@@ -22,7 +22,9 @@ h2 {
 #description,
 #datepicker,
 #time,
-#attendees{
+#attendees, 
+#location,
+#title {
   border: 2px #606060 solid;
   border-radius:5px;
 }
