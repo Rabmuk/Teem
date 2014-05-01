@@ -49,3 +49,7 @@ h1 {
   min-height:86.8%;
 }
 
+li {
+  list-style-type: none;
+}
+
