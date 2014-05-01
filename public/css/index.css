@@ -115,7 +115,7 @@ label {
 
 /*End contact stuff, yo*/
 
-input[type="text"], input[type="password"] {
+#email, #password {
   border: 2px #606060 solid;
   border-radius: 5px;
 }
@@ -158,6 +158,10 @@ a[href="#"]:hover, a[href="createaccount.php"]:hover {
   text-align: center;
 }
 
+input[name="login"] {
+  width: 65px;
+  height: 40px;
+}
 
 
 

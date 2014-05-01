@@ -80,9 +80,9 @@ if (isset($_SESSION['email'])) {
             <div id="login">
               <h1>Login</h1>
               <form method="post" action="index.php">
-                <label for="email">Email: </label><input type="text" class="error" name="email" />
+                <label for="email">Email: </label><input id="email" type="text" class="error" name="email" />
 
-                <label for="pass">Password: </label><input type="password" name="pass" />
+                <label for="pass">Password: </label><input id="password" type="password" name="pass" />
 
                 <input name="login" type="submit" value="Login" />
               </form>
