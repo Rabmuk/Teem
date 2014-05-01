@@ -29,6 +29,8 @@ if (isset($_POST['submit']) && $_POST['submit'] == "Submit") {
 		$user->setEmail($_POST['email']);
 		$_SESSION['email'] = $_POST['email'];
 	}
+
+	echo '<script>window.location.reload()</script>';
 }
 
 require_once "./headerNav.php"; 

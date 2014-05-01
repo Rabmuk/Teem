@@ -50,7 +50,7 @@ if (isset($_SESSION['email'])) {
       <center>
         <img src="img/logo-large.png" />
         <h1 class = "indexhead">Teem</h1>
-        <h4 class = "indexsub">Schedule a meeting, divvy up tasks, and get together.</h4>
+        <h4 class = "indexsub">Be more organized and productive during your meetings.</h4>
         <center>
       </div>
  

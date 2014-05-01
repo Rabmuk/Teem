@@ -92,11 +92,11 @@ class Meeting{
       $user = new User($id_user);
       $subject = "Meeting has been scheduled!";
       $message = "You have been request for a meeting\n" . 
-       "Date: $this->date\n" .
-       "Time: $this->startTime\n" .
-       "Location: $this->location\n" .
-       "Title: $this->title\n" .
-       "Objective: $this->description\n";
+      "Date: $this->date\n" .
+      "Time: $this->startTime\n" .
+      "Location: $this->location\n" .
+      "Title: $this->title\n" .
+      "Objective: $this->description\n";
       $from = "no-reply@teem.rabserver.com";
       mail($user->getEmail(), $subject,$message,"From: $from\n");
     }
@@ -167,11 +167,11 @@ class Meeting{
   public function emailActionItems(){
     global $db;
 
-    $members = $this->getMemberArray();
+    // $members = $this->getMemberArray();
     
     foreach ($members as $member) {
-       
-     } 
+     
+    } 
   }
 
 }

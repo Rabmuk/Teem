@@ -30,7 +30,7 @@ if (isset($_POST['clearTopics'])) {
 	$reload = true;
 }
 
-if (isset($_POST['addItem']) && $_POST['addItem'] == "Submit") {
+if (isset($_POST['addItem']) && $_POST['addItem'] == "Submit" && $meeting->checkOwner($user->getID())) {
 	addItemToMeeting($meeting->getID(), $_POST['heading'], $_POST['time'], $_POST['presenter']);
 	$reload = true;
 }
@@ -58,8 +58,8 @@ if (isset($_POST['clearActions'])) {
 	$reload = true;
 }
 
-if (isset($_POST['emailActionItems'])) {
-	
+if (isset($_POST['emailActionItems']) && $meeting->checkOwner($user->getID())) {
+	$meeting->emailActionItems();
 	$reload = true;
 }
 
@@ -202,16 +202,19 @@ if ($reload) {
 					<form method="post" action=<?php echo '"?id=' . $_GET['id'] . '"'; ?>>
 						<input type="text" name="heading" placeholder="Enter item heading">
 						<input type="number" name="time" placeholder="Enter allotted minutes">
-						<input type="email" name="presenter" placeholder="Enter presentor's email">
+						<!-- <input type="email" name="presenter" placeholder="Enter presentor's email"> -->
 
-						<!-- <label>Select meeting attendee
-							<select>
-								<option value="Alex">Alex</option>
-								<option value="Candice">Candice</option>
-
+						<label>Select meeting attendee
+							<select name="presenter">
+								<?php
+								$members = $meeting->getMemberArray();
+								foreach ($members as $member) {
+									echo '<option value="' . $member->getEmail() . '">' . $member->getName() . '</option>';	
+								}
+								?>
 							</select>
 
-						</label> -->
+						</label>
 						<input type="submit" name="addItem" value="Submit" class="button small expand"></input>
 						<a class="close-reveal-modal">&#215;</a>
 
