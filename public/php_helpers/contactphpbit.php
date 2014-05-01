@@ -39,8 +39,8 @@ if(isset($_POST['submitted'])) {
 	// upon no failure errors let's email now!
 	if(!isset($hasError)) {
 		
-		$emailTo = 'schluh@rpi.edu, hayley.schluter@gmail.com';
-		$subject = '[Teem site message] from: '.$name;
+		$emailTo = 'schluh@rpi.edu, alexkumbar@gmail.com';
+		$subject = '[TEEM site message] from: '.$name;
 		$sendCopy = trim($_POST['sendCopy']);
 		$body = "Name: $name \n\nEmail: $email \n\nComments: $comments";
 		$headers = 'From: ' .' <'.$emailTo.'>' . "\r\n" . 'Reply-To: ' . $email;
