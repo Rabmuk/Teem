@@ -4660,6 +4660,7 @@ label {
   font-weight: normal;
   line-height: 1.5;
   margin-bottom: 0;
+  font-family: 'Roboto Slab';
   /* Styles for required inputs */ }
   label.right {
     float: none;
