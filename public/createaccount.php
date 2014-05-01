@@ -53,9 +53,8 @@ require_once "classes/user.php";
 
     </head>
     <body>
-      <div id="wrapper">
+      <div id="wrappercreateaccount">
 
-        <div id="wrapper">
         <!-- Entire page fits same sizing as rest of website -->
         <div class="row">
 
@@ -86,7 +85,7 @@ require_once "classes/user.php";
               <div class="row">
                 <div class ="large-6 columns">
                   <label>First name
-                    <input type="text" placeholder="First name" name="fName" />
+                    <input id = "uniformyo" type="text" placeholder="" name="fName" />
                   </label>
                 </div>
               </div>
@@ -94,7 +93,7 @@ require_once "classes/user.php";
               <div class="row">
                 <div class ="large-6 columns">
                   <label>Last name
-                    <input type="text" placeholder="Last name" name="lName" />
+                    <input id = "uniformyo" type="text" placeholder="" name="lName" />
                   </label>
                 </div>
               </div>
@@ -102,7 +101,7 @@ require_once "classes/user.php";
               <div class="row">
                 <div class ="large-6 columns">
                   <label>Email
-                    <input type="email" placeholder="Email" name="email" />
+                    <input id = "uniformyo" type="email" placeholder="" name="email" />
                   </label>
                 </div>
               </div>
@@ -110,7 +109,7 @@ require_once "classes/user.php";
               <div class="row">
                 <div class ="large-6 columns">
                   <label>Password
-                    <input type="password" placeholder="Password" name="pass" />
+                    <input id = "uniformyo" type="password" placeholder="" name="pass" />
                   </label>
                 </div>
               </div>
@@ -118,7 +117,7 @@ require_once "classes/user.php";
               <div class="row">
                 <div class ="large-6 columns">
                   <label>Confirm password
-                    <input type="password" placeholder="Confirm password" name="passconfirm" />
+                    <input id = "uniformyo" type="password" placeholder="" name="passconfirm" />
                   </label>
                 </div>
               </div>
@@ -127,7 +126,6 @@ require_once "classes/user.php";
           </div> 
         </row>
       </div>
-        </div>
       </div>
 
     </body>

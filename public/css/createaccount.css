@@ -20,3 +20,13 @@ input[type="submit"]:hover {
   border: 2px #838383 solid;
   cursor: pointer;
 }
+
+#wrappercreateaccount{
+  min-height:79%;
+  position: relative;
+}
+
+#uniformyo{
+  border: 2px #606060 solid;
+  border-radius:5px;
+}
