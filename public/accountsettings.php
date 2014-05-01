@@ -12,7 +12,7 @@ if (isset($_SESSION['email'])){
 	header("Location: ./index.php");
 }
 
-if (isset($_POST['submit']) && $_POST['submit'] == "Submit") {
+if (isset($_POST['submit']) && $_POST['submit'] == "Yes") {
 	if (isset($_POST['deleteAcc'])) {
 		$user->deleteUser();
 		header("Location: ./logout.php");
@@ -96,12 +96,29 @@ require_once "./headerNav.php";
 							<input type="text" id="company" placeholder="Enter company">
 						</div>
 					</div>
-					<div class="row">
+<!-- 					<div class="row">
 						<div class="small-3 columns"></div>
 						<div class="small-9 columns">
 							<input id="deleteAcc" name="deleteAcc" type="checkbox"><label for="deleteAcc">Delete Account?</label></input>
 						</div>
-					</div>
+					</div> -->
+					<div id='myModal' class='reveal-modal small' data-reveal>
+				        <p class="text-center">Are you sure you want to delete your account?</p>
+				        <div class="row">
+				          <div class="large-3 columns"><p></p></div>
+				          <form method="post">
+				          <div class="large-3 columns">
+				            <input type="submit" name="submit" value="Yes" class="button expand"></input>
+				          </div>
+				          <div class="large-3 columns">
+				            <input type="submit" name="submit" value="No" class="button expand"></input>
+				          </div>
+				          <div class="large-3 columns"><p></p></div>
+				        </div>
+				        </form>
+				        <a class="close-reveal-modal">&#215;</a>
+				      </div>
+				  </div>
 					<div class="row">
 						<div class="small-9 columns"></div>
 						<div class="small-3 columns">
