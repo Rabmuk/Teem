@@ -12,31 +12,6 @@ if (isset($_SESSION['email'])){
 	header("Location: ./index.php");
 }
 
-$posted = false;
-$err = "";
-
-if (isset($_POST['submit']) && $_POST['submit'] == 'Create') {
-	$posted = true;
-	if ($_POST['title'] == null) {
-		$err .= '<h3>Error: Please enter a title</h3>';
-	}
-	if ($_POST['description'] == null) {
-		$err .= '<h3>Error: Please enter a description</h3>';
-	}
-	if ($_POST['date'] == null) {
-		$err .= '<h3>Error: Please enter a date</h3>';
-	}
-	if ($_POST['time'] == null) {
-		$err .= '<h3>Error: Please enter a time</h3>';
-	}
-	if ($_POST['attendees'] == null) {
-		$err .= '<h3>Error: Please enter attendees</h3>';
-	}	
-	if ($err == "") {
-		$err = addMeetingToDatabase($_POST['title'], $_POST['description'], (Integer)$user->getID(), $_POST['location'], $_POST['date'], $_POST['time'], $_POST['attendees']);
-	}
-}
-
 ?>
 
 <!doctype HTML>
@@ -53,23 +28,20 @@ if (isset($_POST['submit']) && $_POST['submit'] == 'Create') {
 <body>
 	<div id = "wrapper">
 		<?php 
-		if($posted){
+		if(isset($_POST['submit']) && $_POST['submit'] == 'Create'){
+			addMeetingToDatabase($_POST['title'], $_POST['description'], (Integer)$user->getID(), $_POST['location'], $_POST['date'], $_POST['time'], $_POST['attendees']);
 			?>
 			<div id = "wrapper">
-				<?php
-				if ($err == "") {
-					?>
-					<div class="row">
+				<div class="row">
+					<div class="large-12 columns">
 						<h1>Your meeting has been created.</h1>
+					</div>
+				</div>
+				<div class="row">
+					<div class="large-12 columns">
 						<a href="index.php">Return to your profile</a>
 					</div>
-					<?php
-				} else {
-					echo '<div class="row">';
-					echo $err;
-					echo '</div>';
-				}
-				?>
+				</div>
 			</div>
 			<?php
 		}else{ ?>

@@ -1,8 +1,6 @@
 Teem
 ====
 
-Meeting scheduler site
+A project for Rensselaer Polytechnic Institute's ITWS 4200: Web Science Course. 
 
-With pi-lighting and more!
-
-YO everyone!
+Teem was created with love by Alex Kumbar, Lauren Angelini, Josh McGraw, Chris Paradis, Candice Poon, & Hayley Schluter. 

@@ -115,7 +115,7 @@ label {
 
 /*End contact stuff, yo*/
 
-#email, #password {
+#email, #password, #contactName {
   border: 2px #606060 solid;
   border-radius: 5px;
 }
@@ -132,7 +132,6 @@ label {
 img[src="img/logo-large.png"] {
   padding-bottom: 10px;
   width: 175px;
-  height: 175px;
 
 }
 
@@ -144,7 +143,7 @@ img[src="img/logo-large.png"] {
 
 a[href="#"],a[href="createaccount.php"] {
   color: white;
-  font-size: 13px;
+  font-size: 20px;
   background-color: #197b5e;
   border-color: #197b5e;
   border-radius: 5px;
@@ -163,5 +162,7 @@ input[name="login"] {
   height: 40px;
 }
 
+input[type="name"] {
 
+}
 
