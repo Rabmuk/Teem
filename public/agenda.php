@@ -109,13 +109,13 @@ if ($reload) {
 					?>
 					<div class="row">
 						<div class="large-12 columns">
-							<br><h3 class = "heading"><?php echo $agendaItem->getHeading(); ?></h3>
+							<br><h3 class = "heading bigyo"><?php echo $agendaItem->getHeading(); ?></h3>
 							<p class = "inline right"><?php echo $agendaItem->getTime(); ?> minutes</p>
 							<p><?php echo $agendaItem->getPresenter()->getName(); ?></p>
 						</div>
 					</div>
 					<!--topics, attachments-->
-					<div class="row">
+					<div class="row needsbottomborder">
 						<div class="large-6 columns">
 							<h5 class= "heading">Topics to Cover</h5>
 							<ul>
@@ -225,7 +225,7 @@ if ($reload) {
 			<div class="large-3 columns" id="nextActions">
 				<!-- Each individual action item list -->
 				<div class="row">
-					<h3>Action Items</h3>
+					<h3 id = "actionitemstitle">Action Items</h3>
 				</div>
 				<?php 
 				$members = $meeting->getMemberArray();
@@ -233,7 +233,7 @@ if ($reload) {
 					?>
 					<div class="row">
 						<!-- meeting attendee's name -->
-						<h4 class="memberName"><?php echo $member->getName(); ?></h4>
+						<h5 class="memberName"><?php echo $member->getName(); ?></h5>
 						<!-- List of existing tasks -->
 						<ul class="tasks">
 							<?php
