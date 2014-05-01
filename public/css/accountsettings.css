@@ -10,17 +10,12 @@ label {
 }
 
 input[type="submit"] {
-	background-color: #009999;
-}
-
-input[type="submit"] {
   background-color: #197b5e;
   border: 2px #197b5e solid;
   color: white; 
   border-radius: 5px;
-  text-align: center;
   width: 75px;
-  height: 85px;
+  height: 100%;
 }
 
 input[type="submit"]:hover {
@@ -31,6 +26,5 @@ input[type="submit"]:hover {
 
 input[type="email"] {
   border: 2px #197b5e solid;
-  color: blue;
 }
 

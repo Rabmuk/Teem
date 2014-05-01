@@ -118,12 +118,12 @@ require_once "./headerNav.php";
         </div>
       </div>
       <div class="row">
-        <div class="small-8 columns"><p></p></div>
-        <div class="small-2 columns">
+        <div class="large-8 columns"><p></p></div>
+        <div class="large-2 columns">
           <a href="#" data-reveal-id="myModal" class="button expand" data-reveal>Delete Group</a>
         </div>
-        <div class="small-2 columns">
-          <input type="submit" name="submit" value="Save" class="button small"></input>
+        <div class="large-2 columns">
+          <input type="submit" name="submit" value="Save" class="button expand"></input>
         </div>
       </div>
       <div id='myModal' class='reveal-modal small' data-reveal>
@@ -131,11 +131,12 @@ require_once "./headerNav.php";
         <div class="row">
           <div class="large-3 columns"><p></p></div>
           <div class="large-3 columns">
-            <input type="button" name="deleteAcc" value="Yes" class="button small"></input>
+            <input type="button" name="deleteAcc" value="Yes" class="button expand"></input>
           </div>
           <div class="large-3 columns">
-            <input type="button" name="nodeleteAcc" value="No" class="button small"></input>
+            <input type="button" name="nodeleteAcc" value="No" class="button expand"></input>
           </div>
+        </div>
         <a class='close-reveal-modal'>&#215;</a>
       </div>
     </form>

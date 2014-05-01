@@ -2,7 +2,6 @@
   min-height: 400px;
   border-right: 2px solid gray;
   
-  
 }
 
 .create_page{
@@ -12,11 +11,8 @@
 input[type="submit"] {
   background-color: #197b5e;
   border: 2px #197b5e solid;
-  color: white; 
-  border-radius: 5px;
-  text-align: center;
-  width: 90px;
-  height: 35px;
+  height: 40px;
+  width: 75px;
 }
 
 input[type="submit"]:hover {
