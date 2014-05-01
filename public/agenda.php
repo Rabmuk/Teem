@@ -105,7 +105,7 @@ require_once "./headerNav.php";
 						<div class="row">
 							<div class="large-12 columns">
 								<br><h3 class = "heading"><?php echo $agendaItem->getHeading(); ?></h3>
-								<p class = "inline right"><?php echo $agendaItem->getTime(); ?> minutes</p>
+								<p class = "inline right minutesListing"><?php echo $agendaItem->getTime(); ?> minutes</p>
 								<p><?php echo $agendaItem->getPresenter()->getName(); ?></p>
 							</div>
 						</div>
@@ -201,7 +201,9 @@ require_once "./headerNav.php";
 
 			<div class="large-3 columns" id="nextActions">
 				<!-- Each individual action item list -->
-				<h3>Action Items</h3>
+				<div class="row">
+					<h3>Action Items</h3>
+				</div>
 				<?php 
 				$members = $meeting->getMemberArray();
 				foreach ($members as $member) {

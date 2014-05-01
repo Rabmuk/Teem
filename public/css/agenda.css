@@ -42,4 +42,10 @@ input[type="submit"] {
   height: 35px;
 }
 
+.minutesListing{
+	margin-right: 25px;
+}
 
+.actionItemTitle{
+	float: left;
+}
