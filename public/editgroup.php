@@ -11,56 +11,60 @@ if (isset($_SESSION['email'])){
 	header("Location: ./index.php");
 }
 
-if(isset($_POST['submit'])){
-  $group = new Group($_GET['id']);
-  $memberarray = $group->getMemberArrayID();
-  $groupid = $group->getID();
-  $groupname = $group->getName();
-  $email_user = $user->getEmail();
 
-  if(isset($_POST['deleteAcc'])){
+switch ($_POST['submit2']) {
+    case 'Save':
+    $group = new Group($_GET['id']);
+    $memberarray = $group->getMemberArrayID();
+    $groupid = $group->getID();
+    $groupname = $group->getName();
+    $email_user = $user->getEmail();
 
-    //$id_owner = $user->getID();
-    //deleteGroup($id_owner);
+    // if(isset($_POST['deleteAcc'])){
+
+    //   //$id_owner = $user->getID();
+    //   //deleteGroup($id_owner);
 
 
-    //header("Location: ./profile.php");
-  }
+    //   //header("Location: ./profile.php");
+    // }
 
-  $counter = 0;
-  foreach ($memberarray as $value) {
-    echo $memberarray[$counter];
-    echo "\n";
-    if(isset($_POST["deleteMember[{$counter}]"])){
-      echo "YOLO!";
-      $id_member = $value;
-      deleteMember($id_member);
+    if(!empty($_POST['check_list'])) {
+      foreach($_POST['check_list'] as $check) {
+        deleteMember($check); 
+        }
+      }
+
+    $newgroupname = $_POST['changeName'];
+    if($newgroupname != $groupname){
+      changeGroupName($groupid, $newgroupname);
     }
-    $counter++;
-  }
 
-  $newgroupname = $_POST['changeName'];
-  if($newgroupname != $groupname){
-    changeGroupName($groupid, $newgroupname);
-  }
-
-  $newmember = $_POST['addMember'];
-  if($newmember != ''){
-    addMember($newmember, $groupid);
-    echo $id_owner;
-  }
+    $newmember = $_POST['addMember'];
+    if($newmember != ''){
+      addMember($newmember, $groupid);
+      // echo $id_owner;
+    }
+  break;
 }
 
-if(isset($_POST['deleteAcc'])){
-    $id_owner = $user->getID();
-    deleteGroup($id_owner);
+switch ($_POST['submit']) {
 
-    header("Location: ./profile.php");
-  }
+  case 'Yes':
+      $group = new Group($_GET['id']);
+      $groupid = $group->getID();
+      deleteGroup($groupid);
+      header("Location: ./index.php");
 
-if(isset($_POST['nodeleteAcc'])){
-    header("Location: ./editgroup.php");
-  }
+    break;
+
+ case 'No':
+
+
+
+  break;
+}
+
 
 require_once "./headerNav.php";	
 ?>
@@ -73,7 +77,7 @@ require_once "./headerNav.php";
   <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
 </head>
  <body>
-  <div id="wrapper">
+  <div class="wrapper" id = "specialwrapper">
     <div class="row">
       <div class="large-12 columns">
         <h1> Edit Group </h1>
@@ -106,12 +110,17 @@ require_once "./headerNav.php";
           <label for="deleteMemembers" class="right inline">Delete Members</label>
         </div>
         <div class="small-9 columns">
-          <ul id="deleteMembers">
-          <?php
-          $members = $group->getMemberArray();
+        <?php
           $counter = 0;
-          foreach ($members as $value) {
-            echo "<li><input id='deleteMember[{$counter}]' name='deleteMember[{$counter}]' type='checkbox'><label for='deleteMember[{$counter}]'>$value</label></input></li>";
+          $memberarray = $group->getMemberArrayID();
+          $members = $group->getMemberArray();
+          foreach ($memberarray as $value) {
+            if($counter == 0){
+              echo "<li>" . $members[$counter] . "</li>";
+            }
+            else{
+            echo "<li><input type='checkbox' name='check_list[]' alt='Checkbox' value=$value>" . $members[$counter] . "</label></input></li>";
+          }
             $counter++;
           }
           ?>
@@ -122,28 +131,44 @@ require_once "./headerNav.php";
         <div class="large-2 columns">
           <a href="#" data-reveal-id="myModal" class="button expand" data-reveal>Delete Group</a>
         </div>
+<<<<<<< HEAD
         <div class="large-2 columns">
           <input type="submit" name="submit" value="Save" class="button expand"></input>
+=======
+        <div class="small-2 columns">
+          <input type="submit" name="submit2" value="Save" class="button small"></input>
+>>>>>>> 224d1f69d3e5fa132f5f94f0b8eae433752a7baa
         </div>
       </div>
+    </form>
       <div id='myModal' class='reveal-modal small' data-reveal>
         <p class="text-center">Are you sure you want to delete your group?</p>
         <div class="row">
           <div class="large-3 columns"><p></p></div>
+          <form method="post">
           <div class="large-3 columns">
+<<<<<<< HEAD
             <input type="button" name="deleteAcc" value="Yes" class="button expand"></input>
           </div>
           <div class="large-3 columns">
             <input type="button" name="nodeleteAcc" value="No" class="button expand"></input>
           </div>
         </div>
+=======
+            <input type="submit" id="submit" name="submit" value="Yes" class="button small"></input>
+          </div>
+          <div class="large-3 columns">
+            <input type="submit" id="submit" name="submit" value="No" class="button small"></input>
+          </div>
+        </form>
+>>>>>>> 224d1f69d3e5fa132f5f94f0b8eae433752a7baa
         <a class='close-reveal-modal'>&#215;</a>
       </div>
-    </form>
   </div>
   <script type="text/javascript" src="js/foundation/foundation.js"></script>
   <script type="text/javascript" src="js/foundation/foundation.reveal.js"></script>
   <script> $(document).foundation(); </script>
+  </div>
  </body>
 </html>
 

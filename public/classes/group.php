@@ -102,10 +102,8 @@ class Group{
 function addGroupToDatabase($id_owner, $name, $members){
   global $db;
 
-  echo $name;
+
   $name = stripslashes($name);
-  echo "\n";
-  echo $name;
   $query = $db->prepare(
     "INSERT INTO `groups` (`id_owner`, `name`)
     VALUES (:id_owner, :name)"
@@ -157,24 +155,22 @@ function addGroupToDatabase($id_owner, $name, $members){
         ":id_group" => $group->group_id,
         ":id_user" => $user->user_id
         ));
-    }else{
-      echo $member . ' cound not be found\n';  
     }
   }
   return $returnValue;
 }
 
-function deleteGroup($id_owner){
+function deleteGroup($group_id){
   global $db;
 
-  $query = $db->exec("DELETE FROM `groups` WHERE `id_owner` = $id_owner");
+  $query = $db->exec("DELETE FROM `groups` WHERE `group_id` = $group_id");
 
 }
 
 function deleteMember($id_user){
   global $db;
   //Delete member from group
-  $query = $db->exec("DELETE FROM `groupmembers` WHERE `id_user` = $id_user"); 
+  $query = $db->exec("DELETE FROM `groupMembers` WHERE `id_user` = $id_user"); 
 }
 
 function addMember($id_user, $group_id){
@@ -206,10 +202,10 @@ function addMember($id_user, $group_id){
 function changeGroupName($group_id, $name){
   global $db;
   
-  $query = $db->prepare("UPDATE `groups` SET `name`= :name WHERE `group_id`= :group_id");
+  $query = $db->prepare("UPDATE `groups` SET `name`= :email WHERE `group_id`= :group_id");
   $query->execute(array(
     ":email" => $name,
-    "group_id" => $group_id
+    ":group_id" => $group_id
     ));
 
 }

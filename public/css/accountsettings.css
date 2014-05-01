@@ -28,3 +28,7 @@ input[type="email"] {
   border: 2px #197b5e solid;
 }
 
+#specialwrapper{
+  min-height: 76%;
+  position: relative;
+}
