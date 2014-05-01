@@ -161,3 +161,8 @@ input[name="login"] {
   width: 65px;
   height: 40px;
 }
+
+input[type="text"] {
+  border-radius: 5px;
+  border: #606060 solid 2px;
+}
