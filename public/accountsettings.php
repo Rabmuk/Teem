@@ -102,6 +102,16 @@ require_once "./headerNav.php";
 							<input id="deleteAcc" name="deleteAcc" type="checkbox"><label for="deleteAcc">Delete Account?</label></input>
 						</div>
 					</div> -->
+					<div class="row">
+					        <div class="large-7 columns"><p></p></div>
+					        <div class="large-3 columns">
+					          <a href="#" data-reveal-id="myModal" class="button expand" data-reveal>Delete Group</a>
+					        </div>
+					        <div class="large-2 columns">
+					          <input type="submit" name="submit" value="Submit" class="button small expand"></input>
+					        </div>
+					</div>
+					</form>
 					<div id='myModal' class='reveal-modal small' data-reveal>
 				        <p class="text-center">Are you sure you want to delete your account?</p>
 				        <div class="row">
@@ -119,15 +129,8 @@ require_once "./headerNav.php";
 				        <a class="close-reveal-modal">&#215;</a>
 				      </div>
 				  </div>
-					<div class="row">
-						<div class="small-9 columns"></div>
-						<div class="small-3 columns">
-							<input type="submit" name="submit" value="Submit" class="button small expand"></input>
-						</div>
-					</div>
-				</div>
 			</div>
-		</form>
+		
 	</div>
 </body>
 </html>
