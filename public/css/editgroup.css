@@ -25,6 +25,8 @@ input[type="button"] {
   font-size: 13px;
   border-radius: 5px;
   text-align: center;
+  height: 100px;
+  width: 200px;
 }
 
 input[type="button"]:hover {
@@ -37,9 +39,7 @@ h1 {
   color: #197b5e;
 }
 
-<<<<<<< HEAD
-=======
 #specialwrapper{
   min-height:86.8%;
 }
->>>>>>> 224d1f69d3e5fa132f5f94f0b8eae433752a7baa
+

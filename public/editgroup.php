@@ -131,13 +131,8 @@ require_once "./headerNav.php";
         <div class="large-2 columns">
           <a href="#" data-reveal-id="myModal" class="button expand" data-reveal>Delete Group</a>
         </div>
-<<<<<<< HEAD
         <div class="large-2 columns">
           <input type="submit" name="submit" value="Save" class="button expand"></input>
-=======
-        <div class="small-2 columns">
-          <input type="submit" name="submit2" value="Save" class="button small"></input>
->>>>>>> 224d1f69d3e5fa132f5f94f0b8eae433752a7baa
         </div>
       </div>
     </form>
@@ -147,22 +142,14 @@ require_once "./headerNav.php";
           <div class="large-3 columns"><p></p></div>
           <form method="post">
           <div class="large-3 columns">
-<<<<<<< HEAD
             <input type="button" name="deleteAcc" value="Yes" class="button expand"></input>
           </div>
           <div class="large-3 columns">
             <input type="button" name="nodeleteAcc" value="No" class="button expand"></input>
           </div>
         </div>
-=======
-            <input type="submit" id="submit" name="submit" value="Yes" class="button small"></input>
-          </div>
-          <div class="large-3 columns">
-            <input type="submit" id="submit" name="submit" value="No" class="button small"></input>
-          </div>
         </form>
->>>>>>> 224d1f69d3e5fa132f5f94f0b8eae433752a7baa
-        <a class='close-reveal-modal'>&#215;</a>
+        <a class="close-reveal-modal">&#215;</a>
       </div>
   </div>
   <script type="text/javascript" src="js/foundation/foundation.js"></script>
