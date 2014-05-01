@@ -29,7 +29,7 @@ if (isset($_SESSION['email'])){
 	<div id = "wrapper">
 		<?php 
 		if(isset($_POST['submit']) && $_POST['submit'] == 'Create'){
-			addMeetingToDatabase($_POST['title'], (Integer)$user->getID(), $_POST['location'], $_POST['date'], $_POST['time'], $_POST['attendees']);
+			addMeetingToDatabase($_POST['title'], $_POST['description'], (Integer)$user->getID(), $_POST['location'], $_POST['date'], $_POST['time'], $_POST['attendees']);
 			?>
 			<div id = "wrapper">
 			<h1>Your meeting has been created.</h1>
@@ -58,7 +58,7 @@ if (isset($_SESSION['email'])){
 							<label for="description" class="right inline">Desired Outcome</label>
 						</div>
 						<div class="small-9 columns">
-							<textarea type="text" id="description" rows="2" placeholder="Enter Desired Outcome"></textarea>
+							<textarea type="text" id="description" name="description" rows="2" placeholder="Enter Desired Outcome"></textarea>
 						</div>
 					</div>
 					<div class="row">

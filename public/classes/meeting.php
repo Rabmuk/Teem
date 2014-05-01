@@ -83,6 +83,17 @@ class Meeting{
         ":id_meeting" => $this->meeting_id,
         ":id_user" => $id_user
         ));
+
+      $user = new User($id_user);
+      $subject = "Meeting has been scheduled!";
+      $message = "You have been requested at a meeting\n" . 
+       "Date: $this->date\n" .
+       "Time: $this->startTime\n" .
+       "Location: $this->location\n" .
+       "Title: $this->title\n" .
+       "Objective: $this->description\n";
+      $from = "no-reply@teem.rabserver.com";
+      mail($user->getEmail(), $subject,$message,"From: $from\n");
     }
   }
 
@@ -150,7 +161,7 @@ class Meeting{
 
 }
 
-function addMeetingToDatabase($title, $id_owner, $location, $date, $startTime, $members){
+function addMeetingToDatabase($title, $description, $id_owner, $location, $date, $startTime, $members){
   global $db;
 
   $query = $db->prepare(
@@ -160,7 +171,7 @@ function addMeetingToDatabase($title, $id_owner, $location, $date, $startTime, $
   $query->execute(array(
     ":id_owner" => $id_owner,
     ":title" => $title,
-    ":description" => "",
+    ":description" => $description,
     ":location" => $location,
     ":date" => $date,
     ":startTime" => $startTime
@@ -179,14 +190,7 @@ function addMeetingToDatabase($title, $id_owner, $location, $date, $startTime, $
 
   $toReturn = new Meeting($meeting->meeting_id);
 
-  $insertQuery = $db->prepare(
-    "INSERT INTO `meetingMembers` (`id_meeting`, `id_user`)
-    VALUES (:id_meeting, :id_user)"
-    );
-  $insertQuery->execute(array(
-    ":id_meeting" => $meeting->meeting_id,
-    ":id_user" => $id_owner
-    ));
+  $toReturn->addMember($id_owner);
 
   $memberArray = explode(",", $members);
 
@@ -221,7 +225,7 @@ function addMeetingToDatabase($title, $id_owner, $location, $date, $startTime, $
           $toReturn->addMember($row->id_user);
         }
       }else{
-        echo '<p>' . $member . ' cound not be found</p>';
+        echo '<h5>' . $member . ' cound not be found</h5>';
       }
     }
 
