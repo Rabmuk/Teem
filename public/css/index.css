@@ -115,7 +115,7 @@ label {
 
 /*End contact stuff, yo*/
 
-#email, #password, #contactName {
+#email, #password, {
   border: 2px #606060 solid;
   border-radius: 5px;
 }
@@ -161,8 +161,3 @@ input[name="login"] {
   width: 65px;
   height: 40px;
 }
-
-input[type="name"] {
-
-}
-

@@ -167,10 +167,22 @@ class Meeting{
   public function emailActionItems(){
     global $db;
 
-    // $members = $this->getMemberArray();
+    $members = $this->getMemberArray();
     
     foreach ($members as $member) {
-     
+      $actionItems = $member->getActionItems($this->meeting_id);
+      $subject = 'Action items from ' . $this->title;
+      $from = "no-reply@teem.rabserver.com";
+
+      if (count($actionItems) > 0) {
+        $message = "You have been assigned the following:\n";
+
+        foreach ($actionItems as $actionItem) {
+          $message .= $actionItem->getAction() . "\n";
+        }  
+        
+        mail($member->getEmail(), $subject, $message,"From: $from\n"); 
+      }      
     } 
   }
 
