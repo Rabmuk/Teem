@@ -70,19 +70,34 @@ require_once "./headerNav.php";
     $results = $user->getGroups();
     foreach ($results as $group) {
      ?>
-     <h3> <a href=<?php echo '"editgroup.php?id=' . $group->getID() . '"'; ?>><?php echo $group->getName(); ?></a></h3>
-     <ul id="groupNames">
-      <li>Team Leader: <?php echo $group->getOwner()->getName(); ?></li>
-      <li>Members: 
-       <?php 
-       echo $group->getMemberNames();
-       ?>
-     </li>
-   </ul>
-   <hr class="profileDivide"></hr>
-   <?php
- }
- ?>
+     <h3> 
+      <?php
+      if ($group->checkOwner($user->getID())) {
+        echo '<a href="editgroup.php?id=' . $group->getID() . '">';  
+      }
+      ?>
+      
+      <?php
+      echo $group->getName(); 
+      if ($group->checkOwner($user->getID())) {
+        ?>
+      </a>
+      <?php
+    }
+    ?>
+  </h3>
+  <ul id="groupNames">
+    <li>Team Leader: <?php echo $group->getOwner()->getName(); ?></li>
+    <li>Members: 
+     <?php 
+     echo $group->getMemberNames();
+     ?>
+   </li>
+ </ul>
+ <hr class="profileDivide"></hr>
+ <?php
+}
+?>
 </div>
 </div>
 <div class="large-6 columns">
@@ -105,9 +120,9 @@ require_once "./headerNav.php";
   <?php
 }
 ?>
-      </div>
-    </div>
-  </div>
+</div>
+</div>
+</div>
 <div class="push"></div>
 </div>
 </body>

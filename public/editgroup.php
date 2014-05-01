@@ -17,7 +17,7 @@ if (isset($_GET['id'])){
   header("Location: ./index.php");
 }
 
-if (!$group->checkOwner()) {
+if (!$group->checkOwner($user->getID())) {
   header("Location: ./index.php"); 
 }
 
@@ -62,7 +62,7 @@ switch ($_POST['submit2']) {
 
 if (isset($_POST['submit'])) {
   $group->deleteGroup();
-  header("Location: ./index.php")
+  header("Location: ./index.php");
 }
 
 
