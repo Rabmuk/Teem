@@ -15,6 +15,7 @@ if (isset($_SESSION['email'])){
 if(isset($_POST['submit'])){
   $id_owner = $user->getID();
   addGroupToDatabase($id_owner, $_POST['groupName'], $_POST['addMembers']);
+  echo '<script>window.location.reload()</script>';
 }
 
 require_once "./headerNav.php";	

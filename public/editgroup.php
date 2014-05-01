@@ -6,10 +6,18 @@ foreach (glob("classes/*.php") as $filename)
 }
 
 if (isset($_SESSION['email'])){
-	$user = new User($_SESSION['email']);
+  $user = new User($_SESSION['email']);
 }else{
-	header("Location: ./index.php");
+  header("Location: ./index.php");
 }
+
+if (isset($_GET['id'])){
+  $group = new Group($_GET['id']);
+}else{
+  header("Location: ./index.php");
+}
+
+
 
 
 switch ($_POST['submit2']) {
@@ -48,21 +56,9 @@ switch ($_POST['submit2']) {
   break;
 }
 
-switch ($_POST['submit']) {
-
-  case 'Yes':
-      $group = new Group($_GET['id']);
-      $groupid = $group->getID();
-      deleteGroup($groupid);
-      header("Location: ./index.php");
-
-    break;
-
- case 'No':
-
-
-
-  break;
+if (isset($_POST['submit'])) {
+  $group->deleteGroup();
+  header("Location: ./index.php")
 }
 
 

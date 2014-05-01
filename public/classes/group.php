@@ -96,6 +96,19 @@ class Group{
     return $toReturn;
   }
 
+
+  function deleteGroup(){
+    global $db;
+
+    $query = $db->prepare(
+      "DELETE FROM `groups` WHERE `group_id` = :group_id"
+      );
+    $query->execute(array(
+      ":group_id" => $this->group_id
+      ));
+
+  }
+
 }
 
 //assume that the email is unique
@@ -160,12 +173,6 @@ function addGroupToDatabase($id_owner, $name, $members){
   return $returnValue;
 }
 
-function deleteGroup($group_id){
-  global $db;
-
-  $query = $db->exec("DELETE FROM `groups` WHERE `group_id` = $group_id");
-
-}
 
 function deleteMember($id_user){
   global $db;
