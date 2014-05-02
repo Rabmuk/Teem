@@ -1,17 +1,20 @@
 <?php 	
 session_start();
 $counter = 0;
+// incluces all support files from classes
 foreach (glob("classes/*.php") as $filename)
 {
   include $filename;
 }
 
+// creates user based on session variables
 if (isset($_SESSION['email'])){
 	$user = new User($_SESSION['email']);
 }else{
 	header("Location: ./index.php");
 }
 
+//save file, dd to group database, reload window
 if(isset($_POST['submit'])){
   $id_owner = $user->getID();
   addGroupToDatabase($id_owner, $_POST['groupName'], $_POST['addMembers']);
