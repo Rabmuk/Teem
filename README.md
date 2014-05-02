@@ -76,7 +76,7 @@ Chris:
 	Great group with a very interesting dynamic. Despite the appearance of conflict on the surface, this group worked very well together. I would say better than any group I have been a part of. I have never really had meetings where both the back-end, front-end, and really all involve truly work together on pages and use each others skill set. Most importantly we ended up with a fully functional final product that looks great. Good stuff guys.
 
 Josh:
-	Has stepped down from executive mediator, and will be deeply missed. The balance of power has shifted... dark times are coming. Prepare yourself
+	"Coming Soon"
 	
 
 =========
