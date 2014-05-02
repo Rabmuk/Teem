@@ -16,14 +16,14 @@ This application runs on a apache stack. Tested a [Host Rocket](http://www.hostr
 =========
 
 ### General description:
-	Teem is a mobile-responsive web application that will increase productivity for meetings and improve any group’s organization.
+Teem is a mobile-responsive web application that will increase productivity for meetings and improve any group’s organization.
 
 
 ### Mission: 
-	To make it incredibly easy for any group of people to schedule and manage agendas for their meetings.
+To make it incredibly easy for any group of people to schedule and manage agendas for their meetings.
 
 ### Vision: 
-	To translate the efficiency of static agendas to the web, to make meetings easier to facilitate for everyone. 
+To translate the efficiency of static agendas to the web, to make meetings easier to facilitate for everyone. 
 
 ### Stakeholders:
 	College Students
@@ -35,7 +35,7 @@ This application runs on a apache stack. Tested a [Host Rocket](http://www.hostr
 	Any group that wants to get together
 
 ### Overview: 
-	Our project Teem makes meetings more productive through an interactive meeting agenda that will allow members to adjust their own material and look at other’s materials during meetings. 
+Our project Teem makes meetings more productive through an interactive meeting agenda that will allow members to adjust their own material and look at other’s materials during meetings. 
 
 ### Features:
 	Personal accounts
