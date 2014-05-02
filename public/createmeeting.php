@@ -81,7 +81,7 @@ if (isset($_SESSION['email'])){
 							</div>
 						</div>
 						<div class="row">
-							L<!-- ocation of the meeting -->
+							<!-- Location of the meeting -->
 							<div class="small-3 columns">
 								<label for="location" class="right inline">Location</label>
 							</div>
