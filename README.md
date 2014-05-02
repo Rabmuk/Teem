@@ -3,6 +3,7 @@ Teem
 
 A project for Rensselaer Polytechnic Institute's ITWS 4200: Web Science Course. 
 
+<<<<<<< HEAD
 Teem was created with love by Alex Kumbar, Lauren Angelini, Josh McGraw, Chris Paradis, Candice Poon, & Hayley Schluter. 
 
 =========
@@ -55,3 +56,12 @@ Future plans:
 
 
 
+=======
+Teem was created with love by Alex Kumbar, Lauren Angelini, Josh McGraw, Chris Paradis, Candice Poon, & Hayley Schluter.
+
+Setup
+-----
+
+Database aretechure is saved in a file inside of database.
+This application runs on a apache stack. Tested a [Host Rocket](http://www.hostrocket.com/) domain.
+>>>>>>> 769c7436e653cad3720461d5908bf9ac9d4e2920
