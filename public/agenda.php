@@ -302,27 +302,6 @@ if ($reload) {
 	</div>
 	
 
-
-
-
-
-
-
-
-
-
-
-	
-
-
-
-
-
-
-
-
-
-
 	<!--don't worry about this-->
 	<br><br><br><br><br>
 
