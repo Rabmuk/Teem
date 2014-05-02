@@ -1,29 +1,30 @@
 <?php 	
 session_start();
+// Includes all class files for use in this document
 foreach (glob("classes/*.php") as $filename)
 {
   include $filename;
 }
-
+// check if there is an email currently in this session. If yes construct a new User with that email, else go back to the index page
 if (isset($_SESSION['email'])){
   $user = new User($_SESSION['email']);
 }else{
   header("Location: ./index.php");
 }
-
+// Same concept as above
 if (isset($_GET['id'])){
   $group = new Group($_GET['id']);
 }else{
   header("Location: ./index.php");
 }
-
+// Check if the id of this user is the owner of the group
 if (!$group->checkOwner($user->getID())) {
   header("Location: ./index.php"); 
 }
 
 
 
-
+// switch creation for submit2, leaving it switch in case of addition of more inputs
 switch ($_POST['submit2']) {
     case 'Save':
     $group = new Group($_GET['id']);
@@ -40,18 +41,19 @@ switch ($_POST['submit2']) {
 
     //   //header("Location: ./profile.php");
     // }
-
+    // if the checklist is not empty, loop through the array deleting the members whose ids are checked using the deleteMember funtion
     if(!empty($_POST['check_list'])) {
       foreach($_POST['check_list'] as $check) {
         deleteMember($check); 
         }
       }
-
+    // Changing group name
     $newgroupname = $_POST['changeName'];
     if($newgroupname != $groupname){
       changeGroupName($groupid, $newgroupname);
     }
-
+    
+    // Adding group member
     $newmember = $_POST['addMember'];
     if($newmember != ''){
       addMember($newmember, $groupid);
@@ -60,7 +62,8 @@ switch ($_POST['submit2']) {
   break;
 }
 
-if (isset($_POST['submit'])) {
+// 
+if (isset($_POST['submit']) && isset($_POST['submit'])=="Yes") {
   $group->deleteGroup();
   header("Location: ./index.php");
 }
