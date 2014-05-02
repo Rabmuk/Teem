@@ -28,6 +28,7 @@ if (isset($_SESSION['email'])){
 <body>
 	<div id = "wrapper">
 		<?php 
+		//if the form was submitted
 		if(isset($_POST['submit']) && $_POST['submit'] == 'Create'){
 			addMeetingToDatabase($_POST['title'], $_POST['description'], (Integer)$user->getID(), $_POST['location'], $_POST['date'], $_POST['time'], $_POST['attendees']);
 			?>
@@ -44,80 +45,82 @@ if (isset($_SESSION['email'])){
 				</div>
 			</div>
 			<?php
-		}else{ ?>
-		<div class="row">
-			<div class="large-12">
-				<h2>Create a Meeting</h2>
-			</div>
-		</div>
-		<form method="post" action="createmeeting.php">
+			// if a form wasnt submitted
+		}else{ 
+			?>
 			<div class="row">
-				<div class="small-12 large-12 columns">
-					<div class="row">
-						<div class="small-3 columns">
-							<label for="title" class="right inline">Title</label>
-						</div>
-						<div class="small-9 columns">
-							<input type="text" id="title" name="title" placeholder="Enter Title">
-						</div>
-					</div>
-					<div class="row">
-						<div class="small-3 columns">
-							<label for="description" class="right inline">Desired Outcome</label>
-						</div>
-						<div class="small-9 columns">
-							<textarea type="text" id="description" name="description" rows="2" placeholder="Enter Desired Outcome"></textarea>
-						</div>
-					</div>
-					<div class="row">
-						<div class="small-3 columns">
-							<label for="location" class="right inline">Location</label>
-						</div>
-						<div class="small-9 columns">
-							<input type="text" id="location" name="location" placeholder="Enter Location">
-						</div>
-					</div>
-					<div class="row">
-						<div class="small-3 columns">
-							<label for="date" class="right inline">Date</label>
-						</div>
-						<div class="small-9 columns">
-							<input type="date" id="datepicker" name="date" placeholder="Enter Date">
-						</div>
-					</div>
-					<div class="row">
-						<div class="small-3 columns">
-							<label for="time" class="right inline">Time</label>
-						</div>
-						<div class="small-9 columns">
-							<input type="time" id="time" name="time" placeholder="Enter Time">
-						</div>
-					</div>
-
-					<div class="row">
-						<div class="small-3 large-3 columns">
-							<label for="attendees" class="right inline">Attendees</label>
-						</div>
-						<div class="small-9 large-9 columns">
-							<textarea type="text" id="attendees" name="attendees" rows="5" placeholder="Enter Individuals and Groups"></textarea>
-						</div>
-					</div>
-
-					<div class="row">
-						<div class="small-9 large-6 small-centered large-centered columns">
-							<!-- <input name="submit" type="submit" class="button nice small radius">Create</a> -->
-							<input name="submit" type="submit" value="Create" class="button nice radius"/>
-						</div>
-					</div>
-
+				<div class="large-12">
+					<h2>Create a Meeting</h2>
 				</div>
 			</div>
-		</form>
-	</div>
-	<?php } ?>
-</body>
-</html>
+			<form method="post" action="createmeeting.php">
+				<div class="row">
+					<div class="small-12 large-12 columns">
+						<div class="row">
+							<div class="small-3 columns">
+								<label for="title" class="right inline">Title</label>
+							</div>
+							<div class="small-9 columns">
+								<input type="text" id="title" name="title" placeholder="Enter Title">
+							</div>
+						</div>
+						<div class="row">
+							<div class="small-3 columns">
+								<label for="description" class="right inline">Desired Outcome</label>
+							</div>
+							<div class="small-9 columns">
+								<textarea type="text" id="description" name="description" rows="2" placeholder="Enter Desired Outcome"></textarea>
+							</div>
+						</div>
+						<div class="row">
+							<div class="small-3 columns">
+								<label for="location" class="right inline">Location</label>
+							</div>
+							<div class="small-9 columns">
+								<input type="text" id="location" name="location" placeholder="Enter Location">
+							</div>
+						</div>
+						<div class="row">
+							<div class="small-3 columns">
+								<label for="date" class="right inline">Date</label>
+							</div>
+							<div class="small-9 columns">
+								<input type="date" id="datepicker" name="date" placeholder="Enter Date">
+							</div>
+						</div>
+						<div class="row">
+							<div class="small-3 columns">
+								<label for="time" class="right inline">Time</label>
+							</div>
+							<div class="small-9 columns">
+								<input type="time" id="time" name="time" placeholder="Enter Time">
+							</div>
+						</div>
 
-<?php
-require_once "./bottomNav.php";
-?>
+						<div class="row">
+							<div class="small-3 large-3 columns">
+								<label for="attendees" class="right inline">Attendees</label>
+							</div>
+							<div class="small-9 large-9 columns">
+								<textarea type="text" id="attendees" name="attendees" rows="5" placeholder="Enter Individuals and Groups"></textarea>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="small-9 large-6 small-centered large-centered columns">
+								<!-- <input name="submit" type="submit" class="button nice small radius">Create</a> -->
+								<input name="submit" type="submit" value="Create" class="button nice radius"/>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</form>
+		</div>
+		<?php } ?>
+	</body>
+	</html>
+
+	<?php
+	require_once "./bottomNav.php";
+	?>
