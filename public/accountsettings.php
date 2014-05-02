@@ -1,39 +1,39 @@
 <?php 
 
 session_start();
-foreach (glob("classes/*.php") as $filename)
+foreach (glob("classes/*.php") as $filename) // incluces all support files from classes
 {
 	include $filename;
 }
 
 if (isset($_SESSION['email'])){
-	$user = new User($_SESSION['email']);
+	$user = new User($_SESSION['email']); // checks if user is logged in
 }else{
-	header("Location: ./index.php");
+	header("Location: ./index.php"); // sends them to home page if not logged in
 }
 
-if (isset($_POST['submit']) && $_POST['submit'] == "Submit") {
-	if (isset($_POST['deleteAcc'])) {
+if (isset($_POST['submit']) && $_POST['submit'] == "Submit") { // when they click submit
+	if (isset($_POST['deleteAcc'])) { // checks if they checked delete account
 		$user->deleteUser();
-		header("Location: ./logout.php");
+		header("Location: ./logout.php"); // deletes account and logs out
 	}
 	if (isset($_POST['firstName']) && $_POST['firstName'] != "Enter First Name") {
-		$user->setFirstName($_POST['firstName']);
+		$user->setFirstName($_POST['firstName']); // changes first name
 	}
 
 	if (isset($_POST['lastName']) && $_POST['lastName'] != "Enter Last Name") {
-		$user->setLastName($_POST['lastName']);
+		$user->setLastName($_POST['lastName']); // changes last name
 	}
 
 	if (isset($_POST['email']) && $_POST['email'] != "Enter E-mail") {
 		$user->setEmail($_POST['email']);
-		$_SESSION['email'] = $_POST['email'];
+		$_SESSION['email'] = $_POST['email']; // changes email
 	}
 
-	echo '<script>window.location.reload()</script>';
+	echo '<script>window.location.reload()</script>'; // reloads page
 }
 
-require_once "./headerNav.php"; 
+require_once "./headerNav.php"; // include header
 
 ?>
 
@@ -47,12 +47,14 @@ require_once "./headerNav.php";
 	<link rel="stylesheet" type="text/css" href="css/accountsettings.css"/>
 </head>
 <body>
-	<div id = "specialwrapper">
+	<!-- make sticky footer !-->
+	<div id = "specialwrapper"> 
 		<div class="row">
 			<div class="large-12">
 				<h1>General Settings</h1>
 			</div>
 		</div>
+		<!-- Change user info form !-->
 		<form action="" method="post">
 			<div class="row">
 				<div class="small-8">
@@ -97,14 +99,17 @@ require_once "./headerNav.php";
 						</div>
 					</div>
 					<div class="row">
+						<!-- Shift delete account over !-->
 						<div class="small-3 columns"></div>
 						<div class="small-9 columns">
+							<!-- Checkbox for delete account !-->
 							<input id="deleteAcc" name="deleteAcc" type="checkbox"><label for="deleteAcc">Delete Account?</label></input>
 						</div>
 					</div>
 					<div class="row">
 						<div class="small-9 columns"></div>
 						<div class="small-3 columns">
+							<!-- Sbumit button !-->
 							<input type="submit" name="submit" value="Submit" class="button expand"></input>
 						</div>
 					</div>
@@ -118,7 +123,7 @@ require_once "./headerNav.php";
 
 <?php
 
-require_once "./bottomNav.php";
+require_once "./bottomNav.php"; // include footer
 
 ?>
 
