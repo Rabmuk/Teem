@@ -26,37 +26,44 @@ if (isset($_SESSION['email'])){
 	<script src="js/createmeeting.js" type="text/javascript" ></script>
 </head>
 <body>
+	<!-- Necessary wrapper so footer works properly -->
 	<div id = "wrapper">
 		<?php 
-		//if the form was submitted
+		//if the form was submitted properly
 		if(isset($_POST['submit']) && $_POST['submit'] == 'Create'){
 			addMeetingToDatabase($_POST['title'], $_POST['description'], (Integer)$user->getID(), $_POST['location'], $_POST['date'], $_POST['time'], $_POST['attendees']);
 			?>
 			<div id = "wrapper">
 				<div class="row">
+					<!-- Confirmation that meeting was created -->
 					<div class="large-12 columns">
 						<h1>Your meeting has been created.</h1>
 					</div>
 				</div>
 				<div class="row">
+					<!-- Link back to index.php -->
 					<div class="large-12 columns">
 						<a href="index.php">Return to your profile</a>
 					</div>
 				</div>
 			</div>
 			<?php
-			// if a form wasnt submitted
+			
+		//If creating a meeting was not successful or form was not submitted	
 		}else{ 
 			?>
 			<div class="row">
 				<div class="large-12">
+					<!-- Page header -->
 					<h2>Create a Meeting</h2>
 				</div>
 			</div>
+			<!-- Form to create a meeting -->
 			<form method="post" action="createmeeting.php">
 				<div class="row">
 					<div class="small-12 large-12 columns">
 						<div class="row">
+							<!-- Meeting Name -->
 							<div class="small-3 columns">
 								<label for="title" class="right inline">Title</label>
 							</div>
@@ -65,6 +72,7 @@ if (isset($_SESSION['email'])){
 							</div>
 						</div>
 						<div class="row">
+							<!-- Desired outcome / description -->
 							<div class="small-3 columns">
 								<label for="description" class="right inline">Desired Outcome</label>
 							</div>
@@ -73,6 +81,7 @@ if (isset($_SESSION['email'])){
 							</div>
 						</div>
 						<div class="row">
+							L<!-- ocation of the meeting -->
 							<div class="small-3 columns">
 								<label for="location" class="right inline">Location</label>
 							</div>
@@ -81,6 +90,7 @@ if (isset($_SESSION['email'])){
 							</div>
 						</div>
 						<div class="row">
+							<!-- Date of meeting -->
 							<div class="small-3 columns">
 								<label for="date" class="right inline">Date</label>
 							</div>
@@ -89,6 +99,7 @@ if (isset($_SESSION['email'])){
 							</div>
 						</div>
 						<div class="row">
+							<!-- Time of meeting -->
 							<div class="small-3 columns">
 								<label for="time" class="right inline">Time</label>
 							</div>
@@ -98,6 +109,7 @@ if (isset($_SESSION['email'])){
 						</div>
 
 						<div class="row">
+							<!-- List of attendees and groups -->
 							<div class="small-3 large-3 columns">
 								<label for="attendees" class="right inline">Attendees</label>
 							</div>
