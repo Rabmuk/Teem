@@ -1,40 +1,49 @@
 <?php
 session_start();
+// incluces all support files from classes
 foreach (glob("classes/*.php") as $filename)
 {
 	include $filename;
 }
 
+// creates user based on session variables
 if (isset($_SESSION['email'])){
 	$user = new User($_SESSION['email']);
 }
 
+//creates meeting based on get request
 if (isset($_GET['id'])) {
 	$meeting = new Meeting($_GET['id']);
 }
 
+//if user or meeting is invalid or if the user is not a member of the given meeting, redirects to index.php
 if(!$user->exists() || !$meeting->exists() || !$meeting->checkMember($user->getID())) {
 	header("Location: ./index.php");
 }
 
+// does the page need to reload
 $reload = false;
 
+//add a topic
 if (isset($_POST['topics'])) {
 	addTopicsToItem($_POST['item_id'], $_POST['topics']);
 	$reload = true;
 }
 
+//clear topics
 if (isset($_POST['clearTopics'])) {
 	$item = new agendaItem($_POST['item_id']);
 	$item->clearTopics();
 	$reload = true;
 }
 
+//only the owner can add new items
 if (isset($_POST['addItem']) && $_POST['addItem'] == "Submit" && $meeting->checkOwner($user->getID())) {
 	addItemToMeeting($meeting->getID(), $_POST['heading'], $_POST['time'], $_POST['presenter']);
 	$reload = true;
 }
 
+//save a file and moves it to uploads giving it a random file name and remembering its real name in the database
 if (isset($_POST['savefile']) && $_POST['savefile'] == 'Submit') {
 	if ($_FILES["file"]["error"] > 0) {
 		echo "Return Code: " . $_FILES["file"]["error"] . "<br>";
@@ -48,21 +57,25 @@ if (isset($_POST['savefile']) && $_POST['savefile'] == 'Submit') {
 	$reload = true;
 }
 
+// new task
 if (isset($_POST['newtask'])) {
 	$meeting->addActionItem($_POST['id_user'], $_POST['newtask']);
 	$reload = true;
 }
 
+//clears tasks
 if (isset($_POST['clearActions'])) {
 	$meeting->clearActionItem($_POST['id_user']);
 	$reload = true;
 }
 
+//only the owner can email out the action items
 if (isset($_POST['emailActionItems']) && $meeting->checkOwner($user->getID())) {
 	$meeting->emailActionItems();
 	$reload = true;
 }
 
+//if the client refreshes it wont prompt them to resubmit the form post
 if ($reload) {
 	echo '<script>window.location.reload()</script>';
 }
@@ -127,6 +140,7 @@ if ($reload) {
 								?>
 							</ul>
 							<?php 
+							//the presenter of a agenda item can add and clear topics
 							$isPresenter = $user->isUser($agendaItem->getPresenter());
 							if ($isPresenter) {
 								?>
@@ -147,6 +161,7 @@ if ($reload) {
 							<h5 class= "heading">Attachments</h5>
 							<ul>
 								<?php
+								// displaying files
 								$files = $agendaItem->getFiles();
 								foreach ($files as $file) {
 									?>
@@ -157,10 +172,11 @@ if ($reload) {
 								?>
 							</ul>
 							<?php
+							// only the presenter can upload files for that item
 							if ($isPresenter) {
 								?>
 								<br>
-								<form action="" method="post" enctype="multipart/form-data">
+								<form method="post" enctype="multipart/form-data">
 									<input type="hidden" name="item_id" value=<?php echo '"' . $agendaItem->getID() . '"'; ?>>
 									<label for="file">Filename:</label>
 									<input type="file" name="file" id="file"><br>
@@ -184,6 +200,7 @@ if ($reload) {
 				<br>
 
 				<?php
+				//owner option
 				if ($meeting->checkOwner($user->getID())) {
 					?>
 					<div class="row">
@@ -229,6 +246,7 @@ if ($reload) {
 					<h3 id = "actionitemstitle">Action Items</h3>
 				</div>
 				<?php 
+				// actoin items
 				$members = $meeting->getMemberArray();
 				foreach ($members as $member) {
 					?>
