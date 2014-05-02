@@ -98,7 +98,7 @@ if ($reload) {
 	require_once "./headerNav.php";	
 	?>
 
-
+	<!-- Wraps around all content for proper position of footer -->
 	<div class="wrapper">
 
 		
@@ -304,7 +304,7 @@ if ($reload) {
 
 	<!--don't worry about this-->
 	<br><br><br><br><br>
-
+	<!-- Needed for the reveal modeal in Foundation 5 -->
 	<script type="text/javascript" src="js/foundation/foundation.js"></script>
 	<script type="text/javascript" src="js/foundation/foundation.reveal.js"></script>
 	<script>

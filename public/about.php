@@ -11,7 +11,7 @@
         <script src="js/index.js" type="text/javascript"></script>    
     </head>
 
-<<<<<<< HEAD
+
 <!doctype HTML>
 <html class="no-js" lang="en">
 <head>
@@ -23,16 +23,18 @@
 <body>
 =======
 
->>>>>>> 85620a08c94d656dba541a0cfec6e03c0c247d75
+
       <!--start wrapper-->
   <div id = "wrapper">
   <div class="row">
   <div class="small-9 columns ">
+  <!-- Title paragraph with mission statement -->
    <h3>Teem was created to help groups of people facilitate better and more efficient meetings. It was built with love by Team SnapChatRoulette 
    at <a href="http://rpi.edu">Rensselaer Polytechnic Institute's</a> Web Science course taught by Richard Plotka. </h3> 
   </div>
   <div class="faq small-9 columns end" id="questions">
   <ul>
+      <!-- Q and A style, with h4 being quesitons, and p <li> items being answers -->
       <li>
         <h4 href="#q1">Is Teem free to use?</h4>
         <p>Teem was created by a team of frustrated college students looking to make meetings more bearable. For this reason, Teem is free for you to use you in your meeting.</p>
