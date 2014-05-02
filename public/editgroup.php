@@ -63,9 +63,13 @@ switch ($_POST['submit2']) {
 }
 
 // 
-if (isset($_POST['submit']) && isset($_POST['submit'])=="Yes") {
-  $group->deleteGroup();
-  header("Location: ./index.php");
+switch ($_POST['submit']) {
+    case "Yes":
+      $group->deleteGroup();
+      header("Location: ./index.php");
+      break;
+    case "No":
+    break;
 }
 
 
