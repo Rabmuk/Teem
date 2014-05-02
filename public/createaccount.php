@@ -67,6 +67,7 @@ require_once "classes/user.php";
               <?php if (isset($msg)) {
                 echo $msg;  
               }else{
+                // In line style to make the highlight color match the rest of the website
                echo 'We want your agendas to be as <span style="color:#197b5e;">DYNAMIC</span> as your meetings.';
                echo '<h2>Create an account today!</h2>';
               }
