@@ -62,7 +62,6 @@ require_once "./headerNav.php";
 			</div>
 		</form>
 	</div>
-	<?php } ?>
 </body>
 </html>
 
