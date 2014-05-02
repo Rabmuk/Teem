@@ -2,7 +2,6 @@ Teem
 =========
 
 A project for Rensselaer Polytechnic Institute's ITWS 4200: Web Science Course. 
-<<<<<<< HEAD
 
 
 Teem was created with love by Alex Kumbar, Lauren Angelini, Josh McGraw, Chris Paradis, Candice Poon, & Hayley Schluter. 
@@ -11,8 +10,6 @@ Teem was created with love by Alex Kumbar, Lauren Angelini, Josh McGraw, Chris P
 Teem was created with love by Alex Kumbar, Lauren Angelini, Josh McGraw, Chris Paradis, Candice Poon, & Hayley Schluter.
 
 =========
->>>>>>> 44d7063f6d71be1b29ad2ca3ae02c048dd40bb47
-
 Setup:
 ------
 
@@ -25,7 +22,7 @@ This application runs on a apache stack. Tested a [Host Rocket](http://www.hostr
 	Teem is a mobile-responsive web application that will increase productivity for meetings and improve any group’s organization.
 
 
-### Mission: ###
+### Mission: 
 	To make it incredibly easy for any group of people to schedule and manage agendas for their meetings.
 
 ### Vision: 
