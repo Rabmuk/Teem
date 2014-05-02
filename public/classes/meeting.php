@@ -60,6 +60,7 @@ class Meeting{
     return $id_user == $this->id_owner;
   }
 
+  // returns true if user id is a member of the meeting
   public function checkMember($id_user){
     global $db;
     $query = $db->prepare(
@@ -76,6 +77,7 @@ class Meeting{
     return false;
   }
 
+  // checks to make sure user is not already a member of the meeting then adds them
   public function addMember($id_user){
     global $db;
 
@@ -102,6 +104,7 @@ class Meeting{
     }
   }
 
+  // returns an array of agenda items
   public function getAgendaItems(){
     global $db;
 
@@ -119,6 +122,7 @@ class Meeting{
     return $toReturn;
   }
 
+  // array of users that are members of this meeting
   public function getMemberArray(){
     global $db;
 
@@ -137,6 +141,7 @@ class Meeting{
     return $toReturn;
   }
 
+  // create a new action item assigned to given user
   public function addActionItem($id_user, $action){
     global $db;
 
@@ -164,6 +169,7 @@ class Meeting{
       ));
   }
 
+  // emails users action items for a given meeting
   public function emailActionItems(){
     global $db;
 
@@ -174,6 +180,7 @@ class Meeting{
       $subject = 'Action items from ' . $this->title;
       $from = "no-reply@teem.rabserver.com";
 
+      // does not email if user has no action items
       if (count($actionItems) > 0) {
         $message = "You have been assigned the following:\n";
 
@@ -236,6 +243,7 @@ function addMeetingToDatabase($title, $description, $id_owner, $location, $date,
     if($user){
       $newMeeting->addMember($user->user_id);
     }else{
+      // if a member is not a user it checks to see if it is a group
       $query = $db->prepare(
         "SELECT `group_id` FROM `groups` WHERE `name` = :name"
         );
@@ -265,6 +273,7 @@ function addMeetingToDatabase($title, $description, $id_owner, $location, $date,
   return $err;
 }
 
+// new meeting item
 function addItemToMeeting($meeting_id, $heading, $allottedTime, $presenter){
   global $db;
 

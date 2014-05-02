@@ -10,6 +10,7 @@ class User{
 
   public function __construct($param){
     global $db;
+    // can be constructed on either an email or id. Emails are forced to be unique because of indexing on the database.
     if (gettype($param) == "integer") {
       $query = $db->prepare(
         "SELECT `email`, `firstName`, `lastName` FROM `users` WHERE `user_id` = :user_id"
@@ -49,6 +50,7 @@ class User{
     return $this->email;
   }
 
+  // updates user email
   public function setEmail($em){
     global $db;
 
@@ -107,6 +109,7 @@ class User{
     return $this->getFirstName() . ' ' . $this->getLastName();
   }
 
+  // returns an array of groups that the member belongs to used in profile.php
   public function getGroups(){
     global $db;
 
@@ -126,6 +129,7 @@ class User{
     return $toReturn;
   }
 
+  // returns an array of meetings that the member belongs to used in profile.php
   public function getMeetings(){
     global $db;
 
@@ -144,6 +148,7 @@ class User{
     return $toReturn;    
   }
 
+  // returns true if user is a member of given meeting
   public function atMeeting($meeting_id){
     global $db;
 
@@ -161,6 +166,7 @@ class User{
 
     return false;
   }
+
 
   public function getActionItems($meeting_id){
     global $db;
@@ -195,7 +201,7 @@ class User{
 
 }
 
-//assume that the email is unique
+// email is checked for uniqueness elsewhere
 function addUserToDatabase($email, $password, $salt, $firstName, $lastName){
   global $db;
   
