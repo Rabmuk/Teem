@@ -1,7 +1,7 @@
 <?php 	
 session_start();
 $counter = 0;
-// incluces all support files from classes
+// incluces all support files from the classes folder
 foreach (glob("classes/*.php") as $filename)
 {
   include $filename;
