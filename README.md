@@ -16,14 +16,14 @@ This application runs on a apache stack. Tested a [Host Rocket](http://www.hostr
 =========
 
 ### General description:
-Teem is a mobile-responsive web application that will increase productivity for meetings and improve any group’s organization.
+	Teem is a mobile-responsive web application that will increase productivity for meetings and improve any group’s organization.
 
 
 ### Mission: 
-To make it incredibly easy for any group of people to schedule and manage agendas for their meetings.
+	To make it incredibly easy for any group of people to schedule and manage agendas for their meetings.
 
 ### Vision: 
-To translate the efficiency of static agendas to the web, to make meetings easier to facilitate for everyone. 
+	To translate the efficiency of static agendas to the web, to make meetings easier to facilitate for everyone. 
 
 ### Stakeholders:
 	College Students
@@ -35,7 +35,7 @@ To translate the efficiency of static agendas to the web, to make meetings easie
 	Any group that wants to get together
 
 ### Overview: 
-Our project Teem makes meetings more productive through an interactive meeting agenda that will allow members to adjust their own material and look at other’s materials during meetings. 
+	Our project Teem makes meetings more productive through an interactive meeting agenda that will allow members to adjust their own material and look at other’s materials during meetings. 
 
 ### Features:
 	Personal accounts
@@ -71,12 +71,12 @@ Candice:
 
 Lauren:
 	This is honestly one of the best teams I have ever worked on. Besides getting bullied by Chris and Candice occassionaly (jokingly of course... i think), we got along great the entire project. We fought through endless merge conflicts, fatal errors, styling issues and tears while trying to fix everything we broke to create a pretty cool application. Everyone contributed what they were assigned to do and we had no issues with people not attending meetings or communicating. I learned a lot about Foundation, CSS, HTML etc. and even refined my skills a little in PHP.I will miss all my teammates and it's been an absolute privelage to be part of Team Snapchat-Roulette <3 
-	
-Alex:
-	I still don’t believe that Plotka didn’t craft this teem (pun intended) himself. I had an awesome semester with a group of people who proved time and time again that they were rock solid people and contributors. Not sure how groups are made for Capstone, but if its random I hope it get the same seed that this random generation had. 
 
+Chris: 
+	Great group with a very interesting dynamic. Despite the appearance of conflict on the surface, this group worked very well together. I would say better than any group I have been a part of. I have never really had meetings where both the back-end, front-end, and really all involve truly work together on pages and use each others skill set. Most importantly we ended up with a fully functional final product that looks great. Good stuff guys.
 
-
+Josh:
+	Has stepped down from executive mediator, and will be deeply missed. The balance of power has shifted.... dark times are coming. Prepare yourself
 =========
 
 (c) Team Snapchat-Roulette
