@@ -38,6 +38,7 @@ class File{
 
 }
 
+// created new file rows for the database
 function addFileToItem($id_item, $name, $location){
   global $db;
   

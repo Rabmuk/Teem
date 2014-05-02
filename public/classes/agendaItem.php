@@ -35,6 +35,7 @@ class AgendaItem{
     return $this->item_id;
   }
 
+  //if the item does not exist item_id will be -1
   public function exists(){
     return $this->item_id >= 0;
   }
@@ -51,6 +52,7 @@ class AgendaItem{
     return $this->heading;
   }
 
+  // returns an array of topics for the given item
   public function getTopics(){
     global $db;
 
@@ -69,6 +71,7 @@ class AgendaItem{
     return $toReturn;
   }
 
+  // returns an array of file objects
   public function getFiles(){
     global $db;
 
@@ -86,6 +89,7 @@ class AgendaItem{
     return $toReturn;
   }
 
+  //clears the topics for a given item
   public function clearTopics(){
     global $db;
 
@@ -99,6 +103,7 @@ class AgendaItem{
 
 }
 
+// adds a new agenda item to the database and then returns the item as an object
 function addAgendaItemToDatabase($id_meeting, $id_user, $topics, $allottedMinutes, $itemOrder){
   $query = $db->prepare(
     "INSERT INTO `agendaItems` (`id_meeting`, `id_user`, `topics`, `allottedMinutes`, `itemOrder`)
@@ -112,6 +117,7 @@ function addAgendaItemToDatabase($id_meeting, $id_user, $topics, $allottedMinute
     ":itemOrder" => $itemOrder
     ));
 
+  //callback on the item that was just created
   $query = $db->prepare(
     "SELECT `item_id` FROM `agendaItems` WHERE `id_meeting` = :id_meeting AND `id_user` = :id_user AND `topics` = :topics"
     );

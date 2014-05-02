@@ -41,6 +41,8 @@ class Group{
     return $id_user == $this->id_owner;
   }
 
+
+  // user names seperated by commas used in profile
   public function getMemberNames(){
     global $db;
 
@@ -64,6 +66,7 @@ class Group{
     return $toReturn;
   }
 
+  // array of member names used in editgroup
   public function getMemberArray(){
     global $db;
 
@@ -82,6 +85,7 @@ class Group{
     return $toReturn;
   }
 
+  // array of user ids used in editgroup.php
   public function getMemberArrayID(){
     global $db;
 
