@@ -9,4 +9,4 @@ Setup
 -----
 
 Database aretechure is saved in a file inside of database.
-This application runs on a apache stack. Tested a host rocket (http://www.hostrocket.com/) domain.
+This application runs on a apache stack. Tested a [Host Rocket](http://www.hostrocket.com/) domain.
