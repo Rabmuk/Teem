@@ -25,7 +25,7 @@ This application runs on a apache stack. Tested a [Host Rocket](http://www.hostr
 	Teem is a mobile-responsive web application that will increase productivity for meetings and improve any group’s organization.
 
 
-### Mission: 
+### Mission: ###
 	To make it incredibly easy for any group of people to schedule and manage agendas for their meetings.
 
 ### Vision: 
