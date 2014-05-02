@@ -1,5 +1,6 @@
 <?php
 session_start();
+
 foreach (glob("classes/*.php") as $filename)
 {
 	include $filename;
@@ -70,6 +71,7 @@ if ($reload) {
 ?>
 <!doctype HTML>
 <head>
+	<!--links-->
 	<meta charset="utf-8" />
 	<title>Teem - Agenda</title>
 	<link rel="stylesheet" href="css/foundation.css" />
@@ -79,7 +81,7 @@ if ($reload) {
 </head>
 <body>
 
-
+<!--header-->
 	<?php
 	require_once "./headerNav.php";	
 	?>
@@ -105,10 +107,12 @@ if ($reload) {
 			<div class="large-8 columns" id="agendaBody">
 				<?php 
 				$agendaItems = $meeting->getAgendaItems();
+				//for every item on the agenda, make one of these:
 				foreach($agendaItems as $agendaItem){
 					?>
 					<div class="row">
 						<div class="large-12 columns">
+							<!--name of topic, person responsible, amount of time-->
 							<br><h3 class = "heading bigyo"><?php echo $agendaItem->getHeading(); ?></h3>
 							<p class = "inline right"><?php echo $agendaItem->getTime(); ?> minutes</p>
 							<p><?php echo $agendaItem->getPresenter()->getName(); ?></p>
@@ -121,6 +125,7 @@ if ($reload) {
 							<ul>
 								<?php 
 								$topics = $agendaItem->getTopics();
+								//for every topic added, make it part of the list
 								foreach ($topics as $topic) {
 									echo "<li>" . $topic . "</li>";
 								}
@@ -130,11 +135,13 @@ if ($reload) {
 							$isPresenter = $user->isUser($agendaItem->getPresenter());
 							if ($isPresenter) {
 								?>
+								<!--if the current user is the presenter, they can add topics-->
 								<form method="post">
 									<input type="text" name="topics" placeholder="New Topic">
 									<input type="hidden" name="item_id" value="<?php echo $agendaItem->getID(); ?>">
 								</form>
 								<form method="post">
+									<!--or get rid of them-->
 									<input type="submit" name="clearTopics" value="Clear" />
 									<input type="hidden" name="item_id" value="<?php echo $agendaItem->getID(); ?>">
 								</form>
@@ -144,12 +151,14 @@ if ($reload) {
 						</div>
 
 						<div class="large-6 columns">
+							<!--attachments can be added by the person who 'owns' that topic, but not others-->
 							<h5 class= "heading">Attachments</h5>
 							<ul>
 								<?php
 								$files = $agendaItem->getFiles();
 								foreach ($files as $file) {
 									?>
+									<!--and upload files!-->
 									<a href="uploads/<?php echo $file->getLocation(); ?>" target="_blank"><?php echo $file->getName(); ?></a>
 
 									<?php
@@ -161,6 +170,7 @@ if ($reload) {
 								?>
 								<br>
 								<form action="" method="post" enctype="multipart/form-data">
+									<!--uploading files form-->
 									<input type="hidden" name="item_id" value=<?php echo '"' . $agendaItem->getID() . '"'; ?>>
 									<label for="file">Filename:</label>
 									<input type="file" name="file" id="file"><br>
@@ -187,23 +197,25 @@ if ($reload) {
 				if ($meeting->checkOwner($user->getID())) {
 					?>
 					<div class="row">
+						<!--if the user is the owner/creator of the meeting, they can assign people to topics and give them a specific amount of time-->
 						<a href="#" id = "addmeetingitembutton" data-reveal-id="myModal" class="button exapand" data-reveal>Add meeting item</a>
 					</div>
 					<form method="post">
+						<!--emails action items to users-->
 						<input type="submit" name="emailActionItems" value="Email Action Items">
 					</form>
 					<?php 
 				}
 				?>
 
-
+				<!--actually adding meeting items popup from clicking the button 'add meeitng item'-->
 				<div id="myModal" class="reveal-modal small" data-reveal>
 					<h1>Add meeting item</h1>
 					<form method="post" action=<?php echo '"?id=' . $_GET['id'] . '"'; ?>>
 						<input type="text" name="heading" placeholder="Enter item heading">
 						<input type="number" name="time" placeholder="Enter allotted minutes">
 						<!-- <input type="email" name="presenter" placeholder="Enter presentor's email"> -->
-
+						<!--select member for that topic-->
 						<label>Select meeting attendee
 							<select name="presenter" id = "makegoodborder">
 								<?php
@@ -215,14 +227,14 @@ if ($reload) {
 							</select>
 
 						</label>
+						<!--submit button-->
 						<center><input type="submit" name="addItem" value="Submit" class="button small expand"></input></center>
 						<a class="close-reveal-modal">&#215;</a>
 
 					</form>
 				</div>
-
 			</div>
-
+			<!--start next actions-->
 			<div class="large-4 columns" id="nextActions">
 				<!-- Each individual action item list -->
 				<div class="row">
@@ -305,6 +317,7 @@ if ($reload) {
 
 </body>
 </html>
+<!--footer, yo-->
 <?php
 
 require_once "./bottomNav.php";
