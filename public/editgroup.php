@@ -11,7 +11,7 @@ if (isset($_SESSION['email'])){
 }else{
   header("Location: ./index.php");
 }
-// Same concept as above
+// Same concept as above, but constructing a new case of Group 
 if (isset($_GET['id'])){
   $group = new Group($_GET['id']);
 }else{
@@ -62,7 +62,7 @@ switch ($_POST['submit2']) {
   break;
 }
 
-// 
+// switch for secon form submission. In case "Yes" delete the group in case "No" do nothing
 switch ($_POST['submit']) {
     case "Yes":
       $group->deleteGroup();
@@ -91,10 +91,12 @@ require_once "./headerNav.php";
       </div>
     </div>
     <?php 
+    // constructing new Group element
       if (isset($_GET['id'])) {
         $group = new Group($_GET['id']);
       }
     ?>
+    <!-- on submission send data to the location specified -->
     <form action=<?php echo '"?id=' . $_GET['id'] . '"';?> method="post">
       <div class="row">
         <div class="small-3 columns">
@@ -118,6 +120,11 @@ require_once "./headerNav.php";
         </div>
         <div class="small-9 columns">
         <?php
+        // creation of two arrays
+        // First one is an array of Member ID's
+        // Second one is an array of Member emails
+        // set the value to the ID so you can use it in the delete function above
+        // use the member email to display in the check box
           $counter = 0;
           $memberarray = $group->getMemberArrayID();
           $members = $group->getMemberArray();
@@ -136,6 +143,7 @@ require_once "./headerNav.php";
       <div class="row">
         <div class="large-7 columns"><p></p></div>
         <div class="large-3 columns">
+          <!-- Cool Popup menu for delete group -->
           <a href="#" data-reveal-id="myModal" class="button expand" data-reveal>Delete Group</a>
         </div>
         <div class="large-2 columns">
