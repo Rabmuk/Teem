@@ -73,7 +73,7 @@ Lauren:
 	This is honestly one of the best teams I have ever worked on. Besides getting bullied by Chris and Candice occassionaly (jokingly of course... i think), we got along great the entire project. We fought through endless merge conflicts, fatal errors, styling issues and tears while trying to fix everything we broke to create a pretty cool application. Everyone contributed what they were assigned to do and we had no issues with people not attending meetings or communicating. I learned a lot about Foundation, CSS, HTML etc. and even refined my skills a little in PHP.I will miss all my teammates and it's been an absolute privelage to be part of Team Snapchat-Roulette <3 
 	
 Alex:
-	I still don’t believe that Plotka didn’t craft this teem (pun intended) himself. I had an awesome semester with a group of people who proved time and time again that they were rock solid people and contributors. Not sure how group are made for Capstone, but if its random I hope it get the same seed that this random generation had. 
+	I still don’t believe that Plotka didn’t craft this teem (pun intended) himself. I had an awesome semester with a group of people who proved time and time again that they were rock solid people and contributors. Not sure how groups are made for Capstone, but if its random I hope it get the same seed that this random generation had. 
 
 
 
