@@ -68,6 +68,8 @@ Personal statements:
 Hayley:
 	I very much enjoyed working with such a diverse, skilled group of like-minded people. I was going to give special thanks to specific team members, but then I realized I'd be thanking every single one of you. Thank you all for listening to my ideas, solving the problems I caused, and making me feel like a welcome and important member of the group. I think we've really made something special that could only come about through this kind of open collaboration and I'm so glad to have played a role in creating it.
 
+Candice:
+	This is my first group project working with the people the same year as me in ITWS and I am so glad I did. These people are kind, patient, and hard-working. It has been a wonderful experience to learn more about PHP, Foundation, etc., and how to program with some really talented people. I am genuinely proud of what we accomplished and what we created over the semester.
 
 
 
