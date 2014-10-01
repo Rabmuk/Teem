@@ -10,7 +10,7 @@ Teem was created with love by Alex Kumbar, Lauren Angelini, Josh McGraw, Chris P
 Setup:
 ------
 
-Database aretechure is saved in a file inside of database.
+Database architecture is saved in a file inside of database.
 This application runs on a apache stack. Tested a [Host Rocket](http://www.hostrocket.com/) domain.
 
 =========
